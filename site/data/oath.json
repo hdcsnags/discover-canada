@@ -21,6 +21,10 @@
           "type": "quote",
           "text": "Je jure (ou j’affirme solennellement)\nQue je serai fidèle\nEt porterai sincère allégeance\nÀ Sa Majesté\nLa reine Elizabeth Deux\nReine du Canada\nÀ ses héritiers et successeurs\nQue j’observerai fidèlement\nLes lois du Canada\nY compris la Constitution\nQui reconnaît et confirme les droits\nAncestraux ou issus de traités\nDes Premières Nations, des Inuits et des Métis\nEt que je remplirai loyalement\nMes obligations\nDe citoyen canadien.",
           "who": "Le serment de citoyenneté"
+        },
+        {
+          "type": "note",
+          "text": "Since 8 September 2022 the Sovereign is King Charles III. The official online Oath now reads \"To His Majesty King Charles the Third, King of Canada, His Heirs and Successors\". The words above are the 2021 print."
         }
       ],
       "focus": [
@@ -134,12 +138,12 @@
       "section": "oath-the-oath-of-citizenship",
       "q": "In the Oath of Citizenship, to whom do you swear or affirm to be faithful and bear true allegiance?",
       "choices": [
-        "The Prime Minister of Canada",
+        "The laws of Canada, which you promise to faithfully observe as a Canadian citizen",
+        "The Constitution of Canada, which recognizes and affirms Aboriginal and treaty rights",
         "The Sovereign (King or Queen) of Canada, and the Sovereign's Heirs and Successors",
-        "The Constitution of Canada",
-        "The Canadian flag"
+        "A geopolitical entity such as a country, or a banner such as the Canadian flag"
       ],
-      "answer": 1,
+      "answer": 2,
       "why": "The Oath pledges to \"bear true allegiance to Her Majesty ... Queen of Canada, Her Heirs and Successors\", that is, to the Sovereign.",
       "page": 2
     },
@@ -218,12 +222,12 @@
       "section": "oath-understanding-the-oath",
       "q": "Which statement expresses the principle described in \"Understanding the Oath\"?",
       "choices": [
+        "Canadians profess their loyalty to a document such as a constitution, not to a person.",
         "Canada is personified by the Sovereign just as the Sovereign is personified by Canada.",
-        "Canada is personified by its flag.",
-        "Loyalty is owed to the Constitution alone.",
-        "The Sovereign is above the laws of Canada."
+        "Canadians profess their loyalty to a banner such as a flag that represents all Canadians.",
+        "Canadians profess their loyalty to a geopolitical entity such as a country, not to a person."
       ],
-      "answer": 0,
+      "answer": 1,
       "why": "The booklet calls it \"a remarkably simple yet powerful principle: Canada is personified by the Sovereign just as the Sovereign is personified by Canada.\"",
       "page": 2
     },

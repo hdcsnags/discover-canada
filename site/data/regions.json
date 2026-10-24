@@ -731,7 +731,7 @@
       "section": "regions-the-atlantic-provinces",
       "front": "Which four provinces make up the Atlantic Provinces?",
       "back": "Newfoundland and Labrador, Prince Edward Island, Nova Scotia and New Brunswick.",
-      "page": 46
+      "page": 45
     },
     {
       "id": "regions-c26",
@@ -1503,7 +1503,7 @@
       ],
       "answer": 3,
       "why": "The Atlantic Provinces are Newfoundland and Labrador, Prince Edward Island, Nova Scotia and New Brunswick.",
-      "page": 46
+      "page": 45
     },
     {
       "id": "regions-q19",
@@ -1636,9 +1636,9 @@
       "section": "regions-central-canada",
       "q": "What share of all Canadian manufactured goods do Ontario and Quebec produce together?",
       "choices": [
-        "More than one-third",
-        "More than one-half",
-        "More than two-thirds",
+        "About one-quarter",
+        "About one-third",
+        "About one-half",
         "More than three-quarters"
       ],
       "answer": 3,
@@ -1888,12 +1888,12 @@
       "section": "regions-the-northern-territories",
       "q": "Why is the North often referred to as the “Land of the Midnight Sun”?",
       "choices": [
-        "Because the sun never rises in winter",
         "Because at the height of summer, daylight can last up to 24 hours",
-        "Because of the gold mines",
-        "Because the soil is permanently frozen"
+        "Because in winter the sun disappears and darkness sets in for three months",
+        "Because of the gold, lead, copper, diamond and zinc mines found in the North",
+        "Because the soil of the tundra is permanently frozen and no trees grow there"
       ],
-      "answer": 1,
+      "answer": 0,
       "why": "The North is called the “Land of the Midnight Sun” because at the height of summer, daylight can last up to 24 hours.",
       "page": 50
     },

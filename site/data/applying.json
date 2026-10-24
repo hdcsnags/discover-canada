@@ -242,12 +242,12 @@
       "section": "applying-applying-for-citizenship",
       "q": "When you apply for citizenship, what will officials do?",
       "choices": [
-        "Interview your family and friends",
-        "Check your status, verify that you are not prohibited from applying, and ensure that you meet the requirements",
-        "Give you your Canadian Citizenship Certificate right away",
-        "Enrol you in citizenship classes"
+        "Interview your friends and family members about your knowledge of Canada and its history",
+        "Give you your Canadian Citizenship Certificate right away and sign the oath form on your behalf",
+        "Enrol you in citizenship classes and in English or French language classes offered free of charge",
+        "Check your status, verify that you are not prohibited from applying, and ensure that you meet the requirements"
       ],
-      "answer": 1,
+      "answer": 3,
       "why": "The booklet says officials \"will check your status, verify that you are not prohibited from applying, and ensure that you meet the requirements\".",
       "page": 6
     },
@@ -284,12 +284,12 @@
       "section": "applying-how-to-use-this-booklet",
       "q": "Where does the booklet suggest you ask for information on citizenship classes?",
       "choices": [
-        "The Call Centre",
         "A local school or school board, a college, a community centre or a local organization that serves immigrants",
-        "The Canadian Forces",
-        "Your Member of Parliament"
+        "The Call Centre, which must always have your correct address while your application is processed",
+        "The Government of Canada, which offers English or French language classes free of charge",
+        "The Citizenship Regulations, which provide information on the knowledge of Canada requirement"
       ],
-      "answer": 1,
+      "answer": 0,
       "why": "The booklet says to call \"a local school or school board, a college, a community centre or a local organization that provides services to immigrants\".",
       "page": 6
     },
@@ -326,12 +326,12 @@
       "section": "applying-about-the-citizenship-test",
       "q": "What are the two basic requirements for citizenship that you will be tested on?",
       "choices": [
+        "Knowledge of Canadian geography and history, and the ability to sign the oath form at the ceremony",
         "Knowledge of Canada and of the rights and responsibilities of citizenship, and adequate knowledge of English or French",
-        "Knowledge of Canadian geography and history only",
-        "Knowledge of the Constitution and the ability to sing the national anthem",
-        "Employment history and adequate knowledge of English or French"
+        "Knowledge of the Constitution and the Citizenship Regulations, and adequate knowledge of English or French",
+        "Knowledge of the rights and responsibilities of citizenship, and a correct address on file with the Call Centre"
       ],
-      "answer": 0,
+      "answer": 1,
       "why": "You are tested on \"1) knowledge of Canada and of the rights and responsibilities of citizenship, and 2) adequate knowledge of English or French\".",
       "page": 6
     },
@@ -396,12 +396,12 @@
       "section": "applying-after-the-test",
       "q": "What does the Notice to Appear to Take the Oath of Citizenship tell you?",
       "choices": [
+        "The result of your test and the next steps you must take",
+        "The questions you will be asked on the citizenship test",
         "The date, time and place of your citizenship ceremony",
-        "The result of your test",
-        "Your new mailing address",
-        "The questions on the test"
+        "The Call Centre telephone numbers for checking your application"
       ],
-      "answer": 0,
+      "answer": 2,
       "why": "\"This document tells you the date, time and place of your citizenship ceremony.\"",
       "page": 7
     }

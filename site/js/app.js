@@ -6,7 +6,12 @@
   const LS_PROGRESS = 'dc.progress.v1';
   const LS_SETTINGS = 'dc.settings';
   const DAY = 86400000;
-  const INTERVALS = [0, 1, 3, 7, 14, 30]; // days per Leitner box
+  const INTERVALS = [0, 1, 3, 7, 14, 30]; // days per level
+  const SESSION_CAP = 20;   // cards per flash-card session
+  const NEW_LIMIT = 20;     // new (never seen) cards per session
+  const QUIZ_BATCH = 10;    // questions per chapter quiz run
+  const SECTION_CHECK = 4;  // questions in a section quick check
+  const BOOK_PAGES = 68;
 
   function load(key, fallback) {
     try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch (e) { return fallback; }
@@ -14,7 +19,8 @@
   function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* private mode */ } }
 
   const settings = Object.assign({ theme: 'auto', size: 'normal', font: 'default', motion: 'on', readMode: 'step' }, load(LS_SETTINGS, {}));
-  const progress = Object.assign({ sections: {}, cards: {}, quiz: {}, mock: [], last: null }, load(LS_PROGRESS, {}));
+  const progress = sanitizeProgress(load(LS_PROGRESS, {}));
+  save(LS_PROGRESS, progress); // write back the sanitized shape
   function saveProgress() { save(LS_PROGRESS, progress); }
   function saveSettings() { save(LS_SETTINGS, settings); applySettings(); }
   function applySettings() {
@@ -24,22 +30,40 @@
     settings.font === 'default' ? r.removeAttribute('data-font') : r.setAttribute('data-font', settings.font);
     settings.motion === 'off' ? r.setAttribute('data-motion', 'off') : r.removeAttribute('data-motion');
   }
+  // Only known shapes survive a load or an import. Everything is coerced to numbers / plain ids.
+  function sanitizeProgress(obj) {
+    const out = { sections: {}, cards: {}, quiz: {}, mock: [], last: null };
+    if (!obj || typeof obj !== 'object') return out;
+    const idOk = (k) => typeof k === 'string' && /^[a-z0-9-]{1,80}$/.test(k);
+    const num = (v, d) => (typeof v === 'number' && isFinite(v) ? v : d);
+    if (obj.sections && typeof obj.sections === 'object') for (const k of Object.keys(obj.sections)) if (idOk(k)) out.sections[k] = num(obj.sections[k], 1);
+    if (obj.cards && typeof obj.cards === 'object') for (const k of Object.keys(obj.cards)) { const s = obj.cards[k]; if (idOk(k) && s && typeof s === 'object') out.cards[k] = { box: Math.min(INTERVALS.length - 1, Math.max(0, num(s.box, 0))), due: num(s.due, 0), seen: num(s.seen, 0) }; }
+    if (obj.quiz && typeof obj.quiz === 'object') for (const k of Object.keys(obj.quiz)) { const s = obj.quiz[k]; if (idOk(k) && s && typeof s === 'object') out.quiz[k] = { best: num(s.best, 0), total: num(s.total, 0), attempts: num(s.attempts, 0), last: num(s.last, 0) }; }
+    if (Array.isArray(obj.mock)) out.mock = obj.mock.filter((m) => m && typeof m === 'object').map((m) => ({ score: num(m.score, 0), total: num(m.total, 0), at: num(m.at, 0) })).slice(-50);
+    if (obj.last && typeof obj.last === 'object' && idOk(obj.last.chapter)) out.last = { chapter: obj.last.chapter, section: Math.max(0, Math.floor(num(obj.last.section, 0))) };
+    return out;
+  }
 
   // ---------- data ----------
   const data = { index: null, chapters: [], byId: {}, official: null, cards: [], quiz: [] };
-  async function loadData() {
-    if (data.index) return data;
-    const idx = await (await fetch('data/index.json')).json();
-    data.index = idx;
-    const files = await Promise.all(idx.chapters.map((c) => fetch('data/' + c.file).then((r) => (r.ok ? r.json() : null)).catch(() => null)));
-    data.chapters = files.filter(Boolean).sort((a, b) => a.order - b.order);
-    data.chapters.forEach((ch) => {
-      data.byId[ch.id] = ch;
-      (ch.cards || []).forEach((c) => { c.chapter = ch.id; data.cards.push(c); });
-      (ch.quiz || []).forEach((q) => { q.chapter = ch.id; data.quiz.push(q); });
-    });
-    try { data.official = await (await fetch('data/' + idx.official)).json(); } catch (e) { data.official = null; }
-    return data;
+  let dataPromise = null;
+  function loadData() {
+    if (dataPromise) return dataPromise;
+    dataPromise = (async () => {
+      const idx = await (await fetch('data/index.json')).json();
+      const files = await Promise.all(idx.chapters.map((c) => fetch('data/' + c.file).then((r) => (r.ok ? r.json() : null)).catch(() => null)));
+      const chapters = files.filter(Boolean).sort((a, b) => a.order - b.order);
+      chapters.forEach((ch) => {
+        data.byId[ch.id] = ch;
+        (ch.cards || []).forEach((c) => { c.chapter = ch.id; data.cards.push(c); });
+        (ch.quiz || []).forEach((q) => { q.chapter = ch.id; data.quiz.push(q); });
+      });
+      data.chapters = chapters;
+      try { data.official = await (await fetch('data/' + idx.official)).json(); } catch (e) { data.official = null; }
+      data.index = idx;
+      return data;
+    })();
+    return dataPromise;
   }
 
   // ---------- helpers ----------
@@ -47,21 +71,26 @@
   const $ = (sel, el) => (el || document).querySelector(sel);
   const $$ = (sel, el) => Array.from((el || document).querySelectorAll(sel));
   const shuffle = (arr) => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
-  const pct = (n, d) => (d ? Math.round((n / d) * 100) : 0);
+  const pct = (n, d) => (d ? Math.min(100, Math.round((n / d) * 100)) : 0);
+  const pageNum = (p) => Math.min(BOOK_PAGES, Math.max(1, parseInt(p, 10) || 1));
   const icon = {
     back: '<svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>',
     next: '<svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>',
     check: '<svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>',
     book: '<svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
     shuffle: '<svg viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M4 20L21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg>',
+    close: '<svg viewBox="0 0 24 24"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>',
+    undo: '<svg viewBox="0 0 24 24"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-15-6.7L3 13"/></svg>',
   };
   let toastTimer = null;
   function toast(msg) {
-    let t = $('.toast'); if (!t) { t = document.createElement('div'); t.className = 'toast'; document.body.appendChild(t); }
+    let t = $('.toast'); if (!t) { t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role', 'status'); document.body.appendChild(t); }
     t.textContent = msg; clearTimeout(toastTimer); toastTimer = setTimeout(() => t.remove(), 1800);
   }
+  // Booklet links open an overlay so the current card / quiz / section is not lost.
   function pageLink(page, label) {
-    return `<a class="pagelink" href="#/book/${page}" title="Open booklet page ${page}">${icon.book} ${esc(label || 'Booklet p.' + page)}</a>`;
+    const p = pageNum(page);
+    return `<a class="pagelink" href="#/book/${p}" data-page="${p}" title="Show booklet page ${p}">${icon.book} ${esc(label || 'Booklet p.' + p)}</a>`;
   }
   function sectionDone(sectionId) { return !!progress.sections[sectionId]; }
   function chapterStats(ch) {
@@ -71,27 +100,66 @@
     return { total, done, pct: pct(done, total), quizBest: q ? q.best : null, quizTotal: q ? q.total : null };
   }
   function cardState(id) { return progress.cards[id] || { box: 0, due: 0, seen: 0 }; }
-  function cardsDue(cards, now) { return cards.filter((c) => cardState(c.id).due <= now); }
+  const isNew = (c) => !cardState(c.id).seen;
+  function cardsDue(cards, now) { return cards.filter((c) => !isNew(c) && cardState(c.id).due <= now); }
+  function cardsNew(cards) { return cards.filter(isNew); }
   function cardsLearned(cards) { return cards.filter((c) => cardState(c.id).box >= 3).length; }
+  const chapterFor = (n) => data.chapters.find((c) => n >= c.pages[0] && n <= c.pages[c.pages.length - 1]) || null;
+
+  // ---------- booklet overlay ----------
+  function openOverlay(page) {
+    let cur = pageNum(page);
+    let ov = $('#overlay');
+    if (!ov) { ov = document.createElement('div'); ov.id = 'overlay'; ov.className = 'overlay'; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true'); ov.setAttribute('aria-label', 'Booklet page'); document.body.appendChild(ov); }
+    const draw = () => {
+      const ch = chapterFor(cur);
+      ov.innerHTML = `
+        <div class="overlay-bar">
+          <button class="iconbtn" data-ov="prev" aria-label="Previous page" ${cur <= 1 ? 'disabled' : ''}>${icon.back}</button>
+          <span class="overlay-title">Page ${cur}${ch ? ` · ${esc(ch.title)}` : ''}</span>
+          <button class="iconbtn" data-ov="next" aria-label="Next page" ${cur >= BOOK_PAGES ? 'disabled' : ''}>${icon.next}</button>
+          <a class="btn small" href="#/book/${cur}" data-ov="go">Open in Booklet</a>
+          <button class="iconbtn" data-ov="close" aria-label="Close">${icon.close}</button>
+        </div>
+        <div class="overlay-body"><img src="book/p${String(cur).padStart(2, '0')}.jpg" alt="Booklet page ${cur}" width="1100" height="1430"></div>`;
+      $('[data-ov="close"]', ov).focus();
+    };
+    const onClick = (e) => {
+      const b = e.target.closest('[data-ov]'); if (!b) { if (e.target === ov) close(); return; }
+      const k = b.getAttribute('data-ov');
+      if (k === 'close') close(); else if (k === 'prev') { cur = Math.max(1, cur - 1); draw(); } else if (k === 'next') { cur = Math.min(BOOK_PAGES, cur + 1); draw(); } else if (k === 'go') close();
+    };
+    const onKey = (e) => { if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') { cur = Math.max(1, cur - 1); draw(); } if (e.key === 'ArrowRight') { cur = Math.min(BOOK_PAGES, cur + 1); draw(); } };
+    const close = () => { ov.removeEventListener('click', onClick); document.removeEventListener('keydown', onKey, true); ov.remove(); document.body.classList.remove('no-scroll'); };
+    ov.addEventListener('click', onClick); document.addEventListener('keydown', onKey, true); document.body.classList.add('no-scroll');
+    draw();
+  }
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a.pagelink[data-page]');
+    if (a && !e.metaKey && !e.ctrlKey) { e.preventDefault(); openOverlay(a.getAttribute('data-page')); return; }
+    if (e.target.closest('[data-reload]')) { e.preventDefault(); render(); }
+  });
 
   // ---------- router ----------
   const app = $('#app');
   const routes = [];
   function route(pattern, handler) { routes.push({ pattern, handler }); }
-  function navigate(hash) { location.hash = hash; }
   let cleanup = null;
+  let renderSeq = 0;
   async function render() {
+    const seq = ++renderSeq;
     if (cleanup) { try { cleanup(); } catch (e) { /* noop */ } cleanup = null; }
+    const ov = $('#overlay'); if (ov) ov.remove(); document.body.classList.remove('no-scroll');
     const hash = location.hash.replace(/^#/, '') || '/';
-    const parts = hash.split('/').filter(Boolean);
-    const top = parts[0] || 'home';
+    const top = hash.split('/').filter(Boolean)[0] || 'home';
     $$('.tabbar a, .topbar .navlink').forEach((a) => {
       const t = a.getAttribute('href').replace('#/', '');
-      if ((t === top) || (t === '' && top === 'home')) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+      if (t === top) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
     app.innerHTML = '<div class="empty">Loading…</div>';
     try {
       await loadData();
+      if (seq !== renderSeq) return; // a newer navigation won
       for (const r of routes) {
         const m = r.pattern.exec(hash);
         if (m) { const out = await r.handler(...m.slice(1)); if (typeof out === 'function') cleanup = out; window.scrollTo({ top: 0 }); return; }
@@ -114,23 +182,25 @@
     const t = data.index.test;
     const last = progress.last;
     const lastCh = last && data.byId[last.chapter];
+    const lastIdx = lastCh ? Math.min(last.section, lastCh.sections.length - 1) : 0;
+    const lastSec = lastCh && lastCh.sections[lastIdx];
     app.innerHTML = `
       <section class="fade-in">
         <h1 class="h1">Your path to the citizenship test</h1>
-        <p class="lead">Everything on the test comes from the official <em>Discover Canada</em> booklet. Read a chapter, flip the cards, then quiz yourself. Small steps, every day.</p>
-        ${lastCh ? `<a class="card link" href="#/learn/${lastCh.id}/${last.section}"><div class="row" style="justify-content:space-between"><div><div class="small muted">Continue where you left off</div><div style="font-weight:700;font-size:1.1rem">${esc(lastCh.title)}</div><div class="small muted">${esc(lastCh.sections[last.section] ? lastCh.sections[last.section].title : '')}</div></div><span class="btn primary">Continue ${icon.next}</span></div></a>` : ''}
+        <p class="lead">Everything on the test comes from the official <em>Discover Canada</em> booklet. Read a section, flip a few cards, check yourself. Small steps, every day.</p>
+        ${lastCh ? `<a class="card link" href="#/learn/${lastCh.id}/${lastIdx}"><div class="row" style="justify-content:space-between"><div><div class="small muted">Continue where you left off</div><div style="font-weight:700;font-size:1.1rem">${esc(lastCh.title)}</div><div class="small muted">${esc(lastSec ? lastSec.title : '')}</div></div><span class="btn primary">Continue ${icon.next}</span></div></a>` : ''}
         <div class="card" style="margin-top:12px">
           <div class="stats">
             <div class="stat"><b>${pct(doneSections, totalSections)}%</b><span>sections read</span></div>
             <div class="stat"><b>${learned}<span class="muted" style="font-size:1rem">/${data.cards.length}</span></b><span>cards learned</span></div>
-            <div class="stat"><b>${bestMock == null ? '—' : bestMock + '/20'}</b><span>best mock test</span></div>
+            <div class="stat"><b>${bestMock == null ? '—' : bestMock + '/' + t.questions}</b><span>best mock test</span></div>
           </div>
           <div class="progress" style="margin-top:14px"><span style="width:${pct(doneSections, totalSections)}%"></span></div>
         </div>
         <div class="grid two" style="margin-top:12px">
-          <a class="card link" href="#/learn"><div class="row"><span class="pill red">Learn</span></div><div style="font-weight:700;margin-top:8px;font-size:1.1rem">Read the booklet, one section at a time</div><div class="small muted">12 chapters · focus points · tick off what you know</div></a>
-          <a class="card link" href="#/cards/due"><div class="row"><span class="pill amber">Cards</span>${due ? `<span class="pill">${due} due</span>` : ''}</div><div style="font-weight:700;margin-top:8px;font-size:1.1rem">Flash cards with spaced repetition</div><div class="small muted">Rate each card; the app brings back the hard ones</div></a>
-          <a class="card link" href="#/quiz"><div class="row"><span class="pill green">Quiz</span></div><div style="font-weight:700;margin-top:8px;font-size:1.1rem">Chapter quizzes and a timed mock test</div><div class="small muted">20 questions · 45 minutes · 15 to pass, like the real one</div></a>
+          <a class="card link" href="#/learn"><div class="row"><span class="pill red">Learn</span></div><div style="font-weight:700;margin-top:8px;font-size:1.1rem">Read the booklet, one section at a time</div><div class="small muted">${chapters.length} chapters · focus points · quick checks · tick off what you know</div></a>
+          <a class="card link" href="#/cards/due"><div class="row"><span class="pill amber">Cards</span>${due ? `<span class="pill">${due} to review</span>` : ''}</div><div style="font-weight:700;margin-top:8px;font-size:1.1rem">Flash cards, ${SESSION_CAP} at a time</div><div class="small muted">Rate each card; the app brings back the hard ones</div></a>
+          <a class="card link" href="#/quiz"><div class="row"><span class="pill green">Quiz</span></div><div style="font-weight:700;margin-top:8px;font-size:1.1rem">Chapter quizzes and a timed mock test</div><div class="small muted">${t.questions} questions · ${t.minutes} minutes · ${t.pass} to pass, like the real one</div></a>
           <a class="card link" href="#/book"><div class="row"><span class="pill blue">Booklet</span></div><div style="font-weight:700;margin-top:8px;font-size:1.1rem">The full official booklet, page by page</div><div class="small muted">Every card and question links back to its page</div></a>
         </div>
         <h2 class="h2">About the real test</h2>
@@ -152,7 +222,7 @@
     app.innerHTML = `
       <section class="fade-in">
         <h1 class="h1">Learn</h1>
-        <p class="lead">Each chapter is split into short sections. Read one, check the focus points, tick it off. Then quiz the chapter.</p>
+        <p class="lead">Each chapter is split into short sections. Read one, check the focus points, try the quick check, tick it off.</p>
         <div class="grid">
           ${data.chapters.map((ch) => {
             const s = chapterStats(ch);
@@ -174,47 +244,53 @@
       if (b.type === 'list') return `<ul>${(b.items || []).map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
       if (b.type === 'quote') return `<blockquote>${esc(b.text)}${b.who ? `<cite>— ${esc(b.who)}</cite>` : ''}</blockquote>`;
       if (b.type === 'caption') return `<div class="caption"><span>${esc(b.text)}</span></div>`;
+      if (b.type === 'note') return `<div class="note">${esc(b.text)}</div>`;
       if (b.type === 'table') {
         const rows = b.rows || []; if (!rows.length) return '';
-        return `<table><thead><tr>${rows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${rows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+        return `<div class="tablewrap"><table><thead><tr>${rows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${rows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
       }
       if (b.type === 'h') return `<h3 class="h3">${esc(b.text)}</h3>`;
       return '';
     }).join('');
   }
+  function sectionQuestions(ch, sec) { return (ch.quiz || []).filter((q) => q.section === sec.id); }
   function renderSection(ch, sec, i) {
     const done = sectionDone(sec.id);
+    const nq = Math.min(sectionQuestions(ch, sec).length, SECTION_CHECK);
     return `
       <article class="reader" data-section="${esc(sec.id)}">
         <div class="section-head"><h2>${esc(sec.title)}</h2>${pageLink(sec.page)}</div>
         ${sec.focus && sec.focus.length ? `<div class="focusbox"><h4>What to remember</h4><ul>${sec.focus.map((f) => `<li>${esc(f)}</li>`).join('')}</ul></div>` : ''}
         ${renderBlocks(sec.blocks)}
-        <button class="done-toggle" data-done="${esc(sec.id)}" aria-pressed="${done}"><span class="box">${done ? icon.check : ''}</span><span>${done ? 'Done — I know this section' : 'Mark this section as done'}</span></button>
+        <div class="grid" style="margin-top:18px">
+          ${nq ? `<a class="btn" href="#/learn/${ch.id}/${i}/check">Quick check · ${nq} question${nq === 1 ? '' : 's'}</a>` : ''}
+          <button class="done-toggle" data-done="${esc(sec.id)}" aria-pressed="${done}"><span class="box">${done ? icon.check : ''}</span><span>${done ? 'Done — I know this section' : 'Mark this section as done'}</span></button>
+        </div>
       </article>`;
   }
   route(/^\/learn\/([a-z-]+)(?:\/(\d+))?$/, (chId, secIdx) => {
     const ch = data.byId[chId]; if (!ch) { app.innerHTML = '<div class="empty">Chapter not found.</div>'; return; }
     const stepMode = settings.readMode !== 'all';
-    let i = Math.min(parseInt(secIdx || '0', 10) || 0, ch.sections.length - 1);
+    const i = Math.min(parseInt(secIdx || '0', 10) || 0, ch.sections.length - 1);
     progress.last = { chapter: ch.id, section: i }; saveProgress();
     const s = chapterStats(ch);
     const nextCh = data.chapters.find((c) => c.order === ch.order + 1);
-        app.innerHTML = `
+    app.innerHTML = `
       <section class="fade-in">
         <div class="row" style="justify-content:space-between;margin-bottom:6px">
           <a class="btn ghost" href="#/learn">${icon.back} All chapters</a>
-          <div class="row"><button class="btn ghost small" data-readmode>${stepMode ? 'Show whole chapter' : 'One section at a time'}</button></div>
+          <button class="btn ghost small" data-readmode>${stepMode ? 'Show whole chapter' : 'One section at a time'}</button>
         </div>
         <div class="small muted">Chapter ${ch.order} · pages ${ch.pages[0]}–${ch.pages[ch.pages.length - 1]}</div>
         <h1 class="h1">${esc(ch.title)}</h1>
         ${ch.summary ? `<p class="lead">${esc(ch.summary)}</p>` : ''}
         <div class="progress green" style="margin:0 0 16px"><span style="width:${s.pct}%"></span></div>
-        <details class="tocwrap" ${stepMode ? '' : 'open'}><summary><span>${stepMode ? `Section ${i + 1} of ${ch.sections.length}` : 'Sections'}</span><span class="small muted">${s.done}/${s.total} done</span></summary>
+        <details class="tocwrap" ${stepMode ? '' : 'open'}><summary><span>${stepMode ? `Section ${i + 1} of ${ch.sections.length}` : 'Sections'}</span><span class="small muted" data-donecount>${s.done}/${s.total} done</span></summary>
         <nav class="toc" aria-label="Sections in this chapter">
-          ${ch.sections.map((sec, k) => `<a href="#/learn/${ch.id}/${k}" class="${sectionDone(sec.id) ? 'done' : ''} ${stepMode && k === i ? 'current' : ''}" data-toc="${k}"><span class="check">${sectionDone(sec.id) ? '✓' : ''}</span><span>${esc(sec.title)}</span><span class="spacer" style="flex:1"></span><span class="small muted">p.${sec.page}</span></a>`).join('')}
+          ${ch.sections.map((sec, k) => `<a href="#/learn/${ch.id}/${k}" class="${sectionDone(sec.id) ? 'done' : ''} ${stepMode && k === i ? 'current' : ''}" data-toc="${k}"><span class="check">${sectionDone(sec.id) ? '✓' : ''}</span><span>${esc(sec.title)}</span><span style="flex:1"></span><span class="small muted">p.${sec.page}</span></a>`).join('')}
         </nav></details>
         <div id="sections">
-          ${stepMode ? renderSection(ch, ch.sections[i], i) : ch.sections.map((sec, k) => renderSection(ch, sec, k)).join('<hr style="border:0;border-top:1px solid var(--line);margin:28px 0">')}
+          ${stepMode ? renderSection(ch, ch.sections[i], i) : ch.sections.map((sec, k) => renderSection(ch, sec, k)).join('<hr class="rule">')}
         </div>
         <div class="stepper">
           ${stepMode && i > 0 ? `<a class="btn" href="#/learn/${ch.id}/${i - 1}">${icon.back} Previous</a>` : '<span></span>'}
@@ -233,6 +309,7 @@
         d.innerHTML = `<span class="box">${done ? icon.check : ''}</span><span>${done ? 'Done — I know this section' : 'Mark this section as done'}</span>`;
         const st = chapterStats(ch);
         const bar = $('.progress.green > span'); if (bar) bar.style.width = st.pct + '%';
+        const dc = $('[data-donecount]'); if (dc) dc.textContent = `${st.done}/${st.total} done`;
         const toc = $(`[data-toc="${ch.sections.findIndex((x) => x.id === id)}"]`);
         if (toc) { toc.classList.toggle('done', done); toc.querySelector('.check').textContent = done ? '✓' : ''; }
         if (done) toast(st.done === st.total ? 'Chapter complete!' : 'Nice. Keep going.');
@@ -243,24 +320,36 @@
     app.addEventListener('click', onClick);
     return () => app.removeEventListener('click', onClick);
   });
+  // Quick check at the end of a section
+  route(/^\/learn\/([a-z-]+)\/(\d+)\/check$/, (chId, secIdx) => {
+    const ch = data.byId[chId]; if (!ch) { app.innerHTML = '<div class="empty">Chapter not found.</div>'; return; }
+    const i = Math.min(parseInt(secIdx, 10) || 0, ch.sections.length - 1);
+    const sec = ch.sections[i];
+    const qs = shuffle(sectionQuestions(ch, sec)).slice(0, SECTION_CHECK);
+    if (!qs.length) { location.hash = `#/learn/${ch.id}/${i}`; return; }
+    const next = i < ch.sections.length - 1 ? { href: `#/learn/${ch.id}/${i + 1}`, label: 'Next section' } : { href: `#/quiz/${ch.id}`, label: 'Quiz this chapter' };
+    return runQuiz({ title: sec.title, questions: qs, backHref: `#/learn/${ch.id}/${i}`, backLabel: 'Back to the section', nextHref: next.href, nextLabel: next.label, onFinish: () => {} });
+  });
 
   // ---------- CARDS: picker ----------
   route(/^\/cards$/, () => {
     const now = Date.now();
     const dueAll = cardsDue(data.cards, now).length;
+    const newAll = cardsNew(data.cards).length;
+    const todayCount = Math.min(SESSION_CAP, dueAll + Math.min(NEW_LIMIT, newAll));
     app.innerHTML = `
       <section class="fade-in">
         <h1 class="h1">Flash cards</h1>
-        <p class="lead">Tap a card to flip it. Then rate yourself: <b>Again</b> brings it back this session, <b>Hard</b> tomorrow, <b>Good</b> in a few days. Cards you know well come back less often.</p>
-        <a class="card link" href="#/cards/due"><div class="row" style="justify-content:space-between"><div><div style="font-weight:700;font-size:1.1rem">Due today</div><div class="small muted">${dueAll ? `${dueAll} card${dueAll === 1 ? '' : 's'} ready across all chapters` : 'Nothing due. Pick a chapter below to learn new cards.'}</div></div><span class="pill ${dueAll ? 'red' : ''}">${dueAll}</span></div></a>
+        <p class="lead">Tap a card to flip it, then rate yourself. <b>Again</b> brings it back this session, <b>Hard</b> tomorrow, <b>Good</b> in a few days. Sessions are ${SESSION_CAP} cards; stop whenever you like.</p>
+        <a class="card link" href="#/cards/due"><div class="row" style="justify-content:space-between"><div><div style="font-weight:700;font-size:1.1rem">Today's session</div><div class="small muted">${dueAll ? `${dueAll} card${dueAll === 1 ? '' : 's'} to review` : 'Nothing to review yet'}${newAll ? ` · ${Math.min(NEW_LIMIT, newAll)} new` : ''}</div></div><span class="pill ${dueAll ? 'red' : ''}">${todayCount}</span></div></a>
         <h2 class="h2">By chapter</h2>
         <div class="grid">
           ${data.chapters.map((ch) => {
-            const cards = ch.cards || []; const learned = cardsLearned(cards); const due = cardsDue(cards, now).length;
-            return `<a class="card link chapter-item" href="#/cards/${ch.id}"><div class="num">${ch.order}</div><div class="grow"><div class="title">${esc(ch.title)}</div><div class="meta">${cards.length} cards · ${learned} learned${due ? ` · ${due} due` : ''}</div><div class="progress green" style="margin-top:8px"><span style="width:${pct(learned, cards.length)}%"></span></div></div></a>`;
+            const cards = ch.cards || []; const learned = cardsLearned(cards); const due = cardsDue(cards, now).length; const fresh = cardsNew(cards).length;
+            return `<a class="card link chapter-item" href="#/cards/${ch.id}"><div class="num">${ch.order}</div><div class="grow"><div class="title">${esc(ch.title)}</div><div class="meta">${cards.length} cards · ${learned} learned${due ? ` · ${due} to review` : ''}${fresh ? ` · ${fresh} new` : ''}</div><div class="progress green" style="margin-top:8px"><span style="width:${pct(learned, cards.length)}%"></span></div></div></a>`;
           }).join('')}
         </div>
-        <div class="row" style="margin-top:16px"><a class="btn" href="#/cards/all">${icon.shuffle} Shuffle every card</a></div>
+        <div class="row" style="margin-top:16px"><a class="btn" href="#/cards/all">${icon.shuffle} Random mix of every card</a></div>
       </section>`;
   });
 
@@ -268,64 +357,94 @@
   route(/^\/cards\/([a-z-]+)$/, (scope) => {
     const now = Date.now();
     let pool, title;
-    if (scope === 'due') { pool = cardsDue(data.cards, now); title = 'Due today'; }
-    else if (scope === 'all') { pool = data.cards; title = 'All cards'; }
+    const backHref = '#/cards';
+    if (scope === 'due') { pool = data.cards; title = "Today's session"; }
+    else if (scope === 'all') { pool = data.cards; title = 'Random mix'; }
     else { const ch = data.byId[scope]; if (!ch) { app.innerHTML = '<div class="empty">Chapter not found.</div>'; return; } pool = ch.cards || []; title = ch.title; }
-    if (scope !== 'due' && scope !== 'all') {
-      // chapter session: due cards first, then the rest (so new cards are learned in order)
-      const due = cardsDue(pool, now); const rest = pool.filter((c) => !due.includes(c));
-      pool = shuffle(due).concat(rest);
-    } else pool = shuffle(pool);
-    if (!pool.length) { app.innerHTML = `<section class="fade-in"><a class="btn ghost" href="#/cards">${icon.back} Cards</a><div class="empty">No cards are due right now. Come back tomorrow, or <a href="#/cards/all">shuffle every card</a>.</div></section>`; return; }
-    const queue = pool.slice(); let current = null; let flipped = false; let doneCount = 0; const total = queue.length; let again = 0;
+    // review cards first (shuffled), then new cards in booklet order, capped per session
+    let session;
+    if (scope === 'all') session = shuffle(pool).slice(0, SESSION_CAP);
+    else {
+      const due = shuffle(cardsDue(pool, now));
+      const fresh = cardsNew(pool).slice(0, NEW_LIMIT);
+      session = due.concat(fresh).slice(0, SESSION_CAP);
+      if (!session.length && scope !== 'due') session = shuffle(pool).slice(0, SESSION_CAP); // everything learned: free practice
+    }
+    const remaining = scope === 'due' ? Math.max(0, cardsDue(pool, now).length + Math.min(NEW_LIMIT, cardsNew(pool).length) - session.length) : 0;
+    if (!session.length) { app.innerHTML = `<section class="fade-in"><a class="btn ghost" href="${backHref}">${icon.back} Cards</a><div class="empty">Nothing to review right now. Come back tomorrow, pick a chapter, or <a href="#/cards/all">try a random mix</a>.</div></section>`; return; }
+    const total = session.length;
+    const queue = session.slice();
+    const finished = new Set();      // card ids rated hard/good this session
+    const repeating = new Set();     // card ids waiting to come back after "Again"
+    let current = null, flipped = false, lastRating = null;
     const chOf = (c) => data.byId[c.chapter];
     function draw() {
       current = queue.shift(); flipped = false;
       if (!current) { finish(); return; }
+      const st = cardState(current.id);
+      const nextGap = INTERVALS[Math.min(st.box + 1, INTERVALS.length - 1)];
       app.innerHTML = `
         <section class="fade-in">
-          <div class="row" style="justify-content:space-between"><a class="btn ghost" href="#/cards">${icon.back} ${esc(title)}</a><span class="small muted">${esc(chOf(current).title)}</span></div>
-          <div class="counter"><span>Card ${Math.min(doneCount + 1, total)} of ${total}${again ? ` · ${again} to repeat` : ''}</span><span class="small">level ${cardState(current.id).box + 1}/${INTERVALS.length}</span></div>
-          <div class="progress"><span style="width:${pct(doneCount, total)}%"></span></div>
+          <div class="row" style="justify-content:space-between"><a class="btn ghost" href="${backHref}">${icon.back} ${esc(title)}</a>${lastRating ? `<button class="btn ghost small" data-undo>${icon.undo} Undo</button>` : ''}</div>
+          <div class="counter"><span>Card ${Math.min(finished.size + 1, total)} of ${total}${repeating.size ? ` · ${repeating.size} coming back` : ''}</span><span class="small">${esc(chOf(current).title)}</span></div>
+          <div class="progress"><span style="width:${pct(finished.size, total)}%"></span></div>
           <div class="deck" style="margin-top:16px">
-            <button class="flashcard" id="fc" aria-label="Flash card. Press to flip.">
+            <button class="flashcard" id="fc" aria-label="${esc(current.front)} — press to reveal the answer" aria-pressed="false">
               <div class="face front"><div class="label">Question</div><div class="text">${esc(current.front)}</div><div class="foot"><span>Tap to reveal</span><span>p.${current.page}</span></div></div>
-              <div class="face back"><div class="label">Answer</div><div class="text">${esc(current.back)}</div><div class="foot"><span>${esc(chOf(current).title)}</span><span>p.${current.page}</span></div></div>
+              <div class="face back" aria-hidden="true"><div class="label">Answer</div><div class="text">${esc(current.back)}</div><div class="foot"><span>${isNew(current) ? 'New card' : 'Level ' + (st.box + 1) + ' of ' + INTERVALS.length}</span><span>p.${current.page}</span></div></div>
             </button>
           </div>
           <div class="rate" id="rate" hidden>
             <button class="btn warn" data-rate="again">Again<small>see it again soon</small></button>
             <button class="btn" data-rate="hard">Hard<small>tomorrow</small></button>
-            <button class="btn good" data-rate="good">Good<small>in ${INTERVALS[Math.min(cardState(current.id).box + 1, INTERVALS.length - 1)]} days</small></button>
+            <button class="btn good" data-rate="good">Good<small>in ${nextGap} day${nextGap === 1 ? '' : 's'}</small></button>
           </div>
           <div class="row" style="justify-content:center;margin-top:14px">${pageLink(current.page, 'See this in the booklet')}</div>
           <p class="small muted" style="text-align:center;margin-top:16px"><kbd>Space</kbd> flip · <kbd>1</kbd> again · <kbd>2</kbd> hard · <kbd>3</kbd> good</p>
         </section>`;
     }
-    function flip() { const fc = $('#fc'); if (!fc) return; flipped = !flipped; fc.classList.toggle('flipped', flipped); $('#rate').hidden = !flipped; }
+    function flip() {
+      const fc = $('#fc'); if (!fc) return; flipped = !flipped;
+      fc.classList.toggle('flipped', flipped); fc.setAttribute('aria-pressed', String(flipped));
+      $('.face.back', fc).setAttribute('aria-hidden', String(!flipped)); $('#rate').hidden = !flipped;
+      if (flipped) $('[data-rate="good"]').focus();
+    }
     function rate(kind) {
       if (!current || !flipped) return;
-      const st = cardState(current.id); st.seen = (st.seen || 0) + 1;
-      if (kind === 'again') { st.box = 0; st.due = Date.now(); queue.push(current); again++; }
-      else if (kind === 'hard') { st.box = Math.max(0, st.box); st.due = Date.now() + DAY; doneCount++; }
-      else { st.box = Math.min(INTERVALS.length - 1, st.box + 1); st.due = Date.now() + INTERVALS[st.box] * DAY; doneCount++; }
+      const prev = Object.assign({}, cardState(current.id));
+      const st = Object.assign({}, prev); st.seen = (st.seen || 0) + 1;
+      lastRating = { card: current, prev, kind, wasRepeating: repeating.has(current.id) };
+      if (kind === 'again') { st.box = 0; st.due = Date.now(); repeating.add(current.id); queue.splice(Math.min(3, queue.length), 0, current); }
+      else {
+        if (kind === 'hard') { st.box = Math.max(0, st.box - 1); st.due = Date.now() + DAY; }
+        else { st.box = Math.min(INTERVALS.length - 1, st.box + 1); st.due = Date.now() + INTERVALS[st.box] * DAY; }
+        repeating.delete(current.id); finished.add(current.id);
+      }
       progress.cards[current.id] = st; saveProgress();
-      if (kind === 'again' && again > 0) { /* repeated card counts when finally rated */ }
-      if (kind !== 'again' && again > 0 && queue.length && queue[0] === current) { /* noop */ }
-      if (kind !== 'again' && again > 0) again = Math.max(0, again - (queue.includes(current) ? 0 : 0));
       draw();
     }
+    function undo() {
+      if (!lastRating) return;
+      const { card, prev, kind, wasRepeating } = lastRating;
+      if (prev.seen) progress.cards[card.id] = prev; else delete progress.cards[card.id];
+      saveProgress();
+      finished.delete(card.id); if (wasRepeating) repeating.add(card.id); else repeating.delete(card.id);
+      if (kind === 'again') { const k = queue.indexOf(card); if (k >= 0) queue.splice(k, 1); }
+      if (current && current !== card) queue.unshift(current);
+      queue.unshift(card); lastRating = null; toast('Undone'); draw();
+    }
     function finish() {
+      const learnedNow = session.filter((c) => cardState(c.id).box >= 3).length;
       app.innerHTML = `
         <section class="fade-in">
-          <a class="btn ghost" href="#/cards">${icon.back} Cards</a>
-          <div class="card" style="text-align:center;margin-top:12px"><div class="score">✓</div><div style="font-weight:700;font-size:1.2rem">Session complete</div><p class="muted">${total} cards reviewed. The hard ones will come back sooner.</p>
-          <div class="row" style="justify-content:center"><a class="btn primary" href="#/cards/${scope}">Go again</a><a class="btn" href="#/quiz${scope !== 'due' && scope !== 'all' ? '/' + scope : ''}">Quiz</a></div></div>
+          <a class="btn ghost" href="${backHref}">${icon.back} Cards</a>
+          <div class="card" style="text-align:center;margin-top:12px"><div class="score">✓</div><div style="font-weight:700;font-size:1.2rem">Session complete</div><p class="muted">${total} cards reviewed · ${learnedNow} at level 4 or higher. The hard ones will come back sooner.</p>
+          <div class="row" style="justify-content:center">${remaining ? `<button class="btn primary" data-reload>Another ${Math.min(SESSION_CAP, remaining)} (${remaining} left today)</button>` : `<button class="btn primary" data-reload>Go again</button>`}<a class="btn" href="#/quiz${scope !== 'due' && scope !== 'all' ? '/' + scope : ''}">Quiz</a><a class="btn ghost" href="#/">Done for now</a></div></div>
         </section>`;
     }
-    const onClick = (e) => { if (e.target.closest('#fc')) flip(); const r = e.target.closest('[data-rate]'); if (r) rate(r.getAttribute('data-rate')); };
+    const onClick = (e) => { if (e.target.closest('#fc')) flip(); const r = e.target.closest('[data-rate]'); if (r) rate(r.getAttribute('data-rate')); if (e.target.closest('[data-undo]')) undo(); };
     const onKey = (e) => {
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if ($('#overlay') || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
       if (e.key === ' ' || e.key === 'Enter') { if (!e.target.closest('a,button') || e.target.id === 'fc') { e.preventDefault(); flip(); } }
       if (e.key === '1') rate('again'); if (e.key === '2') rate('hard'); if (e.key === '3') rate('good');
     };
@@ -341,28 +460,31 @@
     app.innerHTML = `
       <section class="fade-in">
         <h1 class="h1">Quiz</h1>
-        <p class="lead">Chapter quizzes check that the facts stuck. The mock test feels like the real thing: ${t.questions} questions, ${t.minutes} minutes, ${t.pass} to pass.</p>
-        <a class="card link" href="#/quiz/mock"><div class="row" style="justify-content:space-between"><div><div style="font-weight:700;font-size:1.1rem">Mock citizenship test</div><div class="small muted">${progress.mock.length ? `${progress.mock.length} attempt${progress.mock.length === 1 ? '' : 's'} · last ${lastMock.score}/${t.questions} (${lastMock.score >= t.pass ? 'pass' : 'not yet'})` : 'Random questions from every chapter, timed'}</div></div><span class="btn primary">Start</span></div></a>
+        <p class="lead">Chapter quizzes are ${QUIZ_BATCH} questions at a time with the answer explained. The mock test feels like the real thing: ${t.questions} questions, ${t.minutes} minutes, ${t.pass} to pass, answers at the end.</p>
+        <a class="card link" href="#/quiz/mock"><div class="row" style="justify-content:space-between"><div><div style="font-weight:700;font-size:1.1rem">Mock citizenship test</div><div class="small muted">${progress.mock.length ? `${progress.mock.length} attempt${progress.mock.length === 1 ? '' : 's'} · last ${lastMock.score}/${lastMock.total} (${lastMock.score >= t.pass ? 'pass' : 'not yet'})` : 'Random questions from every chapter, timed'}</div></div><span class="btn primary">Start</span></div></a>
         ${data.official ? `<a class="card link" href="#/quiz/official" style="margin-top:12px"><div style="font-weight:700;font-size:1.1rem">The booklet's own study questions</div><div class="small muted">${data.official.mcq.length} sample questions and ${data.official.short.length} questions to answer in your own words (pages 52–53)</div></a>` : ''}
         <h2 class="h2">By chapter</h2>
         <div class="grid">
-          ${data.chapters.map((ch) => { const q = progress.quiz[ch.id]; const n = (ch.quiz || []).length; return `<a class="card link chapter-item" href="#/quiz/${ch.id}"><div class="num">${ch.order}</div><div class="grow"><div class="title">${esc(ch.title)}</div><div class="meta">${n} questions${q ? ` · best ${q.best}/${q.total} · ${q.attempts} attempt${q.attempts === 1 ? '' : 's'}` : ''}</div></div>${q ? `<span class="pill ${pct(q.best, q.total) >= 75 ? 'green' : 'amber'}">${pct(q.best, q.total)}%</span>` : ''}</a>`; }).join('')}
+          ${data.chapters.map((ch) => { const q = progress.quiz[ch.id]; const n = (ch.quiz || []).length; return `<a class="card link chapter-item" href="#/quiz/${ch.id}"><div class="num">${ch.order}</div><div class="grow"><div class="title">${esc(ch.title)}</div><div class="meta">${n} questions${q ? ` · best ${q.best}/${q.total} · ${q.attempts} run${q.attempts === 1 ? '' : 's'}` : ''}</div></div>${q ? `<span class="pill ${pct(q.best, q.total) >= 75 ? 'green' : 'amber'}">${pct(q.best, q.total)}%</span>` : ''}</a>`; }).join('')}
         </div>
       </section>`;
   });
 
   // ---------- QUIZ: run ----------
+  // opts: {title, questions, backHref, backLabel?, nextHref?, nextLabel?, retryHref?, timed(minutes)?, passMark?, onFinish(score,total,answers), isRetry?}
+  // Returns the teardown function; callers store it in `cleanup`.
   function runQuiz(opts) {
-    // opts: {title, questions, backHref, timed(minutes), passMark, onFinish(score,total,answers), kind}
-    const qs = opts.questions; let i = 0; let answered = null; const answers = []; let timeLeft = opts.timed ? opts.timed * 60 : null; let timer = null;
+    const qs = opts.questions; let i = 0; let answered = null; const answers = []; let timer = null;
+    const deadline = opts.timed ? Date.now() + opts.timed * 60000 : null;
     const letters = ['A', 'B', 'C', 'D', 'E'];
-    function fmt(s) { const m = Math.floor(s / 60); const r = s % 60; return `${m}:${r < 10 ? '0' : ''}${r}`; }
+    const fmt = (ms) => { const s = Math.max(0, Math.ceil(ms / 1000)); const m = Math.floor(s / 60); const r = s % 60; return `${m}:${r < 10 ? '0' : ''}${r}`; };
+    const backLabel = opts.backLabel || opts.title;
     function draw() {
       const q = qs[i]; const ch = data.byId[q.chapter];
       app.innerHTML = `
         <section class="fade-in">
-          <div class="row" style="justify-content:space-between"><a class="btn ghost" href="${opts.backHref}">${icon.back} ${esc(opts.title)}</a>${timeLeft != null ? `<span class="timer" id="timer">${fmt(timeLeft)}</span>` : `<span class="small muted">${ch ? esc(ch.title) : ''}</span>`}</div>
-          <div class="counter"><span>Question ${i + 1} of ${qs.length}</span><span>${answers.filter((a) => a.correct).length} correct so far</span></div>
+          <div class="row" style="justify-content:space-between"><a class="btn ghost" href="${esc(opts.backHref)}">${icon.back} ${esc(backLabel)}</a>${deadline ? `<span class="timer" id="timer">${fmt(deadline - Date.now())}</span>` : `<span class="small muted">${ch ? esc(ch.title) : ''}</span>`}</div>
+          <div class="counter"><span>Question ${i + 1} of ${qs.length}</span><span>${deadline ? '' : answers.filter((a) => a.correct).length + ' correct so far'}</span></div>
           <div class="progress"><span style="width:${pct(i, qs.length)}%"></span></div>
           <h2 class="h2" style="margin-top:18px">${esc(q.q)}</h2>
           <div class="choices">${q.choices.map((c, k) => `<button class="choice" data-choice="${k}"><span class="key">${letters[k]}</span><span>${esc(c)}</span></button>`).join('')}</div>
@@ -374,37 +496,48 @@
     function choose(k) {
       if (answered != null) return; const q = qs[i]; answered = k; const correct = k === q.answer;
       answers.push({ id: q.id, q: q.q, chosen: q.choices[k], right: q.choices[q.answer], correct, why: q.why, page: q.page, chapter: q.chapter });
-      $$('.choice').forEach((b, idx) => { b.disabled = true; if (idx === q.answer) b.dataset.state = 'correct'; else if (idx === k) b.dataset.state = 'wrong'; });
-      if (!opts.timed) $('#explain').innerHTML = `<div class="explain ${correct ? 'ok' : 'bad'}"><b>${correct ? 'Correct.' : 'Not quite — the answer is ' + esc(letters[q.answer]) + '.'}</b>${esc(q.why || '')} <span style="white-space:nowrap">${pageLink(q.page)}</span></div>`;
+      $$('.choice').forEach((b, idx) => { b.disabled = true; if (deadline) { if (idx === k) b.dataset.state = 'picked'; } else if (idx === q.answer) b.dataset.state = 'correct'; else if (idx === k) b.dataset.state = 'wrong'; });
+      if (!deadline) $('#explain').innerHTML = `<div class="explain ${correct ? 'ok' : 'bad'}" role="status"><b>${correct ? 'Correct.' : 'Not quite — the answer is ' + esc(letters[q.answer]) + '.'}</b>${esc(q.why || '')} <span style="white-space:nowrap">${pageLink(q.page)}</span></div>`;
       $('#next').hidden = false; $('#next').focus();
     }
-    function next() { if (answered == null) return; answered = null; i++; if (i >= qs.length) finish(); else draw(); }
-    function finish() {
+    function next() { if (answered == null) return; answered = null; i++; if (i >= qs.length) finish(false); else draw(); }
+    function finish(timedOut) {
       if (timer) clearInterval(timer); timer = null;
+      if (timedOut) { for (let k = (answered == null ? i : i + 1); k < qs.length; k++) { const q = qs[k]; answers.push({ id: q.id, q: q.q, chosen: '(no answer)', right: q.choices[q.answer], correct: false, why: q.why, page: q.page, chapter: q.chapter }); } }
       const score = answers.filter((a) => a.correct).length; const total = qs.length;
-      opts.onFinish(score, total, answers);
+      if (!opts.isRetry) opts.onFinish(score, total, answers);
       const passed = opts.passMark != null ? score >= opts.passMark : pct(score, total) >= 75;
       const wrong = answers.filter((a) => !a.correct);
+      const timeLeft = deadline ? deadline - Date.now() : null;
       app.innerHTML = `
         <section class="fade-in">
-          <a class="btn ghost" href="${opts.backHref}">${icon.back} ${esc(opts.title)}</a>
+          <a class="btn ghost" href="${esc(opts.backHref)}">${icon.back} ${esc(backLabel)}</a>
           <div class="card" style="text-align:center;margin-top:12px">
             <div class="score" style="color:${passed ? 'var(--green)' : 'var(--amber)'}">${score}/${total}</div>
-            <div style="font-weight:700;font-size:1.2rem">${passed ? (opts.passMark != null ? 'That is a pass.' : 'Strong. You know this chapter.') : (opts.passMark != null ? `Not yet — you need ${opts.passMark}.` : 'Keep going — review the ones you missed.')}</div>
-            ${timeLeft != null ? `<div class="small muted">Finished with ${fmt(Math.max(0, timeLeft))} left</div>` : ''}
-            <div class="row" style="justify-content:center;margin-top:12px">${wrong.length ? `<button class="btn primary" id="retry-wrong">Retry the ${wrong.length} missed</button>` : ''}<a class="btn" href="${esc(opts.retryHref || opts.backHref)}">Try again</a></div>
+            <div style="font-weight:700;font-size:1.2rem">${timedOut ? 'Time is up.' : passed ? (opts.passMark != null ? 'That is a pass.' : 'Strong. You know this.') : (opts.passMark != null ? `Not yet — you need ${opts.passMark}.` : 'Keep going — review the ones you missed.')}</div>
+            ${timeLeft != null && !timedOut ? `<div class="small muted">Finished with ${fmt(timeLeft)} left</div>` : ''}
+            <div class="row" style="justify-content:center;margin-top:12px">
+              ${wrong.length ? `<button class="btn primary" id="retry-wrong">Retry the ${wrong.length} missed</button>` : ''}
+              ${opts.nextHref ? `<a class="btn ${wrong.length ? '' : 'primary'}" href="${esc(opts.nextHref)}">${esc(opts.nextLabel)} ${icon.next}</a>` : ''}
+              ${opts.retryHref ? `<a class="btn" href="${esc(opts.retryHref)}">New set</a>` : `<button class="btn" data-reload>${opts.isRetry ? 'Back to the full quiz' : 'Try again'}</button>`}
+            </div>
           </div>
           ${wrong.length ? `<h2 class="h2">Review</h2><div class="card flat">${wrong.map((a) => `<div class="review-item"><div class="q">${esc(a.q)}</div><div class="small" style="color:var(--red)">You chose: ${esc(a.chosen)}</div><div class="small" style="color:var(--green)">Answer: ${esc(a.right)}</div><div class="small muted" style="margin-top:4px">${esc(a.why || '')} ${pageLink(a.page)}</div></div>`).join('')}</div>` : '<p class="muted" style="text-align:center">Nothing missed. Well done.</p>'}
         </section>`;
       const rw = $('#retry-wrong');
-      if (rw) rw.addEventListener('click', () => { const ids = new Set(wrong.map((a) => a.id)); runQuiz(Object.assign({}, opts, { questions: shuffle(qs.filter((q) => ids.has(q.id))), timed: null, passMark: null, title: opts.title })); });
+      if (rw) rw.addEventListener('click', () => {
+        const ids = new Set(wrong.map((a) => a.id));
+        teardown();
+        cleanup = runQuiz(Object.assign({}, opts, { questions: shuffle(qs.filter((q) => ids.has(q.id))), timed: null, passMark: null, isRetry: true, retryHref: null }));
+      });
     }
     const onClick = (e) => { const c = e.target.closest('[data-choice]'); if (c) choose(parseInt(c.getAttribute('data-choice'), 10)); if (e.target.closest('#next')) next(); };
-    const onKey = (e) => { if (e.target.tagName === 'INPUT') return; const n = parseInt(e.key, 10); if (n >= 1 && n <= (qs[i] ? qs[i].choices.length : 0) && answered == null) choose(n - 1); if (e.key === 'Enter' && answered != null) { e.preventDefault(); next(); } };
+    const onKey = (e) => { if ($('#overlay') || e.target.tagName === 'INPUT') return; const n = parseInt(e.key, 10); if (n >= 1 && n <= (qs[i] ? qs[i].choices.length : 0) && answered == null) choose(n - 1); if (e.key === 'Enter' && answered != null) { e.preventDefault(); next(); } };
     app.addEventListener('click', onClick); document.addEventListener('keydown', onKey);
-    if (timeLeft != null) timer = setInterval(() => { timeLeft--; const t = $('#timer'); if (t) { t.textContent = fmt(timeLeft); t.classList.toggle('low', timeLeft <= 300); } if (timeLeft <= 0) { if (answered == null && qs[i]) answers.push({ id: qs[i].id, q: qs[i].q, chosen: '(no answer)', right: qs[i].choices[qs[i].answer], correct: false, why: qs[i].why, page: qs[i].page, chapter: qs[i].chapter }); finish(); } }, 1000);
+    if (deadline) timer = setInterval(() => { const left = deadline - Date.now(); const t = $('#timer'); if (t) { t.textContent = fmt(left); t.classList.toggle('low', left <= 300000); } if (left <= 0) finish(true); }, 500);
+    function teardown() { app.removeEventListener('click', onClick); document.removeEventListener('keydown', onKey); if (timer) clearInterval(timer); timer = null; }
     draw();
-    cleanup = () => { app.removeEventListener('click', onClick); document.removeEventListener('keydown', onKey); if (timer) clearInterval(timer); };
+    return teardown;
   }
   route(/^\/quiz\/mock$/, () => {
     const t = data.index.test;
@@ -412,16 +545,15 @@
       <section class="fade-in">
         <a class="btn ghost" href="#/quiz">${icon.back} Quiz</a>
         <h1 class="h1">Mock citizenship test</h1>
-        <p class="lead">${t.questions} random questions from every chapter. ${t.minutes} minutes on the clock. You need ${t.pass} right to pass. No hints until the end, like the real test.</p>
+        <p class="lead">${t.questions} random questions from every chapter. ${t.minutes} minutes on the clock. You need ${t.pass} right to pass. Answers are shown at the end, like the real test.</p>
         ${progress.mock.length ? `<div class="card flat" style="margin-bottom:14px"><b>Your attempts</b><div class="row" style="margin-top:6px">${progress.mock.slice(-8).map((m) => `<span class="pill ${m.score >= t.pass ? 'green' : 'amber'}">${m.score}/${m.total}</span>`).join('')}</div></div>` : ''}
         <button class="btn primary block" id="start">Start the ${t.minutes}-minute test</button>
       </section>`;
     $('#start').addEventListener('click', () => {
-      // stratified sample: at least one from each chapter, rest random
       const perChapter = data.chapters.map((ch) => shuffle(ch.quiz || [])[0]).filter(Boolean);
       const rest = shuffle(data.quiz.filter((q) => !perChapter.includes(q))).slice(0, Math.max(0, t.questions - perChapter.length));
       const qs = shuffle(perChapter.concat(rest)).slice(0, t.questions);
-      runQuiz({ title: 'Mock test', questions: qs, backHref: '#/quiz', retryHref: '#/quiz/mock', timed: t.minutes, passMark: t.pass, onFinish: (score, total) => { progress.mock.push({ score, total, at: Date.now() }); saveProgress(); } });
+      cleanup = runQuiz({ title: 'Mock test', questions: qs, backHref: '#/quiz', backLabel: 'Quiz', retryHref: '#/quiz/mock', timed: t.minutes, passMark: t.pass, onFinish: (score, total) => { progress.mock.push({ score, total, at: Date.now() }); saveProgress(); } });
     });
   });
   route(/^\/quiz\/official$/, () => {
@@ -434,29 +566,27 @@
         <button class="btn primary" id="start-mcq">Try the ${o.mcq.length} sample questions</button>
         <h2 class="h2">Answer these in your own words</h2>
         <p class="muted small">Say the answer out loud or write it down, then open it to compare with the booklet.</p>
-        ${o.short.map((s) => `<details class="official"><summary>${esc(s.q)}</summary><div class="body">${esc(s.answer)}<div style="margin-top:8px">${pageLink(s.page)} ${s.chapter && data.byId[s.chapter] ? `<a class="pagelink" href="#/learn/${s.chapter}">Read: ${esc(data.byId[s.chapter].title)}</a>` : ''}</div></div></details>`).join('')}
+        ${o.short.map((s) => `<details class="official"><summary>${esc(s.q)}</summary><div class="body">${esc(s.answer)}<div style="margin-top:8px">${pageLink(s.page)} ${s.chapter && data.byId[s.chapter] ? `<a class="pagelink" href="#/learn/${esc(s.chapter)}">Read: ${esc(data.byId[s.chapter].title)}</a>` : ''}</div></div></details>`).join('')}
       </section>`;
-    $('#start-mcq').addEventListener('click', () => runQuiz({ title: 'Study questions', questions: o.mcq.map((q) => Object.assign({}, q, { chapter: q.chapter || 'rights' })), backHref: '#/quiz/official', onFinish: () => {} }));
+    $('#start-mcq').addEventListener('click', () => { cleanup = runQuiz({ title: 'Study questions', questions: o.mcq.map((q) => Object.assign({}, q, { chapter: q.chapter || 'rights' })), backHref: '#/quiz/official', backLabel: 'Study questions', onFinish: () => {} }); });
   });
-  route(/^\/quiz\/([a-z-]+)$/, (chId) => {
+  route(/^\/quiz\/([a-z-]+)(?:\/(all))?$/, (chId, all) => {
     const ch = data.byId[chId]; if (!ch) { app.innerHTML = '<div class="empty">Chapter not found.</div>'; return; }
-    const qs = shuffle(ch.quiz || []);
-    if (!qs.length) { app.innerHTML = '<div class="empty">No questions for this chapter yet.</div>'; return; }
-    runQuiz({ title: ch.title, questions: qs, backHref: '#/quiz', retryHref: '#/quiz/' + ch.id, onFinish: (score, total) => { const p = progress.quiz[ch.id] || { best: 0, total, attempts: 0 }; p.attempts++; p.total = total; p.best = Math.max(p.best, score); p.last = score; progress.quiz[ch.id] = p; saveProgress(); } });
-    return cleanup;
+    const pool = ch.quiz || [];
+    if (!pool.length) { app.innerHTML = '<div class="empty">No questions for this chapter yet.</div>'; return; }
+    const qs = all ? shuffle(pool) : shuffle(pool).slice(0, QUIZ_BATCH);
+    return runQuiz({ title: ch.title, questions: qs, backHref: '#/quiz', backLabel: 'Quiz', nextHref: all || pool.length <= QUIZ_BATCH ? null : `#/quiz/${ch.id}/all`, nextLabel: `All ${pool.length} questions`, onFinish: (score, total) => { const p = progress.quiz[ch.id] || { best: 0, total: 0, attempts: 0, last: 0 }; p.attempts++; if (!p.total || pct(score, total) >= pct(p.best, p.total)) { p.best = score; p.total = total; } p.last = score; progress.quiz[ch.id] = p; saveProgress(); } });
   });
 
   // ---------- BOOK ----------
-  const BOOK_PAGES = 68;
   route(/^\/book(?:\/(\d+))?$/, (p) => {
-    let page = Math.min(BOOK_PAGES, Math.max(1, parseInt(p || '1', 10) || 1));
-    const chapterFor = (n) => data.chapters.slice().reverse().find((c) => n >= c.pages[0]) || null;
+    let page = pageNum(p || 1);
     function draw() {
       const ch = chapterFor(page);
       app.innerHTML = `
         <section class="fade-in book">
           <div class="row" style="justify-content:space-between"><h1 class="h1" style="margin:0">Booklet</h1><a class="small" href="discover.pdf#page=${page}" target="_blank" rel="noopener">Open the PDF</a></div>
-          <p class="muted small" style="margin:0">Official <em>Discover Canada</em> (2021 print). ${ch ? `This page is in <a href="#/learn/${ch.id}">${esc(ch.title)}</a>.` : ''}</p>
+          <p class="muted small" style="margin:0">Official <em>Discover Canada</em> (2021 print). ${ch ? `This page is in <a href="#/learn/${ch.id}">${esc(ch.title)}</a>.` : page >= 52 && page <= 53 ? 'Study questions.' : page >= 54 ? 'Reference pages (not on the test).' : ''}</p>
           <div class="page"><img id="pg" src="book/p${String(page).padStart(2, '0')}.jpg" alt="Booklet page ${page}" width="1100" height="1430"></div>
           <div class="controls">
             <button class="btn" id="prev" ${page <= 1 ? 'disabled' : ''}>${icon.back} Prev</button>
@@ -466,18 +596,16 @@
             <button class="btn" id="next" ${page >= BOOK_PAGES ? 'disabled' : ''}>Next ${icon.next}</button>
           </div>
         </section>`;
-      // preload neighbours
       [page - 1, page + 1].forEach((n) => { if (n >= 1 && n <= BOOK_PAGES) { const im = new Image(); im.src = `book/p${String(n).padStart(2, '0')}.jpg`; } });
       history.replaceState(null, '', '#/book/' + page);
     }
-    function go(n) { page = Math.min(BOOK_PAGES, Math.max(1, n)); draw(); window.scrollTo({ top: 0 }); }
+    function go(n) { page = pageNum(n); draw(); window.scrollTo({ top: 0 }); }
     const onClick = (e) => { if (e.target.closest('#prev')) go(page - 1); if (e.target.closest('#next')) go(page + 1); };
     const onChange = (e) => { if (e.target.id === 'num') go(parseInt(e.target.value, 10) || page); if (e.target.id === 'jump' && e.target.value) go(parseInt(e.target.value, 10)); };
     const onKey = (e) => { if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return; if (e.key === 'ArrowLeft') go(page - 1); if (e.key === 'ArrowRight') go(page + 1); };
-    let tx = null; const onTS = (e) => { tx = e.touches[0].clientX; }; const onTE = (e) => { if (tx == null) return; const dx = e.changedTouches[0].clientX - tx; tx = null; if (Math.abs(dx) > 70) go(page + (dx < 0 ? 1 : -1)); };
-    app.addEventListener('click', onClick); app.addEventListener('change', onChange); document.addEventListener('keydown', onKey); app.addEventListener('touchstart', onTS, { passive: true }); app.addEventListener('touchend', onTE);
+    app.addEventListener('click', onClick); app.addEventListener('change', onChange); document.addEventListener('keydown', onKey);
     draw();
-    return () => { app.removeEventListener('click', onClick); app.removeEventListener('change', onChange); document.removeEventListener('keydown', onKey); app.removeEventListener('touchstart', onTS); app.removeEventListener('touchend', onTE); };
+    return () => { app.removeEventListener('click', onClick); app.removeEventListener('change', onChange); document.removeEventListener('keydown', onKey); };
   });
 
   // ---------- RESOURCES ----------
@@ -509,7 +637,7 @@
         <h1 class="h1">Settings</h1>
         <div class="card flat">
           <div class="setting"><div><b>Theme</b><div class="small muted">Auto follows your device</div></div>${seg('theme', [['auto', 'Auto'], ['light', 'Light'], ['dark', 'Dark']])}</div>
-          <div class="setting"><div><b>Text size</b></div>${seg('size', [['small', 'A'], ['normal', 'A'], ['large', 'A'], ['xl', 'A']])}</div>
+          <div class="setting"><div><b>Text size</b></div>${seg('size', [['small', 'Small'], ['normal', 'Normal'], ['large', 'Large'], ['xl', 'XL']])}</div>
           <div class="setting"><div><b>Font</b><div class="small muted">Hyperlegible is easiest for most readers</div></div>${seg('font', [['default', 'Hyperlegible'], ['serif', 'Serif'], ['system', 'System']])}</div>
           <div class="setting"><div><b>Animations</b></div>${seg('motion', [['on', 'On'], ['off', 'Off']])}</div>
           <div class="setting"><div><b>Reading mode</b><div class="small muted">One section at a time keeps the page short</div></div>${seg('readMode', [['step', 'One section'], ['all', 'Whole chapter']])}</div>
@@ -518,24 +646,26 @@
         <div class="card flat">
           <p class="small muted" style="margin-top:0">Progress is saved on this device only. To move it to another phone or laptop, copy the code here and paste it there.</p>
           <div class="row"><button class="btn" id="export">Copy progress code</button><button class="btn" id="import">Paste progress code</button><button class="btn ghost" id="reset" style="color:var(--red)">Reset everything</button></div>
-          <textarea id="code" class="sr-only" aria-hidden="true"></textarea>
+          <textarea id="code" class="sr-only" aria-label="Progress code"></textarea>
         </div>
         <p class="small muted" style="margin-top:20px">Content: <em>Discover Canada: The Rights and Responsibilities of Citizenship</em>, © His Majesty the King in Right of Canada, reproduced for personal study. Built with care for one learner, shared for anyone preparing for the test. <a href="#/resources">Resources</a></p>
       </section>`;
+    const encode = (obj) => btoa(Array.from(new TextEncoder().encode(JSON.stringify(obj)), (b) => String.fromCharCode(b)).join(''));
+    const decode = (code) => JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(code.trim()), (c) => c.charCodeAt(0))));
     const onClick = async (e) => {
       const b = e.target.closest('[data-set]');
       if (b) { settings[b.getAttribute('data-set')] = b.getAttribute('data-val'); saveSettings(); render(); return; }
       if (e.target.closest('#export')) {
-        const code = btoa(unescape(encodeURIComponent(JSON.stringify(progress))));
+        const code = encode(progress);
         try { await navigator.clipboard.writeText(code); toast('Progress code copied'); } catch (err) { const ta = $('#code'); ta.classList.remove('sr-only'); ta.value = code; ta.select(); toast('Copy the code from the box'); }
       }
       if (e.target.closest('#import')) {
         let code = '';
         try { code = await navigator.clipboard.readText(); } catch (err) { code = window.prompt('Paste your progress code') || ''; }
-        try { const obj = JSON.parse(decodeURIComponent(escape(atob(code.trim())))); if (obj && obj.sections) { Object.assign(progress, obj); saveProgress(); toast('Progress restored'); render(); } else toast('That is not a progress code'); } catch (err) { toast('That is not a progress code'); }
+        try { const obj = sanitizeProgress(decode(code)); if (Object.keys(obj.sections).length || Object.keys(obj.cards).length || Object.keys(obj.quiz).length || obj.mock.length) { Object.assign(progress, obj); saveProgress(); toast('Progress restored'); render(); } else toast('That is not a progress code'); } catch (err) { toast('That is not a progress code'); }
       }
       if (e.target.closest('#reset')) {
-        if (window.confirm('Reset all progress on this device? This cannot be undone.')) { progress.sections = {}; progress.cards = {}; progress.quiz = {}; progress.mock = []; progress.last = null; saveProgress(); toast('Progress reset'); render(); }
+        if (window.confirm('Reset all progress on this device? This cannot be undone.')) { Object.assign(progress, sanitizeProgress({})); saveProgress(); toast('Progress reset'); render(); }
       }
     };
     app.addEventListener('click', onClick);

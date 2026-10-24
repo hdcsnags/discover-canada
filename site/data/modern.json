@@ -782,12 +782,12 @@
       "section": "modern-canada-and-quebec",
       "q": "What did Parliament establish in 1963?",
       "choices": [
-        "La Francophonie",
-        "The Official Languages Act",
         "The Royal Commission on Bilingualism and Biculturalism",
-        "The Canada Pension Plan"
+        "La Francophonie, an association of French-speaking countries",
+        "The Official Languages Act, guaranteeing French and English services",
+        "The Canada and Quebec Pension Plans, to support social assistance"
       ],
-      "answer": 2,
+      "answer": 0,
       "why": "“In 1963 Parliament established the Royal Commission on Bilingualism and Biculturalism,” which led to the Official Languages Act (1969).",
       "page": 24
     },
@@ -992,12 +992,12 @@
       "section": "modern-arts-and-culture-in-canada",
       "q": "Who was known as “the greatest living Canadian”?",
       "choices": [
+        "Sir Frederick Banting of Toronto, who discovered insulin with Charles Best",
         "Dr. Wilder Penfield, a pioneering brain surgeon at McGill University",
-        "Marshall McLuhan, a pioneer thinker",
-        "Sir Ernest MacMillan, a musician",
-        "Tom Thomson, a painter"
+        "Dr. John A. Hopps, the inventor of the first cardiac pacemaker",
+        "Sir Sandford Fleming, inventor of the worldwide system of standard time zones"
       ],
-      "answer": 0,
+      "answer": 1,
       "why": "Dr. Wilder Penfield “was a pioneering brain surgeon at McGill University in Montreal, and was known as ‘the greatest living Canadian.’”",
       "page": 27
     },

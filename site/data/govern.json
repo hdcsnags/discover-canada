@@ -2,7 +2,10 @@
   "id": "govern",
   "title": "How Canadians Govern Themselves",
   "order": 7,
-  "pages": [28, 29],
+  "pages": [
+    28,
+    29
+  ],
   "summary": "This chapter explains the three key facts about Canada's system of government—federal state, parliamentary democracy and constitutional monarchy—and shows how Parliament, the Sovereign and the courts fit together and how a bill becomes law.",
   "sections": [
     {
@@ -10,8 +13,14 @@
       "title": "How Canadians Govern Themselves",
       "page": 28,
       "blocks": [
-        {"type": "p", "text": "There are three key facts about Canada's system of government: our country is a federal state, a parliamentary democracy and a constitutional monarchy."},
-        {"type": "caption", "text": "Queen Elizabeth II opening the 23rd Parliament (1957). Parliament Hill, Ottawa."}
+        {
+          "type": "p",
+          "text": "There are three key facts about Canada's system of government: our country is a federal state, a parliamentary democracy and a constitutional monarchy."
+        },
+        {
+          "type": "caption",
+          "text": "Queen Elizabeth II opening the 23rd Parliament (1957). Parliament Hill, Ottawa."
+        }
       ],
       "focus": [
         "Three key facts about Canada's system of government: a federal state, a parliamentary democracy and a constitutional monarchy."
@@ -22,9 +31,18 @@
       "title": "Federal state",
       "page": 28,
       "blocks": [
-        {"type": "p", "text": "There are federal, provincial, territorial and municipal governments in Canada. The responsibilities of the federal and provincial governments were defined in 1867 in the British North America Act, now known as the Constitution Act, 1867."},
-        {"type": "p", "text": "In our federal state, the federal government takes responsibility for matters of national and international concern. These include defence, foreign policy, interprovincial trade and communications, currency, navigation, criminal law and citizenship. The provinces are responsible for municipal government, education, health, natural resources, property and civil rights, and highways. The federal government and the provinces share jurisdiction over agriculture and immigration. Federalism allows different provinces to adopt policies tailored to their own populations, and gives provinces the flexibility to experiment with new ideas and policies."},
-        {"type": "p", "text": "Every province has its own elected Legislative Assembly, like the House of Commons in Ottawa. The three northern territories, which have small populations, do not have the status of provinces, but their governments and assemblies carry out many of the same functions."}
+        {
+          "type": "p",
+          "text": "There are federal, provincial, territorial and municipal governments in Canada. The responsibilities of the federal and provincial governments were defined in 1867 in the British North America Act, now known as the Constitution Act, 1867."
+        },
+        {
+          "type": "p",
+          "text": "In our federal state, the federal government takes responsibility for matters of national and international concern. These include defence, foreign policy, interprovincial trade and communications, currency, navigation, criminal law and citizenship. The provinces are responsible for municipal government, education, health, natural resources, property and civil rights, and highways. The federal government and the provinces share jurisdiction over agriculture and immigration. Federalism allows different provinces to adopt policies tailored to their own populations, and gives provinces the flexibility to experiment with new ideas and policies."
+        },
+        {
+          "type": "p",
+          "text": "Every province has its own elected Legislative Assembly, like the House of Commons in Ottawa. The three northern territories, which have small populations, do not have the status of provinces, but their governments and assemblies carry out many of the same functions."
+        }
       ],
       "focus": [
         "There are federal, provincial, territorial and municipal governments in Canada.",
@@ -40,10 +58,22 @@
       "title": "Parliamentary democracy",
       "page": 28,
       "blocks": [
-        {"type": "p", "text": "In Canada's parliamentary democracy, the people elect members to the House of Commons in Ottawa and to the provincial and territorial legislatures. These representatives are responsible for passing laws, approving and monitoring expenditures, and keeping the government accountable. Cabinet ministers are responsible to the elected representatives, which means they must retain the \"confidence of the House\" and have to resign if they are defeated in a non-confidence vote."},
-        {"type": "p", "text": "Parliament has three parts: the Sovereign (Queen or King), the Senate and the House of Commons. Provincial legislatures comprise the Lieutenant Governor and the elected Assembly."},
-        {"type": "p", "text": "In the federal government, the Prime Minister selects the Cabinet ministers and is responsible for the operations and policy of the government. The House of Commons is the representative chamber, made up of members of Parliament elected by the people, traditionally every four years. Senators are appointed by the Governor General on the advice of the Prime Minister and serve until age 75. Both the House of Commons and the Senate consider and review bills (proposals for new laws). No bill can become law in Canada until it has been passed by both chambers and has received royal assent, granted by the Governor General on behalf of the Sovereign."},
-        {"type": "p", "text": "Living in a democracy, Canadian citizens have the right and the responsibility to participate in making decisions that affect them. It is important for Canadians aged 18 or more to participate in their democracy by voting in federal, provincial or territorial and municipal elections."}
+        {
+          "type": "p",
+          "text": "In Canada's parliamentary democracy, the people elect members to the House of Commons in Ottawa and to the provincial and territorial legislatures. These representatives are responsible for passing laws, approving and monitoring expenditures, and keeping the government accountable. Cabinet ministers are responsible to the elected representatives, which means they must retain the \"confidence of the House\" and have to resign if they are defeated in a non-confidence vote."
+        },
+        {
+          "type": "p",
+          "text": "Parliament has three parts: the Sovereign (Queen or King), the Senate and the House of Commons. Provincial legislatures comprise the Lieutenant Governor and the elected Assembly."
+        },
+        {
+          "type": "p",
+          "text": "In the federal government, the Prime Minister selects the Cabinet ministers and is responsible for the operations and policy of the government. The House of Commons is the representative chamber, made up of members of Parliament elected by the people, traditionally every four years. Senators are appointed by the Governor General on the advice of the Prime Minister and serve until age 75. Both the House of Commons and the Senate consider and review bills (proposals for new laws). No bill can become law in Canada until it has been passed by both chambers and has received royal assent, granted by the Governor General on behalf of the Sovereign."
+        },
+        {
+          "type": "p",
+          "text": "Living in a democracy, Canadian citizens have the right and the responsibility to participate in making decisions that affect them. It is important for Canadians aged 18 or more to participate in their democracy by voting in federal, provincial or territorial and municipal elections."
+        }
       ],
       "focus": [
         "The people elect members to the House of Commons in Ottawa and to the provincial and territorial legislatures.",
@@ -63,16 +93,22 @@
       "title": "Making Laws",
       "page": 29,
       "blocks": [
-        {"type": "p", "text": "How a bill becomes law — The Legislative Process"},
-        {"type": "list", "items": [
-          "Step 1: First Reading – The bill is considered read for the first time and is printed.",
-          "Step 2: Second Reading – Members debate the bill's principle.",
-          "Step 3: Committee Stage – Committee members study the bill clause by clause.",
-          "Step 4: Report Stage – Members can make other amendments.",
-          "Step 5: Third Reading – Members debate and vote on the bill.",
-          "Step 6: Senate – The bill follows a similar process in the Senate.",
-          "Step 7: Royal Assent – The bill receives royal assent after being passed by both Houses."
-        ]}
+        {
+          "type": "p",
+          "text": "How a bill becomes law — The Legislative Process"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Step 1: First Reading – The bill is considered read for the first time and is printed.",
+            "Step 2: Second Reading – Members debate the bill's principle.",
+            "Step 3: Committee Stage – Committee members study the bill clause by clause.",
+            "Step 4: Report Stage – Members can make other amendments.",
+            "Step 5: Third Reading – Members debate and vote on the bill.",
+            "Step 6: Senate – The bill follows a similar process in the Senate.",
+            "Step 7: Royal Assent – The bill receives royal assent after being passed by both Houses."
+          ]
+        }
       ],
       "focus": [
         "A bill becomes law in seven steps: First Reading, Second Reading, Committee Stage, Report Stage, Third Reading, Senate, Royal Assent.",
@@ -89,13 +125,38 @@
       "title": "Constitutional monarchy",
       "page": 29,
       "blocks": [
-        {"type": "p", "text": "As a constitutional monarchy, Canada's Head of State is a hereditary Sovereign (Queen or King), who reigns in accordance with the Constitution: the rule of law. The Sovereign is a part of Parliament, playing an important, non-partisan role as the focus of citizenship and allegiance, most visibly during royal visits to Canada. Her Majesty is a symbol of Canadian sovereignty, a guardian of constitutional freedoms, and a reflection of our history. The Royal Family's example of lifelong service to the community is an encouragement for citizens to give their best to their country. As Head of the Commonwealth, the Sovereign links Canada to 53 other nations that cooperate to advance social, economic and cultural progress. Other constitutional monarchies include Denmark, Norway, Sweden, Australia, New Zealand, The Netherlands, Spain, Thailand, Japan, Jordan and Morocco."},
-        {"type": "p", "text": "There is a clear distinction in Canada between the head of state—the Sovereign—and the head of government—the Prime Minister, who actually directs the governing of the country."},
-        {"type": "p", "text": "The Sovereign is represented in Canada by the Governor General, who is appointed by the Sovereign on the advice of the Prime Minister, usually for five years. In each of the ten provinces, the Sovereign is represented by the Lieutenant Governor, who is appointed by the Governor General on the advice of the Prime Minister, also normally for five years."},
-        {"type": "p", "text": "The interplay between the three branches of government—the Executive, Legislative and Judicial—which work together but also sometimes in creative tension, helps to secure the rights and freedoms of Canadians."},
-        {"type": "p", "text": "Each provincial and territorial government has an elected legislature where provincial and territorial laws are passed. The members of the legislature are called members of the Legislative Assembly (MLAs), members of the National Assembly (MNAs), members of the Provincial Parliament (MPPs) or members of the House of Assembly (MHAs), depending on the province or territory."},
-        {"type": "p", "text": "In each province, the Premier has a role similar to that of the Prime Minister in the federal government, just as the Lieutenant Governor has a role similar to that of the Governor General. In the three territories, the Commissioner represents the federal government and plays a ceremonial role."},
-        {"type": "caption", "text": "David Johnston, 28th Governor General since Confederation, with grandchildren."}
+        {
+          "type": "p",
+          "text": "As a constitutional monarchy, Canada's Head of State is a hereditary Sovereign (Queen or King), who reigns in accordance with the Constitution: the rule of law. The Sovereign is a part of Parliament, playing an important, non-partisan role as the focus of citizenship and allegiance, most visibly during royal visits to Canada. Her Majesty is a symbol of Canadian sovereignty, a guardian of constitutional freedoms, and a reflection of our history. The Royal Family's example of lifelong service to the community is an encouragement for citizens to give their best to their country. As Head of the Commonwealth, the Sovereign links Canada to 53 other nations that cooperate to advance social, economic and cultural progress. Other constitutional monarchies include Denmark, Norway, Sweden, Australia, New Zealand, The Netherlands, Spain, Thailand, Japan, Jordan and Morocco."
+        },
+        {
+          "type": "p",
+          "text": "There is a clear distinction in Canada between the head of state—the Sovereign—and the head of government—the Prime Minister, who actually directs the governing of the country."
+        },
+        {
+          "type": "p",
+          "text": "The Sovereign is represented in Canada by the Governor General, who is appointed by the Sovereign on the advice of the Prime Minister, usually for five years. In each of the ten provinces, the Sovereign is represented by the Lieutenant Governor, who is appointed by the Governor General on the advice of the Prime Minister, also normally for five years."
+        },
+        {
+          "type": "p",
+          "text": "The interplay between the three branches of government—the Executive, Legislative and Judicial—which work together but also sometimes in creative tension, helps to secure the rights and freedoms of Canadians."
+        },
+        {
+          "type": "p",
+          "text": "Each provincial and territorial government has an elected legislature where provincial and territorial laws are passed. The members of the legislature are called members of the Legislative Assembly (MLAs), members of the National Assembly (MNAs), members of the Provincial Parliament (MPPs) or members of the House of Assembly (MHAs), depending on the province or territory."
+        },
+        {
+          "type": "p",
+          "text": "In each province, the Premier has a role similar to that of the Prime Minister in the federal government, just as the Lieutenant Governor has a role similar to that of the Governor General. In the three territories, the Commissioner represents the federal government and plays a ceremonial role."
+        },
+        {
+          "type": "caption",
+          "text": "David Johnston, 28th Governor General since Confederation, with grandchildren."
+        },
+        {
+          "type": "note",
+          "text": "The booklet says \"Her Majesty\". Since 8 September 2022 the Sovereign is King Charles III; the role is the same."
+        }
       ],
       "focus": [
         "Canada's Head of State is a hereditary Sovereign (Queen or King), who reigns in accordance with the Constitution: the rule of law.",
@@ -117,16 +178,51 @@
       "title": "Canada's System of Government",
       "page": 29,
       "blocks": [
-        {"type": "table", "rows": [
-          ["Branch", "Body", "How it is formed"],
-          ["Parliament", "Sovereign", "Represented in Canada by the Governor General"],
-          ["Parliament — Legislative Branch", "Senate", "Appointed on the Prime Minister's recommendation"],
-          ["Parliament — Legislative Branch", "House of Commons", "Elected by voters; made up of Government Members and Opposition Members"],
-          ["Parliament — Executive Branch", "Prime Minister and Cabinet", "The Prime Minister selects the Cabinet ministers"],
-          ["Judiciary", "Supreme Court of Canada", "Nine judges appointed by the Governor General"],
-          ["Judiciary", "Federal Court of Canada", ""],
-          ["Judiciary", "Provincial Courts", ""]
-        ]}
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Branch",
+              "Body",
+              "How it is formed"
+            ],
+            [
+              "Parliament",
+              "Sovereign",
+              "Represented in Canada by the Governor General"
+            ],
+            [
+              "Parliament — Legislative Branch",
+              "Senate",
+              "Appointed on the Prime Minister's recommendation"
+            ],
+            [
+              "Parliament — Legislative Branch",
+              "House of Commons",
+              "Elected by voters; made up of Government Members and Opposition Members"
+            ],
+            [
+              "Parliament — Executive Branch",
+              "Prime Minister and Cabinet",
+              "The Prime Minister selects the Cabinet ministers"
+            ],
+            [
+              "Judiciary",
+              "Supreme Court of Canada",
+              "Nine judges appointed by the Governor General"
+            ],
+            [
+              "Judiciary",
+              "Federal Court of Canada",
+              ""
+            ],
+            [
+              "Judiciary",
+              "Provincial Courts",
+              ""
+            ]
+          ]
+        }
       ],
       "focus": [
         "Parliament: the Sovereign (represented by the Governor General), the Senate and the House of Commons.",
@@ -139,76 +235,686 @@
     }
   ],
   "cards": [
-    {"id": "govern-c01", "section": "govern-how-canadians-govern-themselves", "front": "What are the three key facts about Canada's system of government?", "back": "Canada is a federal state, a parliamentary democracy and a constitutional monarchy.", "page": 28},
-    {"id": "govern-c02", "section": "govern-federal-state", "front": "What levels of government are there in Canada?", "back": "Federal, provincial, territorial and municipal governments.", "page": 28},
-    {"id": "govern-c03", "section": "govern-federal-state", "front": "Where and when were the responsibilities of the federal and provincial governments defined?", "back": "In 1867 in the British North America Act, now known as the Constitution Act, 1867.", "page": 28},
-    {"id": "govern-c04", "section": "govern-federal-state", "front": "Name the matters the federal government is responsible for.", "back": "Defence, foreign policy, interprovincial trade and communications, currency, navigation, criminal law and citizenship.", "page": 28},
-    {"id": "govern-c05", "section": "govern-federal-state", "front": "Name the matters the provinces are responsible for.", "back": "Municipal government, education, health, natural resources, property and civil rights, and highways.", "page": 28},
-    {"id": "govern-c06", "section": "govern-federal-state", "front": "Which two areas do the federal government and the provinces share jurisdiction over?", "back": "Agriculture and immigration.", "page": 28},
-    {"id": "govern-c07", "section": "govern-federal-state", "front": "How do the three northern territories differ from the provinces?", "back": "They have small populations and do not have the status of provinces, but their governments and assemblies carry out many of the same functions.", "page": 28},
-    {"id": "govern-c08", "section": "govern-parliamentary-democracy", "front": "In Canada's parliamentary democracy, who do the people elect?", "back": "Members to the House of Commons in Ottawa and to the provincial and territorial legislatures.", "page": 28},
-    {"id": "govern-c09", "section": "govern-parliamentary-democracy", "front": "What are elected representatives responsible for?", "back": "Passing laws, approving and monitoring expenditures, and keeping the government accountable.", "page": 28},
-    {"id": "govern-c10", "section": "govern-parliamentary-democracy", "front": "What happens if Cabinet ministers are defeated in a non-confidence vote?", "back": "They have to resign. Cabinet ministers are responsible to the elected representatives and must retain the \"confidence of the House.\"", "page": 28},
-    {"id": "govern-c11", "section": "govern-parliamentary-democracy", "front": "Name the three parts of Parliament.", "back": "The Sovereign (King or Queen), the Senate and the House of Commons.", "page": 28},
-    {"id": "govern-c12", "section": "govern-parliamentary-democracy", "front": "What do provincial legislatures comprise?", "back": "The Lieutenant Governor and the elected Assembly.", "page": 28},
-    {"id": "govern-c13", "section": "govern-parliamentary-democracy", "front": "Who selects the Cabinet ministers in the federal government?", "back": "The Prime Minister, who is responsible for the operations and policy of the government.", "page": 28},
-    {"id": "govern-c14", "section": "govern-parliamentary-democracy", "front": "How often are members of Parliament traditionally elected?", "back": "Every four years. The House of Commons is the representative chamber, made up of members of Parliament elected by the people.", "page": 28},
-    {"id": "govern-c15", "section": "govern-parliamentary-democracy", "front": "How are Senators chosen, and until what age do they serve?", "back": "Senators are appointed by the Governor General on the advice of the Prime Minister and serve until age 75.", "page": 28},
-    {"id": "govern-c16", "section": "govern-parliamentary-democracy", "front": "What must happen before a bill can become law in Canada?", "back": "It must be passed by both chambers (the House of Commons and the Senate) and receive royal assent, granted by the Governor General on behalf of the Sovereign.", "page": 28},
-    {"id": "govern-c17", "section": "govern-parliamentary-democracy", "front": "From what age is it important for Canadians to vote, and in which elections?", "back": "Canadians aged 18 or more should vote in federal, provincial or territorial and municipal elections.", "page": 29},
-    {"id": "govern-c18", "section": "govern-making-laws", "front": "Name the seven steps by which a bill becomes law.", "back": "First Reading, Second Reading, Committee Stage, Report Stage, Third Reading, Senate, Royal Assent.", "page": 29},
-    {"id": "govern-c19", "section": "govern-making-laws", "front": "What happens at First Reading?", "back": "The bill is considered read for the first time and is printed.", "page": 29},
-    {"id": "govern-c20", "section": "govern-making-laws", "front": "What happens at Second Reading?", "back": "Members debate the bill's principle.", "page": 29},
-    {"id": "govern-c21", "section": "govern-making-laws", "front": "What happens at the Committee Stage?", "back": "Committee members study the bill clause by clause.", "page": 29},
-    {"id": "govern-c22", "section": "govern-making-laws", "front": "What happens at the Report Stage?", "back": "Members can make other amendments.", "page": 29},
-    {"id": "govern-c23", "section": "govern-making-laws", "front": "What happens at Third Reading?", "back": "Members debate and vote on the bill.", "page": 29},
-    {"id": "govern-c24", "section": "govern-making-laws", "front": "What is the final step before a bill becomes law?", "back": "Royal Assent – the bill receives royal assent after being passed by both Houses.", "page": 29},
-    {"id": "govern-c25", "section": "govern-constitutional-monarchy", "front": "Who is Canada's Head of State?", "back": "A hereditary Sovereign (King or Queen), who reigns in accordance with the Constitution: the rule of law.", "page": 29},
-    {"id": "govern-c26", "section": "govern-constitutional-monarchy", "front": "What does the Sovereign symbolize for Canada?", "back": "The Sovereign is a symbol of Canadian sovereignty, a guardian of constitutional freedoms, and a reflection of our history.", "page": 29},
-    {"id": "govern-c27", "section": "govern-constitutional-monarchy", "front": "As Head of the Commonwealth, the Sovereign links Canada to how many other nations?", "back": "53 other nations that cooperate to advance social, economic and cultural progress.", "page": 29},
-    {"id": "govern-c28", "section": "govern-constitutional-monarchy", "front": "Name some other constitutional monarchies.", "back": "Denmark, Norway, Sweden, Australia, New Zealand, The Netherlands, Spain, Thailand, Japan, Jordan and Morocco.", "page": 29},
-    {"id": "govern-c29", "section": "govern-constitutional-monarchy", "front": "What is the difference between the head of state and the head of government in Canada?", "back": "The head of state is the Sovereign; the head of government is the Prime Minister, who actually directs the governing of the country.", "page": 29},
-    {"id": "govern-c30", "section": "govern-constitutional-monarchy", "front": "Who represents the Sovereign in Canada, and how is that person appointed?", "back": "The Governor General, who is appointed by the Sovereign on the advice of the Prime Minister, usually for five years.", "page": 29},
-    {"id": "govern-c31", "section": "govern-constitutional-monarchy", "front": "Who represents the Sovereign in each province, and how is that person appointed?", "back": "The Lieutenant Governor, who is appointed by the Governor General on the advice of the Prime Minister, normally for five years.", "page": 29},
-    {"id": "govern-c32", "section": "govern-constitutional-monarchy", "front": "Name the three branches of government.", "back": "The Executive, Legislative and Judicial.", "page": 29},
-    {"id": "govern-c33", "section": "govern-constitutional-monarchy", "front": "What are members of provincial and territorial legislatures called?", "back": "Members of the Legislative Assembly (MLAs), members of the National Assembly (MNAs), members of the Provincial Parliament (MPPs) or members of the House of Assembly (MHAs), depending on the province or territory.", "page": 29},
-    {"id": "govern-c34", "section": "govern-constitutional-monarchy", "front": "What is the role of the Premier in a province?", "back": "The Premier has a role similar to that of the Prime Minister in the federal government, just as the Lieutenant Governor has a role similar to that of the Governor General.", "page": 29},
-    {"id": "govern-c35", "section": "govern-constitutional-monarchy", "front": "Who represents the federal government in the three territories?", "back": "The Commissioner, who plays a ceremonial role.", "page": 29},
-    {"id": "govern-c36", "section": "govern-constitutional-monarchy", "front": "Who was David Johnston?", "back": "The 28th Governor General since Confederation.", "page": 29},
-    {"id": "govern-c37", "section": "govern-system-of-government", "front": "How is the Senate formed, and how is the House of Commons formed?", "back": "The Senate is appointed on the Prime Minister's recommendation; the House of Commons is elected by voters.", "page": 29},
-    {"id": "govern-c38", "section": "govern-system-of-government", "front": "Which bodies make up the Legislative Branch, and who makes up the Executive Branch?", "back": "The Legislative Branch is the Senate and the House of Commons; the Executive Branch is the Prime Minister and Cabinet.", "page": 29},
-    {"id": "govern-c39", "section": "govern-system-of-government", "front": "Who sits in the House of Commons?", "back": "Government Members and Opposition Members, elected by voters.", "page": 29},
-    {"id": "govern-c40", "section": "govern-system-of-government", "front": "Name the courts that make up Canada's Judiciary.", "back": "The Supreme Court of Canada, the Federal Court of Canada and the Provincial Courts.", "page": 29},
-    {"id": "govern-c41", "section": "govern-system-of-government", "front": "How many judges sit on the Supreme Court of Canada, and who appoints them?", "back": "Nine judges, appointed by the Governor General.", "page": 29}
+    {
+      "id": "govern-c01",
+      "section": "govern-how-canadians-govern-themselves",
+      "front": "What are the three key facts about Canada's system of government?",
+      "back": "Canada is a federal state, a parliamentary democracy and a constitutional monarchy.",
+      "page": 28
+    },
+    {
+      "id": "govern-c02",
+      "section": "govern-federal-state",
+      "front": "What levels of government are there in Canada?",
+      "back": "Federal, provincial, territorial and municipal governments.",
+      "page": 28
+    },
+    {
+      "id": "govern-c03",
+      "section": "govern-federal-state",
+      "front": "Where and when were the responsibilities of the federal and provincial governments defined?",
+      "back": "In 1867 in the British North America Act, now known as the Constitution Act, 1867.",
+      "page": 28
+    },
+    {
+      "id": "govern-c04",
+      "section": "govern-federal-state",
+      "front": "Name the matters the federal government is responsible for.",
+      "back": "Defence, foreign policy, interprovincial trade and communications, currency, navigation, criminal law and citizenship.",
+      "page": 28
+    },
+    {
+      "id": "govern-c05",
+      "section": "govern-federal-state",
+      "front": "Name the matters the provinces are responsible for.",
+      "back": "Municipal government, education, health, natural resources, property and civil rights, and highways.",
+      "page": 28
+    },
+    {
+      "id": "govern-c06",
+      "section": "govern-federal-state",
+      "front": "Which two areas do the federal government and the provinces share jurisdiction over?",
+      "back": "Agriculture and immigration.",
+      "page": 28
+    },
+    {
+      "id": "govern-c07",
+      "section": "govern-federal-state",
+      "front": "How do the three northern territories differ from the provinces?",
+      "back": "They have small populations and do not have the status of provinces, but their governments and assemblies carry out many of the same functions.",
+      "page": 28
+    },
+    {
+      "id": "govern-c08",
+      "section": "govern-parliamentary-democracy",
+      "front": "In Canada's parliamentary democracy, who do the people elect?",
+      "back": "Members to the House of Commons in Ottawa and to the provincial and territorial legislatures.",
+      "page": 28
+    },
+    {
+      "id": "govern-c09",
+      "section": "govern-parliamentary-democracy",
+      "front": "What are elected representatives responsible for?",
+      "back": "Passing laws, approving and monitoring expenditures, and keeping the government accountable.",
+      "page": 28
+    },
+    {
+      "id": "govern-c10",
+      "section": "govern-parliamentary-democracy",
+      "front": "What happens if Cabinet ministers are defeated in a non-confidence vote?",
+      "back": "They have to resign. Cabinet ministers are responsible to the elected representatives and must retain the \"confidence of the House.\"",
+      "page": 28
+    },
+    {
+      "id": "govern-c11",
+      "section": "govern-parliamentary-democracy",
+      "front": "Name the three parts of Parliament.",
+      "back": "The Sovereign (King or Queen), the Senate and the House of Commons.",
+      "page": 28
+    },
+    {
+      "id": "govern-c12",
+      "section": "govern-parliamentary-democracy",
+      "front": "What do provincial legislatures comprise?",
+      "back": "The Lieutenant Governor and the elected Assembly.",
+      "page": 28
+    },
+    {
+      "id": "govern-c13",
+      "section": "govern-parliamentary-democracy",
+      "front": "Who selects the Cabinet ministers in the federal government?",
+      "back": "The Prime Minister, who is responsible for the operations and policy of the government.",
+      "page": 28
+    },
+    {
+      "id": "govern-c14",
+      "section": "govern-parliamentary-democracy",
+      "front": "How often are members of Parliament traditionally elected?",
+      "back": "Every four years. The House of Commons is the representative chamber, made up of members of Parliament elected by the people.",
+      "page": 28
+    },
+    {
+      "id": "govern-c15",
+      "section": "govern-parliamentary-democracy",
+      "front": "How are Senators chosen, and until what age do they serve?",
+      "back": "Senators are appointed by the Governor General on the advice of the Prime Minister and serve until age 75.",
+      "page": 28
+    },
+    {
+      "id": "govern-c16",
+      "section": "govern-parliamentary-democracy",
+      "front": "What must happen before a bill can become law in Canada?",
+      "back": "It must be passed by both chambers (the House of Commons and the Senate) and receive royal assent, granted by the Governor General on behalf of the Sovereign.",
+      "page": 28
+    },
+    {
+      "id": "govern-c17",
+      "section": "govern-parliamentary-democracy",
+      "front": "From what age is it important for Canadians to vote, and in which elections?",
+      "back": "Canadians aged 18 or more should vote in federal, provincial or territorial and municipal elections.",
+      "page": 29
+    },
+    {
+      "id": "govern-c18",
+      "section": "govern-making-laws",
+      "front": "Name the seven steps by which a bill becomes law.",
+      "back": "First Reading, Second Reading, Committee Stage, Report Stage, Third Reading, Senate, Royal Assent.",
+      "page": 29
+    },
+    {
+      "id": "govern-c19",
+      "section": "govern-making-laws",
+      "front": "What happens at First Reading?",
+      "back": "The bill is considered read for the first time and is printed.",
+      "page": 29
+    },
+    {
+      "id": "govern-c20",
+      "section": "govern-making-laws",
+      "front": "What happens at Second Reading?",
+      "back": "Members debate the bill's principle.",
+      "page": 29
+    },
+    {
+      "id": "govern-c21",
+      "section": "govern-making-laws",
+      "front": "What happens at the Committee Stage?",
+      "back": "Committee members study the bill clause by clause.",
+      "page": 29
+    },
+    {
+      "id": "govern-c22",
+      "section": "govern-making-laws",
+      "front": "What happens at the Report Stage?",
+      "back": "Members can make other amendments.",
+      "page": 29
+    },
+    {
+      "id": "govern-c23",
+      "section": "govern-making-laws",
+      "front": "What happens at Third Reading?",
+      "back": "Members debate and vote on the bill.",
+      "page": 29
+    },
+    {
+      "id": "govern-c24",
+      "section": "govern-making-laws",
+      "front": "What is the final step before a bill becomes law?",
+      "back": "Royal Assent – the bill receives royal assent after being passed by both Houses.",
+      "page": 29
+    },
+    {
+      "id": "govern-c25",
+      "section": "govern-constitutional-monarchy",
+      "front": "Who is Canada's Head of State?",
+      "back": "A hereditary Sovereign (King or Queen), who reigns in accordance with the Constitution: the rule of law.",
+      "page": 29
+    },
+    {
+      "id": "govern-c26",
+      "section": "govern-constitutional-monarchy",
+      "front": "What does the Sovereign symbolize for Canada?",
+      "back": "The Sovereign is a symbol of Canadian sovereignty, a guardian of constitutional freedoms, and a reflection of our history.",
+      "page": 29
+    },
+    {
+      "id": "govern-c27",
+      "section": "govern-constitutional-monarchy",
+      "front": "As Head of the Commonwealth, the Sovereign links Canada to how many other nations?",
+      "back": "53 other nations that cooperate to advance social, economic and cultural progress.",
+      "page": 29
+    },
+    {
+      "id": "govern-c28",
+      "section": "govern-constitutional-monarchy",
+      "front": "Name some other constitutional monarchies.",
+      "back": "Denmark, Norway, Sweden, Australia, New Zealand, The Netherlands, Spain, Thailand, Japan, Jordan and Morocco.",
+      "page": 29
+    },
+    {
+      "id": "govern-c29",
+      "section": "govern-constitutional-monarchy",
+      "front": "What is the difference between the head of state and the head of government in Canada?",
+      "back": "The head of state is the Sovereign; the head of government is the Prime Minister, who actually directs the governing of the country.",
+      "page": 29
+    },
+    {
+      "id": "govern-c30",
+      "section": "govern-constitutional-monarchy",
+      "front": "Who represents the Sovereign in Canada, and how is that person appointed?",
+      "back": "The Governor General, who is appointed by the Sovereign on the advice of the Prime Minister, usually for five years.",
+      "page": 29
+    },
+    {
+      "id": "govern-c31",
+      "section": "govern-constitutional-monarchy",
+      "front": "Who represents the Sovereign in each province, and how is that person appointed?",
+      "back": "The Lieutenant Governor, who is appointed by the Governor General on the advice of the Prime Minister, normally for five years.",
+      "page": 29
+    },
+    {
+      "id": "govern-c32",
+      "section": "govern-constitutional-monarchy",
+      "front": "Name the three branches of government.",
+      "back": "The Executive, Legislative and Judicial.",
+      "page": 29
+    },
+    {
+      "id": "govern-c33",
+      "section": "govern-constitutional-monarchy",
+      "front": "What are members of provincial and territorial legislatures called?",
+      "back": "Members of the Legislative Assembly (MLAs), members of the National Assembly (MNAs), members of the Provincial Parliament (MPPs) or members of the House of Assembly (MHAs), depending on the province or territory.",
+      "page": 29
+    },
+    {
+      "id": "govern-c34",
+      "section": "govern-constitutional-monarchy",
+      "front": "What is the role of the Premier in a province?",
+      "back": "The Premier has a role similar to that of the Prime Minister in the federal government, just as the Lieutenant Governor has a role similar to that of the Governor General.",
+      "page": 29
+    },
+    {
+      "id": "govern-c35",
+      "section": "govern-constitutional-monarchy",
+      "front": "Who represents the federal government in the three territories?",
+      "back": "The Commissioner, who plays a ceremonial role.",
+      "page": 29
+    },
+    {
+      "id": "govern-c36",
+      "section": "govern-constitutional-monarchy",
+      "front": "Who was David Johnston?",
+      "back": "The 28th Governor General since Confederation.",
+      "page": 29
+    },
+    {
+      "id": "govern-c37",
+      "section": "govern-system-of-government",
+      "front": "How is the Senate formed, and how is the House of Commons formed?",
+      "back": "The Senate is appointed on the Prime Minister's recommendation; the House of Commons is elected by voters.",
+      "page": 29
+    },
+    {
+      "id": "govern-c38",
+      "section": "govern-system-of-government",
+      "front": "Which bodies make up the Legislative Branch, and who makes up the Executive Branch?",
+      "back": "The Legislative Branch is the Senate and the House of Commons; the Executive Branch is the Prime Minister and Cabinet.",
+      "page": 29
+    },
+    {
+      "id": "govern-c39",
+      "section": "govern-system-of-government",
+      "front": "Who sits in the House of Commons?",
+      "back": "Government Members and Opposition Members, elected by voters.",
+      "page": 29
+    },
+    {
+      "id": "govern-c40",
+      "section": "govern-system-of-government",
+      "front": "Name the courts that make up Canada's Judiciary.",
+      "back": "The Supreme Court of Canada, the Federal Court of Canada and the Provincial Courts.",
+      "page": 29
+    },
+    {
+      "id": "govern-c41",
+      "section": "govern-system-of-government",
+      "front": "How many judges sit on the Supreme Court of Canada, and who appoints them?",
+      "back": "Nine judges, appointed by the Governor General.",
+      "page": 29
+    }
   ],
   "quiz": [
-    {"id": "govern-q01", "section": "govern-how-canadians-govern-themselves", "q": "What are the three key facts about Canada's system of government?", "choices": ["A republic, a direct democracy and a federal state", "A federal state, a parliamentary democracy and a constitutional monarchy", "A unitary state, a parliamentary democracy and a republic", "A federal state, a presidential democracy and a constitutional monarchy"], "answer": 1, "why": "Our country is a federal state, a parliamentary democracy and a constitutional monarchy.", "page": 28},
-    {"id": "govern-q02", "section": "govern-federal-state", "q": "Which of the following is a responsibility of the federal government?", "choices": ["Education", "Highways", "Natural resources", "Defence"], "answer": 3, "why": "Federal responsibilities include defence, foreign policy, interprovincial trade and communications, currency, navigation, criminal law and citizenship.", "page": 28},
-    {"id": "govern-q03", "section": "govern-federal-state", "q": "Which of the following is a responsibility of the provinces?", "choices": ["Education", "Currency", "Criminal law", "Citizenship"], "answer": 0, "why": "The provinces are responsible for municipal government, education, health, natural resources, property and civil rights, and highways.", "page": 28},
-    {"id": "govern-q04", "section": "govern-federal-state", "q": "Over which matters do the federal government and the provinces share jurisdiction?", "choices": ["Defence and foreign policy", "Health and education", "Agriculture and immigration", "Currency and navigation"], "answer": 2, "why": "The federal government and the provinces share jurisdiction over agriculture and immigration.", "page": 28},
-    {"id": "govern-q05", "section": "govern-federal-state", "q": "In what document were the responsibilities of the federal and provincial governments defined in 1867?", "choices": ["The Royal Proclamation", "The British North America Act", "The Charter of Rights and Freedoms", "The Statute of Westminster"], "answer": 1, "why": "The responsibilities were defined in 1867 in the British North America Act, now known as the Constitution Act, 1867.", "page": 28},
-    {"id": "govern-q06", "section": "govern-parliamentary-democracy", "q": "What are the three parts of Parliament?", "choices": ["The Prime Minister, the Cabinet and the Senate", "The Sovereign, the Senate and the House of Commons", "The Governor General, the Supreme Court and the House of Commons", "The Senate, the House of Commons and the Supreme Court"], "answer": 1, "why": "Parliament has three parts: the Sovereign (Queen or King), the Senate and the House of Commons.", "page": 28},
-    {"id": "govern-q07", "section": "govern-parliamentary-democracy", "q": "What must Cabinet ministers do if they are defeated in a non-confidence vote?", "choices": ["Call a referendum", "Appeal to the Supreme Court", "Ask the Senate to overturn the vote", "Resign"], "answer": 3, "why": "Cabinet ministers must retain the \"confidence of the House\" and have to resign if they are defeated in a non-confidence vote.", "page": 28},
-    {"id": "govern-q08", "section": "govern-parliamentary-democracy", "q": "How are Senators chosen?", "choices": ["Elected by voters every four years", "Appointed by the Governor General on the advice of the Prime Minister", "Appointed by the Supreme Court", "Elected by the provincial legislatures"], "answer": 1, "why": "Senators are appointed by the Governor General on the advice of the Prime Minister and serve until age 75.", "page": 28},
-    {"id": "govern-q09", "section": "govern-parliamentary-democracy", "q": "Until what age do Senators serve?", "choices": ["65", "70", "75", "80"], "answer": 2, "why": "Senators serve until age 75.", "page": 28},
-    {"id": "govern-q10", "section": "govern-parliamentary-democracy", "q": "Members of Parliament are traditionally elected by the people how often?", "choices": ["Every four years", "Every five years", "Every three years", "Every two years"], "answer": 0, "why": "The House of Commons is made up of members of Parliament elected by the people, traditionally every four years.", "page": 28},
-    {"id": "govern-q11", "section": "govern-parliamentary-democracy", "q": "Who grants royal assent to a bill, and on whose behalf?", "choices": ["The Prime Minister, on behalf of the Cabinet", "The Speaker, on behalf of the House of Commons", "The Chief Justice, on behalf of the Supreme Court", "The Governor General, on behalf of the Sovereign"], "answer": 3, "why": "No bill can become law until it has received royal assent, granted by the Governor General on behalf of the Sovereign.", "page": 28},
-    {"id": "govern-q12", "section": "govern-parliamentary-democracy", "q": "Who is responsible for passing laws, approving and monitoring expenditures, and keeping the government accountable?", "choices": ["The Supreme Court judges", "The elected representatives in the House of Commons and legislatures", "The Lieutenant Governors", "The Governor General"], "answer": 1, "why": "The people elect members to the House of Commons and to the provincial and territorial legislatures; these representatives are responsible for passing laws, approving and monitoring expenditures, and keeping the government accountable.", "page": 28},
-    {"id": "govern-q13", "section": "govern-making-laws", "q": "What happens at the Committee Stage of a bill?", "choices": ["The bill is printed for the first time", "Members debate the bill's principle", "Committee members study the bill clause by clause", "The bill receives royal assent"], "answer": 2, "why": "Step 3, Committee Stage – Committee members study the bill clause by clause.", "page": 29},
-    {"id": "govern-q14", "section": "govern-making-laws", "q": "At which stage do members debate and vote on the bill?", "choices": ["Second Reading", "Report Stage", "First Reading", "Third Reading"], "answer": 3, "why": "Step 5, Third Reading – Members debate and vote on the bill.", "page": 29},
-    {"id": "govern-q15", "section": "govern-making-laws", "q": "What is the final step by which a bill becomes law?", "choices": ["Royal Assent", "Senate", "Third Reading", "Report Stage"], "answer": 0, "why": "Step 7, Royal Assent – The bill receives royal assent after being passed by both Houses.", "page": 29},
-    {"id": "govern-q16", "section": "govern-making-laws", "q": "What happens at Second Reading?", "choices": ["Members can make other amendments", "Members debate the bill's principle", "The bill is considered read for the first time", "The bill follows a similar process in the Senate"], "answer": 1, "why": "Step 2, Second Reading – Members debate the bill's principle.", "page": 29},
-    {"id": "govern-q17", "section": "govern-constitutional-monarchy", "q": "Who is Canada's Head of State?", "choices": ["The Prime Minister", "The Governor General", "The Sovereign (King or Queen)", "The Chief Justice"], "answer": 2, "why": "As a constitutional monarchy, Canada's Head of State is a hereditary Sovereign (Queen or King).", "page": 29},
-    {"id": "govern-q18", "section": "govern-constitutional-monarchy", "q": "Who is Canada's head of government?", "choices": ["The Prime Minister", "The Sovereign", "The Governor General", "The Premier"], "answer": 0, "why": "There is a clear distinction between the head of state—the Sovereign—and the head of government—the Prime Minister, who actually directs the governing of the country.", "page": 29},
-    {"id": "govern-q19", "section": "govern-constitutional-monarchy", "q": "How is the Governor General appointed, and for how long?", "choices": ["Elected by voters, every four years", "Appointed by the Sovereign on the advice of the Prime Minister, usually for five years", "Appointed by the Senate, for life", "Appointed by the Prime Minister, until age 75"], "answer": 1, "why": "The Governor General is appointed by the Sovereign on the advice of the Prime Minister, usually for five years.", "page": 29},
-    {"id": "govern-q20", "section": "govern-constitutional-monarchy", "q": "Who represents the Sovereign in each of the ten provinces?", "choices": ["The Premier", "The Commissioner", "The Speaker", "The Lieutenant Governor"], "answer": 3, "why": "In each of the ten provinces, the Sovereign is represented by the Lieutenant Governor, who is appointed by the Governor General on the advice of the Prime Minister.", "page": 29},
-    {"id": "govern-q21", "section": "govern-constitutional-monarchy", "q": "As Head of the Commonwealth, the Sovereign links Canada to how many other nations?", "choices": ["28", "53", "75", "10"], "answer": 1, "why": "As Head of the Commonwealth, the Sovereign links Canada to 53 other nations that cooperate to advance social, economic and cultural progress.", "page": 29},
-    {"id": "govern-q22", "section": "govern-constitutional-monarchy", "q": "What are the three branches of government?", "choices": ["Federal, provincial and municipal", "Sovereign, Senate and House of Commons", "Executive, Legislative and Judicial", "Prime Minister, Cabinet and Governor General"], "answer": 2, "why": "The three branches of government are the Executive, Legislative and Judicial.", "page": 29},
-    {"id": "govern-q23", "section": "govern-constitutional-monarchy", "q": "Who represents the federal government in the three territories?", "choices": ["The Lieutenant Governor", "The Premier", "The Governor General", "The Commissioner"], "answer": 3, "why": "In the three territories, the Commissioner represents the federal government and plays a ceremonial role.", "page": 29},
-    {"id": "govern-q24", "section": "govern-constitutional-monarchy", "q": "Which of the following is NOT a constitutional monarchy named in the booklet?", "choices": ["Japan", "Spain", "Norway", "France"], "answer": 3, "why": "Other constitutional monarchies include Denmark, Norway, Sweden, Australia, New Zealand, The Netherlands, Spain, Thailand, Japan, Jordan and Morocco; France is not on the list.", "page": 29},
-    {"id": "govern-q25", "section": "govern-constitutional-monarchy", "q": "In a province, who has a role similar to that of the Prime Minister in the federal government?", "choices": ["The Premier", "The Lieutenant Governor", "The Commissioner", "The Governor General"], "answer": 0, "why": "In each province, the Premier has a role similar to that of the Prime Minister in the federal government.", "page": 29},
-    {"id": "govern-q26", "section": "govern-system-of-government", "q": "How many judges sit on the Supreme Court of Canada?", "choices": ["Seven", "Nine", "Eleven", "Five"], "answer": 1, "why": "The Supreme Court of Canada has nine judges appointed by the Governor General.", "page": 29},
-    {"id": "govern-q27", "section": "govern-system-of-government", "q": "Who makes up the Executive Branch in Canada's system of government?", "choices": ["The Senate and the House of Commons", "The Supreme Court of Canada", "The Prime Minister and Cabinet", "The Governor General and the Lieutenant Governors"], "answer": 2, "why": "In the diagram of Canada's System of Government, the Executive Branch is the Prime Minister and Cabinet; the Legislative Branch is the Senate and the House of Commons.", "page": 29},
-    {"id": "govern-q28", "section": "govern-system-of-government", "q": "Which courts make up Canada's Judiciary?", "choices": ["The Supreme Court of Canada, the Federal Court of Canada and the Provincial Courts", "The Senate, the House of Commons and the Supreme Court", "The Supreme Court of Canada only", "The Federal Court of Canada and the Court of the Governor General"], "answer": 0, "why": "The Judiciary is the Supreme Court of Canada (nine judges appointed by the Governor General), the Federal Court of Canada and the Provincial Courts.", "page": 29}
+    {
+      "id": "govern-q01",
+      "section": "govern-how-canadians-govern-themselves",
+      "q": "What are the three key facts about Canada's system of government?",
+      "choices": [
+        "A republic, a direct democracy and a federal state",
+        "A federal state, a parliamentary democracy and a constitutional monarchy",
+        "A unitary state, a parliamentary democracy and a republic",
+        "A federal state, a presidential democracy and a constitutional monarchy"
+      ],
+      "answer": 1,
+      "why": "Our country is a federal state, a parliamentary democracy and a constitutional monarchy.",
+      "page": 28
+    },
+    {
+      "id": "govern-q02",
+      "section": "govern-federal-state",
+      "q": "Which of the following is a responsibility of the federal government?",
+      "choices": [
+        "Education",
+        "Highways",
+        "Natural resources",
+        "Defence"
+      ],
+      "answer": 3,
+      "why": "Federal responsibilities include defence, foreign policy, interprovincial trade and communications, currency, navigation, criminal law and citizenship.",
+      "page": 28
+    },
+    {
+      "id": "govern-q03",
+      "section": "govern-federal-state",
+      "q": "Which of the following is a responsibility of the provinces?",
+      "choices": [
+        "Education",
+        "Currency",
+        "Criminal law",
+        "Citizenship"
+      ],
+      "answer": 0,
+      "why": "The provinces are responsible for municipal government, education, health, natural resources, property and civil rights, and highways.",
+      "page": 28
+    },
+    {
+      "id": "govern-q04",
+      "section": "govern-federal-state",
+      "q": "Over which matters do the federal government and the provinces share jurisdiction?",
+      "choices": [
+        "Defence and foreign policy",
+        "Health and education",
+        "Agriculture and immigration",
+        "Currency and navigation"
+      ],
+      "answer": 2,
+      "why": "The federal government and the provinces share jurisdiction over agriculture and immigration.",
+      "page": 28
+    },
+    {
+      "id": "govern-q05",
+      "section": "govern-federal-state",
+      "q": "In what document were the responsibilities of the federal and provincial governments defined in 1867?",
+      "choices": [
+        "The Royal Proclamation",
+        "The British North America Act",
+        "The Charter of Rights and Freedoms",
+        "The Statute of Westminster"
+      ],
+      "answer": 1,
+      "why": "The responsibilities were defined in 1867 in the British North America Act, now known as the Constitution Act, 1867.",
+      "page": 28
+    },
+    {
+      "id": "govern-q06",
+      "section": "govern-parliamentary-democracy",
+      "q": "What are the three parts of Parliament?",
+      "choices": [
+        "The Prime Minister, the Cabinet and the Senate",
+        "The Sovereign, the Senate and the House of Commons",
+        "The Governor General, the Supreme Court and the House of Commons",
+        "The Senate, the House of Commons and the Supreme Court"
+      ],
+      "answer": 1,
+      "why": "Parliament has three parts: the Sovereign (Queen or King), the Senate and the House of Commons.",
+      "page": 28
+    },
+    {
+      "id": "govern-q07",
+      "section": "govern-parliamentary-democracy",
+      "q": "What must Cabinet ministers do if they are defeated in a non-confidence vote?",
+      "choices": [
+        "Call a referendum",
+        "Appeal to the Supreme Court",
+        "Ask the Senate to overturn the vote",
+        "Resign"
+      ],
+      "answer": 3,
+      "why": "Cabinet ministers must retain the \"confidence of the House\" and have to resign if they are defeated in a non-confidence vote.",
+      "page": 28
+    },
+    {
+      "id": "govern-q08",
+      "section": "govern-parliamentary-democracy",
+      "q": "How are Senators chosen?",
+      "choices": [
+        "Elected by the people, traditionally every four years, like members of Parliament",
+        "Appointed by the Sovereign on the advice of the Prime Minister, usually for five years",
+        "Appointed by the Governor General on the advice of the Prime Minister",
+        "Appointed by the Prime Minister, who selects them along with the Cabinet ministers"
+      ],
+      "answer": 2,
+      "why": "Senators are appointed by the Governor General on the advice of the Prime Minister and serve until age 75.",
+      "page": 28
+    },
+    {
+      "id": "govern-q09",
+      "section": "govern-parliamentary-democracy",
+      "q": "Until what age do Senators serve?",
+      "choices": [
+        "65",
+        "70",
+        "75",
+        "80"
+      ],
+      "answer": 2,
+      "why": "Senators serve until age 75.",
+      "page": 28
+    },
+    {
+      "id": "govern-q10",
+      "section": "govern-parliamentary-democracy",
+      "q": "Members of Parliament are traditionally elected by the people how often?",
+      "choices": [
+        "Every four years",
+        "Every five years",
+        "Every three years",
+        "Every two years"
+      ],
+      "answer": 0,
+      "why": "The House of Commons is made up of members of Parliament elected by the people, traditionally every four years.",
+      "page": 28
+    },
+    {
+      "id": "govern-q11",
+      "section": "govern-parliamentary-democracy",
+      "q": "Who grants royal assent to a bill, and on whose behalf?",
+      "choices": [
+        "The Prime Minister, on behalf of the Cabinet",
+        "The Speaker, on behalf of the House of Commons",
+        "The Chief Justice, on behalf of the Supreme Court",
+        "The Governor General, on behalf of the Sovereign"
+      ],
+      "answer": 3,
+      "why": "No bill can become law until it has received royal assent, granted by the Governor General on behalf of the Sovereign.",
+      "page": 28
+    },
+    {
+      "id": "govern-q12",
+      "section": "govern-parliamentary-democracy",
+      "q": "Who is responsible for passing laws, approving and monitoring expenditures, and keeping the government accountable?",
+      "choices": [
+        "The nine judges of the Supreme Court of Canada, appointed by the Governor General",
+        "The Lieutenant Governors, who represent the Sovereign in each of the ten provinces",
+        "The Governor General, who grants royal assent on behalf of the Sovereign",
+        "The elected representatives in the House of Commons and legislatures"
+      ],
+      "answer": 3,
+      "why": "The people elect members to the House of Commons and to the provincial and territorial legislatures; these representatives are responsible for passing laws, approving and monitoring expenditures, and keeping the government accountable.",
+      "page": 28
+    },
+    {
+      "id": "govern-q13",
+      "section": "govern-making-laws",
+      "q": "What happens at the Committee Stage of a bill?",
+      "choices": [
+        "The bill is printed for the first time",
+        "Members debate the bill's principle",
+        "Committee members study the bill clause by clause",
+        "The bill receives royal assent"
+      ],
+      "answer": 2,
+      "why": "Step 3, Committee Stage – Committee members study the bill clause by clause.",
+      "page": 29
+    },
+    {
+      "id": "govern-q14",
+      "section": "govern-making-laws",
+      "q": "At which stage do members debate and vote on the bill?",
+      "choices": [
+        "Second Reading",
+        "Report Stage",
+        "First Reading",
+        "Third Reading"
+      ],
+      "answer": 3,
+      "why": "Step 5, Third Reading – Members debate and vote on the bill.",
+      "page": 29
+    },
+    {
+      "id": "govern-q15",
+      "section": "govern-making-laws",
+      "q": "What is the final step by which a bill becomes law?",
+      "choices": [
+        "Royal Assent",
+        "Senate",
+        "Third Reading",
+        "Report Stage"
+      ],
+      "answer": 0,
+      "why": "Step 7, Royal Assent – The bill receives royal assent after being passed by both Houses.",
+      "page": 29
+    },
+    {
+      "id": "govern-q16",
+      "section": "govern-making-laws",
+      "q": "What happens at Second Reading?",
+      "choices": [
+        "Members can make other amendments",
+        "Members debate the bill's principle",
+        "The bill is considered read for the first time",
+        "The bill follows a similar process in the Senate"
+      ],
+      "answer": 1,
+      "why": "Step 2, Second Reading – Members debate the bill's principle.",
+      "page": 29
+    },
+    {
+      "id": "govern-q17",
+      "section": "govern-constitutional-monarchy",
+      "q": "Who is Canada's Head of State?",
+      "choices": [
+        "The Prime Minister",
+        "The Governor General",
+        "The Sovereign (King or Queen)",
+        "The Chief Justice"
+      ],
+      "answer": 2,
+      "why": "As a constitutional monarchy, Canada's Head of State is a hereditary Sovereign (Queen or King).",
+      "page": 29
+    },
+    {
+      "id": "govern-q18",
+      "section": "govern-constitutional-monarchy",
+      "q": "Who is Canada's head of government?",
+      "choices": [
+        "The Prime Minister",
+        "The Sovereign",
+        "The Governor General",
+        "The Premier"
+      ],
+      "answer": 0,
+      "why": "There is a clear distinction between the head of state—the Sovereign—and the head of government—the Prime Minister, who actually directs the governing of the country.",
+      "page": 29
+    },
+    {
+      "id": "govern-q19",
+      "section": "govern-constitutional-monarchy",
+      "q": "How is the Governor General appointed, and for how long?",
+      "choices": [
+        "Appointed by the Sovereign on the advice of the Prime Minister, usually for five years",
+        "Elected by voters, traditionally every four years, like the members of the House of Commons",
+        "Appointed by the Senate on the Prime Minister's recommendation, and serves until age 75",
+        "Appointed by the Prime Minister, who selects the Cabinet ministers, normally for five years"
+      ],
+      "answer": 0,
+      "why": "The Governor General is appointed by the Sovereign on the advice of the Prime Minister, usually for five years.",
+      "page": 29
+    },
+    {
+      "id": "govern-q20",
+      "section": "govern-constitutional-monarchy",
+      "q": "Who represents the Sovereign in each of the ten provinces?",
+      "choices": [
+        "The Premier",
+        "The Commissioner",
+        "The Speaker",
+        "The Lieutenant Governor"
+      ],
+      "answer": 3,
+      "why": "In each of the ten provinces, the Sovereign is represented by the Lieutenant Governor, who is appointed by the Governor General on the advice of the Prime Minister.",
+      "page": 29
+    },
+    {
+      "id": "govern-q21",
+      "section": "govern-constitutional-monarchy",
+      "q": "As Head of the Commonwealth, the Sovereign links Canada to how many other nations?",
+      "choices": [
+        "28",
+        "53",
+        "75",
+        "10"
+      ],
+      "answer": 1,
+      "why": "As Head of the Commonwealth, the Sovereign links Canada to 53 other nations that cooperate to advance social, economic and cultural progress.",
+      "page": 29
+    },
+    {
+      "id": "govern-q22",
+      "section": "govern-constitutional-monarchy",
+      "q": "What are the three branches of government?",
+      "choices": [
+        "Federal, provincial and municipal",
+        "Sovereign, Senate and House of Commons",
+        "Executive, Legislative and Judicial",
+        "Prime Minister, Cabinet and Governor General"
+      ],
+      "answer": 2,
+      "why": "The three branches of government are the Executive, Legislative and Judicial.",
+      "page": 29
+    },
+    {
+      "id": "govern-q23",
+      "section": "govern-constitutional-monarchy",
+      "q": "Who represents the federal government in the three territories?",
+      "choices": [
+        "The Lieutenant Governor",
+        "The Premier",
+        "The Governor General",
+        "The Commissioner"
+      ],
+      "answer": 3,
+      "why": "In the three territories, the Commissioner represents the federal government and plays a ceremonial role.",
+      "page": 29
+    },
+    {
+      "id": "govern-q24",
+      "section": "govern-constitutional-monarchy",
+      "q": "Which of the following is NOT a constitutional monarchy named in the booklet?",
+      "choices": [
+        "Japan",
+        "Spain",
+        "Norway",
+        "France"
+      ],
+      "answer": 3,
+      "why": "Other constitutional monarchies include Denmark, Norway, Sweden, Australia, New Zealand, The Netherlands, Spain, Thailand, Japan, Jordan and Morocco; France is not on the list.",
+      "page": 29
+    },
+    {
+      "id": "govern-q25",
+      "section": "govern-constitutional-monarchy",
+      "q": "In a province, who has a role similar to that of the Prime Minister in the federal government?",
+      "choices": [
+        "The Premier",
+        "The Lieutenant Governor",
+        "The Commissioner",
+        "The Governor General"
+      ],
+      "answer": 0,
+      "why": "In each province, the Premier has a role similar to that of the Prime Minister in the federal government.",
+      "page": 29
+    },
+    {
+      "id": "govern-q26",
+      "section": "govern-system-of-government",
+      "q": "How many judges sit on the Supreme Court of Canada?",
+      "choices": [
+        "Seven",
+        "Nine",
+        "Eleven",
+        "Five"
+      ],
+      "answer": 1,
+      "why": "The Supreme Court of Canada has nine judges appointed by the Governor General.",
+      "page": 29
+    },
+    {
+      "id": "govern-q27",
+      "section": "govern-system-of-government",
+      "q": "Who makes up the Executive Branch in Canada's system of government?",
+      "choices": [
+        "The Senate and the House of Commons",
+        "The Supreme Court of Canada",
+        "The Prime Minister and Cabinet",
+        "The Governor General and the Lieutenant Governors"
+      ],
+      "answer": 2,
+      "why": "In the diagram of Canada's System of Government, the Executive Branch is the Prime Minister and Cabinet; the Legislative Branch is the Senate and the House of Commons.",
+      "page": 29
+    },
+    {
+      "id": "govern-q28",
+      "section": "govern-system-of-government",
+      "q": "Which courts make up Canada's Judiciary?",
+      "choices": [
+        "The Supreme Court of Canada, the Federal Court of Canada and the Provincial Courts",
+        "The Senate, the House of Commons and the Supreme Court",
+        "The Supreme Court of Canada only",
+        "The Federal Court of Canada and the Court of the Governor General"
+      ],
+      "answer": 0,
+      "why": "The Judiciary is the Supreme Court of Canada (nine judges appointed by the Governor General), the Federal Court of Canada and the Provincial Courts.",
+      "page": 29
+    }
   ]
 }

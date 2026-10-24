@@ -265,12 +265,12 @@
       "section": "justice-the-justice-system",
       "q": "What is due process?",
       "choices": [
-        "The principle that laws are made by elected representatives",
-        "The principle that the courts settle disputes",
+        "The principle that laws are written rules made by elected representatives to guide people in our society",
         "The principle that the government must respect all the legal rights a person is entitled to under the law",
-        "The principle that the police enforce the laws"
+        "The principle that the courts settle disputes and provide a peaceful way to express the values of Canadians",
+        "The principle that the police enforce the laws, which apply to everyone, including judges and politicians"
       ],
-      "answer": 2,
+      "answer": 1,
       "why": "“Due process is the principle that the government must respect all the legal rights a person is entitled to under the law.”",
       "page": 36
     },
@@ -433,12 +433,12 @@
       "section": "justice-the-justice-system",
       "q": "What does the blindfolded Lady Justice at the Vancouver Law Courts symbolize?",
       "choices": [
-        "The secrecy of the ballot",
-        "The role of prisons in deterring crime",
-        "The impartial manner in which our laws are administered: blind to all considerations but the facts",
-        "The presumption of innocence"
+        "The presumption of innocence in criminal matters, meaning everyone is innocent until proven guilty",
+        "The essential role of prisons in punishing criminals and deterring crime in an orderly society",
+        "The freedom under the law that allows anyone to question the police about their service or conduct",
+        "The impartial manner in which our laws are administered: blind to all considerations but the facts"
       ],
-      "answer": 2,
+      "answer": 3,
       "why": "The caption says the blindfolded Lady Justice “symbolizes the impartial manner in which our laws are administered: blind to all considerations but the facts.”",
       "page": 36
     }

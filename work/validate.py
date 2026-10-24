@@ -19,7 +19,7 @@ for ch in idx["chapters"]:
         if not s.get("blocks"):
             problems.append(f"{f.name}: section {s['id']} has no blocks")
         for b in s["blocks"]:
-            if b["type"] not in ("p", "list", "quote", "caption", "table", "h"):
+            if b["type"] not in ("p", "list", "quote", "caption", "table", "h", "note"):
                 problems.append(f"{f.name}: {s['id']} bad block type {b['type']}")
         for fp in s.get("focus", []):
             if len(fp.split()) > 30:

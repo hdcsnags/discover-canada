@@ -468,7 +468,7 @@
       "id": "elections-c24",
       "section": "elections-after-an-election",
       "front": "What is the Official Opposition?",
-      "back": "The opposition party with the most members of the House of Commons, also called the Sovereign’s Loyal Opposition (Her Majesty’s Loyal Opposition in the booklet).",
+      "back": "The opposition party with the most members of the House of Commons, also called Her Majesty's Loyal Opposition.",
       "page": 31
     },
     {
@@ -653,12 +653,12 @@
       "section": "elections-federal-elections",
       "q": "When must federal elections be held under legislation passed by Parliament?",
       "choices": [
-        "On the first Monday in September every five years",
+        "Whenever the Prime Minister asks the Governor General to call one, with no fixed date",
+        "Every four years on a date set by Elections Canada from the National Register of Electors",
         "On the third Monday in October every four years following the most recent general election",
-        "Whenever the Governor General decides",
-        "On July 1 every four years"
+        "On the first Monday in October every five years following the most recent general election"
       ],
-      "answer": 1,
+      "answer": 2,
       "why": "“Federal elections must be held on the third Monday in October every four years following the most recent general election.”",
       "page": 30
     },
@@ -709,12 +709,12 @@
       "section": "elections-voting",
       "q": "Which of the following is a requirement to vote in a federal election?",
       "choices": [
-        "Being a Canadian citizen at least 18 years old on voting day and on the voters’ list",
-        "Being a Canadian resident for at least four years",
-        "Owning property in the electoral district",
-        "Being a member of a political party"
+        "Being a Canadian resident for at least four years and listed in the National Register of Electors",
+        "Owning property in the electoral district and being a Canadian citizen at least 18 years old",
+        "Being a member of a political party and having received a voter information card in the mail",
+        "Being a Canadian citizen at least 18 years old on voting day and on the voters’ list"
       ],
-      "answer": 0,
+      "answer": 3,
       "why": "You are eligible if you are a Canadian citizen, at least 18 years old on voting day, and on the voters’ list.",
       "page": 30
     },
@@ -737,10 +737,10 @@
       "section": "elections-voting",
       "q": "What does the voter information card tell you?",
       "choices": [
-        "The names of the candidates in your riding",
-        "How to join a political party",
+        "The names of the candidates in your electoral district and the political party each one belongs to",
+        "How to join a political party and the name of the MP who currently represents your riding",
         "When and where you vote, and the number to call if you need an interpreter or other special services",
-        "The results of the last election"
+        "The results of the last election in your riding and whether the party in power holds a majority"
       ],
       "answer": 2,
       "why": "“The card lists when and where you vote and the number to call if you require an interpreter or other special services.”",
@@ -779,12 +779,12 @@
       "section": "elections-after-an-election",
       "q": "After an election, who is invited by the Governor General to form the government?",
       "choices": [
-        "The leader of the Official Opposition",
         "The leader of the political party with the most seats in the House of Commons",
-        "The MP who received the most votes in Canada",
-        "The Commissioner"
+        "The leader of the Official Opposition, also known as Her Majesty’s Loyal Opposition",
+        "The MP who received the most votes of any candidate across the 308 electoral districts",
+        "The Cabinet minister chosen to run the largest federal government department"
       ],
-      "answer": 1,
+      "answer": 0,
       "why": "“The leader of the political party with the most seats in the House of Commons is invited by the Governor General to form the government.”",
       "page": 31
     },
@@ -835,12 +835,12 @@
       "section": "elections-after-an-election",
       "q": "What is the Official Opposition?",
       "choices": [
-        "The party in power",
-        "The opposition party with the most members of the House of Commons",
-        "All of the parties not in power",
-        "The Cabinet"
+        "The party in power, which runs the government with the confidence of the MPs",
+        "All of the parties that are not in power, taken together as a single group",
+        "The Cabinet, made up of the Prime Minister and the ministers of the Crown",
+        "The opposition party with the most members of the House of Commons"
       ],
-      "answer": 1,
+      "answer": 3,
       "why": "“The opposition party with the most members of the House of Commons is the Official Opposition or Her Majesty’s Loyal Opposition.”",
       "page": 31
     },
@@ -891,12 +891,12 @@
       "section": "elections-voting-procedures",
       "q": "How do you mark your ballot?",
       "choices": [
-        "Sign your name next to the candidate",
         "Mark an “X” in the circle next to the name of the candidate of your choice",
-        "Write the name of the party",
-        "Tear off the ballot number"
+        "Sign your name next to the candidate, then fold the ballot and present it to the poll officials",
+        "Write the name of the political party of your choice in the circle beside the candidate",
+        "Tear off the ballot number and deposit the number in the ballot box behind the screen"
       ],
-      "answer": 1,
+      "answer": 0,
       "why": "“Mark an ‘X’ in the circle next to the name of the candidate of your choice.”",
       "page": 32
     },

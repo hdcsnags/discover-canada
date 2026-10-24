@@ -1269,21 +1269,21 @@
       "section": "history-rebellions-of-1837-38",
       "front": "What does responsible government mean?",
       "back": "The ministers of the Crown must have the support of a majority of the elected representatives in order to govern.",
-      "page": 17
+      "page": 18
     },
     {
       "id": "history-c66",
       "section": "history-rebellions-of-1837-38",
       "front": "What controversial recommendation did Lord Durham make about the Canadiens?",
       "back": "That the quickest way for the Canadiens to achieve progress was to assimilate into English-speaking Protestant culture.",
-      "page": 17
+      "page": 18
     },
     {
       "id": "history-c67",
       "section": "history-rebellions-of-1837-38",
       "front": "Which reformers later became Fathers of Confederation?",
       "back": "Sir Étienne-Paschal Taché, Sir George-Étienne Cartier and Sir John A. Macdonald.",
-      "page": 17
+      "page": 18
     },
     {
       "id": "history-c68",
@@ -1887,12 +1887,12 @@
       "section": "history-aboriginal-peoples",
       "q": "Why did the first European explorers call the native peoples “Indians”?",
       "choices": [
-        "Because they spoke an Indian language",
-        "Because the explorers thought they had reached the East Indies",
-        "Because the Vikings had named them",
-        "Because they came from the West Indies"
+        "Because the Vikings from Iceland had given them that name 1,000 years ago",
+        "Because Jacques Cartier's two captured guides called them by that name",
+        "Because the explorers believed they had come from the British West Indies",
+        "Because the explorers thought they had reached the East Indies"
       ],
-      "answer": 1,
+      "answer": 3,
       "why": "The booklet says the explorers called them Indians “because the first explorers thought they had reached the East Indies.”",
       "page": 14
     },
@@ -2041,12 +2041,12 @@
       "section": "history-united-empire-loyalists",
       "q": "Who were the Loyalists?",
       "choices": [
-        "Rebels who fought for American independence",
+        "Rebels who fought for American independence when the 13 colonies declared independence in 1776",
+        "French-speaking Catholic habitants who strove to preserve their way of life in the British Empire",
         "People loyal to the Crown who fled the American Revolution to settle in Nova Scotia and Quebec",
-        "French settlers who moved to Louisiana",
-        "Fur traders of the Hudson’s Bay Company"
+        "Fur traders of the Hudson’s Bay Company who competed with Montreal-based traders for 100 years"
       ],
-      "answer": 1,
+      "answer": 2,
       "why": "“More than 40,000 people loyal to the Crown, called ‘Loyalists,’ fled the oppression of the American Revolution to settle in Nova Scotia and Quebec.”",
       "page": 15
     },
@@ -2153,12 +2153,12 @@
       "section": "history-the-war-of-1812",
       "q": "What did Laura Secord do in 1813?",
       "choices": [
-        "Burned down the White House",
-        "Led 460 soldiers at Châteauguay",
         "Walked 19 miles to warn Lieutenant James FitzGibbon of a planned American attack",
-        "Chose Bytown as the endpoint of the Rideau Canal"
+        "Burned down the White House and other public buildings in Washington, D.C., in retaliation",
+        "Led 460 soldiers, mostly French Canadiens, to turn back 4,000 American invaders at Châteauguay",
+        "Chose Bytown (Ottawa) as the endpoint of the Rideau Canal to prevent another American invasion"
       ],
-      "answer": 2,
+      "answer": 0,
       "why": "The caption says Laura Secord made a dangerous 19-mile (30-km) journey on foot to warn Lieutenant James FitzGibbon, contributing to victory at the Battle of Beaver Dams.",
       "page": 17
     },
@@ -2167,12 +2167,12 @@
       "section": "history-the-war-of-1812",
       "q": "Who turned back 4,000 American invaders at Châteauguay in 1813?",
       "choices": [
-        "Sir Isaac Brock and Chief Tecumseh",
-        "Lieutenant-Colonel Charles de Salaberry and 460 soldiers, mostly French Canadiens",
-        "The Duke of Wellington",
-        "Major-General Robert Ross"
+        "Major-General Sir Isaac Brock and Shawnee warriors led by Chief Tecumseh",
+        "The Duke of Wellington and some of his best soldiers, sent to defend Canada in 1814",
+        "Major-General Robert Ross and an expedition of British troops from Nova Scotia",
+        "Lieutenant-Colonel Charles de Salaberry and 460 soldiers, mostly French Canadiens"
       ],
-      "answer": 1,
+      "answer": 3,
       "why": "“In 1813, Lieutenant-Colonel Charles de Salaberry and 460 soldiers, mostly French Canadiens, turned back 4,000 American invaders at Châteauguay, south of Montreal.”",
       "page": 17
     },
@@ -2195,12 +2195,12 @@
       "section": "history-rebellions-of-1837-38",
       "q": "What did Lord Durham recommend after the rebellions of 1837–38?",
       "choices": [
-        "That Canada join the United States",
-        "That the Canadas be given the Quebec Act",
+        "That Canada adopt American republican values and try to join the United States",
         "That Upper and Lower Canada be merged and given responsible government",
-        "That the rebels be pardoned"
+        "That the Canadas be given the Quebec Act, restoring French civil law",
+        "That the rebels be pardoned and the exiles be allowed to return to Canada"
       ],
-      "answer": 2,
+      "answer": 1,
       "why": "“Lord Durham ... recommended that Upper and Lower Canada be merged and given responsible government.”",
       "page": 17
     },
@@ -2405,12 +2405,12 @@
       "section": "history-challenge-in-the-west",
       "q": "Why did Prime Minister Macdonald establish the North West Mounted Police in 1873?",
       "choices": [
-        "To build the railway",
+        "To retake Fort Garry from Louis Riel and the 12,000 Métis of the Red River",
+        "To defend against an American invasion of the interior from sea to sea",
         "To pacify the West and assist in negotiations with the Indians",
-        "To defend against an American invasion",
-        "To collect the Head Tax"
+        "To put down the second rebellion in present-day Saskatchewan in 1885"
       ],
-      "answer": 1,
+      "answer": 2,
       "why": "“Macdonald established the North West Mounted Police (NWMP) in 1873 to pacify the West and assist in negotiations with the Indians.”",
       "page": 19
     },

@@ -432,12 +432,12 @@
       "section": "rights-rights-and-responsibilities-of-citizenship",
       "q": "What is habeas corpus?",
       "choices": [
-        "The right to challenge unlawful detention by the state",
-        "The right to vote in elections",
-        "The right to apply for a passport",
-        "The right to serve on a jury"
+        "The right to enter and leave the country freely and apply for a passport",
+        "The right to vote in federal, provincial or territorial and local elections",
+        "The freedom of peaceful assembly and of association guaranteed to Canadians",
+        "The right to challenge unlawful detention by the state"
       ],
-      "answer": 0,
+      "answer": 3,
       "why": "\"Habeas corpus, the right to challenge unlawful detention by the state, comes from English common law.\"",
       "page": 8
     },
@@ -489,9 +489,9 @@
       "q": "The opening phrase of the Charter underlines the importance of:",
       "choices": [
         "Religious traditions to Canadian society and the dignity and worth of the human person",
-        "Free trade and economic prosperity",
-        "The equal status of French and English",
-        "Military service to the country"
+        "The equal status of French and English in Parliament and throughout the government",
+        "Mobility rights, so that Canadians can live and work anywhere they choose in Canada",
+        "The 800-year old tradition of ordered liberty dating back to Magna Carta in 1215"
       ],
       "answer": 0,
       "why": "\"This phrase underlines the importance of religious traditions to Canadian society and the dignity and worth of the human person.\"",
@@ -516,12 +516,12 @@
       "section": "rights-rights-and-responsibilities-of-citizenship",
       "q": "According to the Charter, what is the effect of the rights it guarantees on the treaty rights of Aboriginal peoples?",
       "choices": [
-        "They replace all treaty rights",
-        "They will not adversely affect any treaty or other rights or freedoms of Aboriginal peoples",
-        "They apply only to First Nations, not to Inuit or Métis",
-        "They cancel rights not written in the Constitution"
+        "They replace all treaty rights with the mobility and language rights set out in the Charter",
+        "They apply only to First Nations and do not extend to the Inuit or Métis peoples of Canada",
+        "They cancel any treaty rights not written into the Constitution when it was amended in 1982",
+        "They will not adversely affect any treaty or other rights or freedoms of Aboriginal peoples"
       ],
-      "answer": 1,
+      "answer": 3,
       "why": "\"The rights guaranteed in the Charter will not adversely affect any treaty or other rights or freedoms of Aboriginal peoples.\"",
       "page": 8
     },
@@ -544,12 +544,12 @@
       "section": "rights-rights-and-responsibilities-of-citizenship",
       "q": "The Charter describes multiculturalism as:",
       "choices": [
-        "A policy introduced in 1982",
+        "A policy introduced when the Constitution was amended in 1982",
+        "A responsibility of Parliament and the provincial legislatures",
         "A fundamental characteristic of the Canadian heritage and identity",
-        "A requirement for citizenship",
-        "A responsibility of the provinces"
+        "A right that Canadians can exercise anywhere they choose in Canada"
       ],
-      "answer": 1,
+      "answer": 2,
       "why": "\"Multiculturalism — A fundamental characteristic of the Canadian heritage and identity.\"",
       "page": 8
     },
@@ -614,12 +614,12 @@
       "section": "rights-citizenship-responsibilities",
       "q": "Which statement describes the rule of law, one of Canada's founding principles?",
       "choices": [
-        "Governments may act as they see fit in an emergency",
-        "Elected officials are above the law",
-        "Laws apply only to citizens, not to governments",
-        "Individuals and governments are regulated by laws and not by arbitrary actions; no person or group is above the law"
+        "Individuals and governments are regulated by laws and not by arbitrary actions; no person or group is above the law",
+        "Governments may act as they see fit in an emergency, since no law can bind the government itself",
+        "Elected officials are above the law because they are the ones who pass laws in Parliament and the legislatures",
+        "Laws regulate individuals but not governments, which may take arbitrary actions when they judge it necessary"
       ],
-      "answer": 3,
+      "answer": 0,
       "why": "\"Individuals and governments are regulated by laws and not by arbitrary actions. No person or group is above the law.\"",
       "page": 9
     },
@@ -656,12 +656,12 @@
       "section": "rights-citizenship-responsibilities",
       "q": "Why does the booklet say serving on a jury is a privilege?",
       "choices": [
+        "Jurors are paid a high salary, which contributes to personal dignity and to Canada's prosperity",
         "It makes the justice system work, as it depends on impartial juries made up of citizens",
-        "Jurors are paid a high salary",
-        "Jurors choose the judges",
-        "Only citizens over 55 may serve"
+        "Jurors choose the judges who settle disputes, and only citizens are allowed to take part",
+        "Only volunteers may serve, and volunteering is an excellent way to gain useful skills and contacts"
       ],
-      "answer": 0,
+      "answer": 1,
       "why": "\"Serving on a jury is a privilege that makes the justice system work as it depends on impartial juries made up of citizens.\"",
       "page": 9
     },
@@ -698,12 +698,12 @@
       "section": "rights-citizenship-responsibilities",
       "q": "What role does every citizen have in protecting and enjoying our heritage and environment?",
       "choices": [
-        "Serving in the Coast Guard",
-        "Avoiding waste and pollution while protecting Canada's natural, cultural and architectural heritage for future generations",
-        "Paying an environmental tax",
-        "Volunteering at a museum once a year"
+        "Serving in the Coast Guard or the emergency services in your community, such as a fire department",
+        "Volunteering at a food bank or other charity and encouraging newcomers to integrate into the community",
+        "Getting a job, taking care of one's family and working hard in keeping with one's abilities",
+        "Avoiding waste and pollution while protecting Canada's natural, cultural and architectural heritage"
       ],
-      "answer": 1,
+      "answer": 3,
       "why": "\"Every citizen has a role to play in avoiding waste and pollution while protecting Canada's natural, cultural and architectural heritage for future generations.\"",
       "page": 9
     },
@@ -754,12 +754,12 @@
       "section": "rights-defending-canada",
       "q": "Besides the Canadian Forces, which of the following does the booklet name as a way to help protect your community?",
       "choices": [
-        "Serving in Parliament",
-        "Working for a bank",
         "Serving in the Coast Guard or emergency services such as a police force or fire department",
-        "Joining a sports team"
+        "Serving in Parliament or in one of the provincial legislatures that pass Canadian laws",
+        "Working for a bank or other business, since work contributes to Canada's prosperity",
+        "Joining a sports team or a community club and encouraging newcomers to integrate"
       ],
-      "answer": 2,
+      "answer": 0,
       "why": "\"You may also serve in the Coast Guard or emergency services in your community such as a police force or fire department.\"",
       "page": 9
     },
@@ -768,12 +768,12 @@
       "section": "rights-defending-canada",
       "q": "In which part-time services can you serve and gain valuable experience, skills and contacts?",
       "choices": [
-        "The Supreme Court",
-        "The Senate",
-        "The Call Centre",
-        "Your local part-time navy, militia and air reserves"
+        "The regular Canadian Forces: the navy, army and air force",
+        "Your local part-time navy, militia and air reserves",
+        "The cadets, where young people learn discipline and skills",
+        "The provincial legislatures and the Parliament of Canada"
       ],
-      "answer": 3,
+      "answer": 1,
       "why": "\"You can serve in your local part-time navy, militia and air reserves and gain valuable experience, skills and contacts.\"",
       "page": 9
     }
