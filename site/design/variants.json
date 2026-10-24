@@ -12,6 +12,25 @@
       "by": "Claude Design (canvas) — ported to CSS by the concierge",
       "canvas": "https://claude.ai/artifact/RURqC3ShrhQy2kWXhQ8nAf",
       "blurb": "Cool stone ground, white cards with 20 px radii, Bricolage Grotesque headings over Atkinson body. Maple red reserved for the one primary action per screen; teal for done and learned so progress never shares a hue with errors; amber only for the things to remember. The canvas has five full mockups (home, section, card, quiz, desktop); this stylesheet carries its tokens and type onto the live app."
+    },
+    {
+      "id": "argon",
+      "name": "Gemini 4 Argon",
+      "by": "Council seat, code mode · 608 s · delivered app.css + DESIGN.md",
+      "design": "notes/argon.md",
+      "blurb": "Full proposal with written rationale. See the design notes below for its palette, type and ADHD reasoning."
+    },
+    {
+      "id": "opus",
+      "name": "Opus 5.5",
+      "by": "Council seat, code mode · hit a usage window after writing app.css (no DESIGN.md yet)",
+      "blurb": "Stylesheet landed before the seat's usage window closed; rationale pending a council resume."
+    },
+    {
+      "id": "sonnet55",
+      "name": "Sonnet 5.5",
+      "by": "Council seat, code mode · hit a usage window after writing app.css (no DESIGN.md yet)",
+      "blurb": "Stylesheet landed before the seat's usage window closed; rationale pending a council resume."
     }
   ]
 }
