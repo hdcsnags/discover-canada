@@ -104,6 +104,7 @@
   function cardsDue(cards, now) { return cards.filter((c) => !isNew(c) && cardState(c.id).due <= now); }
   function cardsNew(cards) { return cards.filter(isNew); }
   function cardsLearned(cards) { return cards.filter((c) => cardState(c.id).box >= 3).length; }
+  const bookLocal = () => !data.index.book || data.index.book.mode !== 'link';
   const chapterFor = (n) => data.chapters.find((c) => n >= c.pages[0] && n <= c.pages[c.pages.length - 1]) || null;
 
   // ---------- booklet overlay ----------
@@ -121,7 +122,7 @@
           <a class="btn small" href="#/book/${cur}" data-ov="go">Open in Booklet</a>
           <button class="iconbtn" data-ov="close" aria-label="Close">${icon.close}</button>
         </div>
-        <div class="overlay-body"><img src="book/p${String(cur).padStart(2, '0')}.jpg" alt="Booklet page ${cur}" width="1100" height="1430"></div>`;
+        <div class="overlay-body">${bookLocal() ? `<img src="book/p${String(cur).padStart(2, '0')}.jpg" alt="Booklet page ${cur}" width="1100" height="1430">` : `<div class="empty"><p>Page ${cur} of the printed booklet.</p><a class="btn primary" href="${esc(data.index.book.official)}" target="_blank" rel="noopener">Open the official online guide</a></div>`}</div>`;
       $('[data-ov="close"]', ov).focus();
     };
     const onClick = (e) => {
@@ -581,6 +582,17 @@
   // ---------- BOOK ----------
   route(/^\/book(?:\/(\d+))?$/, (p) => {
     let page = pageNum(p || 1);
+    if (!bookLocal()) {
+      app.innerHTML = `
+        <section class="fade-in">
+          <h1 class="h1">Booklet</h1>
+          <p class="lead">The official <em>Discover Canada</em> guide is free to read online, download as a PDF or eBook, or listen to as audio.</p>
+          <a class="btn primary" href="${esc(data.index.book.official)}" target="_blank" rel="noopener">Open the official online guide</a>
+          <h2 class="h2">Chapters</h2>
+          <div class="grid">${data.chapters.map((c) => `<a class="card link chapter-item" href="#/learn/${c.id}"><div class="num">${c.order}</div><div class="grow"><div class="title">${esc(c.title)}</div><div class="meta">printed pages ${c.pages[0]}–${c.pages[c.pages.length - 1]} · read it here in Learn</div></div></a>`).join('')}</div>
+        </section>`;
+      return;
+    }
     function draw() {
       const ch = chapterFor(page);
       app.innerHTML = `

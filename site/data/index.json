@@ -1,17 +1,53 @@
 {
   "chapters": [
-    {"id": "oath", "file": "oath.json"},
-    {"id": "applying", "file": "applying.json"},
-    {"id": "rights", "file": "rights.json"},
-    {"id": "who-we-are", "file": "who-we-are.json"},
-    {"id": "history", "file": "history.json"},
-    {"id": "modern", "file": "modern.json"},
-    {"id": "govern", "file": "govern.json"},
-    {"id": "elections", "file": "elections.json"},
-    {"id": "justice", "file": "justice.json"},
-    {"id": "symbols", "file": "symbols.json"},
-    {"id": "economy", "file": "economy.json"},
-    {"id": "regions", "file": "regions.json"}
+    {
+      "id": "oath",
+      "file": "oath.json"
+    },
+    {
+      "id": "applying",
+      "file": "applying.json"
+    },
+    {
+      "id": "rights",
+      "file": "rights.json"
+    },
+    {
+      "id": "who-we-are",
+      "file": "who-we-are.json"
+    },
+    {
+      "id": "history",
+      "file": "history.json"
+    },
+    {
+      "id": "modern",
+      "file": "modern.json"
+    },
+    {
+      "id": "govern",
+      "file": "govern.json"
+    },
+    {
+      "id": "elections",
+      "file": "elections.json"
+    },
+    {
+      "id": "justice",
+      "file": "justice.json"
+    },
+    {
+      "id": "symbols",
+      "file": "symbols.json"
+    },
+    {
+      "id": "economy",
+      "file": "economy.json"
+    },
+    {
+      "id": "regions",
+      "file": "regions.json"
+    }
   ],
   "official": "official-questions.json",
   "test": {
@@ -24,5 +60,10 @@
     "languages": "English or French",
     "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/test/study.html",
     "verified": "2026-10-24"
+  },
+  "book": {
+    "mode": "local",
+    "note": "local = page images + PDF shipped in site/book and site/discover.pdf; link = send readers to the official online guide instead (delete site/book and site/discover.pdf when switching)",
+    "official": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/discover-canada/read-online.html"
   }
 }
