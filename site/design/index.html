@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design round — Discover Canada</title>
+<meta name="description" content="Side-by-side comparison of the design proposals for the Discover Canada study app: the current look, Claude Design, and the council seats.">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #f3f4f1; --card: #fff; --ink: #171a1f; --ink-2: #4e555d; --line: #e2e5e0; --accent: #c8102e; color-scheme: light; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #171412; --card: #262120; --ink: #f3ede6; --ink-2: #c8bfb5; --line: #3a332f; --accent: #ef4d5f; color-scheme: dark; } }
+  :root[data-theme="dark"] { --bg: #171412; --card: #262120; --ink: #f3ede6; --ink-2: #c8bfb5; --line: #3a332f; --accent: #ef4d5f; color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; line-height: 1.5; padding: 0 16px 60px; }
+  main { max-width: 1240px; margin: 0 auto; }
+  h1 { font-size: 1.9rem; margin: 28px 0 6px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.35rem; margin: 0; }
+  .lead { color: var(--ink-2); margin: 0 0 24px; max-width: 70ch; }
+  .variant { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 20px; margin: 0 0 20px; }
+  .head { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; justify-content: space-between; }
+  .by { color: var(--ink-2); font-size: 0.95rem; }
+  .links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .btn { display: inline-flex; align-items: center; min-height: 40px; padding: 8px 14px; border-radius: 12px; border: 1px solid var(--line); text-decoration: none; color: var(--ink); font-weight: 700; font-size: 0.9rem; background: var(--card); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .blurb { margin: 12px 0 0; color: var(--ink-2); max-width: 80ch; }
+  .shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 16px; }
+  .shots figure { margin: 0; }
+  .shots img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); display: block; background: #888; }
+  .shots figcaption { font-size: 0.78rem; color: var(--ink-2); margin-top: 4px; }
+  .shots .wide { grid-column: span 2; }
+  details { margin-top: 14px; }
+  summary { cursor: pointer; font-weight: 700; }
+  .md { white-space: pre-wrap; font-size: 0.92rem; line-height: 1.5; background: var(--bg); border-radius: 12px; padding: 14px 16px; margin-top: 10px; overflow-x: auto; }
+  .missing { color: var(--ink-2); font-style: italic; }
+  .note { border-left: 4px solid var(--accent); padding: 10px 14px; background: var(--bg); border-radius: 0 12px 12px 0; margin: 0 0 20px; max-width: 80ch; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Design round</h1>
+  <p class="lead">Same brief, same app, same screenshots to react to. Each proposal is a drop-in stylesheet, so every "Open live" link is the real app wearing that proposal. Shots are headless Chrome at 390 and 1280 px, light and dark where the proposal defines it.</p>
+  <div class="note">What to look for: hierarchy on the Learn screen (can you find the three things to remember in two seconds?), the card's answer side, the quiz feedback, and whether anything is lost in dark mode.</div>
+  <div id="list"></div>
+</main>
+<script>
+  (async () => {
+    const list = document.getElementById('list');
+    let variants = [];
+    try { variants = (await (await fetch('variants.json')).json()).variants; } catch (e) { list.innerHTML = '<p class="missing">variants.json not found.</p>'; return; }
+    const routes = [['home', 'Home'], ['learn', 'Learn'], ['cards', 'Cards'], ['quiz', 'Quiz']];
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    for (const v of variants) {
+      const sec = document.createElement('section'); sec.className = 'variant';
+      const shots = [];
+      for (const [r, label] of routes) shots.push(`<figure><a href="shots/${v.id}-${r}-phone.jpg" target="_blank"><img loading="lazy" src="shots/${v.id}-${r}-phone.jpg" alt="${esc(v.name)} — ${label}, phone"></a><figcaption>${label} · phone</figcaption></figure>`);
+      for (const [r, label] of routes) shots.push(`<figure><a href="shots/${v.id}-${r}-phone-dark.jpg" target="_blank"><img loading="lazy" src="shots/${v.id}-${r}-phone-dark.jpg" alt="${esc(v.name)} — ${label}, phone, dark"></a><figcaption>${label} · dark</figcaption></figure>`);
+      for (const [r, label] of routes) shots.push(`<figure class="wide"><a href="shots/${v.id}-${r}-desktop.jpg" target="_blank"><img loading="lazy" src="shots/${v.id}-${r}-desktop.jpg" alt="${esc(v.name)} — ${label}, desktop"></a><figcaption>${label} · desktop</figcaption></figure>`);
+      sec.innerHTML = `
+        <div class="head"><div><h2>${esc(v.name)}</h2><div class="by">${esc(v.by)}${v.elapsed ? ' · ' + esc(v.elapsed) : ''}</div></div>
+        <div class="links"><a class="btn primary" href="../?css=${esc(v.id)}#/" target="_blank">Open live</a><a class="btn" href="../?css=${esc(v.id)}#/learn/govern/2" target="_blank">Learn</a><a class="btn" href="../?css=${esc(v.id)}#/cards/govern" target="_blank">Cards</a><a class="btn" href="../?css=${esc(v.id)}#/quiz/justice" target="_blank">Quiz</a>${v.canvas ? `<a class="btn" href="${esc(v.canvas)}" target="_blank">Design canvas</a>` : ''}</div></div>
+        ${v.blurb ? `<p class="blurb">${esc(v.blurb)}</p>` : ''}
+        <div class="shots">${shots.join('')}</div>
+        ${v.design ? `<details><summary>Design notes (${esc(v.name)})</summary><div class="md" data-md="${esc(v.design)}">Loading…</div></details>` : ''}`;
+      list.appendChild(sec);
+    }
+    for (const el of document.querySelectorAll('[data-md]')) {
+      try { const t = await (await fetch(el.getAttribute('data-md'))).text(); el.textContent = t; } catch (e) { el.textContent = 'Notes not available.'; }
+    }
+  })();
+</script>
+</body>
+</html>

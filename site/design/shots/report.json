@@ -1,0 +1,194 @@
+[
+  {
+    "v": "mythos",
+    "route": "home",
+    "size": "phone",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "mythos",
+    "route": "learn",
+    "size": "phone",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "mythos",
+    "route": "cards",
+    "size": "phone",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "mythos",
+    "route": "quiz",
+    "size": "phone",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "mythos",
+    "route": "home",
+    "size": "phone",
+    "dark": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "mythos",
+    "route": "learn",
+    "size": "phone",
+    "dark": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "mythos",
+    "route": "cards",
+    "size": "phone",
+    "dark": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "mythos",
+    "route": "quiz",
+    "size": "phone",
+    "dark": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "mythos",
+    "route": "home",
+    "size": "desktop",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "mythos",
+    "route": "learn",
+    "size": "desktop",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "mythos",
+    "route": "cards",
+    "size": "desktop",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "mythos",
+    "route": "quiz",
+    "size": "desktop",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "home",
+    "size": "phone",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "learn",
+    "size": "phone",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "cards",
+    "size": "phone",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "quiz",
+    "size": "phone",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "home",
+    "size": "phone",
+    "dark": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "learn",
+    "size": "phone",
+    "dark": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "cards",
+    "size": "phone",
+    "dark": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "quiz",
+    "size": "phone",
+    "dark": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "home",
+    "size": "desktop",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "learn",
+    "size": "desktop",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "cards",
+    "size": "desktop",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "v": "quiet-study",
+    "route": "quiz",
+    "size": "desktop",
+    "dark": false,
+    "overflow": false,
+    "errors": []
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "variants": [
+    {
+      "id": "mythos",
+      "name": "Current look (shipped)",
+      "by": "Claude Mythos 5.1 — concierge, built the app",
+      "blurb": "Warm paper ground, maple red for the primary action, green for progress, amber for the focus box. Atkinson Hyperlegible throughout. Shipped 2026-10-24 and audited by the council."
+    },
+    {
+      "id": "quiet-study",
+      "name": "Quiet Study",
+      "by": "Claude Design (canvas) — ported to CSS by the concierge",
+      "canvas": "https://claude.ai/artifact/RURqC3ShrhQy2kWXhQ8nAf",
+      "blurb": "Cool stone ground, white cards with 20 px radii, Bricolage Grotesque headings over Atkinson body. Maple red reserved for the one primary action per screen; teal for done and learned so progress never shares a hue with errors; amber only for the things to remember. The canvas has five full mockups (home, section, card, quiz, desktop); this stylesheet carries its tokens and type onto the live app."
+    }
+  ]
+}
