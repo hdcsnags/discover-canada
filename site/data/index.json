@@ -1,0 +1,28 @@
+{
+  "chapters": [
+    {"id": "oath", "file": "oath.json"},
+    {"id": "applying", "file": "applying.json"},
+    {"id": "rights", "file": "rights.json"},
+    {"id": "who-we-are", "file": "who-we-are.json"},
+    {"id": "history", "file": "history.json"},
+    {"id": "modern", "file": "modern.json"},
+    {"id": "govern", "file": "govern.json"},
+    {"id": "elections", "file": "elections.json"},
+    {"id": "justice", "file": "justice.json"},
+    {"id": "symbols", "file": "symbols.json"},
+    {"id": "economy", "file": "economy.json"},
+    {"id": "regions", "file": "regions.json"}
+  ],
+  "official": "official-questions.json",
+  "test": {
+    "questions": 20,
+    "format": "multiple choice or true/false",
+    "minutes": 45,
+    "pass": 15,
+    "chances": 3,
+    "ages": "18 to 54",
+    "languages": "English or French",
+    "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/test/study.html",
+    "verified": "2026-10-24"
+  }
+}

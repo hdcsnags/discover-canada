@@ -1,0 +1,200 @@
+{
+  "id": "who-we-are",
+  "title": "Who We Are",
+  "order": 4,
+  "pages": [10, 11, 12, 13],
+  "summary": "This chapter introduces Canada's three founding peoples (Aboriginal, French and British), explains who the First Nations, Inuit and Métis are, and describes the English- and French-speaking communities and the many other groups that make up Canada's multicultural society today.",
+  "sections": [
+    {
+      "id": "who-we-are-who-we-are",
+      "title": "Who We Are",
+      "page": 10,
+      "blocks": [
+        {"type": "p", "text": "Canada is known around the world as a strong and free country. Canadians are proud of their unique identity. We have inherited the oldest continuous constitutional tradition in the world. We are the only constitutional monarchy in North America. Our institutions uphold a commitment to Peace, Order and Good Government, a key phrase in Canada's original constitutional document in 1867, the British North America Act. A belief in ordered liberty, enterprise, hard work and fair play has enabled Canadians to build a prosperous society in a rugged environment from our Atlantic shores to the Pacific Ocean and to the Arctic Circle—so much so that poets and songwriters have hailed Canada as the \"Great Dominion.\""},
+        {"type": "p", "text": "To understand what it means to be Canadian, it is important to know about our three founding peoples—Aboriginal, French and British."},
+        {"type": "caption", "text": "Métis from Alberta. Cree dancer. Inuit children in Iqaluit, Nunavut. Haida artist Bill Reid carves a totem pole."}
+      ],
+      "focus": [
+        "Canada has the oldest continuous constitutional tradition in the world.",
+        "Canada is the only constitutional monarchy in North America.",
+        "Peace, Order and Good Government is a key phrase in the British North America Act, Canada's original constitutional document of 1867.",
+        "Poets and songwriters have hailed Canada as the \"Great Dominion.\"",
+        "Canada's three founding peoples are Aboriginal, French and British."
+      ]
+    },
+    {
+      "id": "who-we-are-aboriginal-peoples",
+      "title": "Aboriginal peoples",
+      "page": 10,
+      "blocks": [
+        {"type": "p", "text": "The ancestors of Aboriginal peoples are believed to have migrated from Asia many thousands of years ago. They were well established here long before explorers from Europe first came to North America. Diverse, vibrant First Nations cultures were rooted in religious beliefs about their relationship to the Creator, the natural environment and each other."},
+        {"type": "p", "text": "Aboriginal and treaty rights are in the Canadian Constitution. Territorial rights were first guaranteed through the Royal Proclamation of 1763 by King George III, and established the basis for negotiating treaties with the newcomers—treaties that were not always fully respected."},
+        {"type": "p", "text": "From the 1800s until the 1980s, the federal government placed many Aboriginal children in residential schools to educate and assimilate them into mainstream Canadian culture. The schools were poorly funded and inflicted hardship on the students; some were physically abused. Aboriginal languages and cultural practices were mostly prohibited. In 2008, Ottawa formally apologized to the former students."},
+        {"type": "p", "text": "In today's Canada, Aboriginal peoples enjoy renewed pride and confidence, and have made significant achievements in agriculture, the environment, business and the arts."},
+        {"type": "p", "text": "Today, the term Aboriginal peoples refers to three distinct groups:"},
+        {"type": "p", "text": "Indian refers to all Aboriginal people who are not Inuit or Métis. In the 1970s, the term First Nations began to be used. Today, about half of First Nations people live on reserve land in about 600 communities while the other half live off-reserve, mainly in urban centres."},
+        {"type": "p", "text": "The Inuit, which means \"the people\" in the Inuktitut language, live in small, scattered communities across the Arctic. Their knowledge of the land, sea and wildlife enabled them to adapt to one of the harshest environments on earth."},
+        {"type": "p", "text": "The Métis are a distinct people of mixed Aboriginal and European ancestry, the majority of whom live in the Prairie provinces. They come from both French- and English-speaking backgrounds and speak their own dialect, Michif."},
+        {"type": "p", "text": "About 65% of the Aboriginal people are First Nations, while 30% are Métis and 4% Inuit."}
+      ],
+      "focus": [
+        "The ancestors of Aboriginal peoples are believed to have migrated from Asia many thousands of years ago.",
+        "Aboriginal and treaty rights are in the Canadian Constitution.",
+        "Territorial rights were first guaranteed through the Royal Proclamation of 1763 by King George III.",
+        "From the 1800s until the 1980s, the federal government placed many Aboriginal children in residential schools.",
+        "In 2008, Ottawa formally apologized to the former students of residential schools.",
+        "The term Aboriginal peoples refers to three distinct groups: Indian (First Nations), Inuit and Métis.",
+        "Indian refers to all Aboriginal people who are not Inuit or Métis; the term First Nations began to be used in the 1970s.",
+        "About half of First Nations people live on reserve land in about 600 communities; the other half live off-reserve, mainly in urban centres.",
+        "Inuit means \"the people\" in the Inuktitut language; the Inuit live in small, scattered communities across the Arctic.",
+        "The Métis are a distinct people of mixed Aboriginal and European ancestry; the majority live in the Prairie provinces.",
+        "The Métis speak their own dialect, Michif.",
+        "About 65% of Aboriginal people are First Nations, 30% are Métis and 4% Inuit."
+      ]
+    },
+    {
+      "id": "who-we-are-unity-in-diversity",
+      "title": "Unity in Diversity",
+      "page": 11,
+      "blocks": [
+        {"type": "p", "text": "John Buchan, the 1st Baron Tweedsmuir, was a popular Governor General of Canada (1935–40)."},
+        {"type": "quote", "text": "Immigrant groups \"should retain their individuality and each make its contribution to the national character.\" Each could learn \"from the other, and … while they cherish their own special loyalties and traditions, they cherish not less that new loyalty and tradition which springs from their union.\"", "who": "John Buchan, Lord Tweedsmuir, Canadian Club of Halifax, 1937"},
+        {"type": "caption", "text": "The 15th Governor General is shown here in Blood (Kainai First Nation) headdress."}
+      ],
+      "focus": [
+        "John Buchan, the 1st Baron Tweedsmuir, was a popular Governor General of Canada (1935–40).",
+        "Lord Tweedsmuir said immigrant groups \"should retain their individuality and each make its contribution to the national character.\""
+      ]
+    },
+    {
+      "id": "who-we-are-english-and-french",
+      "title": "English and French",
+      "page": 11,
+      "blocks": [
+        {"type": "p", "text": "Canadian society today stems largely from the English-speaking and French-speaking Christian civilizations that were brought here from Europe by settlers. English and French define the reality of day-to-day life for most people and are the country's official languages. The federal government is required by law to provide services throughout Canada in English and French."},
+        {"type": "p", "text": "Today, there are 18 million Anglophones—people who speak English as a first language—and seven million Francophones—people who speak French as their first language. While the majority of Francophones live in the province of Quebec, one million Francophones live in Ontario, New Brunswick and Manitoba, with a smaller presence in other provinces. New Brunswick is the only officially bilingual province."},
+        {"type": "p", "text": "The Acadians are the descendants of French colonists who began settling in what are now the Maritime provinces in 1604. Between 1755 and 1763, during the war between Britain and France, more than two-thirds of the Acadians were deported from their homeland. Despite this ordeal, known as the \"Great Upheaval,\" the Acadians survived and maintained their unique identity. Today, Acadian culture is flourishing and is a lively part of French-speaking Canada."},
+        {"type": "p", "text": "Quebecers are the people of Quebec, the vast majority French-speaking. Most are descendants of 8,500 French settlers from the 1600s and 1700s and maintain a unique identity, culture and language. The House of Commons recognized in 2006 that the Quebecois form a nation within a united Canada. One million Anglo-Quebecers have a heritage of 250 years and form a vibrant part of the Quebec fabric."},
+        {"type": "p", "text": "The basic way of life in English-speaking areas was established by hundreds of thousands of English, Welsh, Scottish and Irish settlers, soldiers and migrants from the 1600s to the 20th century. Generations of pioneers and builders of British origins, as well as other groups, invested and endured hardship in laying the foundations of our country. This helps explain why Anglophones (English speakers) are generally referred to as English Canadians."},
+        {"type": "caption", "text": "St. Patrick's Day Parade, Montreal, Quebec. Highland dancer at Glengarry Highland Games, Maxville, Ontario. Celebrating Fête Nationale, Gatineau, Quebec. Acadian fiddler, Village of Grande-Anse, New Brunswick."}
+      ],
+      "focus": [
+        "English and French are Canada's official languages.",
+        "The federal government is required by law to provide services throughout Canada in English and French.",
+        "There are 18 million Anglophones (English as a first language) and seven million Francophones (French as a first language).",
+        "The majority of Francophones live in Quebec; one million Francophones live in Ontario, New Brunswick and Manitoba.",
+        "New Brunswick is the only officially bilingual province.",
+        "The Acadians are descendants of French colonists who began settling in the Maritime provinces in 1604.",
+        "Between 1755 and 1763, more than two-thirds of the Acadians were deported from their homeland—the \"Great Upheaval.\"",
+        "Most Quebecers are descendants of 8,500 French settlers from the 1600s and 1700s.",
+        "The House of Commons recognized in 2006 that the Quebecois form a nation within a united Canada.",
+        "One million Anglo-Quebecers have a heritage of 250 years.",
+        "Anglophones (English speakers) are generally referred to as English Canadians."
+      ]
+    },
+    {
+      "id": "who-we-are-becoming-canadian",
+      "title": "Becoming Canadian",
+      "page": 12,
+      "blocks": [
+        {"type": "p", "text": "Some Canadians immigrate from places where they have experienced warfare or conflict. Such experiences do not justify bringing to Canada violent, extreme or hateful prejudices. In becoming Canadian, newcomers are expected to embrace democratic principles such as the rule of law."}
+      ],
+      "focus": [
+        "In becoming Canadian, newcomers are expected to embrace democratic principles such as the rule of law.",
+        "Experiences of warfare or conflict do not justify bringing to Canada violent, extreme or hateful prejudices."
+      ]
+    },
+    {
+      "id": "who-we-are-diversity-in-canada",
+      "title": "Diversity in Canada",
+      "page": 12,
+      "blocks": [
+        {"type": "p", "text": "The majority of Canadians were born in this country and this has been true since the 1800s. However, Canada is often referred to as a land of immigrants because, over the past 200 years, millions of newcomers have helped to build and defend our way of life."},
+        {"type": "p", "text": "Many ethnic and religious groups live and work in peace as proud Canadians. The largest groups are the English, French, Scottish, Irish, German, Italian, Chinese, Aboriginal, Ukrainian, Dutch, South Asian and Scandinavian. Since the 1970s, most immigrants have come from Asian countries."},
+        {"type": "p", "text": "Non-official languages are widely spoken in Canadian homes. Chinese languages are the second most-spoken at home, after English, in two of Canada's biggest cities. In Vancouver, 13% of the population speak Chinese languages at home; in Toronto, the number is 7%."},
+        {"type": "p", "text": "The great majority of Canadians identify as Christians. The largest religious affiliation is Catholic, followed by various Protestant churches. The numbers of Muslims, Jews, Hindus, Sikhs and members of other religions, as well as people who state \"no religion\" are also growing."},
+        {"type": "p", "text": "In Canada the state has traditionally partnered with faith communities to promote social welfare, harmony and mutual respect; to provide schools and health care; to resettle refugees; and to uphold religious freedom, religious expression and freedom of conscience."},
+        {"type": "p", "text": "Canada's diversity includes gay and lesbian Canadians, who enjoy the full protection of and equal treatment under the law, including access to civil marriage."},
+        {"type": "p", "text": "Together, these diverse groups, sharing a common Canadian identity, make up today's multicultural society."},
+        {"type": "caption", "text": "Celebration of Cultures, Edmonton, Alberta. Pipes and drums in Ottawa. Ismaili Muslims in the Calgary Stampede, Alberta. Caribbean cultural festival, Toronto, Ontario. Ukrainian Pysanka Festival, Vegreville, Alberta. Young Polish dancers in Oliver, British Columbia."},
+        {"type": "caption", "text": "Christmas in Gatineau. Chinese-Canadian war veterans. Notre-Dame-des-Victoires, Québec City. Chinese New Year celebration, Vancouver."},
+        {"type": "caption", "text": "Olympian Marjorie Turner-Bailey of Nova Scotia is a descendant of black Loyalists, escaped slaves and freed men and women of African origin who in the 1780s fled to Canada from America, where slavery remained legal until 1863."}
+      ],
+      "focus": [
+        "The majority of Canadians were born in this country, and this has been true since the 1800s.",
+        "Canada is often called a land of immigrants: over the past 200 years, millions of newcomers have helped build and defend our way of life.",
+        "The largest groups are the English, French, Scottish, Irish, German, Italian, Chinese, Aboriginal, Ukrainian, Dutch, South Asian and Scandinavian.",
+        "Since the 1970s, most immigrants have come from Asian countries.",
+        "Chinese languages are the second most-spoken at home, after English, in two of Canada's biggest cities: Vancouver 13%, Toronto 7%.",
+        "The great majority of Canadians identify as Christians; the largest religious affiliation is Catholic, followed by various Protestant churches.",
+        "Gay and lesbian Canadians enjoy the full protection of and equal treatment under the law, including access to civil marriage.",
+        "Black Loyalists—escaped slaves and freed people of African origin—fled to Canada from America in the 1780s; slavery remained legal there until 1863."
+      ]
+    }
+  ],
+  "cards": [
+    {"id": "who-we-are-c01", "section": "who-we-are-who-we-are", "front": "What constitutional tradition has Canada inherited?", "back": "The oldest continuous constitutional tradition in the world.", "page": 10},
+    {"id": "who-we-are-c02", "section": "who-we-are-who-we-are", "front": "What is Canada's distinction among the countries of North America?", "back": "Canada is the only constitutional monarchy in North America.", "page": 10},
+    {"id": "who-we-are-c03", "section": "who-we-are-who-we-are", "front": "What key phrase do Canada's institutions uphold, and where does it come from?", "back": "Peace, Order and Good Government, a key phrase in Canada's original constitutional document in 1867, the British North America Act.", "page": 10},
+    {"id": "who-we-are-c04", "section": "who-we-are-who-we-are", "front": "What name have poets and songwriters given Canada?", "back": "The \"Great Dominion.\"", "page": 10},
+    {"id": "who-we-are-c05", "section": "who-we-are-who-we-are", "front": "Name Canada's three founding peoples.", "back": "Aboriginal, French and British.", "page": 10},
+    {"id": "who-we-are-c06", "section": "who-we-are-aboriginal-peoples", "front": "Where are the ancestors of Aboriginal peoples believed to have migrated from?", "back": "From Asia, many thousands of years ago.", "page": 10},
+    {"id": "who-we-are-c07", "section": "who-we-are-aboriginal-peoples", "front": "Where are Aboriginal and treaty rights set out?", "back": "In the Canadian Constitution.", "page": 10},
+    {"id": "who-we-are-c08", "section": "who-we-are-aboriginal-peoples", "front": "How were Aboriginal territorial rights first guaranteed?", "back": "Through the Royal Proclamation of 1763 by King George III, which established the basis for negotiating treaties with the newcomers.", "page": 10},
+    {"id": "who-we-are-c09", "section": "who-we-are-aboriginal-peoples", "front": "During what period did the federal government place many Aboriginal children in residential schools?", "back": "From the 1800s until the 1980s.", "page": 10},
+    {"id": "who-we-are-c10", "section": "who-we-are-aboriginal-peoples", "front": "In what year did Ottawa formally apologize to former residential school students?", "back": "In 2008.", "page": 10},
+    {"id": "who-we-are-c11", "section": "who-we-are-aboriginal-peoples", "front": "Name the three distinct groups covered by the term Aboriginal peoples.", "back": "Indian (First Nations), Inuit and Métis.", "page": 10},
+    {"id": "who-we-are-c12", "section": "who-we-are-aboriginal-peoples", "front": "Who does the term Indian refer to, and what term began to be used in the 1970s?", "back": "Indian refers to all Aboriginal people who are not Inuit or Métis. In the 1970s, the term First Nations began to be used.", "page": 10},
+    {"id": "who-we-are-c13", "section": "who-we-are-aboriginal-peoples", "front": "Where do First Nations people live today?", "back": "About half live on reserve land in about 600 communities; the other half live off-reserve, mainly in urban centres.", "page": 10},
+    {"id": "who-we-are-c14", "section": "who-we-are-aboriginal-peoples", "front": "What does the word Inuit mean, and where do the Inuit live?", "back": "Inuit means \"the people\" in the Inuktitut language. They live in small, scattered communities across the Arctic.", "page": 11},
+    {"id": "who-we-are-c15", "section": "who-we-are-aboriginal-peoples", "front": "Who are the Métis?", "back": "A distinct people of mixed Aboriginal and European ancestry, the majority of whom live in the Prairie provinces.", "page": 11},
+    {"id": "who-we-are-c16", "section": "who-we-are-aboriginal-peoples", "front": "What is the name of the Métis dialect?", "back": "Michif.", "page": 11},
+    {"id": "who-we-are-c17", "section": "who-we-are-aboriginal-peoples", "front": "What percentage of Aboriginal people are First Nations, Métis and Inuit?", "back": "About 65% are First Nations, 30% are Métis and 4% Inuit.", "page": 11},
+    {"id": "who-we-are-c18", "section": "who-we-are-unity-in-diversity", "front": "Who was John Buchan, the 1st Baron Tweedsmuir?", "back": "A popular Governor General of Canada (1935–40) who said immigrant groups \"should retain their individuality and each make its contribution to the national character.\"", "page": 11},
+    {"id": "who-we-are-c19", "section": "who-we-are-english-and-french", "front": "What are Canada's two official languages?", "back": "English and French.", "page": 11},
+    {"id": "who-we-are-c20", "section": "who-we-are-english-and-french", "front": "What is the federal government required by law to do regarding the official languages?", "back": "To provide services throughout Canada in English and French.", "page": 11},
+    {"id": "who-we-are-c21", "section": "who-we-are-english-and-french", "front": "How many Anglophones and Francophones are there in Canada?", "back": "18 million Anglophones (English as a first language) and seven million Francophones (French as a first language).", "page": 11},
+    {"id": "who-we-are-c22", "section": "who-we-are-english-and-french", "front": "Where do most Francophones live, and where do another one million live?", "back": "The majority live in Quebec; one million Francophones live in Ontario, New Brunswick and Manitoba.", "page": 11},
+    {"id": "who-we-are-c23", "section": "who-we-are-english-and-french", "front": "Which is the only officially bilingual province?", "back": "New Brunswick.", "page": 11},
+    {"id": "who-we-are-c24", "section": "who-we-are-english-and-french", "front": "Who are the Acadians?", "back": "The descendants of French colonists who began settling in what are now the Maritime provinces in 1604.", "page": 11},
+    {"id": "who-we-are-c25", "section": "who-we-are-english-and-french", "front": "What was the \"Great Upheaval\"?", "back": "Between 1755 and 1763, during the war between Britain and France, more than two-thirds of the Acadians were deported from their homeland.", "page": 11},
+    {"id": "who-we-are-c26", "section": "who-we-are-english-and-french", "front": "Most Quebecers are descendants of how many French settlers, and from when?", "back": "8,500 French settlers from the 1600s and 1700s.", "page": 11},
+    {"id": "who-we-are-c27", "section": "who-we-are-english-and-french", "front": "What did the House of Commons recognize in 2006?", "back": "That the Quebecois form a nation within a united Canada.", "page": 11},
+    {"id": "who-we-are-c28", "section": "who-we-are-english-and-french", "front": "How many Anglo-Quebecers are there, and how long is their heritage?", "back": "One million Anglo-Quebecers have a heritage of 250 years.", "page": 11},
+    {"id": "who-we-are-c29", "section": "who-we-are-english-and-french", "front": "Why are Anglophones generally referred to as English Canadians?", "back": "Because the basic way of life in English-speaking areas was established by hundreds of thousands of English, Welsh, Scottish and Irish settlers, soldiers and migrants from the 1600s to the 20th century.", "page": 12},
+    {"id": "who-we-are-c30", "section": "who-we-are-becoming-canadian", "front": "What are newcomers expected to embrace in becoming Canadian?", "back": "Democratic principles such as the rule of law.", "page": 12},
+    {"id": "who-we-are-c31", "section": "who-we-are-becoming-canadian", "front": "Do experiences of warfare or conflict justify bringing violent, extreme or hateful prejudices to Canada?", "back": "No. Such experiences do not justify bringing to Canada violent, extreme or hateful prejudices.", "page": 12},
+    {"id": "who-we-are-c32", "section": "who-we-are-diversity-in-canada", "front": "Were most Canadians born in Canada or elsewhere?", "back": "The majority of Canadians were born in this country, and this has been true since the 1800s.", "page": 12},
+    {"id": "who-we-are-c33", "section": "who-we-are-diversity-in-canada", "front": "Why is Canada often referred to as a land of immigrants?", "back": "Because, over the past 200 years, millions of newcomers have helped to build and defend our way of life.", "page": 12},
+    {"id": "who-we-are-c34", "section": "who-we-are-diversity-in-canada", "front": "Name the largest ethnic groups in Canada.", "back": "The English, French, Scottish, Irish, German, Italian, Chinese, Aboriginal, Ukrainian, Dutch, South Asian and Scandinavian.", "page": 12},
+    {"id": "who-we-are-c35", "section": "who-we-are-diversity-in-canada", "front": "Since the 1970s, where have most immigrants to Canada come from?", "back": "From Asian countries.", "page": 12},
+    {"id": "who-we-are-c36", "section": "who-we-are-diversity-in-canada", "front": "Which languages are the second most-spoken at home, after English, in two of Canada's biggest cities?", "back": "Chinese languages: 13% of the population in Vancouver and 7% in Toronto speak Chinese languages at home.", "page": 13},
+    {"id": "who-we-are-c37", "section": "who-we-are-diversity-in-canada", "front": "What is the largest religious affiliation in Canada?", "back": "Catholic, followed by various Protestant churches. The great majority of Canadians identify as Christians.", "page": 13},
+    {"id": "who-we-are-c38", "section": "who-we-are-diversity-in-canada", "front": "What rights do gay and lesbian Canadians enjoy?", "back": "The full protection of and equal treatment under the law, including access to civil marriage.", "page": 13},
+    {"id": "who-we-are-c39", "section": "who-we-are-diversity-in-canada", "front": "Who were the black Loyalists?", "back": "Escaped slaves and freed men and women of African origin who in the 1780s fled to Canada from America, where slavery remained legal until 1863.", "page": 13}
+  ],
+  "quiz": [
+    {"id": "who-we-are-q01", "section": "who-we-are-who-we-are", "q": "Who are Canada's three founding peoples?", "choices": ["Aboriginal, French and British", "English, Scottish and Irish", "Inuit, Métis and French", "French, British and American"], "answer": 0, "why": "The booklet says it is important to know about our three founding peoples—Aboriginal, French and British.", "page": 10},
+    {"id": "who-we-are-q02", "section": "who-we-are-who-we-are", "q": "What is the key phrase in the British North America Act of 1867 that Canada's institutions uphold?", "choices": ["Liberty, Equality and Fraternity", "Peace, Order and Good Government", "Life, Liberty and Security", "Unity in Diversity"], "answer": 1, "why": "Our institutions uphold a commitment to Peace, Order and Good Government, a key phrase in the British North America Act.", "page": 10},
+    {"id": "who-we-are-q03", "section": "who-we-are-who-we-are", "q": "Which statement about Canada is correct?", "choices": ["Canada is one of three constitutional monarchies in North America", "Canada became a constitutional monarchy in 1982", "Canada is the only constitutional monarchy in North America", "Canada is a republic with a hereditary head of state"], "answer": 2, "why": "The booklet states: We are the only constitutional monarchy in North America.", "page": 10},
+    {"id": "who-we-are-q04", "section": "who-we-are-aboriginal-peoples", "q": "Through which document were Aboriginal territorial rights first guaranteed?", "choices": ["The British North America Act of 1867", "The Constitution Act, 1982", "The Treaty of Paris", "The Royal Proclamation of 1763"], "answer": 3, "why": "Territorial rights were first guaranteed through the Royal Proclamation of 1763 by King George III.", "page": 10},
+    {"id": "who-we-are-q05", "section": "who-we-are-aboriginal-peoples", "q": "In what year did Ottawa formally apologize to former residential school students?", "choices": ["1980", "2008", "1970", "2006"], "answer": 1, "why": "In 2008, Ottawa formally apologized to the former students.", "page": 10},
+    {"id": "who-we-are-q06", "section": "who-we-are-aboriginal-peoples", "q": "What does the word Inuit mean in the Inuktitut language?", "choices": ["\"the land\"", "\"the north\"", "\"the people\"", "\"the hunters\""], "answer": 2, "why": "The Inuit, which means \"the people\" in the Inuktitut language, live in small, scattered communities across the Arctic.", "page": 11},
+    {"id": "who-we-are-q07", "section": "who-we-are-aboriginal-peoples", "q": "Who are the Métis?", "choices": ["A distinct people of mixed Aboriginal and European ancestry", "All Aboriginal people who are not Inuit", "The Aboriginal people who live across the Arctic", "The descendants of French colonists in the Maritimes"], "answer": 0, "why": "The Métis are a distinct people of mixed Aboriginal and European ancestry, the majority of whom live in the Prairie provinces.", "page": 11},
+    {"id": "who-we-are-q08", "section": "who-we-are-aboriginal-peoples", "q": "What is Michif?", "choices": ["The language of the Inuit", "The dialect spoken by the Métis", "A First Nations reserve", "An Acadian festival"], "answer": 1, "why": "The Métis come from both French- and English-speaking backgrounds and speak their own dialect, Michif.", "page": 11},
+    {"id": "who-we-are-q09", "section": "who-we-are-aboriginal-peoples", "q": "Approximately what percentage of Aboriginal people in Canada are First Nations?", "choices": ["30%", "4%", "50%", "65%"], "answer": 3, "why": "About 65% of the Aboriginal people are First Nations, while 30% are Métis and 4% Inuit.", "page": 11},
+    {"id": "who-we-are-q10", "section": "who-we-are-aboriginal-peoples", "q": "Approximately what percentage of Aboriginal people are Inuit?", "choices": ["4%", "30%", "65%", "13%"], "answer": 0, "why": "The booklet says 30% are Métis and 4% Inuit.", "page": 11},
+    {"id": "who-we-are-q11", "section": "who-we-are-aboriginal-peoples", "q": "Where do about half of First Nations people live today?", "choices": ["In the Prairie provinces", "In small, scattered communities across the Arctic", "On reserve land in about 600 communities", "In Quebec"], "answer": 2, "why": "About half of First Nations people live on reserve land in about 600 communities while the other half live off-reserve, mainly in urban centres.", "page": 10},
+    {"id": "who-we-are-q12", "section": "who-we-are-aboriginal-peoples", "q": "When did the term First Nations begin to be used?", "choices": ["In 1763", "In the 1970s", "In 2008", "In the 1800s"], "answer": 1, "why": "In the 1970s, the term First Nations began to be used.", "page": 10},
+    {"id": "who-we-are-q13", "section": "who-we-are-english-and-french", "q": "Which is the only officially bilingual province?", "choices": ["Quebec", "Manitoba", "Ontario", "New Brunswick"], "answer": 3, "why": "New Brunswick is the only officially bilingual province.", "page": 11},
+    {"id": "who-we-are-q14", "section": "who-we-are-english-and-french", "q": "How many Francophones are there in Canada?", "choices": ["18 million", "One million", "Seven million", "8,500"], "answer": 2, "why": "There are 18 million Anglophones and seven million Francophones.", "page": 11},
+    {"id": "who-we-are-q15", "section": "who-we-are-english-and-french", "q": "Who are the Acadians?", "choices": ["The descendants of 8,500 French settlers in Quebec", "The descendants of French colonists who began settling in the Maritime provinces in 1604", "A people of mixed Aboriginal and European ancestry", "English-speaking Quebecers with a 250-year heritage"], "answer": 1, "why": "The Acadians are the descendants of French colonists who began settling in what are now the Maritime provinces in 1604.", "page": 11},
+    {"id": "who-we-are-q16", "section": "who-we-are-english-and-french", "q": "What happened to the Acadians between 1755 and 1763?", "choices": ["More than two-thirds were deported from their homeland", "They were recognized as a nation within a united Canada", "They were placed in residential schools", "They were granted an officially bilingual province"], "answer": 0, "why": "Between 1755 and 1763, during the war between Britain and France, more than two-thirds of the Acadians were deported from their homeland, known as the \"Great Upheaval.\"", "page": 11},
+    {"id": "who-we-are-q17", "section": "who-we-are-english-and-french", "q": "In what year did the House of Commons recognize that the Quebecois form a nation within a united Canada?", "choices": ["1604", "1867", "2008", "2006"], "answer": 3, "why": "The House of Commons recognized in 2006 that the Quebecois form a nation within a united Canada.", "page": 11},
+    {"id": "who-we-are-q18", "section": "who-we-are-becoming-canadian", "q": "In becoming Canadian, what are newcomers expected to embrace?", "choices": ["The English language only", "The Catholic faith", "Democratic principles such as the rule of law", "Membership in a political party"], "answer": 2, "why": "In becoming Canadian, newcomers are expected to embrace democratic principles such as the rule of law.", "page": 12},
+    {"id": "who-we-are-q19", "section": "who-we-are-diversity-in-canada", "q": "Since the 1970s, where have most immigrants to Canada come from?", "choices": ["European countries", "Asian countries", "The United States", "Caribbean countries"], "answer": 1, "why": "Since the 1970s, most immigrants have come from Asian countries.", "page": 12},
+    {"id": "who-we-are-q20", "section": "who-we-are-diversity-in-canada", "q": "What is the largest religious affiliation in Canada?", "choices": ["Catholic", "Protestant", "Muslim", "No religion"], "answer": 0, "why": "The largest religious affiliation is Catholic, followed by various Protestant churches.", "page": 13},
+    {"id": "who-we-are-q21", "section": "who-we-are-diversity-in-canada", "q": "In Vancouver, what percentage of the population speak Chinese languages at home?", "choices": ["7%", "30%", "13%", "4%"], "answer": 2, "why": "In Vancouver, 13% of the population speak Chinese languages at home; in Toronto, the number is 7%.", "page": 13},
+    {"id": "who-we-are-q22", "section": "who-we-are-diversity-in-canada", "q": "Why is Canada often referred to as a land of immigrants?", "choices": ["Because most Canadians were born outside the country", "Because English and French are the official languages", "Because most immigrants come from Asian countries", "Because, over the past 200 years, millions of newcomers have helped to build and defend our way of life"], "answer": 3, "why": "The majority of Canadians were born in this country, but Canada is often referred to as a land of immigrants because, over the past 200 years, millions of newcomers have helped to build and defend our way of life.", "page": 12}
+  ]
+}

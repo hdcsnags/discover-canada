@@ -1,0 +1,7 @@
+work/shots/
+work/shots-cdp/
+work/pages/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

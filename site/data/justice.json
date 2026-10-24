@@ -1,0 +1,446 @@
+{
+  "id": "justice",
+  "title": "The Justice System",
+  "order": 9,
+  "pages": [
+    36,
+    37
+  ],
+  "summary": "The principles behind Canada's justice system (due process, the presumption of innocence and the rule of law), the courts from the Supreme Court of Canada down to small claims courts, the different police forces, and how to get legal help.",
+  "sections": [
+    {
+      "id": "justice-the-justice-system",
+      "title": "The Justice System",
+      "page": 36,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The Canadian justice system guarantees everyone due process under the law. Our judicial system is founded on the presumption of innocence in criminal matters, meaning everyone is innocent until proven guilty."
+        },
+        {
+          "type": "p",
+          "text": "Canada’s legal system is based on a heritage that includes the rule of law, freedom under the law, democratic principles and due process. Due process is the principle that the government must respect all the legal rights a person is entitled to under the law."
+        },
+        {
+          "type": "caption",
+          "text": "Scales of Justice, Vancouver Law Courts. The blindfolded Lady Justice symbolizes the impartial manner in which our laws are administered: blind to all considerations but the facts"
+        },
+        {
+          "type": "p",
+          "text": "Canada is governed by an organized system of laws. These laws are the written rules intended to guide people in our society. They are made by elected representatives. The courts settle disputes and the police enforce the laws. The law in Canada applies to everyone, including judges, politicians and the police. Our laws are intended to provide order in society and a peaceful way to settle disputes, and to express the values and beliefs of Canadians."
+        },
+        {
+          "type": "caption",
+          "text": "Prisons have an essential role in punishing criminals and deterring crime"
+        }
+      ],
+      "focus": [
+        "The Canadian justice system guarantees everyone due process under the law.",
+        "Our judicial system is founded on the presumption of innocence in criminal matters, meaning everyone is innocent until proven guilty.",
+        "Canada’s legal system is based on a heritage that includes the rule of law, freedom under the law, democratic principles and due process.",
+        "Due process is the principle that the government must respect all the legal rights a person is entitled to under the law.",
+        "Laws are made by elected representatives; the courts settle disputes and the police enforce the laws.",
+        "The law in Canada applies to everyone, including judges, politicians and the police.",
+        "Our laws are intended to provide order in society and a peaceful way to settle disputes, and to express the values and beliefs of Canadians."
+      ]
+    },
+    {
+      "id": "justice-courts",
+      "title": "Courts",
+      "page": 37,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The Supreme Court of Canada is our country’s highest court. The Federal Court of Canada deals with matters concerning the federal government. In most provinces there is an appeal court and a trial court, sometimes called the Court of Queen’s Bench or the Supreme Court. There are also provincial courts for lesser offences, family courts, traffic courts and small claims courts for civil cases involving small sums of money."
+        }
+      ],
+      "focus": [
+        "The Supreme Court of Canada is our country’s highest court.",
+        "The Federal Court of Canada deals with matters concerning the federal government.",
+        "In most provinces there is an appeal court and a trial court, sometimes called the Court of Queen’s Bench or the Supreme Court.",
+        "Provincial courts handle lesser offences; there are also family courts, traffic courts and small claims courts for civil cases involving small sums of money."
+      ]
+    },
+    {
+      "id": "justice-police",
+      "title": "Police",
+      "page": 37,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The police are there to keep people safe and to enforce the law. You can ask the police for help in all kinds of situations—if there’s been an accident, if someone has stolen something from you, if you are a victim of assault, if you see a crime taking place or if someone you know has gone missing."
+        },
+        {
+          "type": "p",
+          "text": "There are different types of police in Canada. There are provincial police forces in Ontario and Quebec and municipal police departments in all provinces. The Royal Canadian Mounted Police (RCMP) enforce federal laws throughout Canada, and serve as the provincial police in all provinces and territories except Ontario and Quebec, as well as in some municipalities. Remember, the police are there to help you."
+        },
+        {
+          "type": "p",
+          "text": "You can also question the police about their service or conduct if you feel you need to. Almost all police forces in Canada have a process by which you can bring your concerns to the police and seek action."
+        }
+      ],
+      "focus": [
+        "The police are there to keep people safe and to enforce the law.",
+        "There are provincial police forces in Ontario and Quebec and municipal police departments in all provinces.",
+        "The Royal Canadian Mounted Police (RCMP) enforce federal laws throughout Canada.",
+        "The RCMP serve as the provincial police in all provinces and territories except Ontario and Quebec, as well as in some municipalities.",
+        "You can question the police about their service or conduct; almost all police forces have a process for bringing concerns and seeking action."
+      ]
+    },
+    {
+      "id": "justice-getting-legal-help",
+      "title": "Getting legal help",
+      "page": 37,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Lawyers can help you with legal problems and act for you in court. If you cannot pay for a lawyer, in most communities there are legal aid services available free of charge or at a low cost."
+        }
+      ],
+      "focus": [
+        "Lawyers can help you with legal problems and act for you in court.",
+        "If you cannot pay for a lawyer, in most communities there are legal aid services available free of charge or at a low cost."
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "justice-c01",
+      "section": "justice-the-justice-system",
+      "front": "What does the Canadian justice system guarantee everyone?",
+      "back": "Due process under the law.",
+      "page": 36
+    },
+    {
+      "id": "justice-c02",
+      "section": "justice-the-justice-system",
+      "front": "What is the presumption of innocence?",
+      "back": "The principle our judicial system is founded on in criminal matters: everyone is innocent until proven guilty.",
+      "page": 36
+    },
+    {
+      "id": "justice-c03",
+      "section": "justice-the-justice-system",
+      "front": "Name the four elements of the heritage Canada’s legal system is based on.",
+      "back": "The rule of law, freedom under the law, democratic principles and due process.",
+      "page": 36
+    },
+    {
+      "id": "justice-c04",
+      "section": "justice-the-justice-system",
+      "front": "What is due process?",
+      "back": "The principle that the government must respect all the legal rights a person is entitled to under the law.",
+      "page": 36
+    },
+    {
+      "id": "justice-c05",
+      "section": "justice-the-justice-system",
+      "front": "Who makes the laws, who settles disputes and who enforces the laws in Canada?",
+      "back": "Laws are made by elected representatives. The courts settle disputes and the police enforce the laws.",
+      "page": 36
+    },
+    {
+      "id": "justice-c06",
+      "section": "justice-the-justice-system",
+      "front": "Does the law in Canada apply to judges, politicians and the police?",
+      "back": "Yes. The law in Canada applies to everyone, including judges, politicians and the police.",
+      "page": 36
+    },
+    {
+      "id": "justice-c07",
+      "section": "justice-the-justice-system",
+      "front": "What are Canada’s laws intended to do?",
+      "back": "Provide order in society and a peaceful way to settle disputes, and express the values and beliefs of Canadians.",
+      "page": 36
+    },
+    {
+      "id": "justice-c08",
+      "section": "justice-the-justice-system",
+      "front": "What does the blindfolded Lady Justice symbolize?",
+      "back": "The impartial manner in which our laws are administered: blind to all considerations but the facts.",
+      "page": 36
+    },
+    {
+      "id": "justice-c09",
+      "section": "justice-courts",
+      "front": "What is Canada’s highest court?",
+      "back": "The Supreme Court of Canada.",
+      "page": 37
+    },
+    {
+      "id": "justice-c10",
+      "section": "justice-courts",
+      "front": "Which court deals with matters concerning the federal government?",
+      "back": "The Federal Court of Canada.",
+      "page": 37
+    },
+    {
+      "id": "justice-c11",
+      "section": "justice-courts",
+      "front": "What courts exist in most provinces?",
+      "back": "An appeal court and a trial court, sometimes called the Court of Queen’s Bench or the Supreme Court.",
+      "page": 37
+    },
+    {
+      "id": "justice-c12",
+      "section": "justice-courts",
+      "front": "What do small claims courts deal with?",
+      "back": "Civil cases involving small sums of money.",
+      "page": 37
+    },
+    {
+      "id": "justice-c13",
+      "section": "justice-courts",
+      "front": "Which courts handle lesser offences?",
+      "back": "Provincial courts. There are also family courts, traffic courts and small claims courts.",
+      "page": 37
+    },
+    {
+      "id": "justice-c14",
+      "section": "justice-police",
+      "front": "What are the police there to do?",
+      "back": "To keep people safe and to enforce the law.",
+      "page": 37
+    },
+    {
+      "id": "justice-c15",
+      "section": "justice-police",
+      "front": "Which two provinces have their own provincial police forces?",
+      "back": "Ontario and Quebec.",
+      "page": 37
+    },
+    {
+      "id": "justice-c16",
+      "section": "justice-police",
+      "front": "What does the Royal Canadian Mounted Police (RCMP) do?",
+      "back": "Enforces federal laws throughout Canada, and serves as the provincial police in all provinces and territories except Ontario and Quebec, as well as in some municipalities.",
+      "page": 37
+    },
+    {
+      "id": "justice-c17",
+      "section": "justice-police",
+      "front": "Which provinces have municipal police departments?",
+      "back": "All provinces.",
+      "page": 37
+    },
+    {
+      "id": "justice-c18",
+      "section": "justice-police",
+      "front": "Can you question the police about their service or conduct?",
+      "back": "Yes. Almost all police forces in Canada have a process by which you can bring your concerns to the police and seek action.",
+      "page": 37
+    },
+    {
+      "id": "justice-c19",
+      "section": "justice-getting-legal-help",
+      "front": "What can lawyers do for you?",
+      "back": "Help you with legal problems and act for you in court.",
+      "page": 37
+    },
+    {
+      "id": "justice-c20",
+      "section": "justice-getting-legal-help",
+      "front": "What can you do if you cannot pay for a lawyer?",
+      "back": "In most communities there are legal aid services available free of charge or at a low cost.",
+      "page": 37
+    }
+  ],
+  "quiz": [
+    {
+      "id": "justice-q01",
+      "section": "justice-the-justice-system",
+      "q": "What does the presumption of innocence mean?",
+      "choices": [
+        "The police must prove you are innocent",
+        "Everyone is innocent until proven guilty",
+        "Only judges can decide who is innocent",
+        "The government must respect all your legal rights"
+      ],
+      "answer": 1,
+      "why": "“Our judicial system is founded on the presumption of innocence in criminal matters, meaning everyone is innocent until proven guilty.”",
+      "page": 36
+    },
+    {
+      "id": "justice-q02",
+      "section": "justice-the-justice-system",
+      "q": "What is due process?",
+      "choices": [
+        "The principle that laws are made by elected representatives",
+        "The principle that the courts settle disputes",
+        "The principle that the government must respect all the legal rights a person is entitled to under the law",
+        "The principle that the police enforce the laws"
+      ],
+      "answer": 2,
+      "why": "“Due process is the principle that the government must respect all the legal rights a person is entitled to under the law.”",
+      "page": 36
+    },
+    {
+      "id": "justice-q03",
+      "section": "justice-the-justice-system",
+      "q": "Canada’s legal system is based on a heritage that includes which of the following?",
+      "choices": [
+        "The rule of law, freedom under the law, democratic principles and due process",
+        "The Quiet Revolution, La Francophonie and the Official Languages Act",
+        "The Supreme Court, the RCMP and legal aid",
+        "By-laws, bands and municipalities"
+      ],
+      "answer": 0,
+      "why": "“Canada’s legal system is based on a heritage that includes the rule of law, freedom under the law, democratic principles and due process.”",
+      "page": 36
+    },
+    {
+      "id": "justice-q04",
+      "section": "justice-the-justice-system",
+      "q": "Who makes the laws in Canada?",
+      "choices": [
+        "The police",
+        "The courts",
+        "Elected representatives",
+        "The Royal Canadian Mounted Police"
+      ],
+      "answer": 2,
+      "why": "Laws “are made by elected representatives. The courts settle disputes and the police enforce the laws.”",
+      "page": 36
+    },
+    {
+      "id": "justice-q05",
+      "section": "justice-the-justice-system",
+      "q": "To whom does the law in Canada apply?",
+      "choices": [
+        "Everyone except judges",
+        "Everyone except politicians and the police",
+        "Only Canadian citizens",
+        "Everyone, including judges, politicians and the police"
+      ],
+      "answer": 3,
+      "why": "“The law in Canada applies to everyone, including judges, politicians and the police.”",
+      "page": 36
+    },
+    {
+      "id": "justice-q06",
+      "section": "justice-courts",
+      "q": "What is Canada’s highest court?",
+      "choices": [
+        "The Federal Court of Canada",
+        "The Court of Queen’s Bench",
+        "The Supreme Court of Canada",
+        "The provincial appeal court"
+      ],
+      "answer": 2,
+      "why": "“The Supreme Court of Canada is our country’s highest court.”",
+      "page": 37
+    },
+    {
+      "id": "justice-q07",
+      "section": "justice-courts",
+      "q": "Which court deals with matters concerning the federal government?",
+      "choices": [
+        "The Supreme Court of Canada",
+        "The Federal Court of Canada",
+        "The small claims court",
+        "The family court"
+      ],
+      "answer": 1,
+      "why": "“The Federal Court of Canada deals with matters concerning the federal government.”",
+      "page": 37
+    },
+    {
+      "id": "justice-q08",
+      "section": "justice-courts",
+      "q": "What kind of cases do small claims courts deal with?",
+      "choices": [
+        "Lesser criminal offences",
+        "Traffic offences",
+        "Civil cases involving small sums of money",
+        "Matters concerning the federal government"
+      ],
+      "answer": 2,
+      "why": "There are “small claims courts for civil cases involving small sums of money.”",
+      "page": 37
+    },
+    {
+      "id": "justice-q09",
+      "section": "justice-police",
+      "q": "Which provinces have their own provincial police forces?",
+      "choices": [
+        "British Columbia and Alberta",
+        "Ontario and Quebec",
+        "Nova Scotia and New Brunswick",
+        "Manitoba and Saskatchewan"
+      ],
+      "answer": 1,
+      "why": "“There are provincial police forces in Ontario and Quebec and municipal police departments in all provinces.”",
+      "page": 37
+    },
+    {
+      "id": "justice-q10",
+      "section": "justice-police",
+      "q": "Which police force enforces federal laws throughout Canada?",
+      "choices": [
+        "Municipal police departments",
+        "Provincial police forces",
+        "The Royal Canadian Mounted Police (RCMP)",
+        "The Federal Court of Canada"
+      ],
+      "answer": 2,
+      "why": "“The Royal Canadian Mounted Police (RCMP) enforce federal laws throughout Canada.”",
+      "page": 37
+    },
+    {
+      "id": "justice-q11",
+      "section": "justice-police",
+      "q": "Where do the RCMP serve as the provincial police?",
+      "choices": [
+        "Only in the territories",
+        "In all provinces and territories except Ontario and Quebec",
+        "Only in Ontario and Quebec",
+        "In no provinces, only in municipalities"
+      ],
+      "answer": 1,
+      "why": "The RCMP “serve as the provincial police in all provinces and territories except Ontario and Quebec, as well as in some municipalities.”",
+      "page": 37
+    },
+    {
+      "id": "justice-q12",
+      "section": "justice-police",
+      "q": "What are the police there to do, according to the booklet?",
+      "choices": [
+        "Make the laws",
+        "Keep people safe and enforce the law",
+        "Settle disputes in court",
+        "Act for you in court"
+      ],
+      "answer": 1,
+      "why": "“The police are there to keep people safe and to enforce the law.”",
+      "page": 37
+    },
+    {
+      "id": "justice-q13",
+      "section": "justice-getting-legal-help",
+      "q": "What is available in most communities if you cannot pay for a lawyer?",
+      "choices": [
+        "A free police lawyer",
+        "Legal aid services free of charge or at a low cost",
+        "A judge who will act for you",
+        "Nothing; you must represent yourself"
+      ],
+      "answer": 1,
+      "why": "“If you cannot pay for a lawyer, in most communities there are legal aid services available free of charge or at a low cost.”",
+      "page": 37
+    },
+    {
+      "id": "justice-q14",
+      "section": "justice-the-justice-system",
+      "q": "What does the blindfolded Lady Justice at the Vancouver Law Courts symbolize?",
+      "choices": [
+        "The secrecy of the ballot",
+        "The role of prisons in deterring crime",
+        "The impartial manner in which our laws are administered: blind to all considerations but the facts",
+        "The presumption of innocence"
+      ],
+      "answer": 2,
+      "why": "The caption says the blindfolded Lady Justice “symbolizes the impartial manner in which our laws are administered: blind to all considerations but the facts.”",
+      "page": 36
+    }
+  ]
+}

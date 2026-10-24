@@ -1,0 +1,409 @@
+{
+  "id": "applying",
+  "title": "Applying for Citizenship",
+  "order": 2,
+  "pages": [
+    6,
+    7
+  ],
+  "summary": "What happens when you apply for citizenship, how to use this booklet to prepare, what the citizenship test covers and who must write it, and what to expect at the citizenship ceremony.",
+  "sections": [
+    {
+      "id": "applying-applying-for-citizenship",
+      "title": "Applying for Citizenship",
+      "page": 6,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "When you apply for citizenship, officials will check your status, verify that you are not prohibited from applying, and ensure that you meet the requirements."
+        },
+        {
+          "type": "p",
+          "text": "Your application may take several months. Please ensure that the Call Centre always has your correct address while your application is being processed."
+        },
+        {
+          "type": "p",
+          "text": "See page 54 for telephone numbers."
+        }
+      ],
+      "focus": [
+        "When you apply, officials check your status, verify that you are not prohibited from applying, and ensure that you meet the requirements.",
+        "Your application may take several months.",
+        "Ensure that the Call Centre always has your correct address while your application is being processed."
+      ]
+    },
+    {
+      "id": "applying-how-to-use-this-booklet",
+      "title": "How to use this booklet to prepare for the citizenship test",
+      "page": 6,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "This booklet will help you prepare for the citizenship test. You should:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Study this guide;",
+            "Ask a friend or family member to help you practise answering questions about Canada;",
+            "Call a local school or school board, a college, a community centre or a local organization that provides services to immigrants and ask for information on citizenship classes;",
+            "Take English or French language classes, which the Government of Canada offers free of charge."
+          ]
+        }
+      ],
+      "focus": [
+        "Four ways to prepare: study this guide; practise with a friend or family member; ask about citizenship classes; take English or French language classes.",
+        "The Government of Canada offers English or French language classes free of charge.",
+        "For citizenship classes, call a local school or school board, a college, a community centre or a local organization that serves immigrants."
+      ]
+    },
+    {
+      "id": "applying-about-the-citizenship-test",
+      "title": "About the citizenship test",
+      "page": 6,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The citizenship test is usually a written test, but it could be an interview. You will be tested on two basic requirements for citizenship: 1) knowledge of Canada and of the rights and responsibilities of citizenship, and 2) adequate knowledge of English or French. Adult applicants 55 years of age and over do not need to write the citizenship test."
+        },
+        {
+          "type": "p",
+          "text": "The Citizenship Regulations provide information on how your ability to meet the knowledge of Canada requirement is determined. Information about this requirement can be found on page 64 of the study guide."
+        },
+        {
+          "type": "p",
+          "text": "All the citizenship test questions are based on the subject areas noted in the Citizenship Regulations, and all required information is provided in this study guide."
+        }
+      ],
+      "focus": [
+        "The citizenship test is usually a written test, but it could be an interview.",
+        "Two basic requirements are tested: 1) knowledge of Canada and the rights and responsibilities of citizenship; 2) adequate knowledge of English or French.",
+        "Adult applicants 55 years of age and over do not need to write the citizenship test.",
+        "The Citizenship Regulations provide information on how your ability to meet the knowledge of Canada requirement is determined.",
+        "All test questions are based on the subject areas noted in the Citizenship Regulations, and all required information is in this study guide."
+      ]
+    },
+    {
+      "id": "applying-after-the-test",
+      "title": "After the test",
+      "page": 7,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "If you pass the test and meet all the other requirements, you will receive a Notice to Appear to Take the Oath of Citizenship. This document tells you the date, time and place of your citizenship ceremony."
+        },
+        {
+          "type": "p",
+          "text": "At the ceremony, you will:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Take the Oath of Citizenship;",
+            "Sign the oath form; and",
+            "Receive your Canadian Citizenship Certificate."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "If you do not pass the test, you will receive a notification indicating the next steps."
+        },
+        {
+          "type": "p",
+          "text": "You are encouraged to bring your family and friends to celebrate this occasion."
+        }
+      ],
+      "focus": [
+        "If you pass the test and meet all the other requirements, you receive a Notice to Appear to Take the Oath of Citizenship.",
+        "The Notice to Appear tells you the date, time and place of your citizenship ceremony.",
+        "At the ceremony you: take the Oath of Citizenship; sign the oath form; and receive your Canadian Citizenship Certificate.",
+        "If you do not pass the test, you receive a notification indicating the next steps.",
+        "You are encouraged to bring your family and friends to celebrate the ceremony."
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "applying-c01",
+      "section": "applying-applying-for-citizenship",
+      "front": "What three things do officials do when you apply for citizenship?",
+      "back": "They check your status, verify that you are not prohibited from applying, and ensure that you meet the requirements.",
+      "page": 6
+    },
+    {
+      "id": "applying-c02",
+      "section": "applying-applying-for-citizenship",
+      "front": "How long may your citizenship application take?",
+      "back": "Several months.",
+      "page": 6
+    },
+    {
+      "id": "applying-c03",
+      "section": "applying-applying-for-citizenship",
+      "front": "What must the Call Centre always have while your application is being processed?",
+      "back": "Your correct address.",
+      "page": 6
+    },
+    {
+      "id": "applying-c04",
+      "section": "applying-how-to-use-this-booklet",
+      "front": "Name four ways the booklet says you should prepare for the citizenship test.",
+      "back": "Study this guide; ask a friend or family member to help you practise answering questions about Canada; ask about citizenship classes; and take English or French language classes.",
+      "page": 6
+    },
+    {
+      "id": "applying-c05",
+      "section": "applying-how-to-use-this-booklet",
+      "front": "Who offers English or French language classes free of charge?",
+      "back": "The Government of Canada.",
+      "page": 6
+    },
+    {
+      "id": "applying-c06",
+      "section": "applying-how-to-use-this-booklet",
+      "front": "Where can you ask for information on citizenship classes?",
+      "back": "A local school or school board, a college, a community centre or a local organization that provides services to immigrants.",
+      "page": 6
+    },
+    {
+      "id": "applying-c07",
+      "section": "applying-about-the-citizenship-test",
+      "front": "What form does the citizenship test usually take?",
+      "back": "It is usually a written test, but it could be an interview.",
+      "page": 6
+    },
+    {
+      "id": "applying-c08",
+      "section": "applying-about-the-citizenship-test",
+      "front": "What are the two basic requirements for citizenship that you are tested on?",
+      "back": "1) Knowledge of Canada and of the rights and responsibilities of citizenship, and 2) adequate knowledge of English or French.",
+      "page": 6
+    },
+    {
+      "id": "applying-c09",
+      "section": "applying-about-the-citizenship-test",
+      "front": "Which adult applicants do not need to write the citizenship test?",
+      "back": "Adult applicants 55 years of age and over.",
+      "page": 6
+    },
+    {
+      "id": "applying-c10",
+      "section": "applying-about-the-citizenship-test",
+      "front": "What provides information on how your ability to meet the knowledge of Canada requirement is determined?",
+      "back": "The Citizenship Regulations.",
+      "page": 6
+    },
+    {
+      "id": "applying-c11",
+      "section": "applying-about-the-citizenship-test",
+      "front": "Where do the citizenship test questions come from?",
+      "back": "All questions are based on the subject areas noted in the Citizenship Regulations, and all required information is provided in this study guide.",
+      "page": 6
+    },
+    {
+      "id": "applying-c12",
+      "section": "applying-after-the-test",
+      "front": "What do you receive if you pass the test and meet all the other requirements?",
+      "back": "A Notice to Appear to Take the Oath of Citizenship.",
+      "page": 7
+    },
+    {
+      "id": "applying-c13",
+      "section": "applying-after-the-test",
+      "front": "What does the Notice to Appear tell you?",
+      "back": "The date, time and place of your citizenship ceremony.",
+      "page": 7
+    },
+    {
+      "id": "applying-c14",
+      "section": "applying-after-the-test",
+      "front": "Name the three things you will do at the citizenship ceremony.",
+      "back": "Take the Oath of Citizenship; sign the oath form; and receive your Canadian Citizenship Certificate.",
+      "page": 7
+    },
+    {
+      "id": "applying-c15",
+      "section": "applying-after-the-test",
+      "front": "What happens if you do not pass the citizenship test?",
+      "back": "You will receive a notification indicating the next steps.",
+      "page": 7
+    },
+    {
+      "id": "applying-c16",
+      "section": "applying-after-the-test",
+      "front": "Who are you encouraged to bring to your citizenship ceremony?",
+      "back": "Your family and friends, to celebrate the occasion.",
+      "page": 7
+    }
+  ],
+  "quiz": [
+    {
+      "id": "applying-q01",
+      "section": "applying-applying-for-citizenship",
+      "q": "When you apply for citizenship, what will officials do?",
+      "choices": [
+        "Interview your family and friends",
+        "Check your status, verify that you are not prohibited from applying, and ensure that you meet the requirements",
+        "Give you your Canadian Citizenship Certificate right away",
+        "Enrol you in citizenship classes"
+      ],
+      "answer": 1,
+      "why": "The booklet says officials \"will check your status, verify that you are not prohibited from applying, and ensure that you meet the requirements\".",
+      "page": 6
+    },
+    {
+      "id": "applying-q02",
+      "section": "applying-applying-for-citizenship",
+      "q": "While your application is being processed, you must make sure the Call Centre always has your:",
+      "choices": [
+        "Correct address",
+        "Passport number",
+        "Employer's name",
+        "Test results"
+      ],
+      "answer": 0,
+      "why": "\"Please ensure that the Call Centre always has your correct address while your application is being processed.\"",
+      "page": 6
+    },
+    {
+      "id": "applying-q03",
+      "section": "applying-how-to-use-this-booklet",
+      "q": "Which of the following does the Government of Canada offer free of charge?",
+      "choices": [
+        "Citizenship test coaching",
+        "Legal advice on immigration",
+        "English or French language classes",
+        "Travel to the citizenship ceremony"
+      ],
+      "answer": 2,
+      "why": "The booklet says to \"take English or French language classes, which the Government of Canada offers free of charge\".",
+      "page": 6
+    },
+    {
+      "id": "applying-q04",
+      "section": "applying-how-to-use-this-booklet",
+      "q": "Where does the booklet suggest you ask for information on citizenship classes?",
+      "choices": [
+        "The Call Centre",
+        "A local school or school board, a college, a community centre or a local organization that serves immigrants",
+        "The Canadian Forces",
+        "Your Member of Parliament"
+      ],
+      "answer": 1,
+      "why": "The booklet says to call \"a local school or school board, a college, a community centre or a local organization that provides services to immigrants\".",
+      "page": 6
+    },
+    {
+      "id": "applying-q05",
+      "section": "applying-about-the-citizenship-test",
+      "q": "The citizenship test is usually:",
+      "choices": [
+        "An oral exam before a judge",
+        "A group discussion",
+        "An online quiz",
+        "A written test, but it could be an interview"
+      ],
+      "answer": 3,
+      "why": "\"The citizenship test is usually a written test, but it could be an interview.\"",
+      "page": 6
+    },
+    {
+      "id": "applying-q06",
+      "section": "applying-about-the-citizenship-test",
+      "q": "Which adult applicants do not need to write the citizenship test?",
+      "choices": [
+        "Applicants 18 years of age and under",
+        "Applicants 65 years of age and over",
+        "Applicants 55 years of age and over",
+        "Applicants who speak both English and French"
+      ],
+      "answer": 2,
+      "why": "\"Adult applicants 55 years of age and over do not need to write the citizenship test.\"",
+      "page": 6
+    },
+    {
+      "id": "applying-q07",
+      "section": "applying-about-the-citizenship-test",
+      "q": "What are the two basic requirements for citizenship that you will be tested on?",
+      "choices": [
+        "Knowledge of Canada and of the rights and responsibilities of citizenship, and adequate knowledge of English or French",
+        "Knowledge of Canadian geography and history only",
+        "Knowledge of the Constitution and the ability to sing the national anthem",
+        "Employment history and adequate knowledge of English or French"
+      ],
+      "answer": 0,
+      "why": "You are tested on \"1) knowledge of Canada and of the rights and responsibilities of citizenship, and 2) adequate knowledge of English or French\".",
+      "page": 6
+    },
+    {
+      "id": "applying-q08",
+      "section": "applying-about-the-citizenship-test",
+      "q": "All the citizenship test questions are based on the subject areas noted in:",
+      "choices": [
+        "The Canadian Charter of Rights and Freedoms",
+        "The Constitution of Canada",
+        "Magna Carta",
+        "The Citizenship Regulations"
+      ],
+      "answer": 3,
+      "why": "\"All the citizenship test questions are based on the subject areas noted in the Citizenship Regulations.\"",
+      "page": 6
+    },
+    {
+      "id": "applying-q09",
+      "section": "applying-after-the-test",
+      "q": "If you pass the test and meet all the other requirements, you will receive:",
+      "choices": [
+        "A Canadian passport",
+        "A Notice to Appear to Take the Oath of Citizenship",
+        "A Canadian Citizenship Certificate by mail",
+        "A letter from the Prime Minister"
+      ],
+      "answer": 1,
+      "why": "\"If you pass the test and meet all the other requirements, you will receive a Notice to Appear to Take the Oath of Citizenship.\"",
+      "page": 7
+    },
+    {
+      "id": "applying-q10",
+      "section": "applying-after-the-test",
+      "q": "Which of the following will you do at the citizenship ceremony?",
+      "choices": [
+        "Write the citizenship test",
+        "Apply for a passport",
+        "Receive your Canadian Citizenship Certificate",
+        "Register to vote"
+      ],
+      "answer": 2,
+      "why": "At the ceremony you take the Oath, sign the oath form, and \"receive your Canadian Citizenship Certificate\".",
+      "page": 7
+    },
+    {
+      "id": "applying-q11",
+      "section": "applying-after-the-test",
+      "q": "If you do not pass the citizenship test, you will:",
+      "choices": [
+        "Have to leave Canada",
+        "Receive your Citizenship Certificate anyway",
+        "Be invited to the ceremony as a guest",
+        "Receive a notification indicating the next steps"
+      ],
+      "answer": 3,
+      "why": "\"If you do not pass the test, you will receive a notification indicating the next steps.\"",
+      "page": 7
+    },
+    {
+      "id": "applying-q12",
+      "section": "applying-after-the-test",
+      "q": "What does the Notice to Appear to Take the Oath of Citizenship tell you?",
+      "choices": [
+        "The date, time and place of your citizenship ceremony",
+        "The result of your test",
+        "Your new mailing address",
+        "The questions on the test"
+      ],
+      "answer": 0,
+      "why": "\"This document tells you the date, time and place of your citizenship ceremony.\"",
+      "page": 7
+    }
+  ]
+}

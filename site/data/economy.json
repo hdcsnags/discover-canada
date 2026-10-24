@@ -1,0 +1,104 @@
+{
+  "id": "economy",
+  "title": "Canada's Economy",
+  "order": 11,
+  "pages": [42, 43],
+  "summary": "This chapter explains why Canada is a trading nation, describes the three main types of industries in the Canadian economy, and covers Canada's close trading relationship with the United States, including the Peace Arch at Blaine, Washington.",
+  "sections": [
+    {
+      "id": "economy-trading-nation",
+      "title": "A trading nation",
+      "page": 42,
+      "blocks": [
+        {"type": "p", "text": "Canada has always been a trading nation and commerce remains the engine of economic growth. As Canadians, we could not maintain our standard of living without engaging in trade with other nations."},
+        {"type": "p", "text": "In 1988, Canada enacted free trade with the United States. Mexico became a partner in 1994 in the broader North American Free Trade Agreement (NAFTA), with over 444 million people and over $1 trillion in merchandise trade in 2008."},
+        {"type": "p", "text": "Today, Canada has one of the ten largest economies in the world and is part of the G8 group of leading industrialized countries with the United States, Germany, the United Kingdom, Italy, France, Japan and Russia."}
+      ],
+      "focus": [
+        "Canada has always been a trading nation and commerce remains the engine of economic growth.",
+        "Canadians could not maintain their standard of living without engaging in trade with other nations.",
+        "In 1988, Canada enacted free trade with the United States.",
+        "Mexico became a partner in 1994 in NAFTA, with over 444 million people and over $1 trillion in merchandise trade in 2008.",
+        "Canada has one of the ten largest economies in the world.",
+        "Canada is part of the G8 with the United States, Germany, the United Kingdom, Italy, France, Japan and Russia."
+      ]
+    },
+    {
+      "id": "economy-three-industries",
+      "title": "Canada's three main types of industries",
+      "page": 42,
+      "blocks": [
+        {"type": "p", "text": "Canada's economy includes three main types of industries:"},
+        {"type": "list", "items": [
+          "Service industries provide thousands of different jobs in areas like transportation, education, health care, construction, banking, communications, retail services, tourism and government. More than 75% of working Canadians now have jobs in service industries.",
+          "Manufacturing industries make products to sell in Canada and around the world. Manufactured products include paper, high technology equipment, aerospace technology, automobiles, machinery, food, clothing and many other goods. Our largest international trading partner is the United States.",
+          "Natural resources industries include forestry, fishing, agriculture, mining and energy. These industries have played an important part in the country's history and development. Today, the economy of many areas of the country still depends on developing natural resources, and a large percentage of Canada's exports are natural resources commodities."
+        ]},
+        {"type": "caption", "text": "Lumber truck; oil pump jacks in southern Alberta; Atlantic lobster; hydro-electric dam on the Saguenay River, Quebec."}
+      ],
+      "focus": [
+        "Canada's economy includes three main types of industries: service industries, manufacturing industries and natural resources industries.",
+        "Service industries provide jobs in transportation, education, health care, construction, banking, communications, retail services, tourism and government.",
+        "More than 75% of working Canadians now have jobs in service industries.",
+        "Manufactured products include paper, high technology equipment, aerospace technology, automobiles, machinery, food and clothing.",
+        "Our largest international trading partner is the United States.",
+        "Natural resources industries include forestry, fishing, agriculture, mining and energy.",
+        "A large percentage of Canada's exports are natural resources commodities."
+      ]
+    },
+    {
+      "id": "economy-canada-us-relations",
+      "title": "Canada–U.S. relations and the Peace Arch",
+      "page": 43,
+      "blocks": [
+        {"type": "caption", "text": "Car assembly plant in Oakville, Ontario; Port of Vancouver; the Peace Arch at Blaine, Washington; research laboratory; RIM's BlackBerry; ice wine grapes, Niagara Region, Ontario."},
+        {"type": "p", "text": "Canada enjoys close relations with the United States and each is the other's largest trading partner. Over three-quarters of Canadian exports are destined for the U.S.A. In fact we have the biggest bilateral trading relationship in the world. Integrated Canada-U.S.A. supply chains compete with the rest of the world. Canada exports billions of dollars worth of energy products, industrial goods, machinery, equipment, automotive, agricultural, fishing and forestry products, and consumer goods every year. Millions of Canadians and Americans cross every year and in safety what is traditionally known as \"the world's longest undefended border.\""},
+        {"type": "p", "text": "At Blaine in the State of Washington, the Peace Arch, inscribed with the words \"children of a common mother\" and \"brethren dwelling together in unity,\" symbolizes our close ties and common interests."}
+      ],
+      "focus": [
+        "Canada and the United States are each the other's largest trading partner.",
+        "Over three-quarters of Canadian exports are destined for the U.S.A.",
+        "Canada and the U.S.A. have the biggest bilateral trading relationship in the world.",
+        "The Canada–U.S.A. border is traditionally known as \"the world's longest undefended border.\"",
+        "The Peace Arch is at Blaine in the State of Washington, inscribed \"children of a common mother\" and \"brethren dwelling together in unity.\"",
+        "The Peace Arch symbolizes the close ties and common interests of Canada and the United States."
+      ]
+    }
+  ],
+  "cards": [
+    {"id": "economy-c01", "section": "economy-trading-nation", "front": "What does the booklet call the engine of Canada's economic growth?", "back": "Commerce. Canada has always been a trading nation.", "page": 42},
+    {"id": "economy-c02", "section": "economy-trading-nation", "front": "Why is trade with other nations important for Canadians?", "back": "Canadians could not maintain their standard of living without engaging in trade with other nations.", "page": 42},
+    {"id": "economy-c03", "section": "economy-trading-nation", "front": "When did Canada enact free trade with the United States?", "back": "In 1988.", "page": 42},
+    {"id": "economy-c04", "section": "economy-trading-nation", "front": "When did Mexico become a partner in NAFTA, and how large is the agreement?", "back": "In 1994. The North American Free Trade Agreement covers over 444 million people and over $1 trillion in merchandise trade in 2008.", "page": 42},
+    {"id": "economy-c05", "section": "economy-trading-nation", "front": "How does Canada's economy rank in the world?", "back": "Canada has one of the ten largest economies in the world.", "page": 42},
+    {"id": "economy-c06", "section": "economy-trading-nation", "front": "Name the other members of the G8 alongside Canada.", "back": "The United States, Germany, the United Kingdom, Italy, France, Japan and Russia.", "page": 42},
+    {"id": "economy-c07", "section": "economy-three-industries", "front": "Name the three main types of industries in Canada's economy.", "back": "Service industries, manufacturing industries and natural resources industries.", "page": 42},
+    {"id": "economy-c08", "section": "economy-three-industries", "front": "Give examples of areas where service industries provide jobs.", "back": "Transportation, education, health care, construction, banking, communications, retail services, tourism and government.", "page": 42},
+    {"id": "economy-c09", "section": "economy-three-industries", "front": "What share of working Canadians have jobs in service industries?", "back": "More than 75%.", "page": 42},
+    {"id": "economy-c10", "section": "economy-three-industries", "front": "Give examples of Canadian manufactured products.", "back": "Paper, high technology equipment, aerospace technology, automobiles, machinery, food, clothing and many other goods.", "page": 42},
+    {"id": "economy-c11", "section": "economy-three-industries", "front": "Which country is Canada's largest international trading partner?", "back": "The United States.", "page": 42},
+    {"id": "economy-c12", "section": "economy-three-industries", "front": "What do natural resources industries include?", "back": "Forestry, fishing, agriculture, mining and energy.", "page": 42},
+    {"id": "economy-c13", "section": "economy-three-industries", "front": "What role do natural resources play in Canada's exports today?", "back": "A large percentage of Canada's exports are natural resources commodities, and the economy of many areas still depends on developing natural resources.", "page": 42},
+    {"id": "economy-c14", "section": "economy-canada-us-relations", "front": "Who is Canada's largest trading partner, and who is the United States' largest trading partner?", "back": "Each is the other's largest trading partner.", "page": 43},
+    {"id": "economy-c15", "section": "economy-canada-us-relations", "front": "What share of Canadian exports are destined for the U.S.A.?", "back": "Over three-quarters.", "page": 43},
+    {"id": "economy-c16", "section": "economy-canada-us-relations", "front": "How does the booklet describe the Canada–U.S.A. trading relationship?", "back": "The biggest bilateral trading relationship in the world.", "page": 43},
+    {"id": "economy-c17", "section": "economy-canada-us-relations", "front": "What is the Canada–U.S.A. border traditionally known as?", "back": "\"The world's longest undefended border.\" Millions of Canadians and Americans cross it every year and in safety.", "page": 43},
+    {"id": "economy-c18", "section": "economy-canada-us-relations", "front": "Where is the Peace Arch, and what words are inscribed on it?", "back": "At Blaine in the State of Washington. It is inscribed \"children of a common mother\" and \"brethren dwelling together in unity.\"", "page": 43},
+    {"id": "economy-c19", "section": "economy-canada-us-relations", "front": "What does the Peace Arch symbolize?", "back": "The close ties and common interests of Canada and the United States.", "page": 43}
+  ],
+  "quiz": [
+    {"id": "economy-q01", "section": "economy-trading-nation", "q": "In what year did Canada enact free trade with the United States?", "choices": ["1967", "1988", "1994", "2008"], "answer": 1, "why": "\"In 1988, Canada enacted free trade with the United States.\"", "page": 42},
+    {"id": "economy-q02", "section": "economy-trading-nation", "q": "Which country became a partner in the North American Free Trade Agreement (NAFTA) in 1994?", "choices": ["Mexico", "The United Kingdom", "Japan", "Germany"], "answer": 0, "why": "\"Mexico became a partner in 1994 in the broader North American Free Trade Agreement (NAFTA).\"", "page": 42},
+    {"id": "economy-q03", "section": "economy-trading-nation", "q": "Which of the following is NOT listed in the booklet as a member of the G8 with Canada?", "choices": ["Italy", "Russia", "Mexico", "Japan"], "answer": 2, "why": "Canada is part of the G8 \"with the United States, Germany, the United Kingdom, Italy, France, Japan and Russia.\" Mexico is a NAFTA partner, not a G8 member.", "page": 42},
+    {"id": "economy-q04", "section": "economy-trading-nation", "q": "According to the booklet, what remains the engine of Canada's economic growth?", "choices": ["Natural resources", "Commerce", "Manufacturing", "Government spending"], "answer": 1, "why": "\"Canada has always been a trading nation and commerce remains the engine of economic growth.\"", "page": 42},
+    {"id": "economy-q05", "section": "economy-three-industries", "q": "What are the three main types of industries in Canada's economy?", "choices": ["Fishing, farming and forestry", "Banking, tourism and government", "Service, manufacturing and natural resources industries", "Energy, mining and automotive industries"], "answer": 2, "why": "\"Canada's economy includes three main types of industries\": service industries, manufacturing industries and natural resources industries.", "page": 42},
+    {"id": "economy-q06", "section": "economy-three-industries", "q": "What share of working Canadians now have jobs in service industries?", "choices": ["More than 25%", "About half", "More than 75%", "Over three-quarters of exports"], "answer": 2, "why": "\"More than 75% of working Canadians now have jobs in service industries.\"", "page": 42},
+    {"id": "economy-q07", "section": "economy-three-industries", "q": "Which of the following is a natural resources industry according to the booklet?", "choices": ["Mining", "Banking", "Aerospace technology", "Retail services"], "answer": 0, "why": "\"Natural resources industries include forestry, fishing, agriculture, mining and energy.\"", "page": 42},
+    {"id": "economy-q08", "section": "economy-three-industries", "q": "Which type of industry makes products such as paper, automobiles, machinery, food and clothing?", "choices": ["Service industries", "Natural resources industries", "Manufacturing industries", "Communications industries"], "answer": 2, "why": "\"Manufacturing industries make products to sell in Canada and around the world. Manufactured products include paper, high technology equipment, aerospace technology, automobiles, machinery, food, clothing and many other goods.\"", "page": 42},
+    {"id": "economy-q09", "section": "economy-canada-us-relations", "q": "Which country is Canada's largest trading partner?", "choices": ["Mexico", "The United Kingdom", "Japan", "The United States"], "answer": 3, "why": "\"Canada enjoys close relations with the United States and each is the other's largest trading partner.\"", "page": 43},
+    {"id": "economy-q10", "section": "economy-canada-us-relations", "q": "What share of Canadian exports are destined for the U.S.A.?", "choices": ["About one-quarter", "About half", "Nearly all", "Over three-quarters"], "answer": 3, "why": "\"Over three-quarters of Canadian exports are destined for the U.S.A.\"", "page": 43},
+    {"id": "economy-q11", "section": "economy-canada-us-relations", "q": "Where is the Peace Arch located?", "choices": ["Blaine, Washington", "Oakville, Ontario", "Port of Vancouver", "Niagara Region, Ontario"], "answer": 0, "why": "\"At Blaine in the State of Washington, the Peace Arch ... symbolizes our close ties and common interests.\"", "page": 43},
+    {"id": "economy-q12", "section": "economy-canada-us-relations", "q": "Which words are inscribed on the Peace Arch?", "choices": ["\"From sea to sea\"", "\"Children of a common mother\" and \"brethren dwelling together in unity\"", "\"The world's longest undefended border\"", "\"Peace, order and good government\""], "answer": 1, "why": "The Peace Arch is \"inscribed with the words 'children of a common mother' and 'brethren dwelling together in unity.'\"", "page": 43},
+    {"id": "economy-q13", "section": "economy-canada-us-relations", "q": "What is the Canada–U.S.A. border traditionally known as?", "choices": ["The Peace Arch", "The 49th parallel", "The biggest bilateral border in the world", "The world's longest undefended border"], "answer": 3, "why": "Millions of Canadians and Americans cross every year \"what is traditionally known as 'the world's longest undefended border.'\"", "page": 43}
+  ]
+}

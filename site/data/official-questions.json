@@ -1,0 +1,248 @@
+{
+  "intro": "One of the basic requirements of citizenship is to demonstrate that you have adequate knowledge of Canada. The citizenship test is used to assess your knowledge of Canada and the rights and responsibilities of being a citizen in Canada.\n\nAll the citizenship test questions are based on information provided in this study guide. You will be asked about facts and ideas presented in the guide.",
+  "mcq": [
+    {
+      "id": "off-m01",
+      "q": "What are three responsibilities of citizenship?",
+      "choices": [
+        "Being loyal to Canada, recycling newspapers, serving in the navy, army or air force.",
+        "Obeying the law, taking responsibility for oneself and one's family, serving on a jury.",
+        "Learning both official languages, voting in elections, belonging to a union.",
+        "Buying Canadian products, owning your own business, using less water."
+      ],
+      "answer": 1,
+      "why": "The booklet lists the citizenship responsibilities as obeying the law, taking responsibility for oneself and one's family, serving on a jury, voting in elections, helping others in the community, and protecting and enjoying our heritage and environment.",
+      "page": 52,
+      "answerPage": 9,
+      "chapter": "rights"
+    },
+    {
+      "id": "off-m02",
+      "q": "What is the meaning of the Remembrance Day poppy?",
+      "choices": [
+        "To remember our Sovereign, Queen Elizabeth II.",
+        "To celebrate Confederation.",
+        "To honour prime ministers who have died.",
+        "To remember the sacrifice of Canadians who have served or died in wars up to the present day."
+      ],
+      "answer": 3,
+      "why": "Canadians wear the red poppy on Remembrance Day, November 11, to honour the sacrifices of over a million brave men and women who have served, and the 110,000 who have given their lives, in all wars up to the present day in which Canadians took part.",
+      "page": 52,
+      "answerPage": 22,
+      "chapter": "history"
+    },
+    {
+      "id": "off-m03",
+      "q": "How are members of Parliament chosen?",
+      "choices": [
+        "They are appointed by the United Nations.",
+        "They are chosen by the provincial premiers.",
+        "They are elected by voters in their local constituency (riding).",
+        "They are elected by landowners and police chiefs."
+      ],
+      "answer": 2,
+      "why": "Canada is divided into 308 electoral districts, also known as ridings or constituencies, and the citizens in each electoral district elect one MP who sits in the House of Commons to represent them.",
+      "page": 52,
+      "answerPage": 30,
+      "chapter": "elections"
+    }
+  ],
+  "short": [
+    {
+      "id": "off-s01",
+      "q": "Name two key documents that contain our rights and freedoms.",
+      "answer": "Magna Carta, signed in 1215 in England (also known as the Great Charter of Freedoms), and the Canadian Charter of Rights and Freedoms, entrenched when the Constitution of Canada was amended in 1982.",
+      "page": 8,
+      "chapter": "rights"
+    },
+    {
+      "id": "off-s02",
+      "q": "Identify four (4) rights that Canadians enjoy.",
+      "answer": "The Charter sets out Mobility Rights (Canadians can live and work anywhere they choose in Canada, enter and leave the country freely, and apply for a passport), Aboriginal Peoples' Rights, Official Language Rights and Minority Language Educational Rights, and Multiculturalism. Habeas corpus, the right to challenge unlawful detention by the state, comes from English common law.",
+      "page": 8,
+      "chapter": "rights"
+    },
+    {
+      "id": "off-s03",
+      "q": "Name four (4) fundamental freedoms that Canadians enjoy.",
+      "answer": "Freedom of conscience and religion; freedom of thought, belief, opinion and expression, including freedom of speech and of the press; freedom of peaceful assembly; and freedom of association.",
+      "page": 8,
+      "chapter": "rights"
+    },
+    {
+      "id": "off-s04",
+      "q": "What is meant by the equality of women and men?",
+      "answer": "In Canada, men and women are equal under the law. Canada's openness and generosity do not extend to barbaric cultural practices that tolerate spousal abuse, \"honour killings,\" female genital mutilation, forced marriage or other gender-based violence; those guilty of these crimes are severely punished under Canada's criminal laws.",
+      "page": 9,
+      "chapter": "rights"
+    },
+    {
+      "id": "off-s05",
+      "q": "What are some examples of taking responsibility for yourself and your family?",
+      "answer": "Getting a job, taking care of one's family and working hard in keeping with one's abilities are important Canadian values. Work contributes to personal dignity and self-respect, and to Canada's prosperity.",
+      "page": 9,
+      "chapter": "rights"
+    },
+    {
+      "id": "off-s06",
+      "q": "Who were the founding peoples of Canada?",
+      "answer": "Canada's three founding peoples are Aboriginal, French and British.",
+      "page": 10,
+      "chapter": "who-we-are"
+    },
+    {
+      "id": "off-s07",
+      "q": "Who are the Métis?",
+      "answer": "The Métis are a distinct people of mixed Aboriginal and European ancestry, the majority of whom live in the Prairie provinces. They come from both French- and English-speaking backgrounds and speak their own dialect, Michif.",
+      "page": 11,
+      "chapter": "who-we-are"
+    },
+    {
+      "id": "off-s08",
+      "q": "What does the word \"Inuit\" mean?",
+      "answer": "Inuit means \"the people\" in the Inuktitut language. The Inuit live in small, scattered communities across the Arctic, and their knowledge of the land, sea and wildlife enabled them to adapt to one of the harshest environments on earth.",
+      "page": 11,
+      "chapter": "who-we-are"
+    },
+    {
+      "id": "off-s09",
+      "q": "What is meant by the term \"responsible government\"?",
+      "answer": "Responsible government means that the ministers of the Crown must have the support of a majority of the elected representatives in order to govern. This is the system that we have today: if the government loses a confidence vote in the assembly it must resign.",
+      "page": 18,
+      "chapter": "history"
+    },
+    {
+      "id": "off-s10",
+      "q": "Who was Sir Louis-Hippolyte La Fontaine?",
+      "answer": "Sir Louis-Hippolyte La Fontaine was a champion of democracy and French language rights who, with Robert Baldwin, worked with British governors toward responsible government. He became the first leader of a responsible government (similar to a prime minister) in the Canadas in 1849.",
+      "page": 18,
+      "chapter": "history"
+    },
+    {
+      "id": "off-s11",
+      "q": "What did the Canadian Pacific Railway symbolize?",
+      "answer": "The Canadian Pacific Railway (CPR) was a powerful symbol of unity. British Columbia joined Canada in 1871 after Ottawa promised to build a railway to the West Coast; on November 7, 1885, Donald Smith (Lord Strathcona) drove the last spike, and the CPR's \"ribbons of steel\" fulfilled a national dream.",
+      "page": 20,
+      "chapter": "history"
+    },
+    {
+      "id": "off-s12",
+      "q": "What does Confederation mean?",
+      "answer": "From 1864 to 1867, representatives of Nova Scotia, New Brunswick and the Province of Canada, with British support, worked together to establish a new country. These Fathers of Confederation created two levels of government, federal and provincial, and the Dominion of Canada was officially born on July 1, 1867, when the British Parliament passed the British North America Act.",
+      "page": 18,
+      "chapter": "history"
+    },
+    {
+      "id": "off-s13",
+      "q": "What is the significance of the discovery of insulin by Sir Frederick Banting and Charles Best?",
+      "answer": "Sir Frederick Banting of Toronto and Charles Best discovered insulin, a hormone to treat diabetes that has saved 16 million lives worldwide.",
+      "page": 27,
+      "chapter": "modern"
+    },
+    {
+      "id": "off-s14",
+      "q": "What does it mean to say that Canada is a constitutional monarchy?",
+      "answer": "As a constitutional monarchy, Canada's Head of State is a hereditary Sovereign (King or Queen), who reigns in accordance with the Constitution: the rule of law. The Sovereign is a part of Parliament, playing an important, non-partisan role as the focus of citizenship and allegiance, while the Prime Minister, the head of government, actually directs the governing of the country.",
+      "page": 29,
+      "chapter": "govern"
+    },
+    {
+      "id": "off-s15",
+      "q": "What are the three branches of government?",
+      "answer": "The Executive, Legislative and Judicial branches. They work together but also sometimes in creative tension, which helps to secure the rights and freedoms of Canadians.",
+      "page": 29,
+      "chapter": "govern"
+    },
+    {
+      "id": "off-s16",
+      "q": "What is the difference between the role of the Queen and that of the Prime Minister?",
+      "answer": "The Sovereign (King or Queen) is the head of state: a symbol of Canadian sovereignty, a guardian of constitutional freedoms and a reflection of our history, with a non-partisan role. The Prime Minister is the head of government, who actually directs the governing of the country, selects the Cabinet ministers and is responsible for the operations and policy of the government.",
+      "page": 29,
+      "chapter": "govern"
+    },
+    {
+      "id": "off-s17",
+      "q": "What is the highest honour that Canadians can receive?",
+      "answer": "The Victoria Cross (V.C.) is the highest honour available to Canadians. It is awarded for the most conspicuous bravery, a daring or pre-eminent act of valour or self-sacrifice, or extreme devotion to duty in the presence of the enemy.",
+      "page": 41,
+      "chapter": "symbols"
+    },
+    {
+      "id": "off-s18",
+      "q": "When you go to vote on election day, what do you do?",
+      "answer": "Go to the polling station listed on your voter information card, bringing the card and proof of your identity and address. You go behind the screen and mark an \"X\" in the circle next to the name of the candidate of your choice, fold the ballot and present it to the poll officials; the poll official tears off the ballot number and gives your ballot back to you to deposit in the ballot box.",
+      "page": 32,
+      "chapter": "elections"
+    },
+    {
+      "id": "off-s19",
+      "q": "Who is entitled to vote in Canadian federal elections?",
+      "answer": "You are eligible to vote in a federal election or cast a ballot in a federal referendum if you are a Canadian citizen, at least 18 years old on voting day, and on the voters' list.",
+      "page": 30,
+      "chapter": "elections"
+    },
+    {
+      "id": "off-s20",
+      "q": "In Canada, are you obliged to tell other people how you voted?",
+      "answer": "No. Canadian law secures the right to a secret ballot. You may choose to discuss how you voted with others, but no one, including family members, your employer or union representative, has the right to insist that you tell them how you voted.",
+      "page": 31,
+      "chapter": "elections"
+    },
+    {
+      "id": "off-s21",
+      "q": "After an election, which party forms the government?",
+      "answer": "Ordinarily, the leader of the political party with the most seats in the House of Commons is invited by the Governor General to form the government, and after being appointed becomes the Prime Minister. If the party in power holds at least half of the seats it is a majority government; if it holds less than half, a minority government.",
+      "page": 31,
+      "chapter": "elections"
+    },
+    {
+      "id": "off-s22",
+      "q": "Who is your member of Parliament?",
+      "answer": "The answer depends on where you live. Canada is divided into 308 electoral districts (ridings or constituencies), and the citizens in each electoral district elect one MP who sits in the House of Commons to represent them. Find out the name of your MP and of your federal electoral district and write them on the booklet's notes page (\"My member of Parliament (MP) in Ottawa is...\", page 34); election results are published by Elections Canada at www.elections.ca.",
+      "page": 30,
+      "chapter": "elections"
+    },
+    {
+      "id": "off-s23",
+      "q": "What are the three levels of government?",
+      "answer": "Federal, provincial and territorial, and municipal (local). The federal level is represented by members of Parliament (MPs); the provincial and territorial level by members of the Legislative Assembly (MLAs), National Assembly (MNAs), Provincial Parliament (MPPs) or House of Assembly (MHAs); and the municipal level by a mayor or reeve and councillors or aldermen.",
+      "page": 33,
+      "chapter": "elections"
+    },
+    {
+      "id": "off-s24",
+      "q": "What is the role of the courts in Canada?",
+      "answer": "The courts settle disputes and the police enforce the laws. The Canadian justice system guarantees everyone due process under the law and is founded on the presumption of innocence in criminal matters, meaning everyone is innocent until proven guilty. The Supreme Court of Canada is our country's highest court.",
+      "page": 36,
+      "chapter": "justice"
+    },
+    {
+      "id": "off-s25",
+      "q": "In Canada, are you allowed to question the police about their service or conduct?",
+      "answer": "Yes. You can question the police about their service or conduct if you feel you need to. Almost all police forces in Canada have a process by which you can bring your concerns to the police and seek action.",
+      "page": 37,
+      "chapter": "justice"
+    },
+    {
+      "id": "off-s26",
+      "q": "Name two Canadian symbols.",
+      "answer": "Any two from the booklet, for example the Canadian Crown, the Canadian flag (raised for the first time in 1965), the maple leaf (Canada's best-known symbol), the fleur-de-lys, the coat of arms and the motto A mari usque ad mare, the Parliament buildings, the Canadian Red Ensign or the beaver.",
+      "page": 38,
+      "chapter": "symbols"
+    },
+    {
+      "id": "off-s27",
+      "q": "What provinces are referred to as the Atlantic Provinces?",
+      "answer": "Newfoundland and Labrador, Prince Edward Island, Nova Scotia and New Brunswick.",
+      "page": 45,
+      "chapter": "regions"
+    },
+    {
+      "id": "off-s28",
+      "q": "What is the capital of the province or territory that you live in?",
+      "answer": "The answer depends on where you live. Canada has ten provinces and three territories, each with its own capital city, and the booklet says you should know the capital of your province or territory as well as that of Canada (Ottawa). The table on page 45 lists them: St. John's (Newfoundland and Labrador), Charlottetown (Prince Edward Island), Halifax (Nova Scotia), Fredericton (New Brunswick), Québec City (Quebec), Toronto (Ontario), Winnipeg (Manitoba), Regina (Saskatchewan), Edmonton (Alberta), Victoria (British Columbia), Iqaluit (Nunavut), Yellowknife (Northwest Territories) and Whitehorse (Yukon Territory).",
+      "page": 45,
+      "chapter": "regions"
+    }
+  ]
+}

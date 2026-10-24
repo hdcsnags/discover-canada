@@ -1,0 +1,1044 @@
+{
+  "id": "elections",
+  "title": "Federal Elections",
+  "order": 8,
+  "pages": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "summary": "How federal elections work: who can vote and run, electoral districts, the voter information card and the secret ballot, the step-by-step voting procedure, what happens after an election (majority and minority governments, Cabinet, the Official Opposition), and the responsibilities of the federal, provincial, territorial and municipal levels of government.",
+  "sections": [
+    {
+      "id": "elections-federal-elections",
+      "title": "Federal Elections",
+      "page": 30,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Canadians vote in elections for the people they want to represent them in the House of Commons. In each election, voters may re-elect the same members of the House of Commons or choose new ones. Members of the House of Commons are also known as members of Parliament or MPs."
+        },
+        {
+          "type": "p",
+          "text": "Under legislation passed by Parliament, federal elections must be held on the third Monday in October every four years following the most recent general election. The Prime Minister may ask the Governor General to call an earlier election."
+        },
+        {
+          "type": "p",
+          "text": "Canada is divided into 308 electoral districts, also known as ridings or constituencies. An electoral district is a geographical area represented by a member of Parliament (MP). The citizens in each electoral district elect one MP who sits in the House of Commons to represent them, as well as all Canadians."
+        },
+        {
+          "type": "p",
+          "text": "Canadian citizens who are 18 years old or older may run in a federal election. The people who run for office are called candidates. There can be many candidates in an electoral district."
+        },
+        {
+          "type": "p",
+          "text": "The people in each electoral district vote for the candidate and political party of their choice. The candidate who receives the most votes becomes the MP for that electoral district."
+        }
+      ],
+      "focus": [
+        "Members of the House of Commons are also known as members of Parliament or MPs.",
+        "Federal elections must be held on the third Monday in October every four years following the most recent general election.",
+        "The Prime Minister may ask the Governor General to call an earlier election.",
+        "Canada is divided into 308 electoral districts, also known as ridings or constituencies.",
+        "The citizens in each electoral district elect one MP who sits in the House of Commons.",
+        "Canadian citizens who are 18 years old or older may run in a federal election. The people who run for office are called candidates.",
+        "The candidate who receives the most votes becomes the MP for that electoral district."
+      ]
+    },
+    {
+      "id": "elections-voting",
+      "title": "Voting",
+      "page": 30,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "One of the privileges of Canadian citizenship is the right to vote. You are eligible to vote in a federal election or cast a ballot in a federal referendum if you are:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "a Canadian citizen; and",
+            "at least 18 years old on voting day; and",
+            "on the voters’ list."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The voters’ lists used during federal elections and referendums are produced from the National Register of Electors by a neutral agency of Parliament called Elections Canada. This is a permanent database of Canadian citizens 18 years of age or older who are qualified to vote in federal elections and referendums."
+        },
+        {
+          "type": "p",
+          "text": "Once an election has been called, Elections Canada mails a voter information card to each elector whose name is in the National Register of Electors. The card lists when and where you vote and the number to call if you require an interpreter or other special services."
+        },
+        {
+          "type": "p",
+          "text": "Even if you choose not to be listed in the National Register of Electors or do not receive a voter information card, you can still be added to the voters’ list at any time, including on election day. To vote either on election day or at advance polls, go to the polling station listed on your voter information card. (See voting procedures)"
+        }
+      ],
+      "focus": [
+        "One of the privileges of Canadian citizenship is the right to vote.",
+        "To vote in a federal election you must be a Canadian citizen, at least 18 years old on voting day, and on the voters’ list.",
+        "Voters’ lists are produced from the National Register of Electors by a neutral agency of Parliament called Elections Canada.",
+        "The National Register of Electors is a permanent database of Canadian citizens 18 years of age or older who are qualified to vote.",
+        "Once an election has been called, Elections Canada mails a voter information card to each elector in the National Register of Electors.",
+        "The voter information card lists when and where you vote and the number to call if you require an interpreter or other special services.",
+        "You can still be added to the voters’ list at any time, including on election day."
+      ]
+    },
+    {
+      "id": "elections-secret-ballot",
+      "title": "Secret ballot",
+      "page": 31,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Canadian law secures the right to a secret ballot. This means that no one can watch you vote and no one should look at how you voted. You may choose to discuss how you voted with others, but no one, including family members, your employer or union representative, has the right to insist that you tell them how you voted. Immediately after the polling stations close, election officers count the ballots and the results are announced on radio and television, and in the newspapers."
+        }
+      ],
+      "focus": [
+        "Canadian law secures the right to a secret ballot: no one can watch you vote and no one should look at how you voted.",
+        "No one, including family members, your employer or union representative, has the right to insist that you tell them how you voted.",
+        "Immediately after the polling stations close, election officers count the ballots and the results are announced on radio and television, and in the newspapers."
+      ]
+    },
+    {
+      "id": "elections-after-an-election",
+      "title": "After an election",
+      "page": 31,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Ordinarily, after an election, the leader of the political party with the most seats in the House of Commons is invited by the Governor General to form the government. After being appointed by the Governor General, the leader of this party becomes the Prime Minister. If the party in power holds at least half of the seats in the House of Commons, this is called a majority government. If the party in power holds less than half of the seats in the House of Commons, this is called a minority government."
+        },
+        {
+          "type": "p",
+          "text": "The Prime Minister and the party in power run the government as long as they have the support or confidence of the majority of the MPs. When the House of Commons votes on a major issue such as the budget, this is considered a matter of confidence. If a majority of the members of the House of Commons vote against a major government decision, the party in power is defeated, which usually results in the Prime Minister asking the Governor General, on behalf of the Sovereign, to call an election."
+        },
+        {
+          "type": "p",
+          "text": "The Prime Minister chooses the ministers of the Crown, most of them from among members of the House of Commons. Cabinet ministers are responsible for running the federal government departments. The Prime Minister and the Cabinet ministers are called the Cabinet and they make important decisions about how the country is governed. They prepare the budget and propose most new laws. Their decisions can be questioned by all members of the House of Commons."
+        },
+        {
+          "type": "p",
+          "text": "The other parties that are not in power are known as opposition parties. The opposition party with the most members of the House of Commons is the Official Opposition or Her Majesty’s Loyal Opposition. The role of opposition parties is to peacefully oppose or try to improve government proposals. There are three major political parties currently represented in the House of Commons: the Conservative Party, the New Democratic Party, and the Liberal Party."
+        }
+      ],
+      "focus": [
+        "The leader of the party with the most seats in the House of Commons is invited by the Governor General to form the government",
+        "A majority government holds at least half of the seats in the House of Commons; a minority government holds less than half.",
+        "The Prime Minister and the party in power run the government as long as they have the confidence of the majority of the MPs.",
+        "A vote on a major issue such as the budget is a matter of confidence; if defeated, the Prime Minister usually asks for an election.",
+        "The Prime Minister chooses the ministers of the Crown; Cabinet ministers are responsible for running the federal government departments.",
+        "The Prime Minister and the Cabinet ministers are called the Cabinet; they prepare the budget and propose most new laws.",
+        "The opposition party with the most members of the House of Commons is the Official Opposition, or Her Majesty’s Loyal Opposition.",
+        "Three major political parties are currently represented in the House of Commons: the Conservative Party, the New Democratic Party, and the Liberal Party.",
+        "The role of opposition parties is to peacefully oppose or try to improve government proposals."
+      ]
+    },
+    {
+      "id": "elections-voting-procedures",
+      "title": "Voting procedures during an election period",
+      "page": 32,
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Voter information card. Electors whose information is in the National Register of Electors will receive a voter information card. This confirms that your name is on the voters’ list and states when and where you vote.",
+            "I did not get a card. If you do not receive a voter information card, call your local elections office to ensure that you are on the voters’ list. If you do not have the number, call Elections Canada, in Ottawa, at 1-800-463-6868.",
+            "Advance poll and special ballot. If you cannot or do not wish to vote on election day, you can vote at the advance polls or by special ballot. The dates and location are on your voter information card.",
+            "On election day. Go to your polling station. The location is on your voter information card. Bring this card and proof of your identity and address to the polling station.",
+            "Marking the ballot. Mark an “X” in the circle next to the name of the candidate of your choice.",
+            "Voting is secret. Your vote is secret. You will be invited to go behind the screen to mark your ballot. Once marked, fold it and present it to the poll officials.",
+            "The ballot box. The poll official will tear off the ballot number and give your ballot back to you to deposit in the ballot box.",
+            "The election results. When the polls close, every ballot is counted and the results are made public. You can see the results on television or on the Elections Canada website (www.elections.ca)."
+          ]
+        }
+      ],
+      "focus": [
+        "The voter information card confirms that your name is on the voters’ list and states when and where you vote.",
+        "If you do not receive a voter information card, call your local elections office, or Elections Canada, in Ottawa, at 1-800-463-6868.",
+        "If you cannot or do not wish to vote on election day, you can vote at the advance polls or by special ballot.",
+        "On election day, bring your voter information card and proof of your identity and address to the polling station.",
+        "Behind the screen, mark an “X” in the circle next to the candidate of your choice; fold the ballot and present it to poll officials.",
+        "The poll official will tear off the ballot number and give your ballot back to you to deposit in the ballot box.",
+        "When the polls close, every ballot is counted and the results are made public on television or on the Elections Canada website (www.elections.ca)."
+      ]
+    },
+    {
+      "id": "elections-other-levels-of-government",
+      "title": "Other levels of government in Canada",
+      "page": 33,
+      "blocks": [
+        {
+          "type": "caption",
+          "text": "Provincial Assembly, Charlottetown, P.E.I."
+        },
+        {
+          "type": "p",
+          "text": "Local or municipal government plays an important role in the lives of our citizens. Municipal governments usually have a council that passes laws called “by-laws” that affect only the local community. The council usually includes a mayor (or a reeve) and councillors or aldermen. Municipalities are normally responsible for urban or regional planning, streets and roads, sanitation (such as garbage removal), snow removal, firefighting, ambulance and other emergency services, recreation facilities, public transit and some local health and social services. Most major urban centres have municipal police forces."
+        },
+        {
+          "type": "p",
+          "text": "Provincial, territorial and municipal elections are held by secret ballot, but the rules are not the same as those for federal elections. It is important to find out the rules for voting in provincial, territorial and local elections so that you can exercise your right to vote."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Level",
+              "Elected officials",
+              "Some responsibilities"
+            ],
+            [
+              "Federal",
+              "Members of Parliament (MPs)",
+              "National Defence; Foreign Policy; Citizenship; Policing; Criminal Justice; International Trade; Aboriginal Affairs; Immigration (shared); Agriculture (shared); Environment (shared)"
+            ],
+            [
+              "Provincial and Territorial",
+              "Members of the Legislative Assembly (MLAs) or Members of the National Assembly (MNAs) or Members of the Provincial Parliament (MPPs) or Members of the House of Assembly (MHAs)",
+              "Education; Health Care; Natural Resources; Highways; Policing (Ontario, Quebec); Property and Civil Rights; Immigration (shared); Agriculture (shared); Environment (shared)"
+            ],
+            [
+              "Municipal (local)",
+              "Mayor or Reeve; Councillors or Aldermen",
+              "Social and Community Health; Recycling Programs; Transportation and Utilities; Snow Removal; Policing; Firefighting; Emergency Services"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The First Nations have band chiefs and councillors who have major responsibilities on First Nations reserves, including housing, schools and other services. There are a number of provincial, regional and national Aboriginal organizations that are a voice for First Nations, Métis and Inuit people in their relationships with the federal, provincial and territorial governments."
+        }
+      ],
+      "focus": [
+        "Municipal governments usually have a council that passes laws called “by-laws” that affect only the local community.",
+        "The municipal council usually includes a mayor (or a reeve) and councillors or aldermen.",
+        "Municipalities are normally responsible for planning, streets and roads, sanitation, snow removal, firefighting, emergency services, recreation, public transit and some local health and social services.",
+        "Provincial, territorial and municipal elections are held by secret ballot, but the rules are not the same as those for federal elections.",
+        "The First Nations have band chiefs and councillors who have major responsibilities on First Nations reserves, including housing, schools and other services.",
+        "Federal responsibilities: National Defence, Foreign Policy, Citizenship, Policing, Criminal Justice, International Trade, Aboriginal Affairs; elected officials are Members of Parliament (MPs).",
+        "Provincial and territorial responsibilities: Education, Health Care, Natural Resources, Highways, Policing (Ontario, Quebec), Property and Civil Rights; elected officials are MLAs, MNAs, MPPs or MHAs.",
+        "Immigration, Agriculture and Environment are shared between the federal and provincial/territorial governments."
+      ]
+    },
+    {
+      "id": "elections-how-much-do-you-know",
+      "title": "How Much Do You Know About Your Government?",
+      "page": 34,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Use these pages to take notes and to study important information."
+        },
+        {
+          "type": "p",
+          "text": "Federal Government"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Head of State",
+            "The name of the representative of the Queen of Canada, the Governor General, is",
+            "The Head of Government, the Prime Minister, is",
+            "The name of the political party in power is",
+            "The name of the Leader of the Opposition is",
+            "The name of the party representing Her Majesty’s Loyal Opposition is",
+            "The names of the other opposition parties and leaders are",
+            "My member of Parliament (MP) in Ottawa is",
+            "My federal electoral district is called"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Provincial Government"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The representative of the Queen in my province, the Lieutenant Governor, is",
+            "The Head of Government (the Premier) is",
+            "The name of the provincial party in power is",
+            "The names of the provincial opposition parties and leaders are",
+            "My provincial representative is"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Territorial Government"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The name of the Commissioner, who represents the federal government in my territory, is",
+            "The name of the Premier is",
+            "The name of my territorial representative is"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Municipal Government"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The name of the municipality where I live is",
+            "The name of the head of the municipal government (mayor or reeve) is"
+          ]
+        },
+        {
+          "type": "caption",
+          "text": "Québec City Hall, constructed 1895–96"
+        }
+      ],
+      "focus": [
+        "The Governor General is the representative of the Sovereign (King or Queen) of Canada; the Prime Minister is the Head of Government.",
+        "The Lieutenant Governor is the representative of the Sovereign (King or Queen) in each province; the Premier is the Head of Government of a province.",
+        "The Commissioner represents the federal government in each territory; the territorial Head of Government is the Premier.",
+        "The head of the municipal government is the mayor or reeve."
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "elections-c01",
+      "section": "elections-federal-elections",
+      "front": "What is another name for members of the House of Commons?",
+      "back": "Members of Parliament or MPs.",
+      "page": 30
+    },
+    {
+      "id": "elections-c02",
+      "section": "elections-federal-elections",
+      "front": "When must federal elections be held?",
+      "back": "On the third Monday in October every four years following the most recent general election.",
+      "page": 30
+    },
+    {
+      "id": "elections-c03",
+      "section": "elections-federal-elections",
+      "front": "Who may ask the Governor General to call an earlier federal election?",
+      "back": "The Prime Minister.",
+      "page": 30
+    },
+    {
+      "id": "elections-c04",
+      "section": "elections-federal-elections",
+      "front": "How many electoral districts is Canada divided into, and what are they also called?",
+      "back": "308 electoral districts, also known as ridings or constituencies.",
+      "page": 30
+    },
+    {
+      "id": "elections-c05",
+      "section": "elections-federal-elections",
+      "front": "What is an electoral district?",
+      "back": "A geographical area represented by a member of Parliament (MP). The citizens in each district elect one MP who sits in the House of Commons.",
+      "page": 30
+    },
+    {
+      "id": "elections-c06",
+      "section": "elections-federal-elections",
+      "front": "Who may run in a federal election, and what are they called?",
+      "back": "Canadian citizens who are 18 years old or older. The people who run for office are called candidates.",
+      "page": 30
+    },
+    {
+      "id": "elections-c07",
+      "section": "elections-federal-elections",
+      "front": "Who becomes the MP for an electoral district?",
+      "back": "The candidate who receives the most votes.",
+      "page": 30
+    },
+    {
+      "id": "elections-c08",
+      "section": "elections-voting",
+      "front": "What are the three requirements to be eligible to vote in a federal election or referendum?",
+      "back": "You must be a Canadian citizen, at least 18 years old on voting day, and on the voters’ list.",
+      "page": 30
+    },
+    {
+      "id": "elections-c09",
+      "section": "elections-voting",
+      "front": "What is described as one of the privileges of Canadian citizenship?",
+      "back": "The right to vote.",
+      "page": 30
+    },
+    {
+      "id": "elections-c10",
+      "section": "elections-voting",
+      "front": "Who produces the voters’ lists, and from what?",
+      "back": "Elections Canada, a neutral agency of Parliament, produces them from the National Register of Electors.",
+      "page": 30
+    },
+    {
+      "id": "elections-c11",
+      "section": "elections-voting",
+      "front": "What is the National Register of Electors?",
+      "back": "A permanent database of Canadian citizens 18 years of age or older who are qualified to vote in federal elections and referendums.",
+      "page": 30
+    },
+    {
+      "id": "elections-c12",
+      "section": "elections-voting",
+      "front": "What does Elections Canada mail to each elector once an election has been called?",
+      "back": "A voter information card, which lists when and where you vote and the number to call if you require an interpreter or other special services.",
+      "page": 30
+    },
+    {
+      "id": "elections-c13",
+      "section": "elections-voting",
+      "front": "Can you be added to the voters’ list on election day?",
+      "back": "Yes. You can be added to the voters’ list at any time, including on election day.",
+      "page": 30
+    },
+    {
+      "id": "elections-c14",
+      "section": "elections-secret-ballot",
+      "front": "What does the right to a secret ballot mean?",
+      "back": "No one can watch you vote and no one should look at how you voted.",
+      "page": 31
+    },
+    {
+      "id": "elections-c15",
+      "section": "elections-secret-ballot",
+      "front": "Does your employer, union representative or family have the right to insist you tell them how you voted?",
+      "back": "No. No one has the right to insist that you tell them how you voted, though you may choose to discuss it.",
+      "page": 31
+    },
+    {
+      "id": "elections-c16",
+      "section": "elections-secret-ballot",
+      "front": "What happens immediately after the polling stations close?",
+      "back": "Election officers count the ballots and the results are announced on radio and television, and in the newspapers.",
+      "page": 31
+    },
+    {
+      "id": "elections-c17",
+      "section": "elections-after-an-election",
+      "front": "After an election, who is invited by the Governor General to form the government?",
+      "back": "The leader of the political party with the most seats in the House of Commons. After being appointed, that leader becomes the Prime Minister.",
+      "page": 31
+    },
+    {
+      "id": "elections-c18",
+      "section": "elections-after-an-election",
+      "front": "What is a majority government?",
+      "back": "When the party in power holds at least half of the seats in the House of Commons.",
+      "page": 31
+    },
+    {
+      "id": "elections-c19",
+      "section": "elections-after-an-election",
+      "front": "What is a minority government?",
+      "back": "When the party in power holds less than half of the seats in the House of Commons.",
+      "page": 31
+    },
+    {
+      "id": "elections-c20",
+      "section": "elections-after-an-election",
+      "front": "How long do the Prime Minister and the party in power run the government?",
+      "back": "As long as they have the support or confidence of the majority of the MPs.",
+      "page": 31
+    },
+    {
+      "id": "elections-c21",
+      "section": "elections-after-an-election",
+      "front": "What happens if a majority of MPs vote against a major government decision such as the budget?",
+      "back": "The party in power is defeated, which usually results in the Prime Minister asking the Governor General, on behalf of the Sovereign, to call an election.",
+      "page": 31
+    },
+    {
+      "id": "elections-c22",
+      "section": "elections-after-an-election",
+      "front": "Who chooses the ministers of the Crown, and what are Cabinet ministers responsible for?",
+      "back": "The Prime Minister chooses them, most from among MPs. Cabinet ministers are responsible for running the federal government departments.",
+      "page": 31
+    },
+    {
+      "id": "elections-c23",
+      "section": "elections-after-an-election",
+      "front": "What is the Cabinet, and what does it do?",
+      "back": "The Prime Minister and the Cabinet ministers. They make important decisions about how the country is governed, prepare the budget and propose most new laws.",
+      "page": 31
+    },
+    {
+      "id": "elections-c24",
+      "section": "elections-after-an-election",
+      "front": "What is the Official Opposition?",
+      "back": "The opposition party with the most members of the House of Commons, also called the Sovereign’s Loyal Opposition (Her Majesty’s Loyal Opposition in the booklet).",
+      "page": 31
+    },
+    {
+      "id": "elections-c25",
+      "section": "elections-after-an-election",
+      "front": "What is the role of opposition parties?",
+      "back": "To peacefully oppose or try to improve government proposals.",
+      "page": 31
+    },
+    {
+      "id": "elections-c26",
+      "section": "elections-after-an-election",
+      "front": "Name the three major political parties currently represented in the House of Commons.",
+      "back": "The Conservative Party, the New Democratic Party, and the Liberal Party.",
+      "page": 31
+    },
+    {
+      "id": "elections-c27",
+      "section": "elections-voting-procedures",
+      "front": "What does the voter information card confirm?",
+      "back": "That your name is on the voters’ list, and when and where you vote.",
+      "page": 32
+    },
+    {
+      "id": "elections-c28",
+      "section": "elections-voting-procedures",
+      "front": "What should you do if you do not receive a voter information card?",
+      "back": "Call your local elections office to ensure you are on the voters’ list, or call Elections Canada, in Ottawa, at 1-800-463-6868.",
+      "page": 32
+    },
+    {
+      "id": "elections-c29",
+      "section": "elections-voting-procedures",
+      "front": "How can you vote if you cannot or do not wish to vote on election day?",
+      "back": "At the advance polls or by special ballot. The dates and location are on your voter information card.",
+      "page": 32
+    },
+    {
+      "id": "elections-c30",
+      "section": "elections-voting-procedures",
+      "front": "What should you bring to the polling station on election day?",
+      "back": "Your voter information card and proof of your identity and address.",
+      "page": 32
+    },
+    {
+      "id": "elections-c31",
+      "section": "elections-voting-procedures",
+      "front": "How do you mark the ballot?",
+      "back": "Mark an “X” in the circle next to the name of the candidate of your choice, behind the screen. Then fold it and present it to the poll officials.",
+      "page": 32
+    },
+    {
+      "id": "elections-c32",
+      "section": "elections-voting-procedures",
+      "front": "What does the poll official do with your ballot before you deposit it in the ballot box?",
+      "back": "The poll official tears off the ballot number and gives your ballot back to you to deposit in the ballot box.",
+      "page": 32
+    },
+    {
+      "id": "elections-c33",
+      "section": "elections-voting-procedures",
+      "front": "Where can you see the election results?",
+      "back": "On television or on the Elections Canada website (www.elections.ca). When the polls close, every ballot is counted and the results are made public.",
+      "page": 32
+    },
+    {
+      "id": "elections-c34",
+      "section": "elections-other-levels-of-government",
+      "front": "What are the laws passed by municipal councils called?",
+      "back": "“By-laws”, which affect only the local community.",
+      "page": 33
+    },
+    {
+      "id": "elections-c35",
+      "section": "elections-other-levels-of-government",
+      "front": "Who usually makes up a municipal council?",
+      "back": "A mayor (or a reeve) and councillors or aldermen.",
+      "page": 33
+    },
+    {
+      "id": "elections-c36",
+      "section": "elections-other-levels-of-government",
+      "front": "Name some responsibilities of municipalities.",
+      "back": "Urban or regional planning, streets and roads, sanitation (such as garbage removal), snow removal, firefighting, ambulance and other emergency services, recreation facilities, public transit and some local health and social services.",
+      "page": 33
+    },
+    {
+      "id": "elections-c37",
+      "section": "elections-other-levels-of-government",
+      "front": "Are the rules for provincial, territorial and municipal elections the same as for federal elections?",
+      "back": "No. They are held by secret ballot, but the rules are not the same as those for federal elections.",
+      "page": 33
+    },
+    {
+      "id": "elections-c38",
+      "section": "elections-other-levels-of-government",
+      "front": "Who has major responsibilities on First Nations reserves, and for what?",
+      "back": "Band chiefs and councillors, including housing, schools and other services.",
+      "page": 33
+    },
+    {
+      "id": "elections-c39",
+      "section": "elections-other-levels-of-government",
+      "front": "Name some responsibilities of the federal government.",
+      "back": "National Defence, Foreign Policy, Citizenship, Policing, Criminal Justice, International Trade and Aboriginal Affairs, plus Immigration, Agriculture and Environment (shared).",
+      "page": 33
+    },
+    {
+      "id": "elections-c40",
+      "section": "elections-other-levels-of-government",
+      "front": "Name some responsibilities of provincial and territorial governments.",
+      "back": "Education, Health Care, Natural Resources, Highways, Policing (Ontario, Quebec) and Property and Civil Rights, plus Immigration, Agriculture and Environment (shared).",
+      "page": 33
+    },
+    {
+      "id": "elections-c41",
+      "section": "elections-other-levels-of-government",
+      "front": "Which responsibilities are shared between the federal and provincial/territorial governments?",
+      "back": "Immigration, Agriculture and Environment.",
+      "page": 33
+    },
+    {
+      "id": "elections-c42",
+      "section": "elections-other-levels-of-government",
+      "front": "What are the elected officials of provincial and territorial governments called?",
+      "back": "Members of the Legislative Assembly (MLAs), Members of the National Assembly (MNAs), Members of the Provincial Parliament (MPPs) or Members of the House of Assembly (MHAs).",
+      "page": 33
+    },
+    {
+      "id": "elections-c43",
+      "section": "elections-other-levels-of-government",
+      "front": "Name some responsibilities of municipal (local) government from the table.",
+      "back": "Social and Community Health, Recycling Programs, Transportation and Utilities, Snow Removal, Policing, Firefighting and Emergency Services.",
+      "page": 33
+    },
+    {
+      "id": "elections-c44",
+      "section": "elections-how-much-do-you-know",
+      "front": "Who is the representative of the Sovereign (King or Queen) of Canada at the federal level?",
+      "back": "The Governor General.",
+      "page": 34
+    },
+    {
+      "id": "elections-c45",
+      "section": "elections-how-much-do-you-know",
+      "front": "Who is the Head of Government of Canada?",
+      "back": "The Prime Minister.",
+      "page": 34
+    },
+    {
+      "id": "elections-c46",
+      "section": "elections-how-much-do-you-know",
+      "front": "Who represents the Sovereign (King or Queen) in each province?",
+      "back": "The Lieutenant Governor.",
+      "page": 34
+    },
+    {
+      "id": "elections-c47",
+      "section": "elections-how-much-do-you-know",
+      "front": "Who is the Head of Government of a province or territory?",
+      "back": "The Premier.",
+      "page": 34
+    },
+    {
+      "id": "elections-c48",
+      "section": "elections-how-much-do-you-know",
+      "front": "Who represents the federal government in a territory?",
+      "back": "The Commissioner.",
+      "page": 35
+    },
+    {
+      "id": "elections-c49",
+      "section": "elections-how-much-do-you-know",
+      "front": "Who is the head of a municipal government?",
+      "back": "The mayor or reeve.",
+      "page": 35
+    }
+  ],
+  "quiz": [
+    {
+      "id": "elections-q01",
+      "section": "elections-federal-elections",
+      "q": "When must federal elections be held under legislation passed by Parliament?",
+      "choices": [
+        "On the first Monday in September every five years",
+        "On the third Monday in October every four years following the most recent general election",
+        "Whenever the Governor General decides",
+        "On July 1 every four years"
+      ],
+      "answer": 1,
+      "why": "“Federal elections must be held on the third Monday in October every four years following the most recent general election.”",
+      "page": 30
+    },
+    {
+      "id": "elections-q02",
+      "section": "elections-federal-elections",
+      "q": "How many electoral districts is Canada divided into?",
+      "choices": [
+        "105",
+        "208",
+        "308",
+        "338"
+      ],
+      "answer": 2,
+      "why": "“Canada is divided into 308 electoral districts, also known as ridings or constituencies.”",
+      "page": 30
+    },
+    {
+      "id": "elections-q03",
+      "section": "elections-federal-elections",
+      "q": "What is another name for an electoral district?",
+      "choices": [
+        "A riding or constituency",
+        "A municipality",
+        "A reserve",
+        "A Cabinet"
+      ],
+      "answer": 0,
+      "why": "Electoral districts are “also known as ridings or constituencies.”",
+      "page": 30
+    },
+    {
+      "id": "elections-q04",
+      "section": "elections-federal-elections",
+      "q": "Who becomes the MP for an electoral district?",
+      "choices": [
+        "The candidate chosen by the Governor General",
+        "The candidate appointed by the Prime Minister",
+        "The candidate who receives the most votes",
+        "The candidate from the party with the most seats"
+      ],
+      "answer": 2,
+      "why": "“The candidate who receives the most votes becomes the MP for that electoral district.”",
+      "page": 30
+    },
+    {
+      "id": "elections-q05",
+      "section": "elections-voting",
+      "q": "Which of the following is a requirement to vote in a federal election?",
+      "choices": [
+        "Being a Canadian citizen at least 18 years old on voting day and on the voters’ list",
+        "Being a Canadian resident for at least four years",
+        "Owning property in the electoral district",
+        "Being a member of a political party"
+      ],
+      "answer": 0,
+      "why": "You are eligible if you are a Canadian citizen, at least 18 years old on voting day, and on the voters’ list.",
+      "page": 30
+    },
+    {
+      "id": "elections-q06",
+      "section": "elections-voting",
+      "q": "What is the neutral agency of Parliament that produces the voters’ lists?",
+      "choices": [
+        "The National Register of Electors",
+        "Elections Canada",
+        "The House of Commons",
+        "The Cabinet"
+      ],
+      "answer": 1,
+      "why": "The voters’ lists “are produced from the National Register of Electors by a neutral agency of Parliament called Elections Canada.”",
+      "page": 30
+    },
+    {
+      "id": "elections-q07",
+      "section": "elections-voting",
+      "q": "What does the voter information card tell you?",
+      "choices": [
+        "The names of the candidates in your riding",
+        "How to join a political party",
+        "When and where you vote, and the number to call if you need an interpreter or other special services",
+        "The results of the last election"
+      ],
+      "answer": 2,
+      "why": "“The card lists when and where you vote and the number to call if you require an interpreter or other special services.”",
+      "page": 30
+    },
+    {
+      "id": "elections-q08",
+      "section": "elections-voting",
+      "q": "If you did not receive a voter information card, until when can you be added to the voters’ list?",
+      "choices": [
+        "Only before the election is called",
+        "Only at the advance polls",
+        "At any time, including on election day",
+        "Never; you must wait for the next election"
+      ],
+      "answer": 2,
+      "why": "“You can still be added to the voters’ list at any time, including on election day.”",
+      "page": 30
+    },
+    {
+      "id": "elections-q09",
+      "section": "elections-secret-ballot",
+      "q": "Who has the right to insist that you tell them how you voted?",
+      "choices": [
+        "Your employer",
+        "Your union representative",
+        "Your family members",
+        "No one"
+      ],
+      "answer": 3,
+      "why": "“No one, including family members, your employer or union representative, has the right to insist that you tell them how you voted.”",
+      "page": 31
+    },
+    {
+      "id": "elections-q10",
+      "section": "elections-after-an-election",
+      "q": "After an election, who is invited by the Governor General to form the government?",
+      "choices": [
+        "The leader of the Official Opposition",
+        "The leader of the political party with the most seats in the House of Commons",
+        "The MP who received the most votes in Canada",
+        "The Commissioner"
+      ],
+      "answer": 1,
+      "why": "“The leader of the political party with the most seats in the House of Commons is invited by the Governor General to form the government.”",
+      "page": 31
+    },
+    {
+      "id": "elections-q11",
+      "section": "elections-after-an-election",
+      "q": "What is a majority government?",
+      "choices": [
+        "The party in power holds less than half of the seats in the House of Commons",
+        "The party in power holds at least half of the seats in the House of Commons",
+        "The party in power holds all of the seats in the House of Commons",
+        "Two parties share the seats equally"
+      ],
+      "answer": 1,
+      "why": "“If the party in power holds at least half of the seats in the House of Commons, this is called a majority government.”",
+      "page": 31
+    },
+    {
+      "id": "elections-q12",
+      "section": "elections-after-an-election",
+      "q": "A vote in the House of Commons on which issue is considered a matter of confidence?",
+      "choices": [
+        "The budget",
+        "A by-law",
+        "The voters’ list",
+        "The election date"
+      ],
+      "answer": 0,
+      "why": "“When the House of Commons votes on a major issue such as the budget, this is considered a matter of confidence.”",
+      "page": 31
+    },
+    {
+      "id": "elections-q13",
+      "section": "elections-after-an-election",
+      "q": "Who is responsible for running the federal government departments?",
+      "choices": [
+        "The Governor General",
+        "Members of the Official Opposition",
+        "Cabinet ministers",
+        "Elections Canada"
+      ],
+      "answer": 2,
+      "why": "“Cabinet ministers are responsible for running the federal government departments.”",
+      "page": 31
+    },
+    {
+      "id": "elections-q14",
+      "section": "elections-after-an-election",
+      "q": "What is the Official Opposition?",
+      "choices": [
+        "The party in power",
+        "The opposition party with the most members of the House of Commons",
+        "All of the parties not in power",
+        "The Cabinet"
+      ],
+      "answer": 1,
+      "why": "“The opposition party with the most members of the House of Commons is the Official Opposition or Her Majesty’s Loyal Opposition.”",
+      "page": 31
+    },
+    {
+      "id": "elections-q15",
+      "section": "elections-after-an-election",
+      "q": "Which three major political parties are currently represented in the House of Commons?",
+      "choices": [
+        "The Conservative Party, the Green Party, and the Liberal Party",
+        "The Conservative Party, the New Democratic Party, and the Liberal Party",
+        "The Liberal Party, the Bloc Québécois, and the Green Party",
+        "The New Democratic Party, the Reform Party, and the Liberal Party"
+      ],
+      "answer": 1,
+      "why": "The booklet names “the Conservative Party, the New Democratic Party, and the Liberal Party.”",
+      "page": 31
+    },
+    {
+      "id": "elections-q16",
+      "section": "elections-after-an-election",
+      "q": "What is the role of opposition parties?",
+      "choices": [
+        "To run the federal government departments",
+        "To prepare the budget",
+        "To peacefully oppose or try to improve government proposals",
+        "To count the ballots after an election"
+      ],
+      "answer": 2,
+      "why": "“The role of opposition parties is to peacefully oppose or try to improve government proposals.”",
+      "page": 31
+    },
+    {
+      "id": "elections-q17",
+      "section": "elections-voting-procedures",
+      "q": "What should you bring to the polling station on election day?",
+      "choices": [
+        "Your voter information card and proof of your identity and address",
+        "Your passport and a political party membership card",
+        "A letter from your employer",
+        "Your previous ballot"
+      ],
+      "answer": 0,
+      "why": "“Bring this card and proof of your identity and address to the polling station.”",
+      "page": 32
+    },
+    {
+      "id": "elections-q18",
+      "section": "elections-voting-procedures",
+      "q": "How do you mark your ballot?",
+      "choices": [
+        "Sign your name next to the candidate",
+        "Mark an “X” in the circle next to the name of the candidate of your choice",
+        "Write the name of the party",
+        "Tear off the ballot number"
+      ],
+      "answer": 1,
+      "why": "“Mark an ‘X’ in the circle next to the name of the candidate of your choice.”",
+      "page": 32
+    },
+    {
+      "id": "elections-q19",
+      "section": "elections-voting-procedures",
+      "q": "What can you do if you cannot or do not wish to vote on election day?",
+      "choices": [
+        "Ask a family member to vote for you",
+        "Vote by telephone",
+        "Vote at the advance polls or by special ballot",
+        "Vote at the Elections Canada office in Ottawa"
+      ],
+      "answer": 2,
+      "why": "“If you cannot or do not wish to vote on election day, you can vote at the advance polls or by special ballot.”",
+      "page": 32
+    },
+    {
+      "id": "elections-q20",
+      "section": "elections-voting-procedures",
+      "q": "What does the poll official do before you deposit your ballot in the ballot box?",
+      "choices": [
+        "Reads your ballot to check it is marked correctly",
+        "Tears off the ballot number and gives your ballot back to you",
+        "Records your name on the ballot",
+        "Seals the ballot in an envelope"
+      ],
+      "answer": 1,
+      "why": "“The poll official will tear off the ballot number and give your ballot back to you to deposit in the ballot box.”",
+      "page": 32
+    },
+    {
+      "id": "elections-q21",
+      "section": "elections-other-levels-of-government",
+      "q": "What are the laws passed by a municipal council called?",
+      "choices": [
+        "Acts",
+        "Statutes",
+        "By-laws",
+        "Regulations"
+      ],
+      "answer": 2,
+      "why": "Municipal governments “usually have a council that passes laws called ‘by-laws’ that affect only the local community.”",
+      "page": 33
+    },
+    {
+      "id": "elections-q22",
+      "section": "elections-other-levels-of-government",
+      "q": "Which of the following is a federal responsibility?",
+      "choices": [
+        "Education",
+        "Highways",
+        "Snow Removal",
+        "National Defence"
+      ],
+      "answer": 3,
+      "why": "The table lists National Defence under federal responsibilities; Education and Highways are provincial, and Snow Removal is municipal.",
+      "page": 33
+    },
+    {
+      "id": "elections-q23",
+      "section": "elections-other-levels-of-government",
+      "q": "Which of the following is a provincial or territorial responsibility?",
+      "choices": [
+        "Foreign Policy",
+        "Health Care",
+        "Recycling Programs",
+        "Citizenship"
+      ],
+      "answer": 1,
+      "why": "The table lists Health Care under provincial and territorial responsibilities.",
+      "page": 33
+    },
+    {
+      "id": "elections-q24",
+      "section": "elections-other-levels-of-government",
+      "q": "Which responsibilities are shared between the federal and provincial/territorial governments?",
+      "choices": [
+        "Immigration, Agriculture and Environment",
+        "National Defence, Foreign Policy and Citizenship",
+        "Education, Health Care and Highways",
+        "Firefighting, Snow Removal and Recycling Programs"
+      ],
+      "answer": 0,
+      "why": "The table marks Immigration, Agriculture and Environment as “(shared)” at both the federal and the provincial and territorial levels.",
+      "page": 33
+    },
+    {
+      "id": "elections-q25",
+      "section": "elections-other-levels-of-government",
+      "q": "Who usually heads a municipal council?",
+      "choices": [
+        "A Premier",
+        "A Lieutenant Governor",
+        "A mayor (or a reeve)",
+        "A Commissioner"
+      ],
+      "answer": 2,
+      "why": "“The council usually includes a mayor (or a reeve) and councillors or aldermen.”",
+      "page": 33
+    },
+    {
+      "id": "elections-q26",
+      "section": "elections-other-levels-of-government",
+      "q": "Who has major responsibilities on First Nations reserves, including housing and schools?",
+      "choices": [
+        "Municipal councillors",
+        "Band chiefs and councillors",
+        "Members of the Legislative Assembly",
+        "The Commissioner"
+      ],
+      "answer": 1,
+      "why": "“The First Nations have band chiefs and councillors who have major responsibilities on First Nations reserves, including housing, schools and other services.”",
+      "page": 33
+    },
+    {
+      "id": "elections-q27",
+      "section": "elections-how-much-do-you-know",
+      "q": "Who represents the Sovereign (King or Queen) in each province?",
+      "choices": [
+        "The Premier",
+        "The Commissioner",
+        "The Lieutenant Governor",
+        "The Governor General"
+      ],
+      "answer": 2,
+      "why": "The study page names “the representative of the Queen in my province, the Lieutenant Governor.”",
+      "page": 34
+    },
+    {
+      "id": "elections-q28",
+      "section": "elections-how-much-do-you-know",
+      "q": "Who represents the federal government in a territory?",
+      "choices": [
+        "The Lieutenant Governor",
+        "The Commissioner",
+        "The Governor General",
+        "The mayor or reeve"
+      ],
+      "answer": 1,
+      "why": "The study page names “the Commissioner, who represents the federal government in my territory.”",
+      "page": 35
+    }
+  ]
+}

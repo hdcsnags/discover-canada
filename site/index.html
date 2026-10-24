@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Discover Canada — Study</title>
+  <meta name="description" content="Learn the official Discover Canada citizenship study guide with a reading mode, flash cards, section quizzes, a mock test and the full booklet, on any device.">
+  <meta name="theme-color" content="#c8102e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+  <script>
+    (function () {
+      try {
+        var s = JSON.parse(localStorage.getItem('dc.settings') || '{}');
+        var r = document.documentElement;
+        if (s.theme) r.setAttribute('data-theme', s.theme);
+        if (s.size) r.setAttribute('data-size', s.size);
+        if (s.font) r.setAttribute('data-font', s.font);
+        if (s.motion === 'off') r.setAttribute('data-motion', 'off');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/"><img src="icons/icon-192.png" alt=""><span>Discover Canada</span></a>
+    <nav aria-label="Main">
+      <a class="navlink" href="#/learn">Learn</a>
+      <a class="navlink" href="#/cards">Cards</a>
+      <a class="navlink" href="#/quiz">Quiz</a>
+      <a class="navlink" href="#/book">Booklet</a>
+    </nav>
+    <div class="spacer"></div>
+    <a class="iconbtn" href="#/settings" aria-label="Settings" title="Settings">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h0a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v0a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+    </a>
+  </header>
+
+  <main id="app" aria-live="polite"></main>
+
+  <nav class="tabbar" aria-label="Sections">
+    <a href="#/learn" data-tab="learn"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Learn</a>
+    <a href="#/cards" data-tab="cards"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/></svg>Cards</a>
+    <a href="#/quiz" data-tab="quiz"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Quiz</a>
+    <a href="#/book" data-tab="book"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Booklet</a>
+  </nav>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

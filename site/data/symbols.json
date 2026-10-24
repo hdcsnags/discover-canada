@@ -1,0 +1,406 @@
+{
+  "id": "symbols",
+  "title": "Canadian Symbols",
+  "order": 10,
+  "pages": [38, 39, 40, 41],
+  "summary": "This chapter covers the objects, events and people that express Canada's national identity: the Crown, the flags, the maple leaf and fleur-de-lys, the coat of arms, the Parliament Buildings, sports, the beaver, the official languages, the anthems, honours such as the Order of Canada and the Victoria Cross, and the national public holidays.",
+  "sections": [
+    {
+      "id": "symbols-canadian-symbols",
+      "title": "Canadian Symbols",
+      "page": 38,
+      "blocks": [
+        {"type": "p", "text": "Canada has many important symbols — objects, events, and people that have special meaning. Together they help explain what it means to be Canadian and express our national identity. Important Canadian symbols appear throughout this booklet."},
+        {"type": "caption", "text": "The Canadian Red Ensign served as the national flag for 100 years, and has been carried officially by veterans since 2005."},
+        {"type": "caption", "text": "Mace of the House of Commons, Ottawa; Canadian flag of 1965; The Royal Arms of Canada; Parliament at dusk."},
+        {"type": "caption", "text": "The Snowbirds (431 Air Demonstration Squadron) are a Canadian icon."}
+      ],
+      "focus": [
+        "Canadian symbols are objects, events and people that have special meaning and express our national identity.",
+        "The Canadian Red Ensign has been carried officially by veterans since 2005.",
+        "The Snowbirds (431 Air Demonstration Squadron) are a Canadian icon."
+      ]
+    },
+    {
+      "id": "symbols-canadian-crown",
+      "title": "The Canadian Crown",
+      "page": 38,
+      "blocks": [
+        {"type": "p", "text": "The Crown has been a symbol of the state in Canada for 400 years. Canada has been a constitutional monarchy in its own right since Confederation in 1867 during Queen Victoria's reign. Queen Elizabeth II, who has been Queen of Canada since 1952, marked her Golden Jubilee in 2002, and celebrates her Diamond Jubilee (60 years as Sovereign) in 2012. The Crown is a symbol of government, including Parliament, the legislatures, the courts, police services and the Canadian Forces."}
+      ],
+      "focus": [
+        "The Crown has been a symbol of the state in Canada for 400 years.",
+        "Canada has been a constitutional monarchy in its own right since Confederation in 1867, during Queen Victoria's reign.",
+        "Queen Elizabeth II, Queen of Canada since 1952, marked her Golden Jubilee in 2002 and her Diamond Jubilee (60 years as Sovereign) in 2012.",
+        "The Crown is a symbol of government, including Parliament, the legislatures, the courts, police services and the Canadian Forces."
+      ]
+    },
+    {
+      "id": "symbols-flags",
+      "title": "Flags in Canada",
+      "page": 38,
+      "blocks": [
+        {"type": "p", "text": "A new Canadian flag was raised for the first time in 1965. The red-white-red pattern comes from the flag of the Royal Military College, Kingston, founded in 1876. Red and white had been colours of France and England since the Middle Ages and the national colours of Canada since 1921. The Union Jack is our official Royal Flag. The Canadian Red Ensign served as the Canadian flag for about 100 years. The provinces and territories also have flags that embody their distinct traditions."}
+      ],
+      "focus": [
+        "A new Canadian flag was raised for the first time in 1965.",
+        "The red-white-red pattern comes from the flag of the Royal Military College, Kingston, founded in 1876.",
+        "Red and white have been the national colours of Canada since 1921.",
+        "The Union Jack is our official Royal Flag.",
+        "The Canadian Red Ensign served as the Canadian flag for about 100 years."
+      ]
+    },
+    {
+      "id": "symbols-maple-leaf",
+      "title": "The maple leaf",
+      "page": 38,
+      "blocks": [
+        {"type": "p", "text": "The maple leaf is Canada's best-known symbol. Maple leaves were adopted as a symbol by French Canadians in the 1700s, have appeared on Canadian uniforms and insignia since the 1850s, and are carved into the headstones of our fallen soldiers buried overseas and in Canada."}
+      ],
+      "focus": [
+        "The maple leaf is Canada's best-known symbol.",
+        "Maple leaves were adopted as a symbol by French Canadians in the 1700s.",
+        "Maple leaves have appeared on Canadian uniforms and insignia since the 1850s.",
+        "Maple leaves are carved into the headstones of our fallen soldiers buried overseas and in Canada."
+      ]
+    },
+    {
+      "id": "symbols-fleur-de-lys",
+      "title": "The fleur-de-lys",
+      "page": 38,
+      "blocks": [
+        {"type": "p", "text": "It is said that the lily flower (\"fleur-de-lys\") was adopted by the French king in the year 496. It became the symbol of French royalty for more than 1,000 years, including the colony of New France. Revived at Confederation, the fleur-de-lys was included in the Canadian Red Ensign. In 1948 Quebec adopted its own flag, based on the Cross and the fleur-de-lys (see p. 47)."}
+      ],
+      "focus": [
+        "It is said that the lily flower (fleur-de-lys) was adopted by the French king in the year 496.",
+        "The fleur-de-lys was the symbol of French royalty for more than 1,000 years, including the colony of New France.",
+        "Revived at Confederation, the fleur-de-lys was included in the Canadian Red Ensign.",
+        "In 1948 Quebec adopted its own flag, based on the Cross and the fleur-de-lys."
+      ]
+    },
+    {
+      "id": "symbols-coat-of-arms",
+      "title": "Coat of arms and motto",
+      "page": 38,
+      "blocks": [
+        {"type": "p", "text": "As an expression of national pride after the First World War, Canada adopted an official coat of arms and a national motto, A mari usque ad mare, which in Latin means \"from sea to sea.\" The arms contain symbols of England, France, Scotland and Ireland as well as red maple leaves. Today the arms can be seen on dollar bills, government documents and public buildings."}
+      ],
+      "focus": [
+        "After the First World War, as an expression of national pride, Canada adopted an official coat of arms and a national motto.",
+        "The national motto, A mari usque ad mare, in Latin means \"from sea to sea.\"",
+        "The arms contain symbols of England, France, Scotland and Ireland as well as red maple leaves.",
+        "Today the arms can be seen on dollar bills, government documents and public buildings."
+      ]
+    },
+    {
+      "id": "symbols-parliament-buildings",
+      "title": "Parliament buildings",
+      "page": 38,
+      "blocks": [
+        {"type": "p", "text": "The towers, arches, sculptures and stained glass of the Parliament Buildings embody the French, English and Aboriginal traditions and the Gothic Revival architecture popular in the time of Queen Victoria. The buildings were completed in the 1860s. The Centre Block was destroyed by an accidental fire in 1916 and rebuilt in 1922. The Library is the only part of the original building remaining. The Peace Tower was completed in 1927 in memory of the First World War. The Memorial Chamber within the Tower contains the Books of Remembrance in which are written the names of soldiers, sailors and airmen who died serving Canada in wars or while on duty."},
+        {"type": "p", "text": "The provincial legislatures are architectural treasures. The Quebec National Assembly is built in the French Second Empire style, while the legislatures of the other provinces are Baroque, Romanesque and neoclassical, reflecting the Greco-Roman heritage of Western civilization in which democracy originated."}
+      ],
+      "focus": [
+        "The Parliament Buildings embody the French, English and Aboriginal traditions and the Gothic Revival architecture popular in the time of Queen Victoria.",
+        "The Parliament Buildings were completed in the 1860s.",
+        "The Centre Block was destroyed by an accidental fire in 1916 and rebuilt in 1922.",
+        "The Library is the only part of the original Parliament building remaining.",
+        "The Peace Tower was completed in 1927 in memory of the First World War.",
+        "The Memorial Chamber within the Peace Tower contains the Books of Remembrance, with the names of those who died serving Canada.",
+        "The Quebec National Assembly is built in the French Second Empire style."
+      ]
+    },
+    {
+      "id": "symbols-popular-sports",
+      "title": "Popular sports",
+      "page": 39,
+      "blocks": [
+        {"type": "caption", "text": "Montreal Canadiens Stanley Cup champions, 1978."},
+        {"type": "caption", "text": "RCMP Musical Ride, Ottawa, Ontario."},
+        {"type": "p", "text": "Hockey is Canada's most popular spectator sport and is considered to be the national winter sport. Ice hockey was developed in Canada in the 1800s. The National Hockey League plays for the championship Stanley Cup, donated by Lord Stanley, the Governor General, in 1892. The Clarkson Cup, established in 2005 by Adrienne Clarkson, the 26th Governor General (and the first of Asian origin), is awarded for women's hockey. Many young Canadians play hockey at school, in a hockey league or on quiet streets—road hockey or street hockey—and are taken to the hockey rink by their parents. Canadian children have collected hockey cards for generations."},
+        {"type": "p", "text": "Canadian football is the second most popular sport (see page 26). Curling, an ice game introduced by Scottish pioneers, is popular. Lacrosse, an ancient sport first played by Aboriginals, is the official summer sport. Soccer has the most registered players of any game in Canada."}
+      ],
+      "focus": [
+        "Hockey is Canada's most popular spectator sport and is considered to be the national winter sport.",
+        "Ice hockey was developed in Canada in the 1800s.",
+        "The Stanley Cup was donated by Lord Stanley, the Governor General, in 1892.",
+        "The Clarkson Cup, established in 2005 by Adrienne Clarkson, the 26th Governor General (and the first of Asian origin), is awarded for women's hockey.",
+        "Canadian football is the second most popular sport.",
+        "Curling is an ice game introduced by Scottish pioneers.",
+        "Lacrosse, an ancient sport first played by Aboriginals, is the official summer sport.",
+        "Soccer has the most registered players of any game in Canada."
+      ]
+    },
+    {
+      "id": "symbols-beaver",
+      "title": "The beaver",
+      "page": 39,
+      "blocks": [
+        {"type": "p", "text": "The beaver was adopted centuries ago as a symbol of the Hudson's Bay Company. It became an emblem of the St. Jean Baptiste Society, a French-Canadian patriotic association, in 1834, and was also adopted by other groups. This industrious rodent can be seen on the five-cent coin, on the coats of arms of Saskatchewan and Alberta, and of cities such as Montreal and Toronto."},
+        {"type": "caption", "text": "The industrious beaver."}
+      ],
+      "focus": [
+        "The beaver was adopted centuries ago as a symbol of the Hudson's Bay Company.",
+        "The beaver became an emblem of the St. Jean Baptiste Society, a French-Canadian patriotic association, in 1834.",
+        "The beaver can be seen on the five-cent coin and on the coats of arms of Saskatchewan, Alberta, Montreal and Toronto."
+      ]
+    },
+    {
+      "id": "symbols-official-languages",
+      "title": "Canada's official languages",
+      "page": 39,
+      "blocks": [
+        {"type": "p", "text": "English and French are the two official languages and are important symbols of identity. English speakers (Anglophones) and French speakers (Francophones) have lived together in partnership and creative tension for more than 300 years. You must have adequate knowledge of English or French to become a Canadian citizen. Adult applicants 55 years of age or over are exempted from this requirement."},
+        {"type": "p", "text": "Parliament passed the Official Languages Act in 1969. It has three main objectives:"},
+        {"type": "list", "items": [
+          "Establish equality between French and English in Parliament, the Government of Canada and institutions subject to the Act;",
+          "Maintain and develop official language minority communities in Canada; and",
+          "Promote equality of French and English in Canadian society."
+        ]}
+      ],
+      "focus": [
+        "English and French are the two official languages and are important symbols of identity.",
+        "Anglophones and Francophones have lived together in partnership and creative tension for more than 300 years.",
+        "You must have adequate knowledge of English or French to become a Canadian citizen; adult applicants 55 years of age or over are exempted.",
+        "Parliament passed the Official Languages Act in 1969.",
+        "Official Languages Act objectives: equality of French and English in Parliament and government; maintain official language minority communities; promote equality in Canadian society."
+      ]
+    },
+    {
+      "id": "symbols-national-anthem",
+      "title": "National Anthem",
+      "page": 40,
+      "blocks": [
+        {"type": "p", "text": "O Canada was proclaimed as the national anthem in 1980. It was first sung in Québec City in 1880. French and English Canadians sing different words to the national anthem."},
+        {"type": "quote", "text": "O Canada! Our home and native land!\nTrue patriot love in all thy sons command\nWith glowing hearts we see thee rise\nThe true North strong and free!\nFrom far and wide, O Canada\nWe stand on guard for thee\nGod keep our land glorious and free!\nO Canada, we stand on guard for thee\nO Canada, we stand on guard for thee", "who": "O Canada"},
+        {"type": "quote", "text": "Ô Canada! Terre de nos aïeux,\nTon front est ceint de fleurons glorieux!\nCar ton bras sait porter l'épée,\nIl sait porter la croix!\nTon histoire est une épopée\nDes plus brillants exploits.\nEt ta valeur, de foi trempée,\nProtégera nos foyers et nos droits.\nProtégera nos foyers et nos droits.", "who": "Ô Canada"}
+      ],
+      "focus": [
+        "O Canada was proclaimed as the national anthem in 1980.",
+        "O Canada was first sung in Québec City in 1880.",
+        "French and English Canadians sing different words to the national anthem."
+      ]
+    },
+    {
+      "id": "symbols-royal-anthem",
+      "title": "Royal Anthem",
+      "page": 40,
+      "blocks": [
+        {"type": "p", "text": "The Royal Anthem of Canada, \"God Save the Queen (or King),\" can be played or sung on any occasion when Canadians wish to honour the Sovereign."},
+        {"type": "quote", "text": "God save our gracious Queen!\nLong live our noble Queen!\nGod save the Queen!\nSend her victorious,\nHappy and glorious,\nLong to reign over us,\nGod save the Queen!", "who": "God Save the Queen"},
+        {"type": "quote", "text": "Dieu protège la Reine!\nDe sa main souveraine!\nVive la Reine!\nQu'un règne glorieux,\nLong et victorieux,\nRende son peuple heureux,\nVive la Reine!", "who": "Dieu protège la Reine"}
+      ],
+      "focus": [
+        "The Royal Anthem of Canada is \"God Save the Queen (or King).\"",
+        "The Royal Anthem can be played or sung on any occasion when Canadians wish to honour the Sovereign."
+      ]
+    },
+    {
+      "id": "symbols-order-of-canada",
+      "title": "The Order of Canada and other honours",
+      "page": 40,
+      "blocks": [
+        {"type": "caption", "text": "Jazz pianist Oscar Peterson (left) receives the Order of Canada from Roland Michener (right), the 20th Governor General, in 1973. In the centre are Norah Michener and a portrait of Vincent Massey, the 18th Governor General."},
+        {"type": "p", "text": "All countries have ways to recognize outstanding citizens. Official awards are called honours, consisting of orders, decorations and medals. After using British honours for many years, Canada started its own honours system with the Order of Canada in 1967, the centennial of Confederation."},
+        {"type": "p", "text": "If you know of fellow citizens who you think are worthy of recognition, you are welcome to nominate them. Information on nominations for many of these honours can be found at www.gg.ca/document.aspx?id=70?&lan=eng."}
+      ],
+      "focus": [
+        "Official awards are called honours, consisting of orders, decorations and medals.",
+        "After using British honours for many years, Canada started its own honours system with the Order of Canada in 1967.",
+        "1967 was the centennial of Confederation.",
+        "Citizens are welcome to nominate fellow citizens they think are worthy of recognition."
+      ]
+    },
+    {
+      "id": "symbols-victoria-cross",
+      "title": "The Victoria Cross",
+      "page": 41,
+      "blocks": [
+        {"type": "p", "text": "The Victoria Cross (V.C.) is the highest honour available to Canadians and is awarded for the most conspicuous bravery, a daring or pre-eminent act of valour or self-sacrifice, or extreme devotion to duty in the presence of the enemy. The V.C. has been awarded to 96 Canadians since 1854, including:"},
+        {"type": "list", "items": [
+          "Then Lieutenant Alexander Roberts Dunn, born in present-day Toronto, served in the British Army in the Charge of the Light Brigade at Balaclava (1854) in the Crimean War, and was the first Canadian to be awarded the Victoria Cross.",
+          "Able Seaman William Hall of Horton, Nova Scotia, whose parents were American slaves, was the first black man to be awarded the V.C. for his role in the Siege of Lucknow during the Indian Rebellion of 1857.",
+          "Corporal Filip Konowal, born in Ukraine, showed exceptional courage in the Battle of Hill 70 in 1917, and became the first member of the Canadian Corps not born in the British Empire to be awarded the V.C.",
+          "Flying ace Captain Billy Bishop, born in Owen Sound, Ontario, earned the V.C. in the Royal Flying Corps during the First World War, and was later an honorary Air Marshal of the Royal Canadian Air Force.",
+          "Captain Paul Triquet of Cabano, Quebec, earned the V.C. leading his men and a handful of tanks in the attack on Casa Berardi in Italy in 1943 during the Second World War, and was later a Brigadier.",
+          "Lieutenant Robert Hampton Gray, a navy pilot born in Trail, B.C., was killed while bombing and sinking a Japanese warship in August 1945, a few days before the end of the Second World War, and was the last Canadian to receive the V.C. to date."
+        ]},
+        {"type": "caption", "text": "Colonel Alexander Roberts Dunn, V.C.; Able Seaman William Hall, V.C.; Brigadier Paul Triquet, V.C.; Filip Konowal, V.C., was promoted Sergeant."},
+        {"type": "caption", "text": "Air Marshal William A. Bishop, better known as flying ace Billy Bishop, V.C.; Lieutenant Robert Hampton Gray, V.C."}
+      ],
+      "focus": [
+        "The Victoria Cross (V.C.) is the highest honour available to Canadians.",
+        "V.C.: awarded for conspicuous bravery, a daring or pre-eminent act of valour or self-sacrifice, or extreme devotion to duty in the presence of the enemy.",
+        "The V.C. has been awarded to 96 Canadians since 1854.",
+        "Alexander Roberts Dunn, in the Charge of the Light Brigade at Balaclava (1854) in the Crimean War, was the first Canadian awarded the Victoria Cross.",
+        "William Hall of Horton, Nova Scotia, was the first black man awarded the V.C., for the Siege of Lucknow during the Indian Rebellion of 1857.",
+        "Filip Konowal, born in Ukraine, was the first member of the Canadian Corps not born in the British Empire awarded the V.C. (Hill 70, 1917).",
+        "Billy Bishop, born in Owen Sound, Ontario, earned the V.C. in the Royal Flying Corps in the First World War; later honorary Air Marshal.",
+        "Paul Triquet of Cabano, Quebec, earned the V.C. at Casa Berardi in Italy in 1943 during the Second World War, and was later a Brigadier.",
+        "Robert Hampton Gray, a navy pilot born in Trail, B.C., killed in August 1945, was the last Canadian to receive the V.C. to date."
+      ]
+    },
+    {
+      "id": "symbols-holidays",
+      "title": "National Public Holidays and Other Important Dates",
+      "page": 41,
+      "blocks": [
+        {"type": "table", "rows": [
+          ["Holiday", "Date"],
+          ["New Year's Day", "January 1"],
+          ["Sir John A. Macdonald Day", "January 11"],
+          ["Good Friday", "Friday immediately preceding Easter Sunday"],
+          ["Easter Monday", "Monday immediately following Easter Sunday"],
+          ["Vimy Day", "April 9"],
+          ["Victoria Day", "Monday preceding May 25 (Sovereign's birthday)"],
+          ["Fête nationale (Quebec)", "June 24 (Feast of St. John the Baptist)"],
+          ["Canada Day", "July 1"],
+          ["Labour Day", "First Monday of September"],
+          ["Thanksgiving Day", "Second Monday of October"],
+          ["Remembrance Day", "November 11"],
+          ["Sir Wilfrid Laurier Day", "November 20"],
+          ["Christmas Day", "December 25"],
+          ["Boxing Day", "December 26"]
+        ]}
+      ],
+      "focus": [
+        "New Year's Day is January 1; Christmas Day is December 25; Boxing Day is December 26.",
+        "Sir John A. Macdonald Day is January 11; Sir Wilfrid Laurier Day is November 20.",
+        "Good Friday is the Friday immediately preceding Easter Sunday; Easter Monday is the Monday immediately following Easter Sunday.",
+        "Vimy Day is April 9; Remembrance Day is November 11.",
+        "Victoria Day is the Monday preceding May 25 (Sovereign's birthday).",
+        "Fête nationale (Quebec) is June 24 (Feast of St. John the Baptist); Canada Day is July 1.",
+        "Labour Day is the first Monday of September; Thanksgiving Day is the second Monday of October."
+      ]
+    }
+  ],
+  "cards": [
+    {"id": "symbols-c01", "section": "symbols-canadian-symbols", "front": "What are Canadian symbols?", "back": "Objects, events, and people that have special meaning. Together they help explain what it means to be Canadian and express our national identity.", "page": 38},
+    {"id": "symbols-c02", "section": "symbols-canadian-symbols", "front": "Since when has the Canadian Red Ensign been carried officially by veterans?", "back": "Since 2005.", "page": 38},
+    {"id": "symbols-c03", "section": "symbols-canadian-symbols", "front": "Who are the Snowbirds?", "back": "The 431 Air Demonstration Squadron, a Canadian icon.", "page": 38},
+    {"id": "symbols-c04", "section": "symbols-canadian-crown", "front": "For how long has the Crown been a symbol of the state in Canada?", "back": "For 400 years.", "page": 38},
+    {"id": "symbols-c05", "section": "symbols-canadian-crown", "front": "Since when has Canada been a constitutional monarchy in its own right?", "back": "Since Confederation in 1867, during Queen Victoria's reign.", "page": 38},
+    {"id": "symbols-c06", "section": "symbols-canadian-crown", "front": "When did Queen Elizabeth II mark her Golden Jubilee and her Diamond Jubilee?", "back": "Golden Jubilee in 2002; Diamond Jubilee (60 years as Sovereign) in 2012. She had been Queen of Canada since 1952.", "page": 38},
+    {"id": "symbols-c07", "section": "symbols-canadian-crown", "front": "The Crown is a symbol of which parts of government?", "back": "Parliament, the legislatures, the courts, police services and the Canadian Forces.", "page": 38},
+    {"id": "symbols-c08", "section": "symbols-flags", "front": "When was the new Canadian flag raised for the first time?", "back": "In 1965.", "page": 38},
+    {"id": "symbols-c09", "section": "symbols-flags", "front": "Where does the red-white-red pattern of the Canadian flag come from?", "back": "From the flag of the Royal Military College, Kingston, founded in 1876.", "page": 38},
+    {"id": "symbols-c10", "section": "symbols-flags", "front": "Since when have red and white been the national colours of Canada?", "back": "Since 1921. They had been colours of France and England since the Middle Ages.", "page": 38},
+    {"id": "symbols-c11", "section": "symbols-flags", "front": "What is Canada's official Royal Flag?", "back": "The Union Jack.", "page": 38},
+    {"id": "symbols-c12", "section": "symbols-flags", "front": "For about how long did the Canadian Red Ensign serve as the Canadian flag?", "back": "For about 100 years.", "page": 38},
+    {"id": "symbols-c13", "section": "symbols-maple-leaf", "front": "What is Canada's best-known symbol?", "back": "The maple leaf.", "page": 38},
+    {"id": "symbols-c14", "section": "symbols-maple-leaf", "front": "Who adopted maple leaves as a symbol in the 1700s?", "back": "French Canadians.", "page": 38},
+    {"id": "symbols-c15", "section": "symbols-maple-leaf", "front": "Since when have maple leaves appeared on Canadian uniforms and insignia?", "back": "Since the 1850s.", "page": 38},
+    {"id": "symbols-c16", "section": "symbols-maple-leaf", "front": "Where are maple leaves carved in memory of Canada's fallen soldiers?", "back": "Into the headstones of our fallen soldiers buried overseas and in Canada.", "page": 38},
+    {"id": "symbols-c17", "section": "symbols-fleur-de-lys", "front": "In what year is the fleur-de-lys said to have been adopted by the French king?", "back": "In the year 496.", "page": 38},
+    {"id": "symbols-c18", "section": "symbols-fleur-de-lys", "front": "For how long was the fleur-de-lys the symbol of French royalty?", "back": "For more than 1,000 years, including the colony of New France.", "page": 38},
+    {"id": "symbols-c19", "section": "symbols-fleur-de-lys", "front": "Where was the fleur-de-lys included after it was revived at Confederation?", "back": "In the Canadian Red Ensign.", "page": 38},
+    {"id": "symbols-c20", "section": "symbols-fleur-de-lys", "front": "When did Quebec adopt its own flag, and what is it based on?", "back": "In 1948, based on the Cross and the fleur-de-lys.", "page": 38},
+    {"id": "symbols-c21", "section": "symbols-coat-of-arms", "front": "When and why did Canada adopt an official coat of arms and a national motto?", "back": "After the First World War, as an expression of national pride.", "page": 38},
+    {"id": "symbols-c22", "section": "symbols-coat-of-arms", "front": "What is Canada's national motto and what does it mean?", "back": "A mari usque ad mare, which in Latin means \"from sea to sea.\"", "page": 38},
+    {"id": "symbols-c23", "section": "symbols-coat-of-arms", "front": "What symbols do the Canadian arms contain?", "back": "Symbols of England, France, Scotland and Ireland as well as red maple leaves.", "page": 38},
+    {"id": "symbols-c24", "section": "symbols-coat-of-arms", "front": "Where can the Canadian coat of arms be seen today?", "back": "On dollar bills, government documents and public buildings.", "page": 38},
+    {"id": "symbols-c25", "section": "symbols-parliament-buildings", "front": "Which traditions and architectural style do the Parliament Buildings embody?", "back": "The French, English and Aboriginal traditions and the Gothic Revival architecture popular in the time of Queen Victoria.", "page": 38},
+    {"id": "symbols-c26", "section": "symbols-parliament-buildings", "front": "When were the Parliament Buildings completed?", "back": "In the 1860s.", "page": 38},
+    {"id": "symbols-c27", "section": "symbols-parliament-buildings", "front": "What happened to the Centre Block in 1916, and when was it rebuilt?", "back": "It was destroyed by an accidental fire in 1916 and rebuilt in 1922.", "page": 39},
+    {"id": "symbols-c28", "section": "symbols-parliament-buildings", "front": "What is the only part of the original Parliament building remaining?", "back": "The Library.", "page": 39},
+    {"id": "symbols-c29", "section": "symbols-parliament-buildings", "front": "When was the Peace Tower completed, and in memory of what?", "back": "In 1927, in memory of the First World War.", "page": 39},
+    {"id": "symbols-c30", "section": "symbols-parliament-buildings", "front": "What does the Memorial Chamber within the Peace Tower contain?", "back": "The Books of Remembrance, in which are written the names of soldiers, sailors and airmen who died serving Canada in wars or while on duty.", "page": 39},
+    {"id": "symbols-c31", "section": "symbols-parliament-buildings", "front": "In what style is the Quebec National Assembly built?", "back": "The French Second Empire style. The other provincial legislatures are Baroque, Romanesque and neoclassical.", "page": 39},
+    {"id": "symbols-c32", "section": "symbols-popular-sports", "front": "What is Canada's most popular spectator sport and national winter sport?", "back": "Hockey.", "page": 39},
+    {"id": "symbols-c33", "section": "symbols-popular-sports", "front": "When and where was ice hockey developed?", "back": "In Canada in the 1800s.", "page": 39},
+    {"id": "symbols-c34", "section": "symbols-popular-sports", "front": "Who donated the Stanley Cup, and when?", "back": "Lord Stanley, the Governor General, in 1892. The National Hockey League plays for it.", "page": 39},
+    {"id": "symbols-c35", "section": "symbols-popular-sports", "front": "What is the Clarkson Cup?", "back": "A trophy for women's hockey, established in 2005 by Adrienne Clarkson, the 26th Governor General (and the first of Asian origin).", "page": 39},
+    {"id": "symbols-c36", "section": "symbols-popular-sports", "front": "What is Canada's second most popular sport?", "back": "Canadian football.", "page": 39},
+    {"id": "symbols-c37", "section": "symbols-popular-sports", "front": "Who introduced curling to Canada?", "back": "Scottish pioneers.", "page": 39},
+    {"id": "symbols-c38", "section": "symbols-popular-sports", "front": "What is Canada's official summer sport?", "back": "Lacrosse, an ancient sport first played by Aboriginals.", "page": 39},
+    {"id": "symbols-c39", "section": "symbols-popular-sports", "front": "Which game has the most registered players in Canada?", "back": "Soccer.", "page": 39},
+    {"id": "symbols-c40", "section": "symbols-beaver", "front": "Which company adopted the beaver as a symbol centuries ago?", "back": "The Hudson's Bay Company.", "page": 39},
+    {"id": "symbols-c41", "section": "symbols-beaver", "front": "Which French-Canadian patriotic association made the beaver its emblem in 1834?", "back": "The St. Jean Baptiste Society.", "page": 39},
+    {"id": "symbols-c42", "section": "symbols-beaver", "front": "Where can the beaver be seen today?", "back": "On the five-cent coin, on the coats of arms of Saskatchewan and Alberta, and of cities such as Montreal and Toronto.", "page": 39},
+    {"id": "symbols-c43", "section": "symbols-official-languages", "front": "What are Canada's two official languages?", "back": "English and French. They are important symbols of identity.", "page": 39},
+    {"id": "symbols-c44", "section": "symbols-official-languages", "front": "For how long have Anglophones and Francophones lived together in Canada?", "back": "In partnership and creative tension for more than 300 years.", "page": 39},
+    {"id": "symbols-c45", "section": "symbols-official-languages", "front": "What language requirement is there to become a Canadian citizen, and who is exempt?", "back": "You must have adequate knowledge of English or French. Adult applicants 55 years of age or over are exempted.", "page": 39},
+    {"id": "symbols-c46", "section": "symbols-official-languages", "front": "When did Parliament pass the Official Languages Act?", "back": "In 1969.", "page": 39},
+    {"id": "symbols-c47", "section": "symbols-official-languages", "front": "Name the three main objectives of the Official Languages Act.", "back": "Establish equality between French and English in Parliament, the Government of Canada and institutions subject to the Act; maintain and develop official language minority communities in Canada; and promote equality of French and English in Canadian society.", "page": 39},
+    {"id": "symbols-c48", "section": "symbols-national-anthem", "front": "When was O Canada proclaimed as the national anthem?", "back": "In 1980.", "page": 40},
+    {"id": "symbols-c49", "section": "symbols-national-anthem", "front": "When and where was O Canada first sung?", "back": "In Québec City in 1880.", "page": 40},
+    {"id": "symbols-c50", "section": "symbols-national-anthem", "front": "Do French and English Canadians sing the same words to the national anthem?", "back": "No. French and English Canadians sing different words to the national anthem.", "page": 40},
+    {"id": "symbols-c51", "section": "symbols-national-anthem", "front": "What are the first two lines of O Canada in English?", "back": "O Canada! Our home and native land! True patriot love in all thy sons command.", "page": 40},
+    {"id": "symbols-c52", "section": "symbols-royal-anthem", "front": "What is the Royal Anthem of Canada?", "back": "\"God Save the Queen (or King).\"", "page": 40},
+    {"id": "symbols-c53", "section": "symbols-royal-anthem", "front": "When can the Royal Anthem be played or sung?", "back": "On any occasion when Canadians wish to honour the Sovereign.", "page": 40},
+    {"id": "symbols-c54", "section": "symbols-order-of-canada", "front": "What are official awards called, and what do they consist of?", "back": "Honours, consisting of orders, decorations and medals.", "page": 40},
+    {"id": "symbols-c55", "section": "symbols-order-of-canada", "front": "When did Canada start its own honours system, and with what?", "back": "In 1967, with the Order of Canada. Before that Canada used British honours for many years.", "page": 40},
+    {"id": "symbols-c56", "section": "symbols-order-of-canada", "front": "What anniversary was 1967, the year the Order of Canada was created?", "back": "The centennial of Confederation.", "page": 40},
+    {"id": "symbols-c57", "section": "symbols-order-of-canada", "front": "Can ordinary citizens nominate someone for an honour?", "back": "Yes. If you know of fellow citizens who you think are worthy of recognition, you are welcome to nominate them.", "page": 40},
+    {"id": "symbols-c58", "section": "symbols-victoria-cross", "front": "What is the highest honour available to Canadians?", "back": "The Victoria Cross (V.C.).", "page": 41},
+    {"id": "symbols-c59", "section": "symbols-victoria-cross", "front": "For what is the Victoria Cross awarded?", "back": "For the most conspicuous bravery, a daring or pre-eminent act of valour or self-sacrifice, or extreme devotion to duty in the presence of the enemy.", "page": 41},
+    {"id": "symbols-c60", "section": "symbols-victoria-cross", "front": "How many Canadians have been awarded the Victoria Cross, and since when?", "back": "96 Canadians since 1854.", "page": 41},
+    {"id": "symbols-c61", "section": "symbols-victoria-cross", "front": "Who was the first Canadian to be awarded the Victoria Cross?", "back": "Then Lieutenant Alexander Roberts Dunn, born in present-day Toronto, for the Charge of the Light Brigade at Balaclava (1854) in the Crimean War.", "page": 41},
+    {"id": "symbols-c62", "section": "symbols-victoria-cross", "front": "Who was the first black man to be awarded the V.C.?", "back": "Able Seaman William Hall of Horton, Nova Scotia, for his role in the Siege of Lucknow during the Indian Rebellion of 1857.", "page": 41},
+    {"id": "symbols-c63", "section": "symbols-victoria-cross", "front": "Who was the first member of the Canadian Corps not born in the British Empire to be awarded the V.C.?", "back": "Corporal Filip Konowal, born in Ukraine, for the Battle of Hill 70 in 1917.", "page": 41},
+    {"id": "symbols-c64", "section": "symbols-victoria-cross", "front": "Who was Billy Bishop?", "back": "A flying ace born in Owen Sound, Ontario, who earned the V.C. in the Royal Flying Corps during the First World War and was later an honorary Air Marshal of the Royal Canadian Air Force.", "page": 41},
+    {"id": "symbols-c65", "section": "symbols-victoria-cross", "front": "How did Captain Paul Triquet earn the V.C.?", "back": "Leading his men and a handful of tanks in the attack on Casa Berardi in Italy in 1943 during the Second World War. He was later a Brigadier.", "page": 41},
+    {"id": "symbols-c66", "section": "symbols-victoria-cross", "front": "Who was the last Canadian to receive the V.C. to date?", "back": "Lieutenant Robert Hampton Gray, a navy pilot born in Trail, B.C., killed while bombing and sinking a Japanese warship in August 1945.", "page": 41},
+    {"id": "symbols-c67", "section": "symbols-victoria-cross", "front": "Name the six Victoria Cross recipients described in the booklet.", "back": "Alexander Roberts Dunn, William Hall, Filip Konowal, Billy Bishop, Paul Triquet and Robert Hampton Gray.", "page": 41},
+    {"id": "symbols-c68", "section": "symbols-holidays", "front": "On what dates are New Year's Day, Christmas Day and Boxing Day?", "back": "January 1, December 25 and December 26.", "page": 41},
+    {"id": "symbols-c69", "section": "symbols-holidays", "front": "When is Sir John A. Macdonald Day?", "back": "January 11.", "page": 41},
+    {"id": "symbols-c70", "section": "symbols-holidays", "front": "When is Sir Wilfrid Laurier Day?", "back": "November 20.", "page": 41},
+    {"id": "symbols-c71", "section": "symbols-holidays", "front": "When are Good Friday and Easter Monday?", "back": "Good Friday is the Friday immediately preceding Easter Sunday; Easter Monday is the Monday immediately following Easter Sunday.", "page": 41},
+    {"id": "symbols-c72", "section": "symbols-holidays", "front": "When is Vimy Day?", "back": "April 9.", "page": 41},
+    {"id": "symbols-c73", "section": "symbols-holidays", "front": "When is Remembrance Day?", "back": "November 11.", "page": 41},
+    {"id": "symbols-c74", "section": "symbols-holidays", "front": "When is Victoria Day?", "back": "The Monday preceding May 25 (the Sovereign's birthday).", "page": 41},
+    {"id": "symbols-c75", "section": "symbols-holidays", "front": "When is the Fête nationale in Quebec?", "back": "June 24 (Feast of St. John the Baptist).", "page": 41},
+    {"id": "symbols-c76", "section": "symbols-holidays", "front": "When is Canada Day?", "back": "July 1.", "page": 41},
+    {"id": "symbols-c77", "section": "symbols-holidays", "front": "When are Labour Day and Thanksgiving Day?", "back": "Labour Day is the first Monday of September; Thanksgiving Day is the second Monday of October.", "page": 41}
+  ],
+  "quiz": [
+    {"id": "symbols-q01", "section": "symbols-canadian-crown", "q": "For how long has the Crown been a symbol of the state in Canada?", "choices": ["100 years", "200 years", "300 years", "400 years"], "answer": 3, "why": "The booklet says \"The Crown has been a symbol of the state in Canada for 400 years.\"", "page": 38},
+    {"id": "symbols-q02", "section": "symbols-canadian-crown", "q": "Since when has Canada been a constitutional monarchy in its own right?", "choices": ["Since 1952", "Since Confederation in 1867", "Since 1921", "Since 1965"], "answer": 1, "why": "Canada \"has been a constitutional monarchy in its own right since Confederation in 1867 during Queen Victoria's reign.\"", "page": 38},
+    {"id": "symbols-q03", "section": "symbols-canadian-crown", "q": "The Crown is a symbol of government, including which of the following?", "choices": ["Parliament, the legislatures, the courts, police services and the Canadian Forces", "Only Parliament and the Senate", "The Hudson's Bay Company and the St. Jean Baptiste Society", "The provinces and territories only"], "answer": 0, "why": "The booklet says the Crown is \"a symbol of government, including Parliament, the legislatures, the courts, police services and the Canadian Forces.\"", "page": 38},
+    {"id": "symbols-q04", "section": "symbols-flags", "q": "When was the new Canadian flag raised for the first time?", "choices": ["1921", "1948", "1980", "1965"], "answer": 3, "why": "\"A new Canadian flag was raised for the first time in 1965.\"", "page": 38},
+    {"id": "symbols-q05", "section": "symbols-flags", "q": "Where does the red-white-red pattern of the Canadian flag come from?", "choices": ["The flag of the Royal Military College, Kingston", "The flag of the Hudson's Bay Company", "The Canadian Red Ensign", "The flag of Quebec"], "answer": 0, "why": "\"The red-white-red pattern comes from the flag of the Royal Military College, Kingston, founded in 1876.\"", "page": 38},
+    {"id": "symbols-q06", "section": "symbols-flags", "q": "Since when have red and white been the national colours of Canada?", "choices": ["1867", "1876", "1921", "1965"], "answer": 2, "why": "Red and white have been \"the national colours of Canada since 1921.\"", "page": 38},
+    {"id": "symbols-q07", "section": "symbols-flags", "q": "What is Canada's official Royal Flag?", "choices": ["The Canadian Red Ensign", "The maple leaf flag of 1965", "The Union Jack", "The fleur-de-lys"], "answer": 2, "why": "\"The Union Jack is our official Royal Flag.\"", "page": 38},
+    {"id": "symbols-q08", "section": "symbols-flags", "q": "For about how long did the Canadian Red Ensign serve as the Canadian flag?", "choices": ["About 50 years", "About 100 years", "About 200 years", "About 400 years"], "answer": 1, "why": "\"The Canadian Red Ensign served as the Canadian flag for about 100 years.\"", "page": 38},
+    {"id": "symbols-q09", "section": "symbols-maple-leaf", "q": "What is Canada's best-known symbol?", "choices": ["The beaver", "The fleur-de-lys", "The Crown", "The maple leaf"], "answer": 3, "why": "\"The maple leaf is Canada's best-known symbol.\"", "page": 38},
+    {"id": "symbols-q10", "section": "symbols-maple-leaf", "q": "Maple leaves have appeared on Canadian uniforms and insignia since when?", "choices": ["The 1700s", "The 1850s", "1921", "1965"], "answer": 1, "why": "Maple leaves \"have appeared on Canadian uniforms and insignia since the 1850s.\" They were adopted as a symbol by French Canadians in the 1700s.", "page": 38},
+    {"id": "symbols-q11", "section": "symbols-fleur-de-lys", "q": "In what year is the fleur-de-lys said to have been adopted by the French king?", "choices": ["496", "1534", "1834", "1948"], "answer": 0, "why": "\"It is said that the lily flower (\"fleur-de-lys\") was adopted by the French king in the year 496.\"", "page": 38},
+    {"id": "symbols-q12", "section": "symbols-fleur-de-lys", "q": "When did Quebec adopt its own flag, based on the Cross and the fleur-de-lys?", "choices": ["1867", "1921", "1965", "1948"], "answer": 3, "why": "\"In 1948 Quebec adopted its own flag, based on the Cross and the fleur-de-lys.\"", "page": 38},
+    {"id": "symbols-q13", "section": "symbols-coat-of-arms", "q": "What does Canada's national motto, A mari usque ad mare, mean?", "choices": ["Peace, order and good government", "From sea to sea", "Strong and free", "Children of a common mother"], "answer": 1, "why": "The motto \"A mari usque ad mare\" in Latin means \"from sea to sea.\"", "page": 38},
+    {"id": "symbols-q14", "section": "symbols-coat-of-arms", "q": "When did Canada adopt an official coat of arms and a national motto?", "choices": ["At Confederation in 1867", "After the First World War", "After the Second World War", "In 1965 with the new flag"], "answer": 1, "why": "\"As an expression of national pride after the First World War, Canada adopted an official coat of arms and a national motto.\"", "page": 38},
+    {"id": "symbols-q15", "section": "symbols-coat-of-arms", "q": "The Canadian arms contain symbols of which countries?", "choices": ["England, France, Scotland and Ireland", "England and France only", "France, Spain and Portugal", "England, Wales and the United States"], "answer": 0, "why": "\"The arms contain symbols of England, France, Scotland and Ireland as well as red maple leaves.\"", "page": 38},
+    {"id": "symbols-q16", "section": "symbols-parliament-buildings", "q": "What happened to the Centre Block of the Parliament Buildings in 1916?", "choices": ["It was destroyed by an accidental fire", "It was completed", "The Peace Tower was added", "The Library was built"], "answer": 0, "why": "\"The Centre Block was destroyed by an accidental fire in 1916 and rebuilt in 1922.\"", "page": 39},
+    {"id": "symbols-q17", "section": "symbols-parliament-buildings", "q": "Which is the only part of the original Parliament building remaining?", "choices": ["The Centre Block", "The Peace Tower", "The Library", "The Memorial Chamber"], "answer": 2, "why": "\"The Library is the only part of the original building remaining.\"", "page": 39},
+    {"id": "symbols-q18", "section": "symbols-parliament-buildings", "q": "When was the Peace Tower completed, and in memory of what?", "choices": ["In 1922, in memory of Confederation", "In 1927, in memory of the First World War", "In 1945, in memory of the Second World War", "In the 1860s, in memory of Queen Victoria"], "answer": 1, "why": "\"The Peace Tower was completed in 1927 in memory of the First World War.\"", "page": 39},
+    {"id": "symbols-q19", "section": "symbols-parliament-buildings", "q": "What does the Memorial Chamber within the Peace Tower contain?", "choices": ["The Mace of the House of Commons", "The Royal Arms of Canada", "The original Canadian Red Ensign", "The Books of Remembrance"], "answer": 3, "why": "\"The Memorial Chamber within the Tower contains the Books of Remembrance in which are written the names of soldiers, sailors and airmen who died serving Canada.\"", "page": 39},
+    {"id": "symbols-q20", "section": "symbols-parliament-buildings", "q": "In which style is the Quebec National Assembly built?", "choices": ["Gothic Revival", "French Second Empire", "Baroque", "Neoclassical"], "answer": 1, "why": "\"The Quebec National Assembly is built in the French Second Empire style.\"", "page": 39},
+    {"id": "symbols-q21", "section": "symbols-popular-sports", "q": "What is Canada's national winter sport?", "choices": ["Curling", "Lacrosse", "Canadian football", "Hockey"], "answer": 3, "why": "\"Hockey is Canada's most popular spectator sport and is considered to be the national winter sport.\"", "page": 39},
+    {"id": "symbols-q22", "section": "symbols-popular-sports", "q": "Who donated the Stanley Cup, and in what year?", "choices": ["Lord Stanley, the Governor General, in 1892", "Adrienne Clarkson, the Governor General, in 2005", "Roland Michener, the Governor General, in 1973", "Vincent Massey, the Governor General, in 1952"], "answer": 0, "why": "The Stanley Cup was \"donated by Lord Stanley, the Governor General, in 1892.\"", "page": 39},
+    {"id": "symbols-q23", "section": "symbols-popular-sports", "q": "The Clarkson Cup is awarded for which sport?", "choices": ["Curling", "Lacrosse", "Soccer", "Women's hockey"], "answer": 3, "why": "\"The Clarkson Cup, established in 2005 by Adrienne Clarkson, the 26th Governor General (and the first of Asian origin), is awarded for women's hockey.\"", "page": 39},
+    {"id": "symbols-q24", "section": "symbols-popular-sports", "q": "What is Canada's official summer sport?", "choices": ["Soccer", "Canadian football", "Curling", "Lacrosse"], "answer": 3, "why": "\"Lacrosse, an ancient sport first played by Aboriginals, is the official summer sport.\"", "page": 39},
+    {"id": "symbols-q25", "section": "symbols-popular-sports", "q": "Which game has the most registered players of any game in Canada?", "choices": ["Hockey", "Soccer", "Curling", "Canadian football"], "answer": 1, "why": "\"Soccer has the most registered players of any game in Canada.\"", "page": 39},
+    {"id": "symbols-q26", "section": "symbols-popular-sports", "q": "Which sport was introduced by Scottish pioneers?", "choices": ["Lacrosse", "Ice hockey", "Curling", "Soccer"], "answer": 2, "why": "\"Curling, an ice game introduced by Scottish pioneers, is popular.\"", "page": 39},
+    {"id": "symbols-q27", "section": "symbols-beaver", "q": "The beaver became an emblem of which French-Canadian patriotic association in 1834?", "choices": ["The Hudson's Bay Company", "The Royal Military College", "The St. Jean Baptiste Society", "The Order of Canada"], "answer": 2, "why": "The beaver \"became an emblem of the St. Jean Baptiste Society, a French-Canadian patriotic association, in 1834.\"", "page": 39},
+    {"id": "symbols-q28", "section": "symbols-beaver", "q": "On which coin can the beaver be seen?", "choices": ["The one-cent coin", "The five-cent coin", "The ten-cent coin", "The one-dollar coin"], "answer": 1, "why": "\"This industrious rodent can be seen on the five-cent coin.\"", "page": 39},
+    {"id": "symbols-q29", "section": "symbols-official-languages", "q": "When did Parliament pass the Official Languages Act?", "choices": ["1969", "1867", "1965", "1980"], "answer": 0, "why": "\"Parliament passed the Official Languages Act in 1969.\"", "page": 39},
+    {"id": "symbols-q30", "section": "symbols-official-languages", "q": "Adult applicants of what age are exempted from the language requirement for citizenship?", "choices": ["18 years of age or over", "50 years of age or over", "55 years of age or over", "65 years of age or over"], "answer": 2, "why": "\"Adult applicants 55 years of age or over are exempted from this requirement.\"", "page": 39},
+    {"id": "symbols-q31", "section": "symbols-official-languages", "q": "Which of the following is one of the three main objectives of the Official Languages Act?", "choices": ["Make French the only language of Quebec", "Maintain and develop official language minority communities in Canada", "Require all citizens to speak both English and French", "Replace British honours with Canadian honours"], "answer": 1, "why": "The Act's objectives are to establish equality between French and English in Parliament and government, to \"maintain and develop official language minority communities in Canada,\" and to promote equality of French and English in Canadian society.", "page": 39},
+    {"id": "symbols-q32", "section": "symbols-national-anthem", "q": "When was O Canada proclaimed as the national anthem?", "choices": ["1880", "1921", "1967", "1980"], "answer": 3, "why": "\"O Canada was proclaimed as the national anthem in 1980. It was first sung in Québec City in 1880.\"", "page": 40},
+    {"id": "symbols-q33", "section": "symbols-national-anthem", "q": "Where was O Canada first sung?", "choices": ["Québec City", "Ottawa", "Montreal", "Kingston"], "answer": 0, "why": "O Canada \"was first sung in Québec City in 1880.\"", "page": 40},
+    {"id": "symbols-q34", "section": "symbols-royal-anthem", "q": "What is the Royal Anthem of Canada?", "choices": ["O Canada", "The Maple Leaf Forever", "God Save the Queen (or King)", "A mari usque ad mare"], "answer": 2, "why": "\"The Royal Anthem of Canada, 'God Save the Queen (or King),' can be played or sung on any occasion when Canadians wish to honour the Sovereign.\"", "page": 40},
+    {"id": "symbols-q35", "section": "symbols-order-of-canada", "q": "When did Canada start its own honours system with the Order of Canada?", "choices": ["1867", "1927", "1967", "1973"], "answer": 2, "why": "\"Canada started its own honours system with the Order of Canada in 1967, the centennial of Confederation.\"", "page": 40},
+    {"id": "symbols-q36", "section": "symbols-order-of-canada", "q": "Official awards, called honours, consist of what?", "choices": ["Orders, decorations and medals", "Titles, lands and pensions", "Flags, anthems and mottoes", "Cups, trophies and ribbons"], "answer": 0, "why": "\"Official awards are called honours, consisting of orders, decorations and medals.\"", "page": 40},
+    {"id": "symbols-q37", "section": "symbols-victoria-cross", "q": "What is the highest honour available to Canadians?", "choices": ["The Order of Canada", "The Stanley Cup", "The Clarkson Cup", "The Victoria Cross"], "answer": 3, "why": "\"The Victoria Cross (V.C.) is the highest honour available to Canadians.\"", "page": 41},
+    {"id": "symbols-q38", "section": "symbols-victoria-cross", "q": "How many Canadians have been awarded the Victoria Cross since 1854?", "choices": ["6", "26", "96", "431"], "answer": 2, "why": "\"The V.C. has been awarded to 96 Canadians since 1854.\"", "page": 41},
+    {"id": "symbols-q39", "section": "symbols-victoria-cross", "q": "Who was the first Canadian to be awarded the Victoria Cross?", "choices": ["Billy Bishop", "William Hall", "Alexander Roberts Dunn", "Robert Hampton Gray"], "answer": 2, "why": "Then Lieutenant Alexander Roberts Dunn, in the Charge of the Light Brigade at Balaclava (1854), \"was the first Canadian to be awarded the Victoria Cross.\"", "page": 41},
+    {"id": "symbols-q40", "section": "symbols-victoria-cross", "q": "Who was the first black man to be awarded the V.C.?", "choices": ["Able Seaman William Hall", "Corporal Filip Konowal", "Captain Paul Triquet", "Lieutenant Alexander Roberts Dunn"], "answer": 0, "why": "\"Able Seaman William Hall of Horton, Nova Scotia ... was the first black man to be awarded the V.C. for his role in the Siege of Lucknow during the Indian Rebellion of 1857.\"", "page": 41},
+    {"id": "symbols-q41", "section": "symbols-victoria-cross", "q": "Who was the first member of the Canadian Corps not born in the British Empire to be awarded the V.C.?", "choices": ["Billy Bishop", "Filip Konowal", "Paul Triquet", "William Hall"], "answer": 1, "why": "Corporal Filip Konowal, born in Ukraine, \"became the first member of the Canadian Corps not born in the British Empire to be awarded the V.C.\"", "page": 41},
+    {"id": "symbols-q42", "section": "symbols-victoria-cross", "q": "Who was the last Canadian to receive the V.C. to date?", "choices": ["Captain Paul Triquet", "Captain Billy Bishop", "Lieutenant Robert Hampton Gray", "Corporal Filip Konowal"], "answer": 2, "why": "Lieutenant Robert Hampton Gray, killed in August 1945, \"was the last Canadian to receive the V.C. to date.\"", "page": 41},
+    {"id": "symbols-q43", "section": "symbols-victoria-cross", "q": "In which war did Billy Bishop earn the V.C.?", "choices": ["The Crimean War", "The First World War", "The Second World War", "The Indian Rebellion of 1857"], "answer": 1, "why": "Billy Bishop \"earned the V.C. in the Royal Flying Corps during the First World War.\"", "page": 41},
+    {"id": "symbols-q44", "section": "symbols-holidays", "q": "When is Vimy Day?", "choices": ["January 11", "April 9", "July 1", "November 20"], "answer": 1, "why": "The booklet's table of national public holidays and other important dates lists Vimy Day as April 9.", "page": 41},
+    {"id": "symbols-q45", "section": "symbols-holidays", "q": "When is Victoria Day?", "choices": ["The Monday preceding May 25 (Sovereign's birthday)", "The first Monday of September", "The second Monday of October", "June 24"], "answer": 0, "why": "The table lists Victoria Day as \"Monday preceding May 25 (Sovereign's birthday).\"", "page": 41},
+    {"id": "symbols-q46", "section": "symbols-holidays", "q": "When is Sir John A. Macdonald Day?", "choices": ["January 1", "January 11", "November 11", "November 20"], "answer": 1, "why": "The table lists Sir John A. Macdonald Day as January 11 and Sir Wilfrid Laurier Day as November 20.", "page": 41},
+    {"id": "symbols-q47", "section": "symbols-holidays", "q": "When is Thanksgiving Day in Canada?", "choices": ["First Monday of September", "November 11", "Fourth Thursday of November", "Second Monday of October"], "answer": 3, "why": "The table lists Thanksgiving Day as the \"Second Monday of October\" and Labour Day as the \"First Monday of September.\"", "page": 41},
+    {"id": "symbols-q48", "section": "symbols-holidays", "q": "What is celebrated on June 24, the Feast of St. John the Baptist?", "choices": ["Canada Day", "Victoria Day", "Fête nationale (Quebec)", "Boxing Day"], "answer": 2, "why": "The table lists \"Fête nationale (Quebec)\" as \"June 24 (Feast of St. John the Baptist).\"", "page": 41}
+  ]
+}

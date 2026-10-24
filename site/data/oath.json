@@ -1,0 +1,259 @@
+{
+  "id": "oath",
+  "title": "The Oath of Citizenship",
+  "order": 1,
+  "pages": [
+    2
+  ],
+  "summary": "The words of the Oath of Citizenship in English and French, and why Canadians pledge their loyalty to the Sovereign rather than to a document, a flag or a country.",
+  "sections": [
+    {
+      "id": "oath-the-oath-of-citizenship",
+      "title": "The Oath of Citizenship",
+      "page": 2,
+      "blocks": [
+        {
+          "type": "quote",
+          "text": "I swear (or affirm)\nThat I will be faithful\nAnd bear true allegiance\nTo Her Majesty\nQueen Elizabeth the Second\nQueen of Canada\nHer Heirs and Successors\nAnd that I will faithfully observe\nThe laws of Canada\nIncluding the Constitution\nWhich recognizes and affirms\nThe Aboriginal and treaty rights of\nFirst Nations, Inuit and Métis peoples\nAnd fulfil my duties\nAs a Canadian citizen.",
+          "who": "The Oath of Citizenship"
+        },
+        {
+          "type": "quote",
+          "text": "Je jure (ou j’affirme solennellement)\nQue je serai fidèle\nEt porterai sincère allégeance\nÀ Sa Majesté\nLa reine Elizabeth Deux\nReine du Canada\nÀ ses héritiers et successeurs\nQue j’observerai fidèlement\nLes lois du Canada\nY compris la Constitution\nQui reconnaît et confirme les droits\nAncestraux ou issus de traités\nDes Premières Nations, des Inuits et des Métis\nEt que je remplirai loyalement\nMes obligations\nDe citoyen canadien.",
+          "who": "Le serment de citoyenneté"
+        }
+      ],
+      "focus": [
+        "The Oath may be sworn or affirmed: it begins \"I swear (or affirm)\".",
+        "In the Oath you promise to be faithful and bear true allegiance to the Sovereign (King or Queen) of Canada, their Heirs and Successors.",
+        "In the Oath you promise to faithfully observe the laws of Canada, including the Constitution.",
+        "The Constitution recognizes and affirms the Aboriginal and treaty rights of First Nations, Inuit and Métis peoples.",
+        "The Oath ends with a promise to fulfil my duties as a Canadian citizen.",
+        "In French the Oath is called Le serment de citoyenneté."
+      ]
+    },
+    {
+      "id": "oath-understanding-the-oath",
+      "title": "Understanding the Oath",
+      "page": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "In Canada, we profess our loyalty to a person who represents all Canadians and not to a document such as a constitution, a banner such as a flag, or a geopolitical entity such as a country. In our constitutional monarchy, these elements are encompassed by the Sovereign (Queen or King). It is a remarkably simple yet powerful principle: Canada is personified by the Sovereign just as the Sovereign is personified by Canada."
+        }
+      ],
+      "focus": [
+        "In Canada, we profess our loyalty to a person who represents all Canadians, not to a document, a flag or a country.",
+        "Canada is a constitutional monarchy; the constitution, the flag and the country are encompassed by the Sovereign (Queen or King).",
+        "Canada is personified by the Sovereign just as the Sovereign is personified by Canada."
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": "oath-c01",
+      "section": "oath-the-oath-of-citizenship",
+      "front": "With what words does the Oath of Citizenship begin?",
+      "back": "\"I swear (or affirm)\". The Oath may be sworn or affirmed.",
+      "page": 2
+    },
+    {
+      "id": "oath-c02",
+      "section": "oath-the-oath-of-citizenship",
+      "front": "To whom do you promise to be faithful and bear true allegiance in the Oath of Citizenship?",
+      "back": "To the Sovereign (King or Queen) of Canada, and the Sovereign's Heirs and Successors.",
+      "page": 2
+    },
+    {
+      "id": "oath-c03",
+      "section": "oath-the-oath-of-citizenship",
+      "front": "What do you promise to faithfully observe in the Oath of Citizenship?",
+      "back": "The laws of Canada, including the Constitution.",
+      "page": 2
+    },
+    {
+      "id": "oath-c04",
+      "section": "oath-the-oath-of-citizenship",
+      "front": "According to the Oath, what does the Constitution recognize and affirm?",
+      "back": "The Aboriginal and treaty rights of First Nations, Inuit and Métis peoples.",
+      "page": 2
+    },
+    {
+      "id": "oath-c05",
+      "section": "oath-the-oath-of-citizenship",
+      "front": "Which three Aboriginal peoples are named in the Oath of Citizenship?",
+      "back": "First Nations, Inuit and Métis peoples.",
+      "page": 2
+    },
+    {
+      "id": "oath-c06",
+      "section": "oath-the-oath-of-citizenship",
+      "front": "What is the final promise in the Oath of Citizenship?",
+      "back": "To fulfil my duties as a Canadian citizen.",
+      "page": 2
+    },
+    {
+      "id": "oath-c07",
+      "section": "oath-the-oath-of-citizenship",
+      "front": "What is the Oath of Citizenship called in French?",
+      "back": "Le serment de citoyenneté.",
+      "page": 2
+    },
+    {
+      "id": "oath-c08",
+      "section": "oath-understanding-the-oath",
+      "front": "In Canada, do we profess our loyalty to a document, a flag, a country, or a person?",
+      "back": "To a person who represents all Canadians, and not to a document such as a constitution, a banner such as a flag, or a geopolitical entity such as a country.",
+      "page": 2
+    },
+    {
+      "id": "oath-c09",
+      "section": "oath-understanding-the-oath",
+      "front": "In Canada's constitutional monarchy, who encompasses the constitution, the flag and the country?",
+      "back": "The Sovereign (King or Queen).",
+      "page": 2
+    },
+    {
+      "id": "oath-c10",
+      "section": "oath-understanding-the-oath",
+      "front": "Complete the principle: \"Canada is personified by the Sovereign just as...\"",
+      "back": "\"...the Sovereign is personified by Canada.\"",
+      "page": 2
+    },
+    {
+      "id": "oath-c11",
+      "section": "oath-understanding-the-oath",
+      "front": "What kind of monarchy is Canada?",
+      "back": "A constitutional monarchy.",
+      "page": 2
+    }
+  ],
+  "quiz": [
+    {
+      "id": "oath-q01",
+      "section": "oath-the-oath-of-citizenship",
+      "q": "In the Oath of Citizenship, to whom do you swear or affirm to be faithful and bear true allegiance?",
+      "choices": [
+        "The Prime Minister of Canada",
+        "The Sovereign (King or Queen) of Canada, and the Sovereign's Heirs and Successors",
+        "The Constitution of Canada",
+        "The Canadian flag"
+      ],
+      "answer": 1,
+      "why": "The Oath pledges to \"bear true allegiance to Her Majesty ... Queen of Canada, Her Heirs and Successors\", that is, to the Sovereign.",
+      "page": 2
+    },
+    {
+      "id": "oath-q02",
+      "section": "oath-the-oath-of-citizenship",
+      "q": "In the Oath of Citizenship, what do you promise to faithfully observe?",
+      "choices": [
+        "The laws of Canada, including the Constitution",
+        "The customs of your country of origin",
+        "The decisions of the Prime Minister",
+        "The laws of your province only"
+      ],
+      "answer": 0,
+      "why": "The Oath says \"I will faithfully observe the laws of Canada including the Constitution\".",
+      "page": 2
+    },
+    {
+      "id": "oath-q03",
+      "section": "oath-the-oath-of-citizenship",
+      "q": "According to the Oath, the Constitution recognizes and affirms the Aboriginal and treaty rights of which peoples?",
+      "choices": [
+        "Immigrants and refugees",
+        "English and French Canadians",
+        "First Nations, Inuit and Métis peoples",
+        "Members of the Canadian Forces"
+      ],
+      "answer": 2,
+      "why": "The Oath names \"the Aboriginal and treaty rights of First Nations, Inuit and Métis peoples\".",
+      "page": 2
+    },
+    {
+      "id": "oath-q04",
+      "section": "oath-the-oath-of-citizenship",
+      "q": "How does the Oath of Citizenship end?",
+      "choices": [
+        "...and defend the borders of Canada.",
+        "...and vote in every election.",
+        "...and respect the Canadian flag.",
+        "...and fulfil my duties as a Canadian citizen."
+      ],
+      "answer": 3,
+      "why": "The last line of the Oath is \"And fulfil my duties as a Canadian citizen.\"",
+      "page": 2
+    },
+    {
+      "id": "oath-q05",
+      "section": "oath-understanding-the-oath",
+      "q": "In Canada, to whom or what do we profess our loyalty?",
+      "choices": [
+        "A document such as a constitution",
+        "A person who represents all Canadians",
+        "A banner such as a flag",
+        "A geopolitical entity such as a country"
+      ],
+      "answer": 1,
+      "why": "The booklet says we profess our loyalty \"to a person who represents all Canadians and not to a document ... a banner ... or a geopolitical entity\".",
+      "page": 2
+    },
+    {
+      "id": "oath-q06",
+      "section": "oath-understanding-the-oath",
+      "q": "In Canada's constitutional monarchy, the constitution, the flag and the country are all encompassed by:",
+      "choices": [
+        "Parliament",
+        "The Supreme Court",
+        "The Sovereign (Queen or King)",
+        "The Governor General"
+      ],
+      "answer": 2,
+      "why": "The booklet says \"these elements are encompassed by the Sovereign (Queen or King)\".",
+      "page": 2
+    },
+    {
+      "id": "oath-q07",
+      "section": "oath-understanding-the-oath",
+      "q": "Which statement expresses the principle described in \"Understanding the Oath\"?",
+      "choices": [
+        "Canada is personified by the Sovereign just as the Sovereign is personified by Canada.",
+        "Canada is personified by its flag.",
+        "Loyalty is owed to the Constitution alone.",
+        "The Sovereign is above the laws of Canada."
+      ],
+      "answer": 0,
+      "why": "The booklet calls it \"a remarkably simple yet powerful principle: Canada is personified by the Sovereign just as the Sovereign is personified by Canada.\"",
+      "page": 2
+    },
+    {
+      "id": "oath-q08",
+      "section": "oath-the-oath-of-citizenship",
+      "q": "The Oath of Citizenship begins with the words:",
+      "choices": [
+        "I promise",
+        "I swear (or affirm)",
+        "I pledge allegiance",
+        "I declare"
+      ],
+      "answer": 1,
+      "why": "The Oath opens with \"I swear (or affirm) That I will be faithful\".",
+      "page": 2
+    },
+    {
+      "id": "oath-q09",
+      "section": "oath-the-oath-of-citizenship",
+      "q": "What is \"Le serment de citoyenneté\"?",
+      "choices": [
+        "The French name of the Canadian Charter of Rights and Freedoms",
+        "The French name of the Oath of Citizenship",
+        "The French name of the citizenship test",
+        "The French name of the Constitution of Canada"
+      ],
+      "answer": 1,
+      "why": "The booklet prints the Oath in both languages: \"The Oath of Citizenship\" and \"Le serment de citoyenneté\".",
+      "page": 2
+    }
+  ]
+}
