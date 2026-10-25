@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="icons/icon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <link id="theme-css" rel="stylesheet" href="css/app.css">
   <script>
     // Design-round variants: ?css=<name> swaps the stylesheet for css/variants/<name>.css (compare page: design/).
@@ -27,9 +27,10 @@
       try {
         var s = JSON.parse(localStorage.getItem('dc.settings') || '{}');
         var r = document.documentElement;
-        if (s.theme) r.setAttribute('data-theme', s.theme);
-        if (s.size) r.setAttribute('data-size', s.size);
-        if (s.font) r.setAttribute('data-font', s.font);
+        if (s.theme && s.theme !== 'auto') r.setAttribute('data-theme', s.theme);
+        if (s.style && s.style !== 'argon') r.setAttribute('data-style', s.style);
+        if (s.size && s.size !== 'normal') r.setAttribute('data-size', s.size);
+        if (s.font && s.font !== 'default') r.setAttribute('data-font', s.font);
         if (s.motion === 'off') r.setAttribute('data-motion', 'off');
       } catch (e) {}
     })();
@@ -45,6 +46,7 @@
       <a class="navlink" href="#/book">Booklet</a>
     </nav>
     <div class="spacer"></div>
+    <a class="top-progress" id="top-progress" href="#/learn" title="Overall reading progress" hidden></a>
     <a class="iconbtn" href="#/settings" aria-label="Settings" title="Settings">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h0a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v0a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
     </a>

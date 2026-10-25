@@ -4,6 +4,7 @@
 
   // ---------- storage ----------
   const LS_PROGRESS = 'dc.progress.v1';
+  const LS_FOCUS = 'dc.focus.v1';
   const LS_SETTINGS = 'dc.settings';
   const DAY = 86400000;
   const INTERVALS = [0, 1, 3, 7, 14, 30]; // days per level
@@ -18,18 +19,27 @@
   }
   function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* private mode */ } }
 
-  const settings = Object.assign({ theme: 'auto', size: 'normal', font: 'default', motion: 'on', readMode: 'step' }, load(LS_SETTINGS, {}));
+  const settings = Object.assign(
+    { theme: 'auto', style: 'argon', size: 'normal', font: 'default', motion: 'on', readMode: 'step', splitBook: 'on', spreadBook: 'off' },
+    load(LS_SETTINGS, {})
+  );
   const progress = sanitizeProgress(load(LS_PROGRESS, {}));
   save(LS_PROGRESS, progress); // write back the sanitized shape
-  function saveProgress() { save(LS_PROGRESS, progress); }
+  const focusChecks = sanitizeFocus(load(LS_FOCUS, {}));
+  save(LS_FOCUS, focusChecks);
+
+  function saveProgress() { save(LS_PROGRESS, progress); updateTopProgress(); }
+  function saveFocus() { save(LS_FOCUS, focusChecks); }
   function saveSettings() { save(LS_SETTINGS, settings); applySettings(); }
   function applySettings() {
     const r = document.documentElement;
     settings.theme === 'auto' ? r.removeAttribute('data-theme') : r.setAttribute('data-theme', settings.theme);
+    !settings.style || settings.style === 'argon' ? r.removeAttribute('data-style') : r.setAttribute('data-style', settings.style);
     settings.size === 'normal' ? r.removeAttribute('data-size') : r.setAttribute('data-size', settings.size);
     settings.font === 'default' ? r.removeAttribute('data-font') : r.setAttribute('data-font', settings.font);
     settings.motion === 'off' ? r.setAttribute('data-motion', 'off') : r.removeAttribute('data-motion');
   }
+
   // Only known shapes survive a load or an import. Everything is coerced to numbers / plain ids.
   function sanitizeProgress(obj) {
     const out = { sections: {}, cards: {}, quiz: {}, mock: [], last: null };
@@ -41,6 +51,14 @@
     if (obj.quiz && typeof obj.quiz === 'object') for (const k of Object.keys(obj.quiz)) { const s = obj.quiz[k]; if (idOk(k) && s && typeof s === 'object') out.quiz[k] = { best: num(s.best, 0), total: num(s.total, 0), attempts: num(s.attempts, 0), last: num(s.last, 0) }; }
     if (Array.isArray(obj.mock)) out.mock = obj.mock.filter((m) => m && typeof m === 'object').map((m) => ({ score: num(m.score, 0), total: num(m.total, 0), at: num(m.at, 0) })).slice(-50);
     if (obj.last && typeof obj.last === 'object' && idOk(obj.last.chapter)) out.last = { chapter: obj.last.chapter, section: Math.max(0, Math.floor(num(obj.last.section, 0))) };
+    return out;
+  }
+
+  function sanitizeFocus(obj) {
+    const out = {};
+    if (!obj || typeof obj !== 'object') return out;
+    const keyOk = (k) => typeof k === 'string' && /^[a-z0-9-]+:\d{1,3}$/.test(k);
+    for (const k of Object.keys(obj)) if (keyOk(k) && obj[k]) out[k] = 1;
     return out;
   }
 
@@ -61,6 +79,7 @@
       data.chapters = chapters;
       try { data.official = await (await fetch('data/' + idx.official)).json(); } catch (e) { data.official = null; }
       data.index = idx;
+      updateTopProgress();
       return data;
     })();
     return dataPromise;
@@ -78,10 +97,15 @@
     next: '<svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>',
     check: '<svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>',
     book: '<svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
+    learn: '<svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
+    cards: '<svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/></svg>',
+    quiz: '<svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>',
     shuffle: '<svg viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M4 20L21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg>',
     close: '<svg viewBox="0 0 24 24"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>',
     undo: '<svg viewBox="0 0 24 24"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-15-6.7L3 13"/></svg>',
+    zoom: '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>',
   };
+
   let toastTimer = null;
   function toast(msg) {
     let t = $('.toast'); if (!t) { t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role', 'status'); document.body.appendChild(t); }
@@ -99,6 +123,15 @@
     const q = progress.quiz[ch.id];
     return { total, done, pct: pct(done, total), quizBest: q ? q.best : null, quizTotal: q ? q.total : null };
   }
+  function updateTopProgress() {
+    const el = $('#top-progress');
+    if (!el || !data.chapters.length) return;
+    const total = data.chapters.reduce((n, c) => n + c.sections.length, 0);
+    const done = data.chapters.reduce((n, c) => n + chapterStats(c).done, 0);
+    const p = pct(done, total);
+    el.hidden = false;
+    el.innerHTML = `<span class="tp-bar"><span style="width:${p}%"></span></span><span>${p}% read</span>`;
+  }
   function cardState(id) { return progress.cards[id] || { box: 0, due: 0, seen: 0 }; }
   const isNew = (c) => !cardState(c.id).seen;
   function cardsDue(cards, now) { return cards.filter((c) => !isNew(c) && cardState(c.id).due <= now); }
@@ -110,6 +143,7 @@
   // ---------- booklet overlay ----------
   function openOverlay(page) {
     let cur = pageNum(page);
+    let zoomed = false;
     let ov = $('#overlay');
     if (!ov) { ov = document.createElement('div'); ov.id = 'overlay'; ov.className = 'overlay'; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true'); ov.setAttribute('aria-label', 'Booklet page'); document.body.appendChild(ov); }
     const draw = () => {
@@ -119,16 +153,21 @@
           <button class="iconbtn" data-ov="prev" aria-label="Previous page" ${cur <= 1 ? 'disabled' : ''}>${icon.back}</button>
           <span class="overlay-title">Page ${cur}${ch ? ` · ${esc(ch.title)}` : ''}</span>
           <button class="iconbtn" data-ov="next" aria-label="Next page" ${cur >= BOOK_PAGES ? 'disabled' : ''}>${icon.next}</button>
+          ${bookLocal() ? `<button class="btn small" data-ov="zoom" aria-pressed="${zoomed}" title="Toggle zoom">${zoomed ? '1×' : '1.75×'}</button>` : ''}
           <a class="btn small" href="#/book/${cur}" data-ov="go">Open in Booklet</a>
           <button class="iconbtn" data-ov="close" aria-label="Close">${icon.close}</button>
         </div>
-        <div class="overlay-body">${bookLocal() ? `<img src="book/p${String(cur).padStart(2, '0')}.jpg" alt="Booklet page ${cur}" width="1100" height="1430">` : `<div class="empty"><p>Page ${cur} of the printed booklet.</p><a class="btn primary" href="${esc(data.index.book.official)}" target="_blank" rel="noopener">Open the official online guide</a></div>`}</div>`;
+        <div class="overlay-body ${zoomed ? 'zoomed' : ''}">${bookLocal() ? `<img src="book/p${String(cur).padStart(2, '0')}.jpg" alt="Booklet page ${cur}" width="1100" height="1430">` : `<div class="empty"><p>Page ${cur} of the printed booklet.</p><a class="btn primary" href="${esc(data.index.book.official)}" target="_blank" rel="noopener">Open the official online guide</a></div>`}</div>`;
       $('[data-ov="close"]', ov).focus();
     };
     const onClick = (e) => {
       const b = e.target.closest('[data-ov]'); if (!b) { if (e.target === ov) close(); return; }
       const k = b.getAttribute('data-ov');
-      if (k === 'close') close(); else if (k === 'prev') { cur = Math.max(1, cur - 1); draw(); } else if (k === 'next') { cur = Math.min(BOOK_PAGES, cur + 1); draw(); } else if (k === 'go') close();
+      if (k === 'close') close();
+      else if (k === 'prev') { cur = Math.max(1, cur - 1); draw(); }
+      else if (k === 'next') { cur = Math.min(BOOK_PAGES, cur + 1); draw(); }
+      else if (k === 'zoom') { zoomed = !zoomed; draw(); }
+      else if (k === 'go') close();
     };
     const onKey = (e) => { if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') { cur = Math.max(1, cur - 1); draw(); } if (e.key === 'ArrowRight') { cur = Math.min(BOOK_PAGES, cur + 1); draw(); } };
     const close = () => { ov.removeEventListener('click', onClick); document.removeEventListener('keydown', onKey, true); ov.remove(); document.body.classList.remove('no-scroll'); };
@@ -151,6 +190,7 @@
     const seq = ++renderSeq;
     if (cleanup) { try { cleanup(); } catch (e) { /* noop */ } cleanup = null; }
     const ov = $('#overlay'); if (ov) ov.remove(); document.body.classList.remove('no-scroll');
+    app.classList.remove('wide');
     const hash = location.hash.replace(/^#/, '') || '/';
     const top = hash.split('/').filter(Boolean)[0] || 'home';
     $$('.tabbar a, .topbar .navlink').forEach((a) => {
@@ -185,11 +225,28 @@
     const lastCh = last && data.byId[last.chapter];
     const lastIdx = lastCh ? Math.min(last.section, lastCh.sections.length - 1) : 0;
     const lastSec = lastCh && lastCh.sections[lastIdx];
+    const lastStats = lastCh ? chapterStats(lastCh) : null;
     app.innerHTML = `
       <section class="fade-in">
+        <div class="eyebrow">Official Study Guide · Interactive Companion</div>
         <h1 class="h1">Your path to the citizenship test</h1>
         <p class="lead">Everything on the test comes from the official <em>Discover Canada</em> booklet. Read a section, flip a few cards, check yourself. Small steps, every day.</p>
-        ${lastCh ? `<a class="card link" href="#/learn/${lastCh.id}/${lastIdx}"><div class="row" style="justify-content:space-between"><div><div class="small muted">Continue where you left off</div><div style="font-weight:700;font-size:1.1rem">${esc(lastCh.title)}</div><div class="small muted">${esc(lastSec ? lastSec.title : '')}</div></div><span class="btn primary">Continue ${icon.next}</span></div></a>` : ''}
+        ${lastCh ? `
+        <a class="card link hero-card" href="#/learn/${lastCh.id}/${lastIdx}">
+          <div class="hero-top">
+            <div class="hero-num">${lastCh.order}</div>
+            <div style="flex:1;min-width:0">
+              <div class="small muted">Continue where you left off</div>
+              <div style="font-weight:700;font-size:1.12rem;line-height:1.25">${esc(lastCh.title)}</div>
+              <div class="small muted">Section ${lastIdx + 1} of ${lastCh.sections.length} · ${esc(lastSec ? lastSec.title : '')}</div>
+            </div>
+            <span class="btn primary">Continue ${icon.next}</span>
+          </div>
+          <div class="hero-bar">
+            <div class="progress green"><span style="width:${lastStats.pct}%"></span></div>
+            <span class="small muted" style="font-weight:700;white-space:nowrap">${lastStats.done} of ${lastStats.total} done</span>
+          </div>
+        </a>` : ''}
         <div class="card" style="margin-top:12px">
           <div class="stats">
             <div class="stat"><b>${pct(doneSections, totalSections)}%</b><span>sections read</span></div>
@@ -199,13 +256,31 @@
           <div class="progress" style="margin-top:14px"><span style="width:${pct(doneSections, totalSections)}%"></span></div>
         </div>
         <div class="grid two" style="margin-top:12px">
-          <a class="card link" href="#/learn"><div class="row"><span class="pill red">Learn</span></div><div style="font-weight:700;margin-top:8px;font-size:1.1rem">Read the booklet, one section at a time</div><div class="small muted">${chapters.length} chapters · focus points · quick checks · tick off what you know</div></a>
-          <a class="card link" href="#/cards/due"><div class="row"><span class="pill amber">Cards</span>${due ? `<span class="pill">${due} to review</span>` : ''}</div><div style="font-weight:700;margin-top:8px;font-size:1.1rem">Flash cards, ${SESSION_CAP} at a time</div><div class="small muted">Rate each card; the app brings back the hard ones</div></a>
-          <a class="card link" href="#/quiz"><div class="row"><span class="pill green">Quiz</span></div><div style="font-weight:700;margin-top:8px;font-size:1.1rem">Chapter quizzes and a timed mock test</div><div class="small muted">${t.questions} questions · ${t.minutes} minutes · ${t.pass} to pass, like the real one</div></a>
-          <a class="card link" href="#/book"><div class="row"><span class="pill blue">Booklet</span></div><div style="font-weight:700;margin-top:8px;font-size:1.1rem">The full official booklet, page by page</div><div class="small muted">Every card and question links back to its page</div></a>
+          <a class="card link hub-card" href="#/learn">
+            <div class="hub-head"><span class="pill red">Learn</span><span class="hub-icon red">${icon.learn}</span></div>
+            <div><div style="font-weight:700;font-size:1.1rem">Read the booklet, one section at a time</div><div class="small muted" style="margin-top:3px">${chapters.length} chapters · focus points · quick checks · tick off what you know</div></div>
+          </a>
+          <a class="card link hub-card" href="#/cards/due">
+            <div class="hub-head"><div class="row" style="gap:6px"><span class="pill amber">Cards</span>${due ? `<span class="pill">${due} to review</span>` : ''}</div><span class="hub-icon amber">${icon.cards}</span></div>
+            <div><div style="font-weight:700;font-size:1.1rem">Flash cards, ${SESSION_CAP} at a time</div><div class="small muted" style="margin-top:3px">Rate each card; the app brings back the hard ones</div></div>
+          </a>
+          <a class="card link hub-card" href="#/quiz">
+            <div class="hub-head"><span class="pill green">Quiz</span><span class="hub-icon green">${icon.quiz}</span></div>
+            <div><div style="font-weight:700;font-size:1.1rem">Chapter quizzes and a timed mock test</div><div class="small muted" style="margin-top:3px">${t.questions} questions · ${t.minutes} minutes · ${t.pass} to pass, like the real one</div></div>
+          </a>
+          <a class="card link hub-card" href="#/book">
+            <div class="hub-head"><span class="pill blue">Booklet</span><span class="hub-icon blue">${icon.book}</span></div>
+            <div><div style="font-weight:700;font-size:1.1rem">The full official booklet, page by page</div><div class="small muted" style="margin-top:3px">Every card and question links back to its page</div></div>
+          </a>
         </div>
         <h2 class="h2">About the real test</h2>
         <div class="card flat">
+          <div class="test-pillars">
+            <div class="test-pillar"><b>${t.questions}</b><span>questions</span></div>
+            <div class="test-pillar"><b>${t.minutes}</b><span>minutes</span></div>
+            <div class="test-pillar"><b>${t.pass}/${t.questions}</b><span>to pass</span></div>
+            <div class="test-pillar"><b>${t.chances}</b><span>chances</span></div>
+          </div>
           <ul style="margin:0;padding-left:1.2em">
             <li><b>${t.questions} questions</b>, ${esc(t.format)}.</li>
             <li><b>${t.minutes} minutes</b>. You need <b>${t.pass} of ${t.questions}</b> correct to pass.</li>
@@ -214,7 +289,7 @@
           </ul>
         </div>
         <div class="note" style="margin-top:16px"><b>One update since this booklet was printed:</b> since 8 September 2022 Canada's Sovereign is <b>King Charles III</b>. The booklet still says Queen Elizabeth II; the official online guide now says King Charles III, and the Oath names him. Where a question is about the role, think "the Sovereign (King or Queen)".</div>
-        <p class="small muted">More help: <a href="#/resources">official links and practice tests</a> · <a href="#/settings">text size, theme, progress backup</a></p>
+        <p class="small muted">More help: <a href="#/resources">official links and practice tests</a> · <a href="#/settings">themes, text size, progress backup</a></p>
       </section>`;
   });
 
@@ -223,7 +298,7 @@
     app.innerHTML = `
       <section class="fade-in">
         <h1 class="h1">Learn</h1>
-        <p class="lead">Each chapter is split into short sections. Read one, check the focus points, try the quick check, tick it off.</p>
+        <p class="lead">Each chapter is split into short sections. Read one, check off the focus points as you spot them, try the quick check, tick it off.</p>
         <div class="grid">
           ${data.chapters.map((ch) => {
             const s = chapterStats(ch);
@@ -255,13 +330,31 @@
     }).join('');
   }
   function sectionQuestions(ch, sec) { return (ch.quiz || []).filter((q) => q.section === sec.id); }
+  function renderFocusBox(sec) {
+    if (!sec.focus || !sec.focus.length) return '';
+    const checkedCount = sec.focus.filter((_, idx) => !!focusChecks[`${sec.id}:${idx}`]).length;
+    return `
+      <div class="focusbox" data-focusbox="${esc(sec.id)}">
+        <div class="focusbox-head">
+          <h4>What to remember</h4>
+          <span class="focus-hint" data-fcount="${esc(sec.id)}">${checkedCount ? `${checkedCount}/${sec.focus.length} ticked` : 'Tap to tick'}</span>
+        </div>
+        <ul>
+          ${sec.focus.map((f, idx) => {
+            const key = `${sec.id}:${idx}`;
+            const ck = !!focusChecks[key];
+            return `<li data-fitem="${esc(key)}" role="checkbox" aria-checked="${ck}" tabindex="0">${esc(f)}</li>`;
+          }).join('')}
+        </ul>
+      </div>`;
+  }
   function renderSection(ch, sec, i) {
     const done = sectionDone(sec.id);
     const nq = Math.min(sectionQuestions(ch, sec).length, SECTION_CHECK);
     return `
       <article class="reader" data-section="${esc(sec.id)}">
         <div class="section-head"><h2>${esc(sec.title)}</h2>${pageLink(sec.page)}</div>
-        ${sec.focus && sec.focus.length ? `<div class="focusbox"><h4>What to remember</h4><ul>${sec.focus.map((f) => `<li>${esc(f)}</li>`).join('')}</ul></div>` : ''}
+        ${renderFocusBox(sec)}
         ${renderBlocks(sec.blocks)}
         <div class="grid" style="margin-top:18px">
           ${nq ? `<a class="btn" href="#/learn/${ch.id}/${i}/check">Quick check · ${nq} question${nq === 1 ? '' : 's'}</a>` : ''}
@@ -272,34 +365,122 @@
   route(/^\/learn\/([a-z-]+)(?:\/(\d+))?$/, (chId, secIdx) => {
     const ch = data.byId[chId]; if (!ch) { app.innerHTML = '<div class="empty">Chapter not found.</div>'; return; }
     const stepMode = settings.readMode !== 'all';
+    const withBook = stepMode && settings.splitBook !== 'off' && bookLocal();
+    if (stepMode) app.classList.add('wide'); else app.classList.remove('wide');
     const i = Math.min(parseInt(secIdx || '0', 10) || 0, ch.sections.length - 1);
+    const curSec = ch.sections[i];
+    let companionPage = pageNum(curSec.page);
+    let companionZoom = false;
     progress.last = { chapter: ch.id, section: i }; saveProgress();
     const s = chapterStats(ch);
     const nextCh = data.chapters.find((c) => c.order === ch.order + 1);
+    const nextSec = stepMode && i < ch.sections.length - 1 ? ch.sections[i + 1] : null;
+    const tocLinks = ch.sections.map((sec, k) => `<a href="#/learn/${ch.id}/${k}" class="${sectionDone(sec.id) ? 'done' : ''} ${stepMode && k === i ? 'current' : ''}" data-toc="${k}"><span class="check">${sectionDone(sec.id) ? '✓' : ''}</span><span style="flex:1;min-width:0">${esc(sec.title)}</span><span class="small muted">p.${sec.page}</span></a>`).join('');
+
     app.innerHTML = `
       <section class="fade-in">
         <div class="row" style="justify-content:space-between;margin-bottom:6px">
           <a class="btn ghost" href="#/learn">${icon.back} All chapters</a>
-          <button class="btn ghost small" data-readmode>${stepMode ? 'Show whole chapter' : 'One section at a time'}</button>
+          <div class="row" style="gap:6px">
+            ${stepMode && bookLocal() ? `<button class="btn ghost small studio-toggle-btn" data-splitbook aria-pressed="${withBook}">${icon.book} ${withBook ? 'Hide booklet pane' : 'Pin booklet pane'}</button>` : ''}
+            <button class="btn ghost small" data-readmode>${stepMode ? 'Show whole chapter' : 'One section at a time'}</button>
+          </div>
         </div>
-        <div class="small muted">Chapter ${ch.order} · pages ${ch.pages[0]}–${ch.pages[ch.pages.length - 1]}</div>
+        <div class="small muted">Chapter ${ch.order} · pages ${ch.pages[0]}–${ch.pages[ch.pages.length - 1]}${stepMode ? ` · Section ${i + 1} of ${ch.sections.length}` : ''}</div>
         <h1 class="h1">${esc(ch.title)}</h1>
         ${ch.summary ? `<p class="lead">${esc(ch.summary)}</p>` : ''}
-        <div class="progress green" style="margin:0 0 16px"><span style="width:${s.pct}%"></span></div>
-        <details class="tocwrap" ${stepMode ? '' : 'open'}><summary><span>${stepMode ? `Section ${i + 1} of ${ch.sections.length}` : 'Sections'}</span><span class="small muted" data-donecount>${s.done}/${s.total} done</span></summary>
-        <nav class="toc" aria-label="Sections in this chapter">
-          ${ch.sections.map((sec, k) => `<a href="#/learn/${ch.id}/${k}" class="${sectionDone(sec.id) ? 'done' : ''} ${stepMode && k === i ? 'current' : ''}" data-toc="${k}"><span class="check">${sectionDone(sec.id) ? '✓' : ''}</span><span>${esc(sec.title)}</span><span style="flex:1"></span><span class="small muted">p.${sec.page}</span></a>`).join('')}
-        </nav></details>
-        <div id="sections">
-          ${stepMode ? renderSection(ch, ch.sections[i], i) : ch.sections.map((sec, k) => renderSection(ch, sec, k)).join('<hr class="rule">')}
+        <div class="progress green" style="margin:0 0 8px"><span style="width:${s.pct}%"></span></div>
+        ${stepMode ? `<div class="stepbar" aria-label="Chapter sections">${ch.sections.map((sec, k) => `<a href="#/learn/${ch.id}/${k}" class="seg-step ${sectionDone(sec.id) ? 'done' : ''} ${k === i ? 'current' : ''}" data-step="${k}" title="Section ${k + 1}: ${esc(sec.title)}"></a>`).join('')}</div>` : ''}
+
+        <details class="tocwrap mobile-toc" ${stepMode ? '' : 'open'}><summary><span>${stepMode ? `Section ${i + 1} of ${ch.sections.length}` : 'Sections'}</span><span class="small muted" data-donecount>${s.done}/${s.total} done</span></summary>
+        <nav class="toc" aria-label="Sections in this chapter">${tocLinks}</nav></details>
+
+        <div class="learn-studio ${stepMode ? 'has-studio' : ''} ${withBook ? 'with-book' : ''}">
+          <aside class="learn-sidebar-left" aria-label="Chapter navigation">
+            <div class="row" style="justify-content:space-between;padding:0 4px 4px">
+              <span class="eyebrow" style="margin:0">Sections</span>
+              <span class="small muted" data-donecount-side>${s.done}/${s.total} done</span>
+            </div>
+            <nav class="toc" style="margin:0">${tocLinks}</nav>
+            <div class="grid" style="margin-top:8px;gap:8px">
+              <a class="btn small" href="#/quiz/${ch.id}">${icon.quiz} Quiz this chapter</a>
+              <a class="btn small ghost" href="#/cards/${ch.id}">${icon.cards} Flash cards</a>
+            </div>
+          </aside>
+
+          <div class="learn-main-card">
+            <div id="sections">
+              ${stepMode ? renderSection(ch, curSec, i) : ch.sections.map((sec, k) => renderSection(ch, sec, k)).join('<hr class="rule">')}
+            </div>
+            <div class="stepper">
+              ${stepMode && i > 0 ? `<a class="btn" href="#/learn/${ch.id}/${i - 1}">${icon.back} Previous</a>` : '<span></span>'}
+              ${nextSec ? `<a class="btn primary" href="#/learn/${ch.id}/${i + 1}">Next: ${esc(nextSec.title)} ${icon.next}</a>` : `<a class="btn primary" href="#/quiz/${ch.id}">Quiz this chapter ${icon.next}</a>`}
+            </div>
+            ${(!stepMode || i === ch.sections.length - 1) ? `<div class="row" style="margin-top:14px;justify-content:center"><a class="btn" href="#/cards/${ch.id}">Flash cards for this chapter</a>${nextCh ? `<a class="btn ghost" href="#/learn/${nextCh.id}">Next chapter: ${esc(nextCh.title)} ${icon.next}</a>` : ''}</div>` : ''}
+          </div>
+
+          <aside class="learn-sidebar-right" aria-label="Booklet page reference">
+            <div class="book-companion-bar">
+              <button class="iconbtn" data-cbook="prev" aria-label="Previous booklet page" style="width:36px;height:36px;min-width:36px;min-height:36px">${icon.back}</button>
+              <span id="cbook-label">Booklet p.${companionPage}</span>
+              <button class="iconbtn" data-cbook="next" aria-label="Next booklet page" style="width:36px;height:36px;min-width:36px;min-height:36px">${icon.next}</button>
+              <button class="btn ghost small" data-cbook="zoom" style="min-height:34px;padding:4px 8px;font-size:0.78rem">1.8×</button>
+              <a class="btn ghost small pagelink" href="#/book/${companionPage}" data-page="${companionPage}" id="cbook-expand" style="min-height:34px;padding:4px 8px;font-size:0.78rem">Expand</a>
+            </div>
+            <div class="book-companion-body" id="cbook-body">
+              <img id="cbook-img" src="book/p${String(companionPage).padStart(2, '0')}.jpg" alt="Booklet page ${companionPage}" width="1100" height="1430">
+            </div>
+          </aside>
         </div>
-        <div class="stepper">
-          ${stepMode && i > 0 ? `<a class="btn" href="#/learn/${ch.id}/${i - 1}">${icon.back} Previous</a>` : '<span></span>'}
-          ${stepMode && i < ch.sections.length - 1 ? `<a class="btn primary" href="#/learn/${ch.id}/${i + 1}">Next section ${icon.next}</a>` : `<a class="btn primary" href="#/quiz/${ch.id}">Quiz this chapter ${icon.next}</a>`}
-        </div>
-        ${(!stepMode || i === ch.sections.length - 1) ? `<div class="row" style="margin-top:14px;justify-content:center"><a class="btn" href="#/cards/${ch.id}">Flash cards for this chapter</a>${nextCh ? `<a class="btn ghost" href="#/learn/${nextCh.id}">Next chapter: ${esc(nextCh.title)} ${icon.next}</a>` : ''}</div>` : ''}
       </section>`;
+
+    const updateCompanion = () => {
+      const img = $('#cbook-img');
+      const lbl = $('#cbook-label');
+      const exp = $('#cbook-expand');
+      const body = $('#cbook-body');
+      const zbtn = $('[data-cbook="zoom"]');
+      if (img) { img.src = `book/p${String(companionPage).padStart(2, '0')}.jpg`; img.alt = `Booklet page ${companionPage}`; }
+      if (lbl) lbl.textContent = `Booklet p.${companionPage}`;
+      if (exp) { exp.setAttribute('href', `#/book/${companionPage}`); exp.setAttribute('data-page', String(companionPage)); }
+      if (body) body.classList.toggle('zoomed', companionZoom);
+      if (zbtn) zbtn.textContent = companionZoom ? '1×' : '1.8×';
+    };
+
+    const toggleFocusItem = (li) => {
+      const key = li.getAttribute('data-fitem');
+      if (!key) return;
+      if (focusChecks[key]) delete focusChecks[key]; else focusChecks[key] = 1;
+      saveFocus();
+      const checked = !!focusChecks[key];
+      li.setAttribute('aria-checked', String(checked));
+      const secId = key.split(':')[0];
+      const secObj = ch.sections.find((x) => x.id === secId);
+      const cntEl = $(`[data-fcount="${secId}"]`);
+      if (secObj && cntEl) {
+        const c = secObj.focus.filter((_, idx) => !!focusChecks[`${secId}:${idx}`]).length;
+        cntEl.textContent = c ? `${c}/${secObj.focus.length} ticked` : 'Tap to tick';
+      }
+    };
+
     const onClick = (e) => {
+      const fi = e.target.closest('[data-fitem]');
+      if (fi) { toggleFocusItem(fi); return; }
+      const cb = e.target.closest('[data-cbook]');
+      if (cb) {
+        const act = cb.getAttribute('data-cbook');
+        if (act === 'prev') companionPage = Math.max(1, companionPage - 1);
+        else if (act === 'next') companionPage = Math.min(BOOK_PAGES, companionPage + 1);
+        else if (act === 'zoom') companionZoom = !companionZoom;
+        updateCompanion();
+        return;
+      }
+      if (e.target.closest('[data-splitbook]')) {
+        settings.splitBook = withBook ? 'off' : 'on';
+        saveSettings();
+        render();
+        return;
+      }
       const d = e.target.closest('[data-done]');
       if (d) {
         const id = d.getAttribute('data-done');
@@ -311,16 +492,28 @@
         const st = chapterStats(ch);
         const bar = $('.progress.green > span'); if (bar) bar.style.width = st.pct + '%';
         const dc = $('[data-donecount]'); if (dc) dc.textContent = `${st.done}/${st.total} done`;
-        const toc = $(`[data-toc="${ch.sections.findIndex((x) => x.id === id)}"]`);
-        if (toc) { toc.classList.toggle('done', done); toc.querySelector('.check').textContent = done ? '✓' : ''; }
+        const dcs = $('[data-donecount-side]'); if (dcs) dcs.textContent = `${st.done}/${st.total} done`;
+        const secIndex = ch.sections.findIndex((x) => x.id === id);
+        $$(`[data-toc="${secIndex}"]`).forEach((toc) => {
+          toc.classList.toggle('done', done);
+          const chk = $('.check', toc); if (chk) chk.textContent = done ? '✓' : '';
+        });
+        const stepEl = $(`[data-step="${secIndex}"]`);
+        if (stepEl) stepEl.classList.toggle('done', done);
         if (done) toast(st.done === st.total ? 'Chapter complete!' : 'Nice. Keep going.');
         return;
       }
       if (e.target.closest('[data-readmode]')) { settings.readMode = stepMode ? 'all' : 'step'; saveSettings(); render(); }
     };
+    const onKey = (e) => {
+      const fi = e.target.closest('[data-fitem]');
+      if (fi && (e.key === ' ' || e.key === 'Enter')) { e.preventDefault(); toggleFocusItem(fi); }
+    };
     app.addEventListener('click', onClick);
-    return () => app.removeEventListener('click', onClick);
+    app.addEventListener('keydown', onKey);
+    return () => { app.removeEventListener('click', onClick); app.removeEventListener('keydown', onKey); };
   });
+
   // Quick check at the end of a section
   route(/^\/learn\/([a-z-]+)\/(\d+)\/check$/, (chId, secIdx) => {
     const ch = data.byId[chId]; if (!ch) { app.innerHTML = '<div class="empty">Chapter not found.</div>'; return; }
@@ -342,7 +535,7 @@
       <section class="fade-in">
         <h1 class="h1">Flash cards</h1>
         <p class="lead">Tap a card to flip it, then rate yourself. <b>Again</b> brings it back this session, <b>Hard</b> tomorrow, <b>Good</b> in a few days. Sessions are ${SESSION_CAP} cards; stop whenever you like.</p>
-        <a class="card link" href="#/cards/due"><div class="row" style="justify-content:space-between"><div><div style="font-weight:700;font-size:1.1rem">Today's session</div><div class="small muted">${dueAll ? `${dueAll} card${dueAll === 1 ? '' : 's'} to review` : 'Nothing to review yet'}${newAll ? ` · ${Math.min(NEW_LIMIT, newAll)} new` : ''}</div></div><span class="pill ${dueAll ? 'red' : ''}">${todayCount}</span></div></a>
+        <a class="card link hero-card" href="#/cards/due"><div class="row" style="justify-content:space-between"><div><div style="font-weight:700;font-size:1.12rem">Today's session</div><div class="small muted">${dueAll ? `${dueAll} card${dueAll === 1 ? '' : 's'} to review` : 'Nothing to review yet'}${newAll ? ` · ${Math.min(NEW_LIMIT, newAll)} new` : ''}</div></div><span class="pill ${dueAll ? 'red' : 'blue'}">${todayCount} cards</span></div></a>
         <h2 class="h2">By chapter</h2>
         <div class="grid">
           ${data.chapters.map((ch) => {
@@ -384,15 +577,25 @@
       if (!current) { finish(); return; }
       const st = cardState(current.id);
       const nextGap = INTERVALS[Math.min(st.box + 1, INTERVALS.length - 1)];
+      const ch = chOf(current);
       app.innerHTML = `
         <section class="fade-in">
           <div class="row" style="justify-content:space-between"><a class="btn ghost" href="${backHref}">${icon.back} ${esc(title)}</a>${lastRating ? `<button class="btn ghost small" data-undo>${icon.undo} Undo</button>` : ''}</div>
-          <div class="counter"><span>Card ${Math.min(finished.size + 1, total)} of ${total}${repeating.size ? ` · ${repeating.size} coming back` : ''}</span><span class="small">${esc(chOf(current).title)}</span></div>
+          <div class="counter"><span>Card ${Math.min(finished.size + 1, total)} of ${total}${repeating.size ? ` · ${repeating.size} coming back` : ''}</span><span class="small">${esc(ch ? ch.title : '')}</span></div>
           <div class="progress"><span style="width:${pct(finished.size, total)}%"></span></div>
           <div class="deck" style="margin-top:16px">
             <button class="flashcard" id="fc" aria-label="${esc(current.front)} — press to reveal the answer" aria-pressed="false">
-              <div class="face front"><div class="label">Question</div><div class="text">${esc(current.front)}</div><div class="foot"><span>Tap to reveal</span><span>p.${current.page}</span></div></div>
-              <div class="face back" aria-hidden="true"><div class="label">Answer</div><div class="text">${esc(current.back)}</div><div class="foot"><span>${isNew(current) ? 'New card' : 'Level ' + (st.box + 1) + ' of ' + INTERVALS.length}</span><span>p.${current.page}</span></div></div>
+              <div class="face front">
+                <div class="card-top"><span class="label">Question</span><span class="pill">p.${current.page}</span></div>
+                <div class="text">${esc(current.front)}</div>
+                <div class="foot"><span>Tap to reveal answer</span><span>${isNew(current) ? 'New card' : 'Level ' + (st.box + 1) + ' of ' + INTERVALS.length}</span></div>
+              </div>
+              <div class="face back" aria-hidden="true">
+                <div class="q-echo">${esc(current.front)}</div>
+                <div class="card-top"><span class="label">Answer</span><span class="pill">${isNew(current) ? 'New card' : 'Level ' + (st.box + 1) + ' of ' + INTERVALS.length}</span></div>
+                <div class="text">${esc(current.back)}</div>
+                <div class="foot"><span>Rate how well you knew it below</span><span>p.${current.page}</span></div>
+              </div>
             </button>
           </div>
           <div class="rate" id="rate" hidden>
@@ -401,7 +604,7 @@
             <button class="btn good" data-rate="good">Good<small>in ${nextGap} day${nextGap === 1 ? '' : 's'}</small></button>
           </div>
           <div class="row" style="justify-content:center;margin-top:14px">${pageLink(current.page, 'See this in the booklet')}</div>
-          <p class="small muted" style="text-align:center;margin-top:16px"><kbd>Space</kbd> flip · <kbd>1</kbd> again · <kbd>2</kbd> hard · <kbd>3</kbd> good</p>
+          <p class="small muted kbd-hint" style="text-align:center;margin-top:16px"><kbd>Space</kbd> flip · <kbd>1</kbd> again · <kbd>2</kbd> hard · <kbd>3</kbd> good</p>
         </section>`;
     }
     function flip() {
@@ -462,7 +665,7 @@
       <section class="fade-in">
         <h1 class="h1">Quiz</h1>
         <p class="lead">Chapter quizzes are ${QUIZ_BATCH} questions at a time with the answer explained. The mock test feels like the real thing: ${t.questions} questions, ${t.minutes} minutes, ${t.pass} to pass, answers at the end.</p>
-        <a class="card link" href="#/quiz/mock"><div class="row" style="justify-content:space-between"><div><div style="font-weight:700;font-size:1.1rem">Mock citizenship test</div><div class="small muted">${progress.mock.length ? `${progress.mock.length} attempt${progress.mock.length === 1 ? '' : 's'} · last ${lastMock.score}/${lastMock.total} (${lastMock.score >= t.pass ? 'pass' : 'not yet'})` : 'Random questions from every chapter, timed'}</div></div><span class="btn primary">Start</span></div></a>
+        <a class="card link hero-card" href="#/quiz/mock"><div class="row" style="justify-content:space-between"><div><div style="font-weight:700;font-size:1.12rem">Mock citizenship test</div><div class="small muted">${progress.mock.length ? `${progress.mock.length} attempt${progress.mock.length === 1 ? '' : 's'} · last ${lastMock.score}/${lastMock.total} (${lastMock.score >= t.pass ? 'pass' : 'not yet'})` : 'Random questions from every chapter, timed'}</div></div><span class="btn primary">Start</span></div></a>
         ${data.official ? `<a class="card link" href="#/quiz/official" style="margin-top:12px"><div style="font-weight:700;font-size:1.1rem">The booklet's own study questions</div><div class="small muted">${data.official.mcq.length} sample questions and ${data.official.short.length} questions to answer in your own words (pages 52–53)</div></a>` : ''}
         <h2 class="h2">By chapter</h2>
         <div class="grid">
@@ -482,24 +685,36 @@
     const backLabel = opts.backLabel || opts.title;
     function draw() {
       const q = qs[i]; const ch = data.byId[q.chapter];
+      const stepSegs = qs.map((_, idx) => {
+        let cls = '';
+        if (idx < answers.length) cls = deadline ? 'done' : (answers[idx].correct ? 'done' : 'wrong');
+        else if (idx === i) cls = 'current';
+        return `<span class="seg-step ${cls}" data-qstep="${idx}"></span>`;
+      }).join('');
       app.innerHTML = `
         <section class="fade-in">
           <div class="row" style="justify-content:space-between"><a class="btn ghost" href="${esc(opts.backHref)}">${icon.back} ${esc(backLabel)}</a>${deadline ? `<span class="timer" id="timer">${fmt(deadline - Date.now())}</span>` : `<span class="small muted">${ch ? esc(ch.title) : ''}</span>`}</div>
           <div class="counter"><span>Question ${i + 1} of ${qs.length}</span><span>${deadline ? '' : answers.filter((a) => a.correct).length + ' correct so far'}</span></div>
-          <div class="progress"><span style="width:${pct(i, qs.length)}%"></span></div>
+          <div class="progress" style="display:none"><span style="width:${pct(i, qs.length)}%"></span></div>
+          <div class="stepbar" aria-hidden="true">${stepSegs}</div>
           <h2 class="h2" style="margin-top:18px">${esc(q.q)}</h2>
           <div class="choices">${q.choices.map((c, k) => `<button class="choice" data-choice="${k}"><span class="key">${letters[k]}</span><span>${esc(c)}</span></button>`).join('')}</div>
           <div id="explain"></div>
-          <div class="stepper"><span></span><button class="btn primary" id="next" hidden>${i + 1 < qs.length ? 'Next' : 'See results'} ${icon.next}</button></div>
-          <p class="small muted" style="text-align:center;margin-top:12px"><kbd>1</kbd>–<kbd>${q.choices.length}</kbd> answer · <kbd>Enter</kbd> next</p>
+          <div class="stepper"><span></span><button class="btn primary" id="next" hidden>${i + 1 < qs.length ? 'Next question' : 'See results'} ${icon.next}</button></div>
+          <p class="small muted kbd-hint" style="text-align:center;margin-top:12px"><kbd>1</kbd>–<kbd>${q.choices.length}</kbd> answer · <kbd>Enter</kbd> next</p>
         </section>`;
     }
     function choose(k) {
       if (answered != null) return; const q = qs[i]; answered = k; const correct = k === q.answer;
       answers.push({ id: q.id, q: q.q, chosen: q.choices[k], right: q.choices[q.answer], correct, why: q.why, page: q.page, chapter: q.chapter });
       $$('.choice').forEach((b, idx) => { b.disabled = true; if (deadline) { if (idx === k) b.dataset.state = 'picked'; } else if (idx === q.answer) b.dataset.state = 'correct'; else if (idx === k) b.dataset.state = 'wrong'; });
-      if (!deadline) $('#explain').innerHTML = `<div class="explain ${correct ? 'ok' : 'bad'}" role="status"><b>${correct ? 'Correct.' : 'Not quite — the answer is ' + esc(letters[q.answer]) + '.'}</b>${esc(q.why || '')} <span style="white-space:nowrap">${pageLink(q.page)}</span></div>`;
-      $('#next').hidden = false; $('#next').focus();
+      const curSeg = $(`[data-qstep="${i}"]`);
+      if (curSeg) { curSeg.classList.remove('current'); curSeg.classList.add(deadline ? 'done' : (correct ? 'done' : 'wrong')); }
+      if (!deadline) $('#explain').innerHTML = `<div class="explain ${correct ? 'ok' : 'bad'}" role="status"><b>${correct ? 'Correct.' : 'Not quite — the answer is ' + esc(letters[q.answer]) + '.'}</b>${esc(q.why || '')} <div style="margin-top:8px">${pageLink(q.page)}</div></div>`;
+      const nxt = $('#next');
+      nxt.hidden = false;
+      nxt.focus({ preventScroll: true });
+      nxt.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
     function next() { if (answered == null) return; answered = null; i++; if (i >= qs.length) finish(false); else draw(); }
     function finish(timedOut) {
@@ -582,6 +797,7 @@
   // ---------- BOOK ----------
   route(/^\/book(?:\/(\d+))?$/, (p) => {
     let page = pageNum(p || 1);
+    let zoomed = false;
     if (!bookLocal()) {
       app.innerHTML = `
         <section class="fade-in">
@@ -594,12 +810,24 @@
       return;
     }
     function draw() {
+      const spread = settings.spreadBook === 'on' && page < BOOK_PAGES;
+      app.classList.toggle('wide', spread);
       const ch = chapterFor(page);
       app.innerHTML = `
         <section class="fade-in book">
-          <div class="row" style="justify-content:space-between"><h1 class="h1" style="margin:0">Booklet</h1><a class="small" href="discover.pdf#page=${page}" target="_blank" rel="noopener">Open the PDF</a></div>
+          <div class="row" style="justify-content:space-between">
+            <h1 class="h1" style="margin:0">Booklet</h1>
+            <div class="row" style="gap:8px">
+              <button class="btn small spread-btn" id="spread-toggle" aria-pressed="${spread}">${spread ? '1-page view' : '2-page spread'}</button>
+              <button class="btn small" id="zoom-toggle" aria-pressed="${zoomed}">${zoomed ? 'Zoom: 1×' : 'Zoom: 1.75×'}</button>
+              <a class="btn small ghost" href="discover.pdf#page=${page}" target="_blank" rel="noopener">Open PDF</a>
+            </div>
+          </div>
           <p class="muted small" style="margin:0">Official <em>Discover Canada</em> (2021 print). ${ch ? `This page is in <a href="#/learn/${ch.id}">${esc(ch.title)}</a>.` : page >= 52 && page <= 53 ? 'Study questions.' : page >= 54 ? 'Reference pages (not on the test).' : ''}</p>
-          <div class="page"><img id="pg" src="book/p${String(page).padStart(2, '0')}.jpg" alt="Booklet page ${page}" width="1100" height="1430"></div>
+          <div class="pair ${spread ? 'spread' : ''}">
+            <div class="page ${zoomed ? 'zoomed' : ''}"><img id="pg" src="book/p${String(page).padStart(2, '0')}.jpg" alt="Booklet page ${page}" width="1100" height="1430"></div>
+            ${spread ? `<div class="page ${zoomed ? 'zoomed' : ''}"><img src="book/p${String(page + 1).padStart(2, '0')}.jpg" alt="Booklet page ${page + 1}" width="1100" height="1430"></div>` : ''}
+          </div>
           <div class="controls">
             <button class="btn" id="prev" ${page <= 1 ? 'disabled' : ''}>${icon.back} Prev</button>
             <input class="num" id="num" type="number" min="1" max="${BOOK_PAGES}" value="${page}" aria-label="Page number">
@@ -608,11 +836,17 @@
             <button class="btn" id="next" ${page >= BOOK_PAGES ? 'disabled' : ''}>Next ${icon.next}</button>
           </div>
         </section>`;
-      [page - 1, page + 1].forEach((n) => { if (n >= 1 && n <= BOOK_PAGES) { const im = new Image(); im.src = `book/p${String(n).padStart(2, '0')}.jpg`; } });
+      [page - 1, page + 1, page + 2].forEach((n) => { if (n >= 1 && n <= BOOK_PAGES) { const im = new Image(); im.src = `book/p${String(n).padStart(2, '0')}.jpg`; } });
       history.replaceState(null, '', '#/book/' + page);
     }
     function go(n) { page = pageNum(n); draw(); window.scrollTo({ top: 0 }); }
-    const onClick = (e) => { if (e.target.closest('#prev')) go(page - 1); if (e.target.closest('#next')) go(page + 1); };
+    const onClick = (e) => {
+      const step = settings.spreadBook === 'on' && window.innerWidth >= 900 ? 2 : 1;
+      if (e.target.closest('#prev')) go(page - step);
+      if (e.target.closest('#next')) go(page + step);
+      if (e.target.closest('#zoom-toggle')) { zoomed = !zoomed; draw(); }
+      if (e.target.closest('#spread-toggle')) { settings.spreadBook = settings.spreadBook === 'on' ? 'off' : 'on'; saveSettings(); draw(); }
+    };
     const onChange = (e) => { if (e.target.id === 'num') go(parseInt(e.target.value, 10) || page); if (e.target.id === 'jump' && e.target.value) go(parseInt(e.target.value, 10)); };
     const onKey = (e) => { if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return; if (e.key === 'ArrowLeft') go(page - 1); if (e.key === 'ArrowRight') go(page + 1); };
     app.addEventListener('click', onClick); app.addEventListener('change', onChange); document.addEventListener('keydown', onKey);
@@ -644,9 +878,29 @@
   // ---------- SETTINGS ----------
   route(/^\/settings$/, () => {
     const seg = (key, options) => `<div class="seg" role="group">${options.map(([v, label]) => `<button data-set="${key}" data-val="${v}" aria-pressed="${settings[key] === v}">${label}</button>`).join('')}</div>`;
+    const styles = [
+      { id: 'argon', name: 'Civic Study', desc: 'Warm parchment, maple red CTA & civic blue progress', colors: ['#faf7f2', '#b81d33', '#1b4f9c', '#146940'] },
+      { id: 'quiet-study', name: 'Quiet Study', desc: 'Cool stone ground with deep forest teal accents', colors: ['#f3f4f1', '#c8102e', '#0e6b62', '#8a4b00'] },
+      { id: 'opus', name: 'Paper & Lake', desc: 'Top red ribbon, lake blue actions & highlighter notes', colors: ['#f7f5f0', '#1f4fbf', '#d52b1e', '#e8b923'] },
+      { id: 'sonnet', name: 'Calm Paper', desc: 'Soft cream, crisp borders & gentle amber feedback', colors: ['#f8f4ed', '#1f4e9e', '#1b6b43', '#8a4604'] },
+      { id: 'mythos', name: 'Classic Warm', desc: 'Original warm sand palette with maple red accents', colors: ['#fbf7f1', '#c8102e', '#1f7a4d', '#b4690e'] },
+    ];
+    const curStyle = settings.style || 'argon';
     app.innerHTML = `
       <section class="fade-in">
         <h1 class="h1">Settings</h1>
+        <h2 class="h2" style="margin-top:12px">Color palette</h2>
+        <p class="small muted" style="margin-top:0">Pick the look that feels calmest to your eyes. Every palette supports Light and Dark mode.</p>
+        <div class="style-grid" role="group" aria-label="Color palette">
+          ${styles.map((st) => `
+            <button class="style-card" data-set="style" data-val="${st.id}" aria-pressed="${curStyle === st.id}">
+              <div class="swatches">${st.colors.map((c) => `<span class="swatch" style="background:${c}"></span>`).join('')}</div>
+              <div class="st-name">${esc(st.name)}</div>
+              <div class="st-desc">${esc(st.desc)}</div>
+            </button>`).join('')}
+        </div>
+
+        <h2 class="h2">Display & reading</h2>
         <div class="card flat">
           <div class="setting"><div><b>Theme</b><div class="small muted">Auto follows your device</div></div>${seg('theme', [['auto', 'Auto'], ['light', 'Light'], ['dark', 'Dark']])}</div>
           <div class="setting"><div><b>Text size</b></div>${seg('size', [['small', 'Small'], ['normal', 'Normal'], ['large', 'Large'], ['xl', 'XL']])}</div>
@@ -660,7 +914,7 @@
           <div class="row"><button class="btn" id="export">Copy progress code</button><button class="btn" id="import">Paste progress code</button><button class="btn ghost" id="reset" style="color:var(--red)">Reset everything</button></div>
           <textarea id="code" class="sr-only" aria-label="Progress code"></textarea>
         </div>
-        <p class="small muted" style="margin-top:20px">Content: <em>Discover Canada: The Rights and Responsibilities of Citizenship</em>, © His Majesty the King in Right of Canada, reproduced for personal study. Built with care for one learner, shared for anyone preparing for the test. <a href="#/resources">Resources</a></p>
+        <p class="small muted" style="margin-top:20px">Content: <em>Discover Canada: The Rights and Responsibilities of Citizenship</em>, © His Majesty the King in Right of Canada, reproduced for personal study. Built with care for one learner, shared for anyone preparing for the test. <a href="#/resources">Resources</a> · <a href="design/" target="_blank">Design round gallery</a></p>
       </section>`;
     const encode = (obj) => btoa(Array.from(new TextEncoder().encode(JSON.stringify(obj)), (b) => String.fromCharCode(b)).join(''));
     const decode = (code) => JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(code.trim()), (c) => c.charCodeAt(0))));
@@ -677,7 +931,11 @@
         try { const obj = sanitizeProgress(decode(code)); if (Object.keys(obj.sections).length || Object.keys(obj.cards).length || Object.keys(obj.quiz).length || obj.mock.length) { Object.assign(progress, obj); saveProgress(); toast('Progress restored'); render(); } else toast('That is not a progress code'); } catch (err) { toast('That is not a progress code'); }
       }
       if (e.target.closest('#reset')) {
-        if (window.confirm('Reset all progress on this device? This cannot be undone.')) { Object.assign(progress, sanitizeProgress({})); saveProgress(); toast('Progress reset'); render(); }
+        if (window.confirm('Reset all progress on this device? This cannot be undone.')) {
+          Object.assign(progress, sanitizeProgress({}));
+          for (const k of Object.keys(focusChecks)) delete focusChecks[k];
+          saveProgress(); saveFocus(); toast('Progress reset'); render();
+        }
       }
     };
     app.addEventListener('click', onClick);

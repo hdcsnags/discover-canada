@@ -1,7 +1,7 @@
 /* Discover Canada study app — service worker.
    App shell + data: cache-first with background refresh.
    Booklet page images + PDF: cached on first view. */
-const VERSION = 'dc-v1';
+const VERSION = 'dc-v2';
 const SHELL = [
   './',
   './index.html',
