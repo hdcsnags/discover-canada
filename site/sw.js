@@ -1,7 +1,7 @@
 /* Discover Canada study app — service worker.
    App shell + data: cache-first with background refresh.
    Booklet page images + PDF: cached on first view. */
-const VERSION = 'dc-v3';
+const VERSION = 'dc-v4';
 const SHELL = [
   './',
   './index.html',
@@ -15,7 +15,9 @@ const SHELL = [
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(VERSION).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting())
+    caches.open(VERSION).then((cache) =>
+      Promise.all(SHELL.map((u) => fetch(u, { cache: 'reload' }).then((res) => cache.put(u, res))))
+    ).then(() => self.skipWaiting())
   );
 });
 
