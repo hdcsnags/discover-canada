@@ -671,6 +671,21 @@
         <div class="grid">
           ${data.chapters.map((ch) => { const q = progress.quiz[ch.id]; const n = (ch.quiz || []).length; return `<a class="card link chapter-item" href="#/quiz/${ch.id}"><div class="num">${ch.order}</div><div class="grow"><div class="title">${esc(ch.title)}</div><div class="meta">${n} questions${q ? ` · best ${q.best}/${q.total} · ${q.attempts} run${q.attempts === 1 ? '' : 's'}` : ''}</div></div>${q ? `<span class="pill ${pct(q.best, q.total) >= 75 ? 'green' : 'amber'}">${pct(q.best, q.total)}%</span>` : ''}</a>`; }).join('')}
         </div>
+        <h2 class="h2">More practice tests (BC &amp; national)</h2>
+        <div class="grid">
+          <a class="card link" href="https://www.yourlibrary.ca/citizenship-test-questions/" target="_blank" rel="noopener">
+            <div class="row" style="justify-content:space-between"><div style="font-weight:700;font-size:1.04rem">Richmond Public Library (BC) — Citizenship Practice Test</div><span class="pill green">BC local</span></div>
+            <div class="small muted" style="margin-top:4px">100+ practice questions including British Columbia &amp; local municipal questions</div>
+          </a>
+          <a class="card link" href="https://citizenshipcounts.ca/quiz/" target="_blank" rel="noopener">
+            <div class="row" style="justify-content:space-between"><div style="font-weight:700;font-size:1.04rem">Citizenship Counts — Practice Quiz</div><span class="pill blue">20 Qs</span></div>
+            <div class="small muted" style="margin-top:4px">Free 20-question timed mock tests and study quizzes</div>
+          </a>
+          <a class="card link" href="https://apps.tpl.ca/new-to-canada/citizenship" target="_blank" rel="noopener">
+            <div class="row" style="justify-content:space-between"><div style="font-weight:700;font-size:1.04rem">Toronto Public Library — Citizenship Practice Test</div><span class="pill">Public library</span></div>
+            <div class="small muted" style="margin-top:4px">Free library practice test based on the official Discover Canada guide</div>
+          </a>
+        </div>
       </section>`;
   });
 
@@ -866,11 +881,19 @@
           <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/discover-canada/read-online/study-questions.html" target="_blank" rel="noopener">Official practice questions</a> (the same ones as in this app's "booklet study questions")</li>
           <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/test/study.html" target="_blank" rel="noopener">How to study for the test</a> · <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/test/how-it-works.html" target="_blank" rel="noopener">How the test works</a> · <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/test/online.html" target="_blank" rel="noopener">Taking the online test</a></li>
         </ul></div>
-        <h2 class="h2">Free third-party practice tests</h2>
-        <p class="small muted">Not checked by us for accuracy. If a question contradicts the booklet, the booklet wins.</p>
+        <h2 class="h2">Free library &amp; community practice tests</h2>
+        <p class="small muted">Great for extra reps. If any third-party question ever contradicts the booklet, the booklet wins.</p>
         <div class="card flat"><ul style="margin:0;padding-left:1.2em">
+          <li><a href="https://www.yourlibrary.ca/citizenship-test-questions/" target="_blank" rel="noopener"><b>Richmond Public Library (BC)</b> — Citizenship Practice Test</a> (includes British Columbia &amp; local municipal questions)</li>
+          <li><a href="https://citizenshipcounts.ca/quiz/" target="_blank" rel="noopener"><b>Citizenship Counts</b> — Free 20-question practice quiz</a></li>
+          <li><a href="https://apps.tpl.ca/new-to-canada/citizenship" target="_blank" rel="noopener"><b>Toronto Public Library</b> — New to Canada Citizenship Practice Test</a></li>
           <li><a href="https://canoo.ca/canadian-citizenship-practice-test" target="_blank" rel="noopener">Canoo — free 20-question practice test</a> (no sign-up, English or French)</li>
           <li><a href="https://www.citizentest.ca/free-tests" target="_blank" rel="noopener">CitizenTest.ca — free diagnostic test</a> (chapter tests are paid)</li>
+        </ul></div>
+        <h2 class="h2">Look up your representatives (BC &amp; Federal)</h2>
+        <div class="card flat"><ul style="margin:0;padding-left:1.2em">
+          <li><a href="https://www.elections.ca/scripts/vis/FindED?L=e&amp;PAGEID=20" target="_blank" rel="noopener">Elections Canada — Find your federal electoral district &amp; MP by postal code</a></li>
+          <li><a href="https://www.leg.bc.ca/members" target="_blank" rel="noopener">Legislative Assembly of British Columbia — Find your BC MLA</a> (BC's capital is <b>Victoria</b>)</li>
         </ul></div>
       </section>`;
   });
