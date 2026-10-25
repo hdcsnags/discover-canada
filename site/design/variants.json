@@ -32,5 +32,6 @@
       "by": "Council seat, code mode · hit a usage window after writing app.css (no DESIGN.md yet)",
       "blurb": "Stylesheet landed before the seat's usage window closed; rationale pending a council resume."
     }
-  ]
+  ],
+  "note": "These proposals were written against the app as of commit c3c2eb0. The app was changed by a separate session afterwards (3-column studio, focus cards, palette picker), so under ?css= some newer elements are unstyled. Judge palette, type and the shared screens."
 }

@@ -46,7 +46,9 @@
   (async () => {
     const list = document.getElementById('list');
     let variants = [];
-    try { variants = (await (await fetch('variants.json')).json()).variants; } catch (e) { list.innerHTML = '<p class="missing">variants.json not found.</p>'; return; }
+    let note = '';
+    try { const j = await (await fetch('variants.json')).json(); variants = j.variants; note = j.note || ''; } catch (e) { list.innerHTML = '<p class="missing">variants.json not found.</p>'; return; }
+    if (note) { const n = document.createElement('p'); n.className = 'note'; n.textContent = note; list.appendChild(n); }
     const routes = [['home', 'Home'], ['learn', 'Learn'], ['cards', 'Cards'], ['quiz', 'Quiz']];
     const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     for (const v of variants) {
